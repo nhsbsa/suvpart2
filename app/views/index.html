@@ -1,0 +1,96 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK TECS Single User View
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Single User View 1.5
+        
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    
+      </p>
+
+      <hr>
+
+      <h2>
+        SUV (Single User View)
+Used in contact centre by 
+agents.
+      </h2>
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+           <span class="nhsuk-details__summary-text">'Lock Case and Tracker'</span>
+        </summary>
+        <div class="nhsuk-details__text">
+           <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+              <summary class="nhsuk-details__summary">
+                 <span class="nhsuk-details__summary-text"><small>Version 1</small></span>
+              </summary>
+      <p>
+        As per the business process, if a case is locked in the SUV, there are certain actions required by the SUV users on many cases before they are unlocked.<p></p> 
+        Presently, the SUV system does not have a feature to display a consolidated list of such locked cases so the SUV user could track and act on such cases. <p>The team is using some external workaround to maintain the list of such cases. The requirement is to display a list of the locked cases on which an action is needed by the SUV users.
+
+A new drop-down menu list to be  displayed on the 'Place penalty on lock' pop-up window with the title ‘Reason'
+      </p>
+      
+      <p>
+        <h2>
+          Page List
+        </h2>
+  
+      </p>
+
+      <p>
+        There is an <a href="/page-list">individual page list</a>, which contains each individual SUV page.
+      </p>
+
+      <hr>
+
+      <h2>
+        Prototype Journey's
+      </h2>
+
+      <p>
+        There is a <a href="/journey-page">Journey page-list</a>, which contains the Version 1 SUV journey.
+      </p>
+
+      <ul>
+     
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
