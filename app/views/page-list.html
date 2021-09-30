@@ -5,127 +5,145 @@
     - edit the header and footer 
     - add custom CSS and JavaScript
 -->
-
+​
 <!-- Set the page title -->
 {% block pageTitle %}
-  Content page example - NHS.UK prototype kit
+Content page example - NHS.UK prototype kit
 {% endblock %}
-
+​
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-  {{ breadcrumb({
-    href: "/",
-    text: "Home"
-  }) }}
+{{ breadcrumb({
+href: "/",
+text: "Home" 
+}) }}
 {% endblock %}
-
+​
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 {% endblock %}
-
+​
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-two-thirds">
-
-      <!-- Change the page heading -->
-      <h1>
-        SUV Page Breakdown
-      </h1>
-
-      <!-- Add content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-      <p class="nhsuk-lede-text">
-        Search page.
-      </p>
-      
-      <p>
-        For more styles, code snippets and guidance on components visit the
-        <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>.
-      </p>
-
-      <figure class="nhsuk-image">
-        <img class="nhsuk-image__img" src="/images/placeholder-image-16-9.jpg" alt="A 16:9 image placeholder">
-        <figcaption class="nhsuk-image__caption">
-          Image example
-        </figcaption>
-      </figure>
-
-      <h2>Level heading two</h2>
-
-      {{ list({
-        "title": "Do",
-        "type": "tick",
-        "items": [
-          {
-            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
-          },
-          {
-            "item": "wash your hands before touching a burst blister"
-          },
-          {
-            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
-          }
-        ]
-      }) }}
-
-      {{ list({
-        "title": "Don't",
-        "type": "cross",
-        "items": [
-          {
-            "item": "burst a blister yourself"
-          },
-          {
-            "item": "peel the skin off a burst blister"
-          },
-          {
-            "item": "pick at the edges of the remaining skin"
-          },
-          {
-            "item": "wear the shoes or use the equipment that caused your blister until it heals"
-          }
-        ]
-      }) }}
-
-      <h3>
-        Level heading three
-      </h3>
-
-      <p>
-        Body text:
-      </p>
-
-      <ul>
-        <li>
-          The quick brown
-        </li>
-        <li>
-          fox jumps over
-        </li>
-        <li>
-          the lazy dog
-        </li>
-      </ul>
-
-      {{ warningCallout({
-        "heading": "School, nursery or work",
-        "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
-      }) }}
-      
-      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
-        Page last reviewed: 15 March 2021<br>
-        Next review due: 15 March 2024
-      </p>
-
-      <!-- End of content -->
-
-    </div>  
-
-  </div>
+​
+<div class="nhsuk-grid-row">
+​
+ 
+        <!-- Change the page heading -->
+        <h1>
+            PCN Search
+        </h1>
+​
+        <!-- ==================================================================================== -->
+        <!-- SEARCH BOX -->
+        <!-- ==================================================================================== -->
+        <div id="search">
+            <div class="grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label">Reference number</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+​
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label">First name</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label">Last name</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label nhsuk-u-margin-top-4">Date of birth</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label nhsuk-u-margin-top-4">Postcode</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <div class="form-group nhsuk-u-margin-top-3">
+                        <a class="nhsuk-button" id="search-button" href="version-2021.html" role="button">Search</a> &nbsp; &nbsp;&nbsp;&nbsp;<button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                          Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==================================================================================== -->
+        <!-- END OF SEARCH BOX -->
+        <!-- ==================================================================================== -->
+​
+​
+        <!-- ==================================================================================== -->
+        <!-- TABLE -->
+        <!-- ==================================================================================== -->
+        <div class="table-scroll" id="table-scroll">
+            <div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
+              <table class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table" id="sortable">
+                <thead class="nhsuk-table__head">
+                  <tr class="nhsuk-table__row">
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Reference</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Name</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Address</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Date of birth</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header fixed-side" scope="col"><button data-index="0" onclick="sortTable()" type="button">Status</button></th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">123456789</td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--green case-tag">Open</span></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">123456789</td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--green case-tag">Open</span></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">123456789</td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--red case-tag">Locked</span></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">123456789</td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">Closed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <!-- ==================================================================================== -->
+        <!-- END TABLE -->
+        <!-- ==================================================================================== -->
+​
+        <!-- End of content -->
+​
+    </div>
+​
+</div>
 {% endblock %}
