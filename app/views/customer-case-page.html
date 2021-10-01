@@ -1,0 +1,173 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-secondary-navigation__container">
+        <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+          <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+            <ul class="nhsuk-secondary-navigation__list">
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="/me-journey/closed-cases">Back</a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="/me-journey/open-cases">Lock
+                </a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="/me-journey/closed-cases">Close</a>
+              </li>
+              <!-- <li class="nhsuk-secondary-navigation__item login-details">
+                <a class="nhsuk-secondary-navigation__link" href="#">Sign out</a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item login-details">
+                <a class="nhsuk-secondary-navigation__link">joe.bloggs@nhs.net</a>
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+        <!-- Change the page heading -->
+       
+
+        <!-- ==================================================================================== -->
+        <!-- SEARCH BOX -->
+        <!-- ==================================================================================== -->
+        <div id="search">
+            <div class="grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label">Reference number</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label">First name</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label">Last name</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label nhsuk-u-margin-top-4">Date of birth</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+                <div class="nhsuk-grid-column-one-third">
+                    <span class="nhsuk-label form-label nhsuk-u-margin-top-4">Postcode</span>
+                    <div class="form-group">
+                        <input class="nhsuk-input form-control" id="reference-number" name="first-name-2" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <div class="form-group nhsuk-u-margin-top-3">
+                        <a class="nhsuk-button" id="search-button" href="version-2021.html" role="button">Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==================================================================================== -->
+        <!-- END OF SEARCH BOX -->
+        <!-- ==================================================================================== -->
+
+
+        <!-- ==================================================================================== -->
+        <!-- TABLE -->
+        <!-- ==================================================================================== -->
+        <div class="table-scroll" id="table-scroll">
+            <div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
+              <table class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table" id="sortable">
+                <thead class="nhsuk-table__head">
+                  <tr class="nhsuk-table__row">
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Reference</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Name</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Address</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Date of birth</button></th>
+                    <th aria-sort="none" class="nhsuk-table__header fixed-side" scope="col"><button data-index="0" onclick="sortTable()" type="button">Status</button></th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><a href="#URL-HERE">123456789</a></td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--green case-tag">Open</span></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><a href="#URL-HERE">123456789</a></td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--green case-tag">Open</span></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><a href="#URL-HERE">123456789</a></td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--red case-tag">Locked</span></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><a href="#URL-HERE">123456789</a></td>
+                    <td class="nhsuk-table__cell">Joe Bloggs</td>
+                    <td class="nhsuk-table__cell">9 test road, town, NE1 OLD</td>
+                    <td class="nhsuk-table__cell">15/11/1992</td>
+                    <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">Closed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <!-- ==================================================================================== -->
+        <!-- END TABLE -->
+        <!-- ==================================================================================== -->
+
+        <!-- End of content -->
+
+    </div>
+
+</div>
+{% endblock %}

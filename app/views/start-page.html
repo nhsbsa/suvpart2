@@ -16,7 +16,7 @@
 {% block beforeContent %}
   {{ breadcrumb({
     href: "/",
-    text: "Home"
+    text: ""
   }) }}
 {% endblock %}
 
@@ -28,96 +28,27 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-two-thirds">
-    </li>
-
-  </a>
-    </div>
-
-
-    <button class="nhsuk-button" type="submit">
-      Save and continue
-    </button>
-    <button class="nhsuk-button" type="submit">
-      Save and continue
-    </button>
+<h1>
+  Page List
   
-      <h1>
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              What is your address? <b>
-           
+<h2 class="app-side-nav__heading">CSS Lock and Tracker</h2>
+<p>
+ 1)<a href="/search-page"> Search </a>which contains SUV search page.
+</p>
+
+<p>
+ 2)<a href="/page-list"> Search Results</a>, which contains SUV search and Reports results page.
+</p>
+
+<p>
+  2)<a href="/customer-case-page"> Customer Case</a>, which contains all info linked to that customer.
+ </p>
+ 
           
         
         
-              Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
-            </label>
-            <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-2">
-              <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
-            </label>
-            <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-town">
-              Town or city
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-county">
-              County
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-postcode">
-              Postcode
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-          </div>
-        
-        </fieldset>
-      </h1>
-      <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption">Skin symptoms and possible causes</caption>
-        <thead role="rowgroup" class="nhsuk-table__head">
-          <tr role="row">
-            <th role="columnheader" class="" scope="col">
-              Skin symptoms
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Possible cause
-            </th>
-          </tr>
-        </thead>
-        <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Blisters on lips or around the mouth</td>
-            <td class="nhsuk-table__cell ">cold sores</td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Itchy, dry, cracked, sore</td>
-            <td class="nhsuk-table__cell ">eczema</td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Itchy blisters</td>
-            <td class="nhsuk-table__cell ">shingles, chickenpox</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Add content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-      <p class="nhsuk-lede-text">
+          
+     
+     
        
 {% endblock %}
