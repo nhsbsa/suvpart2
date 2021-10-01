@@ -7,3 +7,234 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
+// SEARCH
+#search {
+    background-color: #dee0e2;
+    margin: 20px 0 30px 0;
+    padding: 20px 25px 0px 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+[aria-sort] button,
+[aria-sort] button:hover {
+  background-color: transparent;
+  border-width: 0;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color: #005ea5;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0 10px 0 0;
+  position: relative;
+  text-align: inherit;
+  font-size: 1em;
+  margin: 0; }
+
+[aria-sort] button:focus,
+[aria-sort] button:hover:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  white-space: nowrap; }
+
+[aria-sort]:first-child button {
+  right: auto; }
+
+[aria-sort] button:before {
+  content: " \25bc";
+  position: absolute;
+  right: -1px;
+  top: 9px;
+  font-size: 0.5em; }
+
+[aria-sort] button:after {
+  content: " \25b2";
+  position: absolute;
+  right: -1px;
+  top: 1px;
+  font-size: 0.5em; }
+
+//   =====================
+//   TAGS
+//   =====================
+.nhsuk-tag {
+    font-weight: 600;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1;
+    background-color: #0055a6;
+    border: 1px solid #0055a6;
+    color: #ffffff;
+    display: inline-block;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    text-decoration: none; }
+    @media (min-width: 40.0625em) {
+      .nhsuk-tag {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1; } }
+    @media print {
+      .nhsuk-tag {
+        font-size: 14pt;
+        line-height: 1; } }
+  
+  .nhsuk-tag--no-border {
+    border: 0; }
+  
+  .nhsuk-tag--white {
+    background-color: #ffffff;
+    border-color: #212b32;
+    color: #212b32; }
+  
+  .nhsuk-tag--grey {
+    background-color: #dbe0e3;
+    border-color: #354550;
+    color: #354550; }
+  
+  .nhsuk-tag--green {
+    background-color: #cce5d8;
+    border-color: #004c23;
+    color: #004c23; }
+  
+  .nhsuk-tag--aqua-green {
+    background-color: #ccedeb;
+    border-color: #00524d;
+    color: #00524d; }
+  
+  .nhsuk-tag--blue {
+    background-color: #ccdff1;
+    border-color: #004281;
+    color: #004281; }
+  
+  .nhsuk-tag--purple {
+    background-color: #d6cce3;
+    border-color: #240050;
+    color: #240050; }
+  
+  .nhsuk-tag--pink {
+    background-color: #efd3e3;
+    border-color: #57133a;
+    color: #57133a; }
+  
+  .nhsuk-tag--red {
+    background-color: #f7d4d1;
+    border-color: #6b140e;
+    color: #6b140e; }
+  
+  .nhsuk-tag--orange {
+    background-color: #ffdc8e;
+    border-color: #4d3708;
+    color: #4d3708; }
+  
+  .nhsuk-tag--yellow {
+    background-color: #fff59d;
+    border-color: #4d4712;
+    color: #4d4712; }
+    /* ==========================================================================
+   SECONDARY NAV
+  ========================================================================== */
+.nhsuk-secondary-navigation {
+  background-color: #ffffff; }
+
+.nhsuk-secondary-navigation__container {
+  text-align: justify;
+  margin: 0 30px; }
+
+.nhsuk-secondary-navigation__nav {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle; }
+
+.nhsuk-secondary-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.nhsuk-secondary-navigation__item {
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  margin-right: 24px;
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media (min-width: 40.0625em) {
+    .nhsuk-secondary-navigation__item {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.47368; } }
+  @media print {
+    .nhsuk-secondary-navigation__item {
+      font-size: 14pt;
+      line-height: 1.15; } }
+  .nhsuk-secondary-navigation__item:last-child {
+    margin-right: 0; }
+
+.nhsuk-secondary-navigation__link {
+  display: block;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-decoration: none;
+  font-weight: bold; }
+  .nhsuk-secondary-navigation__link:link, .nhsuk-secondary-navigation__link:visited {
+    color: #005eb8; }
+  .nhsuk-secondary-navigation__link:focus {
+    color: black;
+    position: relative;
+    z-index: 1;
+    box-shadow: none; }
+  .nhsuk-secondary-navigation__link[aria-current] {
+    color: #005eb8;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold; }
+    .nhsuk-secondary-navigation__link[aria-current]:before {
+      background-color: #005eb8;
+      content: "";
+      display: block;
+      height: 5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+    .nhsuk-secondary-navigation__link[aria-current]:focus {
+      color: black;
+      position: relative;
+      border: none; }
+      .nhsuk-secondary-navigation__link[aria-current]:focus:before {
+        background-color: black; }
+
+.hmcts-page-heading {
+  margin-bottom: 48px;
+  min-height: 48px;
+  text-align: justify; }
+  .hmcts-page-heading:after {
+    content: "";
+    display: inline-block;
+    width: 100%; }
+
+.hmcts-page-heading__title [class^="govuk-heading-"] {
+  margin-bottom: 8px;
+  text-align: left; }
+
+.hmcts-page-heading__actions {
+  display: inline-block;
+  vertical-align: middle; }
+
+.hmcts-page-heading__action:last-child {
+  margin-bottom: 0; }
+  .login-details {
+    float: right;
+    padding-left: 20px;
+}
