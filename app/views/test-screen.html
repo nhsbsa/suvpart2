@@ -107,12 +107,16 @@ Content page example - NHS.UK prototype kit
                   <br>
                </div>
             </div>
-            <div class="nhsuk-grid-column-full rpads">
+            
+            <div class="nhsuk-grid-column-full-fluid rpads">
                <div class="container rpads">
                   <ul class="tabs rpads">
-                     <li class="tab-link current" data-tab="tab-3">Matches</li>
-                     <li class="tab-link" data-tab="tab-4">Possible matches</li>
-                  </ul>
+                    
+                
+                     <ul class="tabs rpads">
+                        <li class="tab-link current" data-tab="tab-3">Matches</li>
+                        <li class="tab-link" data-tab="tab-4">Possible matches</li>
+                     </ul>
                   <div id="tab-3" class="tab-content current">
                      <div class="makeScrollable2">
                         <table class="internal2-table">
@@ -266,6 +270,8 @@ Content page example - NHS.UK prototype kit
                      </ul>
                      <!-- NOTES -->
                      <div id="tab-1" class="tab1-content rpads">
+                        <p><a href="" onclick="MyWindow=window.open('addPayment','MyWindow','width=600,height=600'); return false;">Add payment</a></p>
+                         <p><a href="" onclick="MyWindow=window.open('easement','MyWindow','width=600,height=600'); return false;">Add easment</a></p>
                         <div class="makeScrollable1Mvp" style="    margin-bottom: 30px;     height: auto;">
                            <table class="internal-table">
                               <thead>
@@ -317,8 +323,7 @@ Content page example - NHS.UK prototype kit
                            </table>
                         </div>
                         <!-- <br> -->
-                         <p><a href="" onclick="MyWindow=window.open('addPayment','MyWindow','width=600,height=600'); return false;">Add payment</a></p>
-                         <p><a href="" onclick="MyWindow=window.open('easement','MyWindow','width=600,height=600'); return false;">Add easment</a></p>
+                         
                         <!-- <br> -->
                      </div>
 
