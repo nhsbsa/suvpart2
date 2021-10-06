@@ -16,8 +16,8 @@ Content page example - NHS.UK prototype kit
 {% block beforeContent %}
 
 <div class="nhsuk-secondary-navigation">
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+  
+    <div class="nhsuk-grid-column-one-half">
       <div class="nhsuk-secondary-navigation__container">
         <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
           <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
@@ -56,7 +56,6 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-
 </nav>
 
 <div class="nhsBSA-sidebar-container">
@@ -71,37 +70,49 @@ Content page example - NHS.UK prototype kit
         
 <h1 class="nhsuk-u-margin-bottom-4">
                 <span role="text">
-                  Add note
+                  Add payment
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">
                     <span class="nhsuk-u-visually-hidden">
 
             </div>
-            <div class="nhsuk-grid-column-one-third">
-
-              <div class="nhsuk-form-group">
-
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                <p class="nhsuk-u-font-weight-bold">Balance due<p></p>
+              </label>
+              £ <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
             </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                <p class="nhsuk-u-font-weight-bold">Amount to pay<p></p>
+              </label>
+              £ <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+            
+            
+            
+            
+            
+          
+          
+                  
+                
+                </fieldset>   
+            
+              
+           
 
 
-          </div>
+          
 
-          <div class="nhsuk-grid-row">
+         
 
-            <div class="nhsuk-grid-column-full">
+       
 
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="example">
-                  Note
-                </label>
-                <textarea class="nhsuk-textarea" id="example" name="example" aria-describedby="example-hint"
-                  rows="10" maxlength="375"></textarea>
-                <p class="nhsuk-hint" style="margin-top: 10px;">You have <span id="chars">375</span> characters
-                  remaining</p>
-              </div>
+             
+          <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
 
-              <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
-
-              <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
+         <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
 
             </div>
 
