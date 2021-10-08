@@ -23,7 +23,7 @@ Content page example - NHS.UK prototype kit
           <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
             <ul class="nhsuk-secondary-navigation__list">
               <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="test-screen">Back</a>
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="/test-screen">Back</a>
               </li>
               <li class="nhsuk-secondary-navigation__item">
                 <a class="nhsuk-secondary-navigation__link" href="/me-journey/open-cases">
@@ -56,33 +56,59 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-
 </nav>
-
 <div class="nhsBSA-sidebar-container">
-
   <div class="nhsBSA-sidebar-wrapper">
     <div class="nhsBSA-sidebar-content">
-
-
-      <div class="nhsuk-width-container-fluid">
+      <div class="nhsuk-width-container-fluid"></div>
 
         <div class="nhsuk-main-wrapper" id="maincontent">
         
 <h1 class="nhsuk-u-margin-bottom-4">
-                <span role="text">
-                  Add note
+                <span role="text">Close record
+                  
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">
                     <span class="nhsuk-u-visually-hidden">
-
             </div>
             <div class="nhsuk-grid-column-one-third">
 
               <div class="nhsuk-form-group">
+                
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="select-1">
+                    <p class="nhsuk-u-font-weight-normal">Reason<p>
+                  </label>
+                  <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">MEDEX or MATEX - subsequently holds a certificte </option>
+                <option value="2" selected>Vulnerable - Terminal illness over 6 months</option>
+                <option value="3" selected>Vulnerable - Terminal illness under 6 months 
+                <option value="4">Vulnerable - Language difficulties</option>
+                <option value="5" selected>Vulnerable - Disability or long term condition</option>
+                <option value="6" selected>Extreme situation/Team manager discretion
+                <option value="7">Same checking period</option>
+                <option value="8" selected>Prescription delivered and left with a minor</option>
+                <option value="9" selected>Original PCN not received
+                <option value="10">Payment/Evidence recieved within timeframe</option>
+                <option value="11" selected>Cross over (Surcharge)</option>
+                <option value="12" selected>Financial hardship -HC2 confirmed
+                <option value="13">First letter not received</option>
+                <option value="14" selected>More than one PCN in same month</option>
+                <option value="15" selected>PR form not signed
+                <option value="14" selected>Signed decleration - signed</option> 
+                <option value="14" selected>Signed decleration- not collected</option>
+                <option value="14" selected>Dead letter office return</option> 
+                  </select>
+                </div>  
+       
 
             </div>
 
-
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                <p class="nhsuk-u-font-weight-bold"><p>
+              </label>
+              
+            </div>  
           </div>
 
           <div class="nhsuk-grid-row">
