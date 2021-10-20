@@ -16,34 +16,34 @@ Content page example - NHS.UK prototype kit
 {% block beforeContent %}
 
 <div class="nhsuk-secondary-navigation">
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-secondary-navigation__container">
-        <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
-          <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
-            <ul class="nhsuk-secondary-navigation__list">
-              <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="test-screen">Back</a>
-              </li>
-              <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" href="/me-journey/open-cases">
-                </a>
-              </li>
-              <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" href="/me-journey/closed-cases"></a>
-              </li>
-              <!-- <li class="nhsuk-secondary-navigation__item login-details">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" aria-current="page" href="test-screen">Back</a>
+                     </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="/me-journey/open-cases">
+                        </a>
+                     </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="/me-journey/closed-cases"></a>
+                     </li>
+                     <!-- <li class="nhsuk-secondary-navigation__item login-details">
                 <a class="nhsuk-secondary-navigation__link" href="#">Sign out</a>
               </li>
               <li class="nhsuk-secondary-navigation__item login-details">
                 <a class="nhsuk-secondary-navigation__link">joe.bloggs@nhs.net</a>
               </li> -->
-            </ul>
-          </nav>
-        </div>
+                  </ul>
+               </nav>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
 {% endblock %}
 
@@ -59,71 +59,33 @@ Content page example - NHS.UK prototype kit
 
 </nav>
 
-<div class="nhsBSA-sidebar-container">
+   <div class="nhsuk-grid-row">
 
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-grid-column-one-half">
 
+         <h1 class="nhsuk-u-margin-bottom-4">
+            Add note
+         </h1>
 
-      <div class="nhsuk-width-container-fluid">
+         <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+               Note
+            </label>
+            <textarea class="nhsuk-textarea" id="example" name="example" aria-describedby="example-hint"
+               rows="10" maxlength="375"></textarea>
+            <p class="nhsuk-hint" style="margin-top: 10px;">You have <span id="chars">375</span> characters
+               remaining</p>
+         </div>
 
-        <div class="nhsuk-main-wrapper" id="maincontent">
-        
-<h1 class="nhsuk-u-margin-bottom-4">
-                <span role="text">
-                  Add note
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                    <span class="nhsuk-u-visually-hidden">
+         <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and
+               continue</button></a>
 
-            </div>
-            <div class="nhsuk-grid-column-one-third">
-
-              <div class="nhsuk-form-group">
-
-            </div>
-
-
-          </div>
-
-          <div class="nhsuk-grid-row">
-
-            <div class="nhsuk-grid-column-full">
-
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="example">
-                  Note
-                </label>
-                <textarea class="nhsuk-textarea" id="example" name="example" aria-describedby="example-hint"
-                  rows="10" maxlength="375"></textarea>
-                <p class="nhsuk-hint" style="margin-top: 10px;">You have <span id="chars">375</span> characters
-                  remaining</p>
-              </div>
-
-              <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
-
-              <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
-
-            </div>
-
-          </div>
-
-
-
-
-
-        </div>
+         <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
 
       </div>
 
-
-        </h3>
-
- 
-
-              
-</div>
-<div class="nhsuk-grid-column-one-half">
- <div class="nhsuk-grid-row highlight1">
+      <div class="nhsuk-grid-column-one-half">
+         <div class="nhsuk-grid-row highlight1">
             <h1 class="nhsuk-heading-m pResize">PCN 223456789: Open</h1>
             <!--<h1 class="nhsuk-heading-m pResize">Direct Debit</h1>-->
             <div class="nhsuk-grid-column-one-third lpads pcnDet1">
@@ -141,8 +103,8 @@ Content page example - NHS.UK prototype kit
                <p class="pResize">No HC3</p>
                <h2 class="nhsuk-heading-s">Charge received</h2>
                <p class="pResize">£0</p>
-              <!--  <h2 class="nhsuk-heading-s">Direct Debit status</h2>
-               <p class="pResize">Active</p> -->
+               <!--  <h2 class="nhsuk-heading-s">Direct Debit status</h2>
+                  <p class="pResize">Active</p> -->
             </div>
             <div class="nhsuk-grid-column-one-third pcnDet1">
                <h2 class="nhsuk-heading-s">Balance due</h2>
@@ -154,13 +116,14 @@ Content page example - NHS.UK prototype kit
                <h2 class="nhsuk-heading-s">Respond by</h2>
                <p class="pResize">28/07/2017</p>
                <h2 class="nhsuk-heading-s">Area team</h2>
-               <p class="pResize"><a href="" onclick="MyWindow=window.open('dentist','MyWindow','width=700,height=500'); return false;">Q55</a></p>
+               <p class="pResize"><a href=""
+                     onclick="MyWindow=window.open('dentist','MyWindow','width=700,height=500'); return false;">Q55</a></p>
                <h2 class="nhsuk-heading-s">Country</h2>
                <p class="pResize">E</p>
                <h2 class="nhsuk-heading-s">DWP checked?</h2>
                <p class="pResize">No</p>
                <!-- <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
-               <p class="pResize">0012345678</p> -->
+                  <p class="pResize">0012345678</p> -->
             </div>
             <div class="nhsuk-grid-column-one-third pcnDet2">
                <h2 class="nhsuk-heading-s">EDI</h2>
@@ -180,9 +143,9 @@ Content page example - NHS.UK prototype kit
                <!--<p>Electronic</p>-->
                <!-- DD set-up -->
                <!-- <h2 class="nhsuk-heading-s">Direct Debit status</h2>
-               <p class="pResize">Active</p>
-               <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
-               <p class="pResize">0012345678</p> -->
+                  <p class="pResize">Active</p>
+                  <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
+                  <p class="pResize">0012345678</p> -->
             </div>
             <div class="nhsuk-grid-column-full rpads">
                <div class="container rpads">
@@ -193,9 +156,10 @@ Content page example - NHS.UK prototype kit
                   </ul>
                   <!-- NOTES -->
                   <div id="tab-1" class="tab1-content rpads">
-                     <p><a href="/add-payment"> Add payment</a><p>
+                     <p><a href="/add-payment"> Add payment</a>
+                     <p>
                         <a href="/add-easement"> Add easement</a>
-                      
+   
                      <div class="makeScrollable1Mvp" style="    margin-bottom: 30px;     height: auto;">
                         <table class="internal-table">
                            <thead>
@@ -247,162 +211,133 @@ Content page example - NHS.UK prototype kit
                         </table>
                      </div>
                      <!-- <br> -->
-                      
+   
                      <!-- <br> -->
                   </div>
-
+   
                   <!-- TRANSACTIONS -->
                   <div id="tab-2" class="tab1-content current1">
                      <!-- <div class="makeScrollable1Mvp"> -->
-                        <p>
-                           <a href="/note-page"> Add note</a>
-                          </p>
-                          
-                        <div></div>
-                           <thead>
-                              <tr>
-                                 <p class="nhsuk-u-font-weight-bold"><th>Date</th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 <th>Agent</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 <th>Comments</th>
-                                 <!--<th><a href="addNote" style="float: right;" ="" onClick="MyWindow=window.open('addNote','MyWindow','width=600,height=475'); return false;">+ Add note</a></th> -->
-                                 <th></th>
-                                 <th></th>
-                                 <th></th>
-                                 <th></th>
-                                 <th></th>
-                                 <th></th>
-                              </tr>
-                           </thead>
-                       </table>
+                     <p>
+                        <a href="/note-page"> Add note</a>
+                     </p>
+   
+                     <div></div>
+                     <thead>
+                        <tr>
+                           <p class="nhsuk-u-font-weight-bold">
+                              <th>Date</th>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <th>Agent</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <th>Comments</th>
+                              <!--<th><a href="addNote" style="float: right;" ="" onClick="MyWindow=window.open('addNote','MyWindow','width=600,height=475'); return false;">+ Add note</a></th> -->
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                        </tr>
+                     </thead>
+                     </table>
                      <div class="makeScrollable1Mvp">
                         <div>
-                                 </div><table class="notes-table">
+                        </div>
+                        <table class="notes-table">
                            <tbody>
                               <tr>
-                                    <td>27/07/2017 13.00</td>
-                                    <td>Tim</td>
-                                    <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call escalated</td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/2017 13.30</td>
-                                    <td>Joanne</td>
-                                    <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/2017 13.00</td>
-                                    <td>Tim</td>
-                                    <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call escalated</td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/2017 13.30</td>
-                                    <td>Joanne</td>
-                                    <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/2017 13.30</td>
-                                    <td>Joanne</td>
-                                    <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/2017 13.30</td>
-                                    <td>Joanne</td>
-                                    <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                                 </tr>
-                              
+                                 <td>27/07/2017 13.00</td>
+                                 <td>Tim</td>
+                                 <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                                    escalated</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>Joanne</td>
+                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.00</td>
+                                 <td>Tim</td>
+                                 <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                                    escalated</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>Joanne</td>
+                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>Joanne</td>
+                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>Joanne</td>
+                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                              </tr>
+   
                            </tbody>
                         </table>
                      </div>
                      <!-- <br> -->
-
+   
                      <!-- <p><a href="addNote" onClick="MyWindow=window.open('addNote','MyWindow','width=600,height=450'); return false;">+ Add note</a></p> -->
-                     
+   
                      <!-- <br> -->
                   </div>
-
+   
                   <!-- PAYMENT PLAN -->
                   <!-- <div id="tab-5" class="tab1-content current2">
-                     <div class="makeScrollable1Mvp">
-                        <table class="internal-table">
-                           <thead>
-                              <tr>
-                                 <th>Date set up</th>
-                                 <th>Type</th>
-                                 <th>Balance</th>
-                                 <th>Monthly Amount</th>
-                                 <th></th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>27/07/2017</td>
-                                 <td>DD</td>
-                                 <td>£51</td>
-                                 <td>PCN</td>
-                                 <td>Cheque</td>
-                              </tr>
-                              <tr>
-                                 <td>18/04/2017</td>
-                                 <td>Manual Payment</td>
-                                 <td>£51</td>
-                                 <td>Surcharge</td>
-                                 <td>Surcharge added</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div> 
-                     <br>
-                     <br> 
-                     <br> -->
-                     <!-- <p><a href="" onClick="MyWindow=window.open('easement','MyWindow','width=600,height=600'); return false;">Add easment</a></p> -->
-                     <br>
-<script>
-  var maxLength = 375;
-  $('textarea').keyup(function () {
-    var length = $(this).val().length;
-    var length = maxLength - length;
-    $('#chars').text(length);
-  });
-</script>
+                        <div class="makeScrollable1Mvp">
+                           <table class="internal-table">
+                              <thead>
+                                 <tr>
+                                    <th>Date set up</th>
+                                    <th>Type</th>
+                                    <th>Balance</th>
+                                    <th>Monthly Amount</th>
+                                    <th></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>27/07/2017</td>
+                                    <td>DD</td>
+                                    <td>£51</td>
+                                    <td>PCN</td>
+                                    <td>Cheque</td>
+                                 </tr>
+                                 <tr>
+                                    <td>18/04/2017</td>
+                                    <td>Manual Payment</td>
+                                    <td>£51</td>
+                                    <td>Surcharge</td>
+                                    <td>Surcharge added</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div> 
+                        <br>
+                        <br> 
+                        <br> -->
+                  <!-- <p><a href="" onClick="MyWindow=window.open('easement','MyWindow','width=600,height=600'); return false;">Add easment</a></p> -->
+               </div>
+            </div>
+         </div>
+      </div>
 
-
-
-      
-
-
-      
- 
-
-  
-
-    
-  
-    <!-- Custom JavaScript files can be added to this file -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-<!-- Add any custom scripts -->
-
-    <!-- For adding page specific JavsScript -->
-    
-  
-
+   </div>
+   
+   
+   <script>
+      var maxLength = 375;
+      $('textarea').keyup(function () {
+         var length = $(this).val().length;
+         var length = maxLength - length;
+         $('#chars').text(length);
+      });
+   </script>
 </html>
-        
-       
-        
-                    
-      ​
-              
-         
-     
-
-     
-
-
-
-        <!-- End of content -->
-
-    </div>
-
-</div>
 {% endblock %}
