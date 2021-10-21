@@ -65,9 +65,20 @@ Content page example - NHS.UK prototype kit
       <div class="nhsuk-grid-column-one-half">
 
          <h1 class="nhsuk-u-margin-bottom-4">
-            Create note
+            Place penalty on lock
          </h1>
-
+         <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              <p class="nhsuk-u-font-weight-bold">Time on lock<p>
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1">Lock for 14 days </option>
+          <option value="2" selected>Lock for 28 days</option>
+          <option value="3" selected>Lock for 30 days 
+          <option value="4">Lock for 60 days + check med/mat</option>
+          <option value="5" selected>Lock for 90 days</option>
+            </select>
+          </div>  
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
                Note
@@ -88,22 +99,15 @@ Content page example - NHS.UK prototype kit
                 <div class="nhsuk-checkboxes">
           
                   <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                      Apply to open case only
+                    
                     </label>
                   </div>
-          <p></p><p></p>
-          <p></p>
+          <p>
                   <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-                      Apply to all cases
+                   
                     </label>
                   </div>
-          
-                
-          
+             
                 </div>
               </fieldset>
           
