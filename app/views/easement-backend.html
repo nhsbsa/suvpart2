@@ -65,28 +65,38 @@ Content page example - NHS.UK prototype kit
       <div class="nhsuk-grid-column-one-half">
 
          <h1 class="nhsuk-u-margin-bottom-4">
-            Add payment
+            Ease penalty
          </h1>
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="select-1">
-              <p class="nhsuk-u-font-weight-bold">Payment type<p>
+              <p class="nhsuk-u-font-weight-bold">Amount to ease<p></p>
             </label>
             <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="1">Cheque </option>
-          <option value="2" selected>Postal order</option>
-          <option value="3" selected>Cash</option>
-          <option value="4" selected>Bank transfer</option>
+          <option value="1">Surcharge </option>
+          <option value="2" selected>Penalty charge and Surcharge</option>
           
           
             </select>
           </div>  
           &nbsp;&nbsp;
           &nbsp;
-          <label class="nhsuk-label" for="select-1">
-            <p class="nhsuk-u-font-weight-bold">Payment amount<p>
-            </label>
-            £ <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text"> 
-           
+          <p class="nhsuk-u-font-weight-bold">Easement amount: £50.00<p></p>
+          <p class="nhsuk-u-font-weight-bold">Customer has paid: £10.00<p></p>
+            <p class="nhsuk-u-font-weight-bold">Balance after easement applied: £116.40<p>
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="1">CO cross over (Surcharge) </option>
+        <option value="2" selected>ES Extreme situation/team manager discretion</option>
+        <option value="3" selected>HC Financial hardship - HC2 confirmed 
+        <option value="4">FL First letter not received</option>
+        <option value="5" selected>MM Medex or Matex - subsequently holds a certificate</option>
+        <option value="5" selected>MP more than one PCN in same month</option>
+        <option value="5" selected>LD Vulnerable - language difficulties</option>
+        <option value="5" selected>TO Vulnerable - terminal illness over 6 months</option>
+        <option value="5" selected>TO Vulnerable - terminal illness under 6 months</option>
+        <option value="5" selected>TU Vulnerable - disability or long term condition</option>
+        <option value="5" selected>PR PR form not signed</option>
+          </select>
        
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
@@ -132,7 +142,7 @@ Content page example - NHS.UK prototype kit
 
       <div class="nhsuk-grid-column-one-half">
          <div class="nhsuk-grid-row highlight1">
-            <h1 class="nhsuk-heading-m pResize">PCN 223456789: Open</h1>
+            <h1 class="nhsuk-heading-m pResize">PCN 06183129565: Open</h1>
             <!--<h1 class="nhsuk-heading-m pResize">Direct Debit</h1>-->
             <div class="nhsuk-grid-column-one-third lpads pcnDet1">
                <h2 class="nhsuk-heading-s">Prescription</h2>
@@ -162,9 +172,10 @@ Content page example - NHS.UK prototype kit
                <h2 class="nhsuk-heading-s">DWP checked</h2>
                <p class="pResize">Yes</p>
                <h2 class="nhsuk-heading-s">Dispenser</h2>
-               <a href="/dispenser"> FMMMM</a>
+               <p class="pResize">FMMMM</p>
                <h2 class="nhsuk-heading-s">Evidence not seen?</h2>
                <p class="pResize">No</p>
+               
                <!-- <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
                   <p class="pResize">0012345678</p> -->
             </div>
@@ -179,7 +190,6 @@ Content page example - NHS.UK prototype kit
                <p class="pResize">(M) Has valid NHS Tax Credit Exemption Certificate</p>
                <h2 class="nhsuk-heading-s">Source</h2>
                <p class="pResize">Electronic</p>
-               
                <!--<p>Electronic</p>-->
                <!-- DD set-up -->
                <!-- <h2 class="nhsuk-heading-s">Direct Debit status</h2>
