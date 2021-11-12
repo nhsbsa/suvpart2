@@ -1,121 +1,23 @@
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - edit the header and footer 
-    - add custom CSS and JavaScript
--->
-
-<!-- Set the page title -->
 {% block pageTitle %}
-Content page example - NHS.UK prototype kit
+Application successful
 {% endblock %}
-
-<!-- For adding a breadcrumb -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
-{% block beforeContent %}
-
-<div class="nhsuk-secondary-navigation">
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-secondary-navigation__container">
-        <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
-          <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
-            <ul class="nhsuk-secondary-navigation__list">
-              <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="/page-list">Reports</a>
-              </li>
-              <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" href="/tracker">Tracker
-                </a>
-              </li>
-         
-              </li>
-              <!-- <li class="nhsuk-secondary-navigation__item login-details">
-                <a class="nhsuk-secondary-navigation__link" href="#">Sign out</a>
-              </li>
-              <li class="nhsuk-secondary-navigation__item login-details">
-                <a class="nhsuk-secondary-navigation__link">joe.bloggs@nhs.net</a>
-              </li> -->
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endblock %}
-
-<!-- For adding a back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
-{% block outerContent %}
-{% endblock %}
-
-<!-- For adding page content -->
-<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
-<div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-full">
-
-        <!-- Change the page heading -->
-        <div class="govuk-width-container">
-          <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                <div class="govuk-panel govuk-panel--confirmation">
-                  <h1 class="govuk-panel__title">
-                    Application complete
-                  </h1>
-                  <div class="govuk-panel__body">
-                    Your reference number<br><strong>HDJ2123F</strong>
-                  </div>
-                </div>
-        
-                <p class="govuk-body">We have sent you a confirmation email.</p>
-        
-                <h2 class="govuk-heading-m">What happens next</h2>
-        
-                <p class="govuk-body">
-                  We’ve sent your application to Hackney Electoral Register Office.
-                </p>
-                <p class="govuk-body">
-                  They will contact you either to confirm your registration, or to ask for more information.
-                </p>
-        
-                <p class="govuk-body">
-                  <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
-                </p>
-              </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-card" style="background: #005EB8; margin-top: 0;">
+            <div class="nhsuk-card__content">
+              <h1 class="nhsuk-card__heading" style="text-align: center; color: white;">
+                Removed from tracker 
+              </h1>
+              <h2 class="nhsuk-card__heading nhsuk-u-font-weight-normal" style="text-align: center; color: white;">
+                Reference number: <span class="nhsuk-caption-xl nhsuk-caption--bottom nhsuk-u-font-weight-bold" style="color: white;">HDJ2123F</span>
+              </h2>
             </div>
-          </main>
-        </div>
-          
-        
-            </div>
-            <div class="grid-row">
-                <div class="nhsuk-grid-column-full">
-                    <div class="form-group nhsuk-u-margin-top-3"> 
-                        <a class="nhsuk-button" id="test-screen" href="css-pcn-view-tracker" role="button">Continue</a> <p class="nhsuk-u-margin-top-0"><a href="css-pcn-view">Cancel</a></p>
-
-                      </div>
-                         
-                          
-                        
-            
-                         
-            </div>
-        </div>
-        <!-- ==================================================================================== -->
-        <!-- END OF SEARCH BOX -->
-        <!-- ==================================================================================== -->
-
-
-       
-        <!-- End of content -->
-
+          </div>
+          <div class="form-group nhsuk-u-margin-top-3"> 
+            <a class="nhsuk-button" id="test-screen" href="css-pcn-view-tracker" role="button">Continue</a> <p class="nhsuk-u-margin-top-0"><a href="css-pcn-view">Cancel</a></p>
+          </div>
     </div>
-
 </div>
 {% endblock %}
