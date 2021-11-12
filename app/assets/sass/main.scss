@@ -334,3 +334,18 @@ ul.tabs1 li {
     margin-bottom: 0;
     vertical-align: middle;
 }
+
+// table filter PECS / DECS
+tr.pecs-row.show, tr.decs-row.show {
+  display: table-row;
+}
+tr.pecs-row.hide, tr.decs-row.hide {
+  display: none;
+}
+
+.show {
+  display: table-row!important;
+}
+.hide {
+  display: none!important;
+}

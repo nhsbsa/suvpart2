@@ -30,6 +30,21 @@ $(document).ready(function () {
         }
     });
 
+	// Add logic to toggle visiblity when unviewed check clicked
+	$('.pecs-row, .decs-row').click(function() {
+		if($(this).is(':checked')) {
+			$('tr.'+ $(this).attr('id')).addClass('show');
+			$('tr.'+ $(this).attr('id')).removeClass('hide');
+			console.log('checked this');
+		}
+		else {
+			$('tr.'+ $(this).attr('id')).addClass('hide');
+			$('tr.'+ $(this).attr('id')).removeClass('show');
+			console.log('hidden');
+		}
+	});
+	
+
 
     
 });
