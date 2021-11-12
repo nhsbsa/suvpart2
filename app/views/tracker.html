@@ -91,7 +91,7 @@ Content page example - NHS.UK prototype kit
           <input class="nhsuk-checkboxes__input pecs-row" id="pecs-row" name="pecs-decs-input" type="checkbox"
             value="email" checked>
           <label class="nhsuk-label nhsuk-checkboxes__label" for="pecs">
-            PECS
+            <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">PECS</span></td>
           </label>
         </div>
 
@@ -99,7 +99,7 @@ Content page example - NHS.UK prototype kit
           <input class="nhsuk-checkboxes__input decs-row" id="decs-row" name="pecs-decs-input" type="checkbox"
             value="phone" checked>
           <label class="nhsuk-label nhsuk-checkboxes__label" for="decs">
-            DECS
+            <td><span class="nhsuk-tag nhsuk-tag--green case-tag">DECS</span></td>
           </label>
         </div>
 
@@ -120,13 +120,13 @@ Content page example - NHS.UK prototype kit
             <th role="columnheader" class="" scope="col">
               Unlock date
             <th role="columnheader" class="" scope="col">
-              Lock duration
+              Days till unlock
             <th role="columnheader" class="" scope="col">
               Lock Reason
             <th role="columnheader" class="" scope="col">
               Date lock applied
             <th role="columnheader" class="" scope="col">
-              Days till unlock
+              Lock duration
             <th role="columnheader" class="" scope="col">
               Remove from tracker
           </tr>
@@ -136,10 +136,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">PECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">123456789</a></td>
             <td class="nhsuk-table__cell">10/11/2021</td>
-            <td class="nhsuk-table__cell">14</td>
-            <td class="nhsuk-table__cell">Sending benefit evidence</td>
-            <td class="nhsuk-table__cell">26/10/2021</td>
             <td class="nhsuk-table__cell">-1</td>
+            <td class="nhsuk-table__cell">Applying for MEDEX</td>
+            <td class="nhsuk-table__cell">11/09/2021</td>
+            <td class="nhsuk-table__cell">60</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -157,10 +157,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--green case-tag">DECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">987654321</a></td>
             <td class="nhsuk-table__cell">10/11/2021</td>
-            <td class="nhsuk-table__cell">28</td>
+            <td class="nhsuk-table__cell">1</td>
             <td class="nhsuk-table__cell">Financial harsdship (HC2)</td>
-            <td class="nhsuk-table__cell">15/10/2021</td>
-            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">13/10/2021</td>
+            <td class="nhsuk-table__cell">28</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -177,10 +177,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">PECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">564789321</a></td>
             <td class="nhsuk-table__cell">15/11/2021</td>
-            <td class="nhsuk-table__cell">28</td>
+            <td class="nhsuk-table__cell">3</td>
             <td class="nhsuk-table__cell">Sending benefit evidence</td>
             <td class="nhsuk-table__cell">18/10/2020</td>
-            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">28</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -197,10 +197,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--green case-tag">DECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">120967236</a></td>
             <td class="nhsuk-table__cell">15/11/2021</td>
-            <td class="nhsuk-table__cell">60</td>
+            <td class="nhsuk-table__cell">6</td>
             <td class="nhsuk-table__cell">Didn't get evidence</td>
             <td class="nhsuk-table__cell">16/09/2021</td>
-            <td class="nhsuk-table__cell">26</td>
+            <td class="nhsuk-table__cell">60</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -216,10 +216,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--green case-tag">DECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">222345432</a></td>
             <td class="nhsuk-table__cell">16/11/2021</td>
-            <td class="nhsuk-table__cell">60</td>
+            <td class="nhsuk-table__cell">7</td>
             <td class="nhsuk-table__cell">Applying for MEDEX</td>
             <td class="nhsuk-table__cell">17/09/2021</td>
-            <td class="nhsuk-table__cell">26</td>
+            <td class="nhsuk-table__cell">60</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -236,10 +236,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">PECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">998856723</a></td>
             <td class="nhsuk-table__cell">17/11/2021</td>
-            <td class="nhsuk-table__cell">14</td>
+            <td class="nhsuk-table__cell">8</td>
             <td class="nhsuk-table__cell">Applying for MATEX</td>
-            <td class="nhsuk-table__cell">03/11/2021</td>
-            <td class="nhsuk-table__cell">-3</td>
+            <td class="nhsuk-table__cell">18/09/2021</td>
+            <td class="nhsuk-table__cell">60</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -256,10 +256,10 @@ Content page example - NHS.UK prototype kit
 
             <td class="nhsuk-table__cell"><a href="URL-HERE">543217896</a></td>
             <td class="nhsuk-table__cell">17/11/2021</td>
-            <td class="nhsuk-table__cell">28</td>
+            <td class="nhsuk-table__cell">9</td>
             <td class="nhsuk-table__cell">Insufficient funds</td>
-            <td class="nhsuk-table__cell">20/10/2021</td>
-            <td class="nhsuk-table__cell">4</td>
+            <td class="nhsuk-table__cell">03/11/2021</td>
+            <td class="nhsuk-table__cell">28</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -275,10 +275,10 @@ Content page example - NHS.UK prototype kit
             <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">PECS</span></td>
             <td class="nhsuk-table__cell"><a href="URL-HERE">344356657</a></td>
             <td class="nhsuk-table__cell">17/11/2021</td>
-            <td class="nhsuk-table__cell">60</td>
+            <td class="nhsuk-table__cell">10</td>
             <td class="nhsuk-table__cell">Didn't get evidence</td>
             <td class="nhsuk-table__cell">18/09/2021</td>
-            <td class="nhsuk-table__cell">26</td>
+            <td class="nhsuk-table__cell">14</td>
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes">
 
@@ -294,11 +294,51 @@ Content page example - NHS.UK prototype kit
       </table>
     </div>
   </div>
+ 
+
+  <nav class="nhsuk-pagination" id="pagination-label">
+
+    <p class="nhsuk-u-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+    
+    <ul class="nhsuk-pagination__list">
+    
+      <li class="nhsuk-pagination__item  nhsuk-pagination__item--prev">
+        <a class="nhsuk-pagination__link" href="">Previous<span class="nhsuk-u-visually-hidden"> set of
+            pages</span></a>
+      </li>
+
+      <li class="nhsuk-pagination__item nhsuk-pagination__item--active">1</li>
+
+      <!--
+      <li class="nhsuk-pagination__item"><a class="nhsuk-pagination__link" href="/page=2">2</a></li>
+
+      <li class="nhsuk-pagination__item"><a class="nhsuk-pagination__link" href="/page=3">3</a></li>
+      -->
+
+      <li class="nhsuk-pagination__item  nhsuk-pagination__item--next">
+        <a class="nhsuk-pagination__link" href="">Next<span class="nhsuk-u-visually-hidden"> set of
+            pages</span></a>
+      </li>
+      
+    </ul>
+    <p class="nhsuk-pagination__results">Showing <b>1</b> of <b>1</b> result(s)</p>
+  </nav>
+
+</div>
+
+
+</div>
+</div>
+
+</main>
+</div>
+
   <!-- ==================================================================================== -->
   <!-- END TABLE -->
   <!-- ==================================================================================== -->
   ​ <p class="change-spacea"></p>
-  <a class="nhsuk-button nhsuk-button--secondary reset-button" id="search-button" href="" role="button">Remove</a>
+  <a class="nhsuk-button nhsuk-button--secondary reset-button" id="remove-warning-note" href="remove-warning-note" role="button">Remove</a>
   <br>
   <br>
 </div>
