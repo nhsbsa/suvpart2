@@ -1,0 +1,184 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+  
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-secondary-navigation__container">
+        <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+          <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+            <ul class="nhsuk-secondary-navigation__list">
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="test-screen">Back</a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="/me-journey/open-cases">
+                </a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="/me-journey/closed-cases"></a>
+              </li>
+              <!-- <li class="nhsuk-secondary-navigation__item login-details">
+                <a class="nhsuk-secondary-navigation__link" href="#">Sign out</a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item login-details">
+                <a class="nhsuk-secondary-navigation__link">joe.bloggs@nhs.net</a>
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+</nav>
+
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+
+
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+        
+<h1 class="nhsuk-u-margin-bottom-4">
+                <span role="text">
+               
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+                    <span class="nhsuk-u-visually-hidden">
+
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                
+              </label>
+              Username <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+               
+              </label>
+              Password <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+            
+            
+            
+            
+            
+          
+          
+                  
+                
+                </fieldset>   
+            
+              
+           
+
+
+          
+
+         
+
+       
+
+             
+          <a href="search-page"><button class="nhsuk-button" type="submit">Login</button></a>
+
+         <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
+
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+
+
+        </h3>
+
+       
+
+<script>
+  var maxLength = 375;
+  $('textarea').keyup(function () {
+    var length = $(this).val().length;
+    var length = maxLength - length;
+    $('#chars').text(length);
+  });
+</script>
+
+
+
+      
+
+
+      
+ 
+
+  
+
+    
+  
+    <!-- Custom JavaScript files can be added to this file -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+<!-- Add any custom scripts -->
+
+    <!-- For adding page specific JavsScript -->
+    
+  
+
+</html>
+        
+       
+        
+                    
+      ​
+              
+         
+     
+
+     
+
+
+
+        <!-- End of content -->
+
+    </div>
+
+</div>
+{% endblock %}
