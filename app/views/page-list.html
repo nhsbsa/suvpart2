@@ -22,10 +22,10 @@ Content page example - NHS.UK prototype kit
           <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
             <ul class="nhsuk-secondary-navigation__list">
               <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="/search-page">Back</a>
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="/search-page-no-tracker">Back</a>
               </li>
               <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" href="/tracker">Tracker
+                <a class="nhsuk-secondary-navigation__link" href="/page-list">Reports
                 </a>
               </li>
               <li class="nhsuk-secondary-navigation__item">
@@ -104,7 +104,7 @@ Content page example - NHS.UK prototype kit
             <div class="grid-row">
                 <div class="nhsuk-grid-column-full">
                     <div class="form-group nhsuk-u-margin-top-3">
-                        <a class="nhsuk-button" id="search-button" href="css-pcn-view-tracker" role="button">Search</a> &nbsp; &nbsp;&nbsp;&nbsp;<button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                        <a class="nhsuk-button" id="search-button" href="css-pcn-view" role="button">Search</a> &nbsp; &nbsp;&nbsp;&nbsp;<button class="nhsuk-button nhsuk-button--secondary" type="submit">
                           Reset
                         </button>
                     </div>
@@ -124,11 +124,16 @@ Content page example - NHS.UK prototype kit
               <table class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table" id="sortable">
                 <thead class="nhsuk-table__head">
                   <tr class="nhsuk-table__row">
-                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Reference</button></th>
-                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Name</button></th>
-                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Address</button></th>
-                    <th aria-sort="none" class="nhsuk-table__header" scope="col"><button data-index="0" onclick="sortTable()" type="button">Date of birth</button></th>
-                    <th aria-sort="none" class="nhsuk-table__header fixed-side" scope="col"><button data-index="0" onclick="sortTable()" type="button">Status</button></th>
+                    <th role="columnheader" class="" scope="col">
+                      Reference
+                      <th role="columnheader" class="" scope="col">
+                        Name
+                        <th role="columnheader" class="" scope="col">
+                          Address
+                          <th role="columnheader" class="" scope="col">
+                            Date of brith
+                            <th role="columnheader" class="" scope="col">
+                              Status
                   </tr>
                 </thead>
                 <tbody class="nhsuk-table__body">
