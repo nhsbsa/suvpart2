@@ -14,10 +14,9 @@ Content page example - NHS.UK prototype kit
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-
 <div class="nhsuk-secondary-navigation">
-  
-    <div class="nhsuk-grid-column-one-half">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
       <div class="nhsuk-secondary-navigation__container">
         <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
           <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
@@ -56,92 +55,25 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-</nav>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-heading-l">Add payment</h1>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label nhsuk-u-font-weight-bold" for="input-width-20">Balance due</label>
+      <span style="font-size:19px;">£</span> <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label nhsuk-u-font-weight-bold" for="input-width-20">Amount to pay</label>
+      <span style="font-size:19px;">£</span> <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+    
+    <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
+    
+    <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
+  </div>
+</div>
 
-<div class="nhsBSA-sidebar-container">
-
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
-
-
-      <div class="nhsuk-width-container-fluid">
-
-        <div class="nhsuk-main-wrapper" id="maincontent">
-        
-<h1 class="nhsuk-u-margin-bottom-4">
-                <span role="text">
-                  Add payment
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                    <span class="nhsuk-u-visually-hidden">
-
-            </div>
             
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="input-width-20">
-                <p class="nhsuk-u-font-weight-bold">Balance due<p></p>
-              </label>
-              £ <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="input-width-20">
-                <p class="nhsuk-u-font-weight-bold">Amount to pay<p></p>
-              </label>
-              £ <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-            </div>
-            
-            
-            
-            
-            
-          
-          
-                  
-                
-                </fieldset>   
-            
-              
-           
-
-
-          
-
-         
-
-       
-
-             
-          <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
-
-         <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
-
-            </div>
-
-          </div>
-
-
-
-
-
-        </div>
-
-      </div>
-
-
-        </h3>
-
-       
-
-<script>
-  var maxLength = 375;
-  $('textarea').keyup(function () {
-    var length = $(this).val().length;
-    var length = maxLength - length;
-    $('#chars').text(length);
-  });
-</script>
-
-
-
       
 
 
@@ -149,36 +81,4 @@ Content page example - NHS.UK prototype kit
  
 
   
-
-    
-  
-    <!-- Custom JavaScript files can be added to this file -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-<!-- Add any custom scripts -->
-
-    <!-- For adding page specific JavsScript -->
-    
-  
-
-</html>
-        
-       
-        
-                    
-      ​
-              
-         
-     
-
-     
-
-
-
-        <!-- End of content -->
-
-    </div>
-
-</div>
 {% endblock %}

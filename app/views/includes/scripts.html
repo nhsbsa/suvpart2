@@ -5,3 +5,12 @@
 {% endif %}
 
 <!-- Add any custom scripts -->
+<script>
+  // Note character counter
+  var maxLength = 2048;
+  $('textarea').keyup(function () {
+    var length = $(this).val().length;
+    var length = maxLength - length;
+    $('#chars').text(length);
+  });
+</script>
