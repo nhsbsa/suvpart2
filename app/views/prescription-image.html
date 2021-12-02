@@ -58,11 +58,12 @@ Content page example - NHS.UK prototype kit
 
    <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-one-half">
-         <h1 class="nhsuk-u-margin-bottom-4">Prescription image</h1>
+         <h1 class="nhsuk-heading-l">Prescription image</h1>
          <img class="nhsuk-image__img" src="/images/example-prescription-front.jpg" alt="an example of the front of a prescription" />
       </div>
 
-      <div class="nhsuk-grid-column-one-half">
+      <!-- 
+         <div class="nhsuk-grid-column-one-half">
          <div class="border-box"> 
             <div class="nhsuk-grid-row">
                <div class="nhsuk-grid-column-full">
@@ -160,7 +161,7 @@ Content page example - NHS.UK prototype kit
                         <li class="tab-link current1" data-tab1="tab-2">Notes</li>
                         <li class="tab-link" data-tab1="tab-1">Transactions</li>
                      </ul>
-                     <!-- NOTES -->
+                     <
                      <div id="tab-1" class="tab1-content rpads">
                         <p><a href="/pay-pcn"> Add payment</a> &nbsp;&nbsp; <a href="/easement-surcharge"> Add easement</a></p>
                            
@@ -215,7 +216,7 @@ Content page example - NHS.UK prototype kit
                            </table>
                         </div>
                      </div>
-                     <!-- TRANSACTIONS -->
+                  
                      <div id="tab-2" class="tab1-content current1">
                         <p><a href="/note-pcn-info"> Add note</a></p>
                         <table class="notes-table">
@@ -264,17 +265,8 @@ Content page example - NHS.UK prototype kit
                </div>
             </div>
          </div>
-      </div>
+      </div>-->
    </div>
-   
-   
-   <script>
-      var maxLength = 375;
-      $('textarea').keyup(function () {
-         var length = $(this).val().length;
-         var length = maxLength - length;
-         $('#chars').text(length);
-      });
-   </script>
+
 
 {% endblock %}
