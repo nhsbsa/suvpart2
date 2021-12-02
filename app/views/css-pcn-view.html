@@ -57,14 +57,6 @@ Content page example - NHS.UK prototype kit
 {% block content %}
 
 <div class="nhsuk-grid-row">
-   <style>
-      .border-box {
-         border: 10px solid #DEE0E2;
-         background-color: #F8F8F8;
-         display:block;
-         padding: 20px;
-      }
-   </style>
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box">   
          <div class="nhsuk-grid-row">
@@ -78,7 +70,7 @@ Content page example - NHS.UK prototype kit
                   <input class="nhsuk-input" id="f-name" name="first-name-2" type="text" value="Joe">
                </div>
                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="s-name">First name</label>
+                  <label class="nhsuk-label" for="s-name">Last name</label>
                   <input class="nhsuk-input" id="s-name" name="first-name-2" type="text" value="Bloggs">
                </div>
                <div class="nhsuk-form-group">
@@ -216,97 +208,97 @@ Content page example - NHS.UK prototype kit
    </div>
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box"> 
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-full">
-            <h1 class="nhsuk-heading-m pResize">PCN 06183129565: Open</h1>
-            <p class="nhsuk-heading-m"><a href="/prescription-image"> View prescription</a></p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+               <h1 class="nhsuk-heading-m pResize">PCN 06183129565: Open</h1>
+               <p class="nhsuk-heading-m"><a href="/prescription-image"> View prescription</a></p>
+            </div>
+            <!--<h1 class="nhsuk-heading-m pResize">Direct Debit</h1>-->
          </div>
-         <!--<h1 class="nhsuk-heading-m pResize">Direct Debit</h1>-->
-      </div>
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
-            <p class="pResize">£26.40</p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
+               <p class="pResize">£26.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
+               <p class="pResize">not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
+               <p class="pResize">3</p>
+            </div>
          </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
-            <p class="pResize">not sent</p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+               <p class="pResize">£100.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+               <p class="pResize">10/09/2018</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
+               <p class="pResize">29/05/2018</p>
+            </div>
          </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
-            <p class="pResize">3</p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+               <p class="pResize">£50.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+               <p class="pResize">10/10/2018</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
+               <p class="pResize">30/06/2018</p>
+            </div>
          </div>
-      </div>
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
-            <p class="pResize">£100.00</p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+               <p class="pResize">£176.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+               <p class="pResize">07/11/2018</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p class="pResize">(M) Has valid NHS Tax Credit Exemption Certificate</p>
+            </div>
          </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
-            <p class="pResize">10/09/2018</p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+               <p class="pResize">£10.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
+               <p class="pResize">Yes</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
+               <p class="pResize">Electronic</p>
+            </div>
          </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
-            <p class="pResize">29/05/2018</p>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+               <p class="pResize">£166.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
+               <p><a href="/dispenser">FMMMM</a></p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+               <p class="pResize">No</p>
+            </div>
          </div>
-      </div>
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
-            <p class="pResize">£50.00</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
-            <p class="pResize">10/10/2018</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
-            <p class="pResize">30/06/2018</p>
-         </div>
-      </div>
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
-            <p class="pResize">£176.40</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
-            <p class="pResize">07/11/2018</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
-            <p class="pResize">(M) Has valid NHS Tax Credit Exemption Certificate</p>
-         </div>
-      </div>
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
-            <p class="pResize">£10.00</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
-            <p class="pResize">Yes</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
-            <p class="pResize">Electronic</p>
-         </div>
-      </div>
-      <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
-            <p class="pResize">£166.40</p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
-            <p><a href="/dispenser">FMMMM</a></p>
-         </div>
-         <div class="nhsuk-grid-column-one-third">
-            <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
-            <p class="pResize">No</p>
-         </div>
-      </div>
          <!-- <div class="nhsuk-grid-column-one-third">  
                <h2 class="nhsuk-heading-s">Direct Debit status</h2>
             <p class="pResize">Active</p> 
@@ -320,128 +312,115 @@ Content page example - NHS.UK prototype kit
             <!-- <h2 class="nhsuk-heading-s">Direct Debit status</h2>
             <p class="pResize">Active</p>
             <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
-            <p class="pResize">0012345678</p> -->
-       <div class="nhsuk-grid-row">
-         <div class="nhsuk-grid-column-full rpads">
-            <div class="container rpads">
-               <ul class="tabs1 rpads">
-                  <li class="tab-link current1" data-tab1="tab-2">Notes</li>
-                  <li class="tab-link" data-tab1="tab-1">Transactions</li>
-                  <!-- <li class="tab-link" data-tab1="tab-5">Payment Plans</li> -->
-               </ul>
-               <!-- NOTES -->
-               <div id="tab-1" class="tab1-content rpads">
-                  <p><a href="/pay-pcn"> Add payment</a> &nbsp;&nbsp; <a href="/easement-surcharge"> Add easement</a></p>
+            <p class="pResize">0012345678</p>
+         -->
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full rpads">
+               <div class="container rpads">
+                  <ul class="tabs1 rpads">
+                     <li class="tab-link current1" data-tab1="tab-2">Notes</li>
+                     <li class="tab-link" data-tab1="tab-1">Transactions</li>
+                     <!-- <li class="tab-link" data-tab1="tab-5">Payment Plans</li> -->
+                  </ul>
+                  <!-- NOTES -->
+                  <div id="tab-1" class="tab1-content rpads">
+                     <p><a href="/pay-pcn"> Add payment</a> &nbsp;&nbsp; <a href="/easement-surcharge"> Add easement</a></p>
                         
-                  <div class="makeScrollable1Mvp" style="    margin-bottom: 30px;     height: auto;">
-                     <table class="internal-table">
-                        <thead>
-                           <tr>
-                              <th>Date</th>
-                              <th>User</th>
-                              <th>Amount</th>
-                              <th>For</th>
-                              <th>Type</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>31/07/2017 15.45</td>
-                              <td>System</td>
-                              <td>-£8.60</td>
-                              <td>Failed payment</td>
-                              <td>Direct Debit</td>
-                           </tr>
-                           <tr>
-                              <td>30/07/2017 15.45</td>
-                              <td>System</td>
-                              <td>£8.60</td>
-                              <td>PCN</td>
-                              <td>Direct Debit</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/2017 13.30</td>
-                              <td>System</td>
-                              <td>£51</td>
-                              <td>PCN</td>
-                              <td>Cheque</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/2017 13.30</td>
-                              <td>System</td>
-                              <td>£51</td>
-                              <td>Surcharge</td>
-                              <td>Surcharge added</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/2017 13.30</td>
-                              <td>System</td>
-                              <td>£58.60</td>
-                              <td>PCN</td>
-                              <td>Payment request</td>
-                           </tr>
-                        </tbody>
-                     </table>
+                     <div class="makeScrollable1Mvp" style="    margin-bottom: 30px;     height: auto;">
+                        <table class="internal-table">
+                           <thead>
+                              <tr>
+                                 <th>Date</th>
+                                 <th>User</th>
+                                 <th>Amount</th>
+                                 <th>For</th>
+                                 <th>Type</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>31/07/2017 15.45</td>
+                                 <td>System</td>
+                                 <td>-£8.60</td>
+                                 <td>Failed payment</td>
+                                 <td>Direct Debit</td>
+                              </tr>
+                              <tr>
+                                 <td>30/07/2017 15.45</td>
+                                 <td>System</td>
+                                 <td>£8.60</td>
+                                 <td>PCN</td>
+                                 <td>Direct Debit</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>System</td>
+                                 <td>£51</td>
+                                 <td>PCN</td>
+                                 <td>Cheque</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>System</td>
+                                 <td>£51</td>
+                                 <td>Surcharge</td>
+                                 <td>Surcharge added</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/2017 13.30</td>
+                                 <td>System</td>
+                                 <td>£58.60</td>
+                                 <td>PCN</td>
+                                 <td>Payment request</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
                   </div>
-               </div>
-               <!-- TRANSACTIONS -->
-               <div id="tab-2" class="tab1-content current1">
-                  <!-- <div class="makeScrollable1Mvp"> -->
-                     <p>
-                        <a href="/note-pcn-info"> Add note</a>
-                        </p>
-                        
-                     <div></div>
+                  <!-- TRANSACTIONS -->
+                  <div id="tab-2" class="tab1-content current1">
+                     <!-- <div class="makeScrollable1Mvp"> -->
+                     <p><a href="/note-pcn-info"> Add note</a></p>
+                     <table class="notes-table">
                         <thead>
                            <tr>
-                              <p class="nhsuk-u-font-weight-bold"><th>Date</th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <th>Agent</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <th>Comments</th>
+                              <th class="nhsuk-u-font-weight-bold">Date</th>
+                              <th class="nhsuk-u-font-weight-bold">Agent</th>
+                              <th class="nhsuk-u-font-weight-bold">Comments</th>
                               <!--<th><a href="addNote" style="float: right;" ="" onClick="MyWindow=window.open('addNote','MyWindow','width=600,height=475'); return false;">+ Add note</a></th> -->
-                              <th></th>
-                              <th></th>
-                              <th></th>
-                              <th></th>
-                              <th></th>
-                              <th></th>
                            </tr>
                         </thead>
-                     </table>
-                  <div class="makeScrollable1Mvp">
-                     <div>
-                              </div><table class="notes-table">
                         <tbody>
                            <tr>
-                                 <td>27/07/2017 13.00</td>
-                                 <td>Tim</td>
-                                 <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call escalated</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/2017 13.30</td>
-                                 <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/2017 13.00</td>
-                                 <td>Tim</td>
-                                 <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call escalated</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/2017 13.30</td>
-                                 <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/2017 13.30</td>
-                                 <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/2017 13.30</td>
-                                 <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
-                              </tr>
-                           
+                              <td>27/07/2017 13.00</td>
+                              <td>Tim</td>
+                              <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call escalated</td>
+                           </tr>
+                           <tr>
+                              <td>27/07/2017 13.30</td>
+                              <td>Joanne</td>
+                              <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                           </tr>
+                           <tr>
+                              <td>27/07/2017 13.00</td>
+                              <td>Tim</td>
+                              <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call escalated</td>
+                           </tr>
+                           <tr>
+                              <td>27/07/2017 13.30</td>
+                              <td>Joanne</td>
+                              <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                           </tr>
+                           <tr>
+                              <td>27/07/2017 13.30</td>
+                              <td>Joanne</td>
+                              <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                           </tr>
+                           <tr>
+                              <td>27/07/2017 13.30</td>
+                              <td>Joanne</td>
+                              <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                           </tr>
                         </tbody>
                      </table>
                   </div>
@@ -486,8 +465,8 @@ Content page example - NHS.UK prototype kit
                   <br>
                   <br> 
                   <br> -->
-                  <!-- <p><a href="" onClick="MyWindow=window.open('easement','MyWindow','width=600,height=600'); return false;">Add easment</a></p> -->
-                  <br>
+                  <!-- <p><a href="" onClick="MyWindow=window.open('easement','MyWindow','width=600,height=600'); return false;">Add easment</a></p>
+               -->
             </div>
          </div>
       </div>
