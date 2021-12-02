@@ -56,174 +56,58 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-</nav>
-<div class="nhsBSA-sidebar-container">
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
-      <div class="nhsuk-width-container-fluid"></div>
-
-        <div class="nhsuk-main-wrapper" id="maincontent">
-        
-<h1 class="nhsuk-u-margin-bottom-4">
-                <span role="text">Place penalty on lock
-                  
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                    <span class="nhsuk-u-visually-hidden">
-            </div>
-            <div class="nhsuk-grid-column-one-third">
-
-              <div class="nhsuk-form-group">
-                
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="select-1">
-                    <p class="nhsuk-u-font-weight-normal">Time on lock<p>
-                  </label>
-                  <select class="nhsuk-select" id="select-1" name="select-1">
-                    <option value="1">14 days</option>
-                    <option value="2" selected>28 days</option>
-                    <option value="3" selected>30 days    
-                    </option>
-                    <option value="2" selected>60 days</option>
-                    <option value="2" selected>60 days check med/mat</option>
-                    <option value="2" selected>90 days</option>
-                  </select>
-                </div>  
-          &nbsp;
-          &nbsp;    
-              
-  <form></form>
-    <p></p> 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-heading-l">Place penalty on lock</h1>
     <div class="nhsuk-form-group">
-  
-    <p></p>
-  
-        <div class="nhsuk-checkboxes">
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-              Do not add to tracker <p></p>
-            </label>
-          </div>
-  
-         
-  
-         
-  
+      <label class="nhsuk-label" for="select-1">Time on lock</label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="1">14 days</option>
+        <option value="2" selected>28 days</option>
+        <option value="3">30 days</option>
+        <option value="2">60 days</option>
+        <option value="2">60 days check med/mat</option>
+        <option value="2">90 days</option>
+      </select>
+    </div>  
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-checkboxes">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">Do not add to tracker</label>
         </div>
-      </fieldset>
-  
-    </div>
-  
-  </form>
-            </div>
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="select-1">
-                <p class="nhsuk-u-font-weight-normal">Reason for locking<p>
-              </label>
-              <select class="nhsuk-select" id="select-1" name="select-1">
-                <option value="1">Applying for MEDEX</option>
-                <option value="2" selected>Applying for MATEX</option>
-                <option value="3" selected>Financial hardship (HC2) 
-                <option value="4">Sending signed delcaration</option>
-                <option value="5" selected>Sending benefit evidence</option>
-                <option value="6" selected>Didn't get evidence
-                <option value="7">Delay getting letter</option>
-                <option value="8" selected>Insufficient funds to pay</option>
-                <option value="9" selected>Complaint
-                <option value="10">Long-life exemption</option>
-                <option value="11" selected>COVID-19</option>
-                <option value="12" selected>RO Process
-                <option value="13">Other</option>
-                </option>
-              </select>
-            </div>  
-          </div>
-
-          <div class="nhsuk-grid-row">
-
-            <div class="nhsuk-grid-column-full">
-
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="example">
-                  Note
-                </label>
-                <textarea class="nhsuk-textarea" id="example" name="example" aria-describedby="example-hint"
-                  rows="10" maxlength="375"></textarea>
-                <p class="nhsuk-hint" style="margin-top: 10px;">You have <span id="chars">375</span> characters
-                  remaining</p>
-              </div>
-
-              <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
-
-              <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
-
-            </div>
-
-          </div>
-
-
-
-
-
-        </div>
-
       </div>
-
-
-        </h3>
-
-       
-
-<script>
-  var maxLength = 375;
-  $('textarea').keyup(function () {
-    var length = $(this).val().length;
-    var length = maxLength - length;
-    $('#chars').text(length);
-  });
-</script>
-
-
-
+    </div>
       
-
-
-      
- 
-
-  
-
-    
-  
-    <!-- Custom JavaScript files can be added to this file -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-<!-- Add any custom scripts -->
-
-    <!-- For adding page specific JavsScript -->
-    
-  
-
-</html>
-        
-       
-        
-                    
-      ​
-              
-         
-     
-
-     
-
-
-
-        <!-- End of content -->
-
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-2">Reason for locking</label>
+      <select class="nhsuk-select" id="select-2" name="select-1">
+        <option value="1">Applying for MEDEX</option>
+        <option value="2" selected>Applying for MATEX</option>
+        <option value="3">Financial hardship (HC2)</option>
+        <option value="4">Sending signed delcaration</option>
+        <option value="5">Sending benefit evidence</option>
+        <option value="6">Didn't get evidence</option>
+        <option value="7">Delay getting letter</option>
+        <option value="8">Insufficient funds to pay</option>
+        <option value="9">Complaint</option>
+        <option value="10">Long-life exemption</option>
+        <option value="11">COVID-19</option>
+        <option value="12">RO Process</option>
+        <option value="13">Other</option>
+      </select>
     </div>
 
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">Note</label>
+      <textarea class="nhsuk-textarea" id="example" name="example" rows="8" style="font-size:19px;"></textarea>
+      <p class="nhsuk-hint">You have <span id="chars">2048</span> characters remaining</p>
+    </div> 
+
+    <a href="applicant-view-personal-details" class="nhsuk-button" role="button">Submit</a>
+
+    <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
+
+  </div>
 </div>
 {% endblock %}
