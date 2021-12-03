@@ -56,118 +56,19 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-heading-l">Add note</h1>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">Note</label>
+      <textarea class="nhsuk-textarea" id="example" name="example" rows="8" style="font-size:19px;"></textarea>
+      <p class="nhsuk-hint">You have <span id="chars">2048</span> characters remaining</p>
+    </div>  
 
-</nav>
-
-<div class="nhsBSA-sidebar-container">
-
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
-
-
-      <div class="nhsuk-width-container-fluid">
-
-        <div class="nhsuk-main-wrapper" id="maincontent">
-        
-<h1 class="nhsuk-u-margin-bottom-4">
-                <span role="text">
-                  Add note
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                    <span class="nhsuk-u-visually-hidden">
-
-            </div>
-            <div class="nhsuk-grid-column-one-third">
-
-              <div class="nhsuk-form-group">
-
-            </div>
-
-
-          </div>
-
-          <div class="nhsuk-grid-row">
-
-            <div class="nhsuk-grid-column-full">
-
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="example">
-                  Note
-                </label>
-                <textarea class="nhsuk-textarea" id="example" name="example" aria-describedby="example-hint"
-                  rows="10" maxlength="375"></textarea>
-                <p class="nhsuk-hint" style="margin-top: 10px;">You have <span id="chars">375</span> characters
-                  remaining</p>
-              </div>
-
-              <a href="applicant-view-personal-details"><button class="nhsuk-button" type="submit">Save and continue</button></a>
-
-              <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
-
-            </div>
-
-          </div>
-
-
-
-
-
-        </div>
-
-      </div>
-
-
-        </h3>
-
-       
-
-<script>
-  var maxLength = 375;
-  $('textarea').keyup(function () {
-    var length = $(this).val().length;
-    var length = maxLength - length;
-    $('#chars').text(length);
-  });
-</script>
-
-
-
-      
-
-
-      
- 
-
-  
-
+    <a href="applicant-view-personal-details" class="nhsuk-button" role="button">Submit</a>
     
-  
-    <!-- Custom JavaScript files can be added to this file -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-<script src="/js/main.js"></script>
+    <p class="nhsuk-u-margin-top-0"><a href="home">Cancel</a></p>
 
-<!-- Add any custom scripts -->
-
-    <!-- For adding page specific JavsScript -->
-    
-  
-
-</html>
-        
-       
-        
-                    
-      ​
-              
-         
-     
-
-     
-
-
-
-        <!-- End of content -->
-
-    </div>
-
+  </div>
 </div>
 {% endblock %}
