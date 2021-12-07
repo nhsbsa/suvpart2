@@ -23,7 +23,7 @@ Content page example - NHS.UK prototype kit
                <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
                   <ul class="nhsuk-secondary-navigation__list">
                      <li class="nhsuk-secondary-navigation__item">
-                        <a class="nhsuk-secondary-navigation__link" aria-current="page"
+                        <a class="nhsuk-secondary-navigation__link" aria-current="page" 
                      </li>
                      <li class="nhsuk-secondary-navigation__item">
                         <a class="nhsuk-secondary-navigation__link" href="/me-journey/open-cases">
@@ -65,58 +65,30 @@ Content page example - NHS.UK prototype kit
       <div class="nhsuk-grid-column-one-half">
 
          <h1 class="nhsuk-u-margin-bottom-4">
-            Unlock penalty
+            Add payment
          </h1>
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="select-1">
-              
+              <p class="nhsuk-u-font-weight-bold">Payment type<p>
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1">Cheque </option>
+          <option value="2" selected>Postal order</option>
+          <option value="3" selected>Cash</option>
+          <option value="4" selected>Bank transfer</option>
+          <option value="4" selected></option>
+          
+          
             </select>
-
-            <form>
-
-               <div class="nhsuk-form-group">
-             
-                 <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                     <h1 class="nhsuk-fieldset__heading">
-                      
-                     </h1>
-                   </legend>
-             
-                   <div class="nhsuk-hint" id="example-hint">
-                    
-                   </div>
-             
-                   <div class="nhsuk-checkboxes">
-             
-                     <div class="nhsuk-checkboxes__item">
-                      
-
-                     </div>
-        
-              
-  <form></form>
-    <p></p> 
-                     <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="select-1">
-                          <p class="nhsuk-u-font-weight-bold">Reason for unlocking<p>
-                        </label>
-                        <select class="nhsuk-select" id="select-1" name="select-1">
-                      <option value="1">Other </option>
-                      <option value="2" selected>Locked accidentally</option>
-                      <option value="2" selected></option>
-                 
-                        </select>       
-             
-                
-             
-                   </div>
-                 </fieldset>
-             
-               </div>
-             
-             </form>
           </div>  
+          &nbsp;&nbsp;
+          &nbsp;
+          <label class="nhsuk-label" for="select-1">
+            <p class="nhsuk-u-font-weight-bold">Payment amount<p>
+            </label>
+            £ <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text"> 
+           
+       
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
                Note
@@ -131,25 +103,7 @@ Content page example - NHS.UK prototype kit
             <div class="nhsuk-form-group">
           
               
-               <div>
-
-                  
-                
-                    
-                    <span class="nhsuk-error-message" id="example-error-error">
-                      <span class="nhsuk-u-visually-hidden">Error:</span> Record should be checked before unlocking 
-                    </span>
-                
-                    <div class="nhsuk-radios">
-                
-                      
-                
-                      
-                
-                    </div>
-                  </fieldset>
-                
-                </div>
+          
                
           
                 <div class="nhsuk-checkboxes">
@@ -158,7 +112,7 @@ Content page example - NHS.UK prototype kit
                     
                     </label>
                   </div>
-         
+          <p>
                   <div class="nhsuk-checkboxes__item">
                    
                     </label>
@@ -170,19 +124,19 @@ Content page example - NHS.UK prototype kit
             </div>
           
           </form>
-         <a href="css-pcn-view-extend-unlock"><button class="nhsuk-button" type="submit">Save and
+         <a href="css-pcn-backend"><button class="nhsuk-button" type="submit">Save and
                continue</button></a>
 
-         <p class="nhsuk-u-margin-top-0"><a href="css-pcn-view-extend-unlock">Cancel</a></p>
+         <p class="nhsuk-u-margin-top-0"><a href="css-pcn-backend">Cancel</a></p>
 
       </div>
 
       <div class="nhsuk-grid-column-one-half">
          <div class="nhsuk-grid-row highlight1">
-            <h1 class="nhsuk-heading-m pResize">PCN 06183129565: Open</h1>
+            <h1 class="nhsuk-heading-m pResize">PCN 223456789: Open</h1>
             <!--<h1 class="nhsuk-heading-m pResize">Direct Debit</h1>-->
-            <div class="nhsuk-grid-column-one-third pcnDet1">
-                   <h2 class="nhsuk-heading-s">Prescription</h2>
+            <div class="nhsuk-grid-column-one-third lpads pcnDet1">
+               <h2 class="nhsuk-heading-s">Prescription</h2>
                   <p class="pResize">£26.40</p>
                   <h2 class="nhsuk-heading-s">Penalty</h2>
                   <p class="pResize">£100.00</p>
@@ -194,26 +148,24 @@ Content page example - NHS.UK prototype kit
                   <p class="pResize">£10.00</p>
                   <h2 class="nhsuk-heading-s">Balance due</h2>
                   <p class="pResize">£166.40</p>
-                  
                <!--  <h2 class="nhsuk-heading-s">Direct Debit status</h2>
                   <p class="pResize">Active</p> -->
             </div>
             <div class="nhsuk-grid-column-one-third pcnDet1">
-                <h2 class="nhsuk-heading-s">Enquiry sent </h2>
-                  <p class="pResize">not sent</p>
-                  <h2 class="nhsuk-heading-s">PCN sent</h2>
-                  <p class="pResize">10/09/2018</p>
-                  <h2 class="nhsuk-heading-s">Surcharge sent</h2>
-                  <p class="pResize">10/10/2018</p>
-                  <h2 class="nhsuk-heading-s">Respond by</h2>
-                  <p class="pResize">07/11/2018</p>
-                  <h2 class="nhsuk-heading-s">DWP checked</h2>
-                  <p class="pResize">Yes</p>
-                  <h2 class="nhsuk-heading-s">Dispenser</h2>
-                  <h2 class="nhsuk-heading-s">FMMMM</h2>
-                  <h2 class="nhsuk-heading-s">Evidence not seen?</h2>
-                  <p class="pResize">No</p>
-               
+               <h2 class="nhsuk-heading-s">Enquiry sent </h2>
+               <p class="pResize">not sent</p>
+               <h2 class="nhsuk-heading-s">PCN sent</h2>
+               <p class="pResize">10/09/2018</p>
+               <h2 class="nhsuk-heading-s">Surcharge sent</h2>
+               <p class="pResize">10/10/2018</p>
+               <h2 class="nhsuk-heading-s">Respond by</h2>
+               <p class="pResize">07/11/2018</p>
+               <h2 class="nhsuk-heading-s">DWP checked</h2>
+               <p class="pResize">Yes</p>
+               <h2 class="nhsuk-heading-s">Dispenser</h2>
+               <a href=""> FMMMM</a>
+               <h2 class="nhsuk-heading-s">Evidence not seen?</h2>
+               <p class="pResize">No</p>
                <!-- <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
                   <p class="pResize">0012345678</p> -->
             </div>
@@ -228,6 +180,7 @@ Content page example - NHS.UK prototype kit
                <p class="pResize">(M) Has valid NHS Tax Credit Exemption Certificate</p>
                <h2 class="nhsuk-heading-s">Source</h2>
                <p class="pResize">Electronic</p>
+               
                <!--<p>Electronic</p>-->
                <!-- DD set-up -->
                <!-- <h2 class="nhsuk-heading-s">Direct Debit status</h2>
@@ -264,7 +217,7 @@ Content page example - NHS.UK prototype kit
                                  <td>31/07/2017 15.45</td>
                                  <td>System</td>
                                  <td>-£8.60</td>
-                                 <td>Failed payment</td>
+                                 <td>Adjustment</td>
                                  <td>Direct Debit</td>
                               </tr>
                               <tr>
@@ -336,34 +289,34 @@ Content page example - NHS.UK prototype kit
                               <tr>
                                  <td>27/07/2017 13.00</td>
                                  <td>Tim</td>
-                                 <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call
-                                    escalated</td>
+                                 <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL
+                                    ESCALATED</td>
                               </tr>
                               <tr>
                                  <td>27/07/2017 13.30</td>
                                  <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF 27/08/17</td>
                               </tr>
                               <tr>
                                  <td>27/07/2017 13.00</td>
                                  <td>Tim</td>
-                                 <td>Cust told pay half to avoid surcharge. Cust non compliant, demanded manager. Call
-                                    escalated</td>
+                                 <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL
+                                    ESCALATED</td>
                               </tr>
                               <tr>
                                  <td>27/07/2017 13.30</td>
                                  <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF 27/08/17</td>
                               </tr>
                               <tr>
                                  <td>27/07/2017 13.30</td>
                                  <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF 27/08/17</td>
                               </tr>
                               <tr>
                                  <td>27/07/2017 13.30</td>
                                  <td>Joanne</td>
-                                 <td>Info repeated as above. Cust paid half, agreed to pay next half 27/08/17</td>
+                                 <td>NFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF 27/08/17</td>
                               </tr>
    
                            </tbody>
