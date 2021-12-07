@@ -402,3 +402,12 @@ tr.pecs-row.hide, tr.decs-row.hide {
   border: 0 !important;
   white-space: nowrap !important;
 }
+
+// style for cheque number and date (inline inputs / errors)
+.cheque {
+  width: 45%;
+  display: inline-block;
+}
+.inline-error {
+  display: inline;
+}
