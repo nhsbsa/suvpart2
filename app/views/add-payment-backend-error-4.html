@@ -64,18 +64,13 @@ Content page example - NHS.UK prototype kit
    <div class="nhsuk-grid-column-one-half">
 
       <h1 class="nhsuk-u-margin-bottom-4">
-         Add payment
+         Add failed payment
       </h1>
       <div class="nhsuk-form-group">
          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-           Payment type
+        
          </label>
-         <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1">Cheque </option>
-            <option value="2" selected>Postal order</option>
-            <option value="3" selected>Cash</option>
-            <option value="4" selected>Bank transfer</option>
-            <option value="4" selected></option>
+        
 
 
          </select>
@@ -84,26 +79,28 @@ Content page example - NHS.UK prototype kit
       <div class="nhsuk-form-group">
          <div class="cheque">
             <label class="nhsuk-label nhsuk-u-font-weight-bold" for="cheque-number">
-            Cheque Number
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="cheque-number" name="cheque-number" type="text">
-         </div>
-         <div class="cheque">
-            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="cheque-number">
-            Cheque Date
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="cheque-number" name="cheque-number" type="text">
-            <p class="inline-error nhsuk-error-message">Invalid date</p>
-         </div>
+            Failed amount
+         </label>
+         -£ <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="cheque-number" name="cheque-number" type="text">
+         <p class="inline-error nhsuk-error-message"></p>    <p class="inline-error nhsuk-error-message">Invalid failed amount</p>
       </div>
+  
+         <div class="cheque">
+           
+         </label>
+         
+      </div>
+         </div>
+   
 
       <div class="nhsuk-form-group">
          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-            Payment amount
+        
          </label>
-         £ <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="address-postcode" name="address-postcode" type="text">
-         <p class="inline-error nhsuk-error-message">Invalid payment amount</p>
+          </label>
+         
       </div>
+    
 
 
       <div class="nhsuk-form-group">
