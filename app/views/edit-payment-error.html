@@ -64,64 +64,42 @@ Content page example - NHS.UK prototype kit
    <div class="nhsuk-grid-column-one-half">
 
       <h1 class="nhsuk-u-margin-bottom-4">
-         Balance transfer
+         Edit payment
       </h1>
       <div class="nhsuk-form-group">
          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-           PCN transferring to
+        
          </label>
-         <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1">PCN </option>
-            <option value="2" selected>Other</option>
-            <option value="4" selected></option>
+        
 
 
          </select>
       </div>
 
       <div class="nhsuk-form-group">
-         
+         <div class="cheque">
             <label class="nhsuk-label nhsuk-u-font-weight-bold" for="cheque-number">
-               <div class="nhsuk-form-group">
-                  <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-                     PCN number
-                     <div class=“nhsuk-grid-column-two-thirds”></div>
-                  </label>
-                   <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="address-postcode" name="address-postcode" type="text">
-                   <p class="inline-error nhsuk-error-message">Transfer cannot be done between PECS/DECS/BECS</p>
-               </div>
-            </label>
-        
-         
-         
-            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="cheque-number">
-       
-            </label>
-            
+            Amount
+         </label>
+         £ <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="cheque-number" name="cheque-number" type="text">
+         <p class="inline-error nhsuk-error-message"></p>    <p class="inline-error nhsuk-error-message">Invalid amount</p>
+      </div>
+  
+         <div class="cheque">
+           
+         </label>
          
       </div>
-
-      <div class="nhsuk-form-group">
-         <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-            Amount to transfer
-        
-            </label>
-           £ <input class="nhsuk-input nhsuk-input--width-10" id="cheque-number" name="cheque-number" type="text">
          </div>
-     
+   
+
       <div class="nhsuk-form-group">
          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-           Reason
+        
          </label>
-         <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1">Overpayment</option>
-            <option value="2" selected>Incorrect transfer</option>
-            <option value="4" selected></option>
-
-
-         </select>
+          </label>
+         
       </div>
-
       <div class="nhsuk-form-group">
          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
            Transaction type
@@ -130,14 +108,13 @@ Content page example - NHS.UK prototype kit
             <option value="1">Cheque</option>
             <option value="2" selected>Postal order</option>
             <option value="2" selected>Cash</option>
-            <option value="2" selected>Credit card</option>
-            <option value="2" selected>Debit card</option>
             <option value="2" selected>Bank transfer</option>
             <option value="4" selected></option>
 
 
          </select>
       </div>
+
 
       <div class="nhsuk-form-group">
          <label class="nhsuk-label" for="example">
