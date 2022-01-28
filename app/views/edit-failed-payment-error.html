@@ -81,12 +81,11 @@ Content page example - NHS.UK prototype kit
          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="cheque-number">
             <div class="nhsuk-form-group">
                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-                
+                  Failed amount
                   <div class=“nhsuk-grid-column-two-thirds”></div>
-                  <label class="nhsuk-label" for="select-1">
-                     <p class="nhsuk-u-font-weight-bold">Failed amount<p>
-                     </label>
-                     -£ <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" value="9" > 
+               </label>
+                -£<input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="address-postcode" name="address-postcode" type="text">
+                <p class="inline-error nhsuk-error-message">Amount cannot be greater than the paid amount</p>
             </div>
          </label>
          <div class="cheque">
