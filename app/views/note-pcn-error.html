@@ -64,13 +64,10 @@ Content page example - NHS.UK prototype kit
 
       <div class="nhsuk-grid-column-one-half">
          
-
          <h1 class="nhsuk-u-margin-bottom-4">
             Create note
          </h1>
 
-         
-           
          <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
             <h2 class="nhsuk-error-summary__title" id="error-summary-title">
               There is an error
@@ -86,22 +83,17 @@ Content page example - NHS.UK prototype kit
               </ul>
             </div>
           </div>
+
+         <form action="note-pcn" method="POST" id="form">
+            <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+               Notes
+            </label>
+            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);">{{data['message']}}</textarea>
+            <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
          
+         </div>
 
-
-
-         
-<form id="form"><div class="nhsuk-form-group">
-   <label class="nhsuk-label" for="example">
-      Notes
-   </label>
-   <textarea class="nhsuk-textarea" name="message" id="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
-   <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
-</div></form>
-       
-
-
-          <form>
 
             <div class="nhsuk-form-group">
           
@@ -132,16 +124,22 @@ Content page example - NHS.UK prototype kit
               </fieldset>
           
             </div>
+            <a><button class="nhsuk-button" id="button" type="submit">Submit</button></a>
+         </form>
           
-          </form>
 
-         <script>
-            
+          
+
+
+
+        
          
-         </script> 
+   
 
 
-         <a><button class="nhsuk-button" type="submit" onclick="charError()">Submit</button></a>
+
+
+
 
          <p class="nhsuk-u-margin-top-0"><a href="css-pcn-view">Cancel</a></p>
 

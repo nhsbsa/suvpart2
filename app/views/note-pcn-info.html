@@ -68,12 +68,12 @@ Content page example - NHS.UK prototype kit
             Create note
          </h1>
 
-         <form id="form">
+         <form action="note-pcn" method="POST" id="form">
             <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
                Notes
             </label>
-            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);" onkeyup="charError(this);"></textarea>
+            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
             <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
          
          </div>
@@ -109,7 +109,7 @@ Content page example - NHS.UK prototype kit
           
             </div>
             <a><button class="nhsuk-button" id="button" type="submit">Submit</button></a>
-          </form>
+         </form>
           
 
           
