@@ -68,15 +68,15 @@ Content page example - NHS.UK prototype kit
             Create note
          </h1>
 
-         <div class="nhsuk-form-group">
+         <form action="note-pcn-extend" method="POST" id="form">
+            <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-               Note
+               Notes
             </label>
-            <textarea class="nhsuk-textarea" id="example" name="example" aria-describedby="example-hint"
-               rows="10" maxlength="375"></textarea>
-               <p class="nhsuk-hint" style="margin-top: 10px;"> <span id="chars">0/2048</span> </p>
+            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
+            <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
          </div>
-         <form>
+         
 
             <div class="nhsuk-form-group">
           
@@ -107,9 +107,9 @@ Content page example - NHS.UK prototype kit
               </fieldset>
           
             </div>
-          
+            <a><button class="nhsuk-button" id="button" type="submit">Submit</button></a>
           </form>
-         <a href="css-pcn-view-extend-unlock"><button class="nhsuk-button" type="submit">Submit</button></a>
+         
 
          <p class="nhsuk-u-margin-top-0"><a href="css-pcn-view-extend-unlock">Cancel</a></p>
 
