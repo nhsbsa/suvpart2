@@ -10,7 +10,7 @@ const router = express.Router();
     // Make a variable and give it the value from 'message'(text area)
     const charNumber = req.session.data['message'];
     let charLength = charNumber.length;
-    const maxLength = 2048;
+    const maxLength = 2000;
   
     // Check whether the variable matches a condition
     if (charLength > maxLength) {
@@ -26,7 +26,7 @@ const router = express.Router();
     // Make a variable and give it the value from 'message'(text area)
     const charNumber = req.session.data['message'];
     let charLength = charNumber.length;
-    const maxLength = 2048;
+    const maxLength = 2000;
   
     // Check whether the variable matches a condition
     if (charLength > maxLength) {
