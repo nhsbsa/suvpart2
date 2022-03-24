@@ -11,9 +11,10 @@ const router = express.Router();
     const charNumber = req.session.data['message'];
     let charLength = charNumber.length;
     const maxLength = 2000;
+    const minLength = 1;
   
     // Check whether the variable matches a condition
-    if (charLength > maxLength) {
+    if (charLength < minLength) {
       // Send user to error page
       res.redirect('/note-pcn-error');
     } else {
@@ -22,6 +23,7 @@ const router = express.Router();
     }
   });
 
+  
   router.post('/note-pcn-extend/', (req, res) => {
     // Make a variable and give it the value from 'message'(text area)
     const charNumber = req.session.data['message'];
@@ -32,6 +34,27 @@ const router = express.Router();
     if (charLength > maxLength) {
       // Send user to error page
       res.redirect('/note-pcn-error');
+    } else {
+      // Send user to normal page
+      res.redirect('/css-pcn-view-extend-unlock');
+    }
+  });
+
+  router.post('/note-easement/', (req, res) => {
+    // Make a variable and give it the value from 'message'(text area)
+    const charNumber = req.session.data['message'];
+    let charLength = charNumber.length;
+    const maxLength = 2000;
+    const minLength = 1;
+  
+    // Check whether the variable matches a condition
+    if(charLength < minLength ){
+      res.redirect('remove-easement-error');
+
+    }
+    else if (charLength > maxLength) {
+      // Send user to error page
+      res.redirect('/remove-easement-char-error');
     } else {
       // Send user to normal page
       res.redirect('/css-pcn-view-extend-unlock');
