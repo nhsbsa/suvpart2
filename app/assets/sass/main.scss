@@ -435,3 +435,23 @@ tr.pecs-row.hide, tr.decs-row.hide {
   position: absolute;
   right: 49px;
 }
+
+.nhsuk-input-grey {
+  @include nhsuk-font(19);
+
+  -moz-appearance: none; /* 1 */
+  -webkit-appearance: none; /* 1 */
+  appearance: none; /* 1 */
+  border: $nhsuk-border-width-form-element solid $nhsuk-form-border-color; /* 2 */
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 0;
+  padding: nhsuk-spacing(1);
+  width: 100%;
+  background-color: rgb(216, 215, 215);
+
+  &:focus {
+    @include nhsuk-focused-input;
+  }
+}
