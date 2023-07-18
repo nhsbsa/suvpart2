@@ -25,131 +25,106 @@
 {% block outerContent %}
 {% endblock %}
 
+{% block signout %}
+
+{% endblock %}
+
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-  <div class="nhsuk-grid-row">
+<div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+        <h1>Single User View 1.5</h1>
 
-      <!-- Change the page title here -->
-      <h1>
-        Single User View 1.5
-        
-      </h1>
+        <hr>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <h2>SUV (Single User View) Used in contact centre by agents.</h2>
 
-    
-      </p>
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading">
+                    SUV Re-design
+                </h3>
+                
+                <details class="nhsuk-details nhsuk-expander">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text"><small>Version 1</small></span>
+                    </summary>
 
-      <hr>
+                    <div class="nhsuk-details__text">
+                        <p>
+                            As per the business process, a new re-design of SUV is required to allow for an improved accessibe version 
+                            under the new NHS Toolkit.
+                        </p> 
+                        
+                        <p>
+                            Presently, the SUV system has various funtions that all appear in a pop-up window which is not considered accessible. 
+                            This prototype explores the function of a pop-up function removed and replaced by a seperate page function.
+                        </p>
 
-      <h2>
-        SUV (Single User View)
-Used in contact centre by 
-agents.
-      </h2>
-      <details class="nhsuk-details nhsuk-expander">
-        <summary class="nhsuk-details__summary">
-           <span class="nhsuk-details__summary-text">SUV Re-design</span>
-        </summary>
-        <div class="nhsuk-details__text">
-           <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
-              <summary class="nhsuk-details__summary">
-                 <span class="nhsuk-details__summary-text"><small>Version 1</small></span>
-              </summary>
-      <p>
-        As per the business process, a new re-design of SUV is required to allow for an improved accessibe version under the new NHS Toolkit.<p></p> 
-        Presently, the SUV system has various funtions that all appear in a pop-up window which is not considered accessible. <p>This prototype explores the function of a pop-up function removed and replaced by a seperate page function.
+                        <h2>Page List</h2>
+          
+                        <p>
+                            There is an <a href="/start-page">individual page list</a>, which contains each individual SUV page.
+                        </p>
+                
+                        <hr>
+                
+                        <h2>
+                            Prototype Journey's
+                        </h2>
+                
+                        <p>
+                            There is a <a href="/journey-page">Journey page-list</a>, which contains the Version 1 SUV journey.
+                        </p>
+                    </div>
+                </details> <!-- End version 1 -->
 
+                <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text"><small>Version 2</small></span>
+                    </summary>
 
-      </p>
-      
-      <p>
-        <h2>
-          Page List
-        </h2>
-  
-      </p>
+                    <div class="nhsuk-details__text">
+                        <p>
+                            As per the business process, a new re-design of SUV is required to allow for an improved accessibe version under the new NHS Toolkit.<p></p> 
+                            Presently, the SUV system has various funtions that all appear in a pop-up window which is not considered accessible. <p>This prototype explores the function of a pop-up function removed and replaced by a seperate page function whilst allowing the user the ability to still see any PCN infomation.
+                        </p>   
+           
+                        <h2>
+                            Page List
+                        </h2>
 
-      <p>
-        There is an <a href="/start-page">individual page list</a>, which contains each individual SUV page.
-      </p>
+                        <p>
+                            There is an <a href="/start-page-version2">individual page list</a>, which contains each individual SUV page.
+                        </p>
+                          
+                        <hr>
+                          
+                        <h2>
+                            Prototype Journey's
+                        </h2>
+                          
+                        <p>
+                            There is a <a href="/search-page-no-tracker">CSS User New Page Function and PCN View PECS</a>, which contains the Version 1 SUV journey.
+                        </p>
+                          
+                        <p>
+                            There is a <a href="/css-pcn-view-dental">CSS User New Page Function and PCN View DECS</a>, which contains the Version 1 SUV journey.
+                        </p>
+                          
+                        <p> 
+                            There is a <a href="css-pcn-backend">Back End View with PCN PECS Info</a>, which contains all patient info and links to all CCS user functions  
+                        </p>
 
-      <hr>
-
-      <h2>
-        Prototype Journey's
-      </h2>
-
-      <p>
-        There is a <a href="/journey-page">Journey page-list</a>, which contains the Version 1 SUV journey.
-      </p>
-
-      <ul>
-     
-      <!-- End of content -->
-
-    
-  </div>
-</p>
-
-<hr>
-
-
-
-  </summary>
-  <div class="nhsuk-details__text">
-     <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0">
-        <summary class="nhsuk-details__summary">
-           <span class="nhsuk-details__summary-text"><small>Version 2</small></span>
-        </summary>
-<p>
-  As per the business process, a new re-design of SUV is required to allow for an improved accessibe version under the new NHS Toolkit.<p></p> 
-  Presently, the SUV system has various funtions that all appear in a pop-up window which is not considered accessible. <p>This prototype explores the function of a pop-up function removed and replaced by a seperate page function whilst allowing the user the ability to still see any PCN infomation.
-
-
-</p>
-
-<p>
-  <h2>
-    Page List
-  </h2>
-
-</p>
-
-<p>
-  There is an <a href="/start-page-version2">individual page list</a>, which contains each individual SUV page.
-</p>
-
-<hr>
-
-<h2>
-  Prototype Journey's
-</h2>
-
-<p>
-  There is a <a href="/search-page-no-tracker">CSS User New Page Function and PCN View PECS</a>, which contains the Version 1 SUV journey.
-</p>
-
-<p>
-  There is a <a href="/css-pcn-view-dental">CSS User New Page Function and PCN View DECS</a>, which contains the Version 1 SUV journey.
-</p>
-
-
-<p> 
- There is a <a href="css-pcn-backend">Back End View with PCN PECS Info </a>, which contains all patient info and links to all CCS user functions  
-</p>
-<p> 
-  <p> 
-    There is a <a href="css-pcn-view-extend-unlock">CSS View with Extend, unlock and close </a>, which contains all patient info and links to all CCS user functions  
-   </p>
-   <p> 
-   
-<!-- End of content -->
-
-</div>
+                        <p> 
+                            There is a <a href="css-pcn-view-extend-unlock">CSS View with Extend, unlock and close</a>, which contains all patient info and links to all CCS user functions  
+                        </p>
+                    </div>
+                </details> <!-- End version 2 -->
+            </div>
+        </div>
+    </div>
 </div>
   
 {% endblock %}
