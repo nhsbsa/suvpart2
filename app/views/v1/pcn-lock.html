@@ -1,0 +1,108 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-secondary-navigation__container">
+        <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+          <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+            <ul class="nhsuk-secondary-navigation__list">
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="test-screen">Back</a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="me-journey/open-cases">
+                </a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="me-journey/closed-cases"></a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="nhsuk-heading-l">Place penalty on lock</h1>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-1">Time on lock</label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="1">14 days</option>
+        <option value="2" selected>28 days</option>
+        <option value="3">30 days</option>
+        <option value="2">60 days</option>
+        <option value="2">60 days check med/mat</option>
+        <option value="2">90 days</option>
+      </select>
+    </div>  
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-checkboxes">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">Do not add to tracker</label>
+        </div>
+      </div>
+    </div>
+      
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-2">Reason for locking</label>
+      <select class="nhsuk-select" id="select-2" name="select-1">
+        <option value="1">Applying for MEDEX</option>
+        <option value="2" selected>Applying for MATEX</option>
+        <option value="3">Financial hardship (HC2)</option>
+        <option value="4">Sending signed delcaration</option>
+        <option value="5">Sending benefit evidence</option>
+        <option value="6">Didn't get evidence</option>
+        <option value="7">Delay getting letter</option>
+        <option value="8">Insufficient funds to pay</option>
+        <option value="9">Complaint</option>
+        <option value="10">Long-life exemption</option>
+        <option value="11">COVID-19</option>
+        <option value="12">RO Process</option>
+        <option value="13">Other</option>
+      </select>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">Note</label>
+      <textarea class="nhsuk-textarea" id="example" name="example" rows="8" style="font-size:19px;"></textarea>
+      <p class="nhsuk-hint">You have <span id="chars">2048</span> characters remaining</p>
+    </div> 
+
+    <a href="applicant-view-personal-details" class="nhsuk-button" role="button">Submit</a>
+
+    <p><a href="javascript:history.back()">Cancel</a></p>
+
+  </div>
+</div>
+{% endblock %}

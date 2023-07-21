@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+Application successful
+{% endblock %}
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-card" style="background: #005EB8; margin-top: 0;">
+            <div class="nhsuk-card__content">
+              <h1 class="nhsuk-card__heading" style="text-align: center; color: white;">
+                Removed from tracker 
+              </h1>
+              <h2 class="nhsuk-card__heading nhsuk-u-font-weight-normal" style="text-align: center; color: white;">
+                Reference number: <span class="nhsuk-caption-xl nhsuk-caption--bottom nhsuk-u-font-weight-bold" style="color: white;">123456789</span>
+              </h2>
+            </div>
+          </div>
+          <div class="form-group nhsuk-u-margin-top-3"> 
+            <a class="nhsuk-button" id="test-screen" href="tracker" role="button">Continue to tracker</a> <p>
+          </div>
+    </div>
+</div>
+{% endblock %}
