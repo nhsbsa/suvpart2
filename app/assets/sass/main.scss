@@ -290,6 +290,22 @@
   display: block;
   padding: 20px;
 }
+
+.bordered-content-box {
+  background-color: #fff;
+  border: 1px solid #dee0e2;
+  .pcn-title {
+    display: inline-block;
+    .heading-tag {
+      position: relative;
+      top: -3px;
+    }
+  }
+  .prescription-link {
+    float: right;
+  }
+}
+
 .highlight1 {
   border: 10px solid #dee0e2;
   background-color: #f8f8f8;
