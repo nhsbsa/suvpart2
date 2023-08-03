@@ -284,7 +284,7 @@
 }
 
 // layout styles
-.border-box {
+.border-box, .bordered-content-box {
   border: 10px solid #dee0e2;
   background-color: #f8f8f8;
   display: block;
@@ -292,8 +292,6 @@
 }
 
 .bordered-content-box {
-  display: block;
-  padding: 20px;
   background-color: #fff;
   border: 1px solid #dee0e2;
   .pcn-title {
@@ -519,3 +517,31 @@ tr.decs-row.hide {
     @include nhsuk-focused-input;
   }
 }
+
+
+// Prefix inputs
+
+.nhsbsa-input-wrapper {
+  display: flex;
+  .nhsbsa-input-prefix {
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    background-color:#f3f2f1;
+    border: 2px solid #4c6272;
+    box-sizing:border-box;
+    cursor:default;
+    display:inline-block;
+    flex:0 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.333;
+    width: 2.5rem;
+    padding:5px;
+    text-align:center;
+    white-space:nowrap;
+    border-right: transparent;
+  }
+  .nhsuk-input {
+    flex: 0 1 auto;
+}
+}
+

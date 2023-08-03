@@ -61,4 +61,15 @@ const router = express.Router();
     }
   });
 
+  // pcn-payment.html in v3 folder - decide which page to direct to depending on the answer chosen
+  router.post('/v3-george/pcn-payment', function(request, response) {
+
+    var country = request.session.data['payment-method']
+    if (country == "card"){
+        response.redirect("pcn-payment-card")
+    } else {
+        response.redirect("pcn-payment-dd")
+    }
+})
+
 module.exports = router;
