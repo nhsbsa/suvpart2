@@ -46,6 +46,7 @@ app.locals.serviceName = config.serviceName;
 const appViews = [
   path.join(__dirname, 'app/views/'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, 'node_modules/govuk-frontend/'),
   path.join(__dirname, 'docs/views/'),
 ];
 
