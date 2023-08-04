@@ -1,0 +1,192 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ Pay by Direct Debit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-back-link">
+            <a class="nhsuk-back-link__link" href="pcn-payment-dd-check-answers">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <h1 class="nhsuk-u-margin-bottom-4">
+            Confirm and submit your Direct Debit
+        </h1>
+
+        <div class="nhsuk-warning-callout">
+            <h2 class="nhsuk-warning-callout__label">
+            <span role="text">
+                Important:
+            </span>
+            </h2>
+            <p>This information must all be read out to the customer.</p>
+        </div>
+
+        <p>If we are unable to take a payment, you may have to pay extra charges. If we are unable to take payments on more than one occasion, you may not be able to pay by Direct Debit in the future.</p>
+
+        <h2 class="nhsuk-heading-m">Direct Debit summary</h2>
+
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                First payment
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                £13.95
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                First payment taken on or just after
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01 September 2023
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Following 11 payments
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                £13.87
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Total amount
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                £166.40
+              </dd>
+          
+            </div>
+          
+          </dl>
+
+          <p>You're responsible for making sure that the payments can be taken on these dates.</p>
+
+
+          <h2 class="nhsuk-heading-m">Your bank details</h2>
+
+          <dl class="nhsuk-summary-list">      
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Account holder's name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Joe Bloggs
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Account number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345678
+              </dd>
+          
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Sort code
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  12 34 56
+                </dd>
+            
+              </div>
+          
+          </dl>
+
+          <div class="bordered-content-box nhsuk-u-margin-bottom-6">
+            <img class="nhsuk-image__img nhsuk-u-margin-bottom-4" src="/images/dd-logo.png" style="width: 150px;" alt="Direct Debit logo">
+            <p>We will send this Direct Debit instruction to <span class="nhsuk-u-font-weight-bold">HSBC BANK PLC, Guernsey, Channel Islands</span>.</p>
+            <p>Please pay the NHSBSA PECS Direct Debits from the account detailed in this instruction subject to the safeguads assured by the Direct Debit Guarantee. I understand that this instruction may remain with the NHSBSA PECS, and if so, details will be passed electronically to my Bank/Building Society.</p>
+            <p>Originator:<br>NHSBSA PECS, Bridge House,<br>152 Pilgrim Street, Newcastle Upon Tyne, NE1 6SN</p>
+            <p>Service User Number (SUN): 174819</p>
+            <p class="nhsuk-u-margin-bottom-0">Telephone: 0300 330 9219</p>
+        </div>
+
+        <form action="pcn-payment-dd-thank-you" method="POST">
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
+                        <h1 class="nhsuk-fieldset__heading">
+                         Do you agree to the terms and conditions?
+                        </h1>
+                    </legend>
+                
+                    <div class="nhsuk-checkboxes">                
+                        <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agree">
+                            <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-font-weight-bold" for="agree">
+                                I agree to the terms and conditions
+                            </label>
+                        </div>                
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Continue
+            </button>
+        </form>
+
+        <p><a href="pcn-css-view">Cancel</a></p>
+    </div>
+</div>
+{% endblock %}
