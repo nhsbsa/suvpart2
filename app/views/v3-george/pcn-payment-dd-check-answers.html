@@ -1,0 +1,264 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ Pay by Direct Debit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-back-link">
+            <a class="nhsuk-back-link__link" href="pcn-payment-dd-bank-details">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <h1 class="nhsuk-u-margin-bottom-4">
+            Check your answers are correct
+        </h1>
+
+        <div class="nhsuk-warning-callout">
+            <h2 class="nhsuk-warning-callout__label">
+            <span role="text">
+                Important:
+            </span>
+            </h2>
+            <p>This information must all be read out to the customer.</p>
+        </div>
+
+        <h2 class="nhsuk-heading-m">Your Direct Debit details</h2>
+
+        <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Number of payments
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+                <a href="pcn-payment-dd-months">
+                  Change<span class="nhsuk-u-visually-hidden"> number of payments</span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Chosen payment date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                1
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+                <a href="pcn-payment-dd-date">
+                  Change<span class="nhsuk-u-visually-hidden"> chosen payment date</span>
+                </a>
+              </dd>
+            </div>          
+          </dl>
+
+          <p>Your payments will be taken on, or just after, your chosen payment date each month until your penalty charge has been cleared.</p>
+
+          <h2 class="nhsuk-heading-m">Your payment summary</h2>
+
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                First payment
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                £13.95
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                First payment taken on or just after
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01 September 2023
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Following 11 payments
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                £13.87
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Total amount
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                £166.40
+              </dd>
+          
+            </div>
+          
+          </dl>
+
+          <p>Your payment summary is based on the information you have given us.</p>
+
+          <p>You're responsible for making sure that the payments can be taken on these dates.</p>
+
+          <h2 class="nhsuk-heading-m">We will send confirmation of your Direct Debit here</h2>
+
+          <dl class="nhsuk-summary-list">      
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                9 Hotspur Street<br>Townford<br>NE10LD
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="pcn-payment-dd-address">
+                  Change<span class="nhsuk-u-visually-hidden"> address</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                <p>joe.bloggs@example.com</p>
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="pcn-payment-dd-email">
+                  Change<span class="nhsuk-u-visually-hidden"> email address</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+          
+          </dl>
+
+          <h2 class="nhsuk-heading-m">Your bank details</h2>
+
+          <dl class="nhsuk-summary-list">      
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Account holder's name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Joe Bloggs
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="pcn-payment-dd-bank-details">
+                  Change<span class="nhsuk-u-visually-hidden"> account holder name</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Account number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345678
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="pcn-payment-dd-email">
+                  Change<span class="nhsuk-u-visually-hidden"> account number</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  Sort code
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  12 34 56
+                </dd>
+            
+                <dd class="nhsuk-summary-list__actions">
+            
+                  <a href="pcn-payment-bank-details">
+                    Change<span class="nhsuk-u-visually-hidden"> sort code</span>
+                  </a>
+            
+                </dd>
+            
+              </div>
+          
+          </dl>
+
+        <form action="pcn-payment-dd-confirm" method="POST">
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Continue
+            </button>
+        </form>
+
+        <p><a href="pcn-css-view">Cancel</a></p>
+    </div>
+</div>
+{% endblock %}
