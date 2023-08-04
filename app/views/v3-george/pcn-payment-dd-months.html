@@ -1,0 +1,123 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ Pay by Direct Debit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-back-link">
+            <a class="nhsuk-back-link__link" href="pcn-payment-dd">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <h1 class="nhsuk-u-margin-bottom-4">
+            Select how many months you want to pay over
+        </h1>
+
+        <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+            <span role="text">
+                Important:
+            </span>
+            </h3>
+            <p>This information must all be read out to the customer.</p>
+        </div>
+
+        <p>Your total amount to pay is <span class="nhsuk-u-font-weight-bold">£166.40</span>. You will not be charged interest on this amount and it will not affect your credit score.</p>
+        
+        <form action="pcn-payment-dd-date" method="POST">
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                        <h1 class="nhsuk-fieldset__heading">
+                            Select how many months you want to pay over
+                        </h1>
+                    </legend>
+                
+                    <div class="nhsuk-radios">
+                
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="gateway" aria-describedby="example-hints-1-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                                3 months
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                                1 Payment of £55.46 followed by 2 payments of £55.47
+                            </div>
+                        </div>
+                
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                6 months
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                1 Payment of £27.75 followed by 5 payments of £27.73
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                12 months
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                1 Payment of £13.95 followed by 11 payments of £13.87
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>        
+            </div>
+        
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Continue
+            </button>
+        </form>
+
+        <p><a href="pcn-css-view">Cancel</a></p>
+    </div>
+</div>
+{% endblock %}
