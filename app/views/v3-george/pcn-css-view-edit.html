@@ -22,13 +22,7 @@ View PCN
             <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
                <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
                   <ul class="nhsuk-secondary-navigation__list">
-                     <li class="nhsuk-secondary-navigation__item">
-                        <a class="nhsuk-secondary-navigation__link" href="lock-pcn">Lock
-                        </a>
-                     </li>
-                     <li class="nhsuk-secondary-navigation__item">
-                        <a class="nhsuk-secondary-navigation__link" href="close-pcn">Close</a>
-                     </li>
+                     <br><br>
                   </ul>
                </nav>
             </div>
@@ -47,18 +41,6 @@ View PCN
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-<div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-back-link">
-         <a class="nhsuk-back-link__link" href="pcn-search-results">
-           <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-           </svg>
-           Go back</a>
-       </div>
-   </div>
-</div>
-
 <div class="bordered-content-box nhsuk-u-margin-bottom-6">
    <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
@@ -70,95 +52,8 @@ View PCN
 
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
-      <div class="bordered-content-box">
-         <dl class="nhsuk-summary-list  nhsuk-u-margin-bottom-4">
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Name
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                Joe Bloggs
-              </dd>
-              <dd class="nhsuk-summary-list__actions">
-               <a href="pcn-css-view-edit">
-                 Change<span class="nhsuk-u-visually-hidden"> name</span>
-               </a>
-             </dd>
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Address
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-               9 Hotspur Street<br>Townford<br> NE10LD
-              </dd>
-              <dd class="nhsuk-summary-list__actions">
-               <a href="pcn-css-view-edit">
-                 Change<span class="nhsuk-u-visually-hidden"> name</span>
-               </a>
-             </dd>
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Email address
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-               <p>joe.blogss@example.com</p>
-              </dd>
-              <dd class="nhsuk-summary-list__actions">
-               <a href="pcn-css-view-edit">
-                 Change<span class="nhsuk-u-visually-hidden"> name</span>
-               </a>
-             </dd>
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Telephone number
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                <p>07700 900362</p>
-              </dd>
-              <dd class="nhsuk-summary-list__actions">
-               <a href="pcn-css-view-edit">
-                 Change<span class="nhsuk-u-visually-hidden"> name</span>
-               </a>
-             </dd>
-            </div>
-
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-                 Date of birth
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-                 20 November 1988
-               </dd>
-               <dd class="nhsuk-summary-list__actions">
-                  <a href="pcn-css-view-edit">
-                    Change<span class="nhsuk-u-visually-hidden"> name</span>
-                  </a>
-                </dd>
-             </div>
-
-             <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-                 NHS number
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-                  23141986
-               </dd>
-                  <dd class="nhsuk-summary-list__actions">
-                  <a href="pcn-css-view-edit">
-                     Change<span class="nhsuk-u-visually-hidden"> name</span>
-                  </a>
-               </dd>
-             </div>
-          </dl>
-      </div>
       
-      <!-- <div class="bordered-content-box">
+      <div class="bordered-content-box">
 
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
@@ -224,14 +119,14 @@ View PCN
             <div class="nhsuk-grid-column-one-half">
                <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">Email address</label>
-                  <input class="nhsuk-input" id="email" name="first-name-2" type="text">
+                  <input class="nhsuk-input" id="email" name="first-name-2" type="email" value="joe.blogss@example.com">
                </div>
             </div>
    
             <div class="nhsuk-grid-column-one-half">
                <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="tel">Telephone number</label>
-                  <input class="nhsuk-input" id="tel" name="first-name-2" type="text">
+                  <input class="nhsuk-input" id="tel" name="first-name-2" type="text" value="07700 900362">
                </div>
             </div>
          </div>
@@ -274,9 +169,11 @@ View PCN
          </div>
 
                
-         <a class="nhsuk-button nhsuk-u-margin-right-2" id="search-button" href="#" role="button">Save</a>
-         <a class="nhsuk-button nhsuk-button--secondary" id="search-button" href="pcn-css-view" role="button">Reset</a>
-      </div> -->
+         <a class="nhsuk-button nhsuk-u-margin-right-2" id="search-button" href="pcn-css-view" role="button">Save</a>
+         <p class="nhsuk-u-margin-bottom-0">
+             <a class="nhsuk-link" href="pcn-css-view">Cancel</a>
+         </p>
+      </div>
       
       <div class="nhsuk-u-margin-top-5">
          <div class="nhsuk-tabs" data-module="nhsuk-tabs">             
