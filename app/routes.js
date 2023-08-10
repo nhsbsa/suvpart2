@@ -83,4 +83,15 @@ router.post('/v3-iona/pay-pcn-extend', function(request, response) {
   }
 })
 
+// pay-pcn-DD-address.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-iona/pay-pcn-DD-address', function(request, response) {
+
+  var country = request.session.data['address']
+  if (country == "yes"){
+      response.redirect("pay-pcn-DD-check-answers")
+  } else {
+      response.redirect("pay-pcn-DD-address-change")
+  }
+})
+
 module.exports = router;

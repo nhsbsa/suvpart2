@@ -45,7 +45,7 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-back-link">
 
-   <a class="nhsuk-back-link__link" href="pay-pcn-DD-monthly-options">
+   <a class="nhsuk-back-link__link" href="pay-pcn-DD-dates">
      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
      </svg>
@@ -60,47 +60,57 @@ Content page example - NHS.UK prototype kit
 
       <p><b>All information on this page must be read out to the customer.</b></p>
 
-      <h2>Which date would you like payments to be taken each month?</h2>
+      <h2>What is your address?</h2>
 
-      <p>All payments will be taken on, or just after, your chosen date.</p>
-      <p>Enter a payment date between 1 and 28.</p>
+      <p>We'll send confirmation of your Direct Debit to the address you provide.</p>
 
-      <div class="nhsuk-form-group">
-         <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-           
-           
-       
-           <div class="nhsuk-date-input" id="example">
-             <div class="nhsuk-date-input__item">
-               <div class="nhsuk-form-group">
-                 <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                   Date
-                 </label>
-                 <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-               </div>
-             </div>
-             
-         </fieldset>
-       
-       </div>
-       <div>
+      <fieldset class="nhsuk-fieldset">
          
-       </div>
+       
+         <div class="nhsuk-form-group">
+           <label class="nhsuk-label" for="address-line-1">
+             Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+           </label>
+           <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
+         </div>
+       
+         <div class="nhsuk-form-group">
+           <label class="nhsuk-label" for="address-line-2">
+             <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+           </label>
+           <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
+         </div>
+       
+         <div class="nhsuk-form-group">
+           <label class="nhsuk-label" for="address-town">
+             Town or city
+           </label>
+           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+         </div>
+       
+         <div class="nhsuk-form-group">
+           <label class="nhsuk-label" for="address-county">
+             County
+           </label>
+           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+         </div>
+       
+         <div class="nhsuk-form-group">
+           <label class="nhsuk-label" for="address-postcode">
+             Postcode
+           </label>
+           <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+         </div>
+       
+       </fieldset>
+      
 
+       
+       
      
 
-      
 
-      
-
-       
-
-
-      
-
-      
-
-      <a href="pay-pcn-DD-address" class="nhsuk-button" type="submit">Continue</a>
+       <a href="pay-pcn-DD-check-answers" class="nhsuk-button" type="submit">Continue</a>
       <p><a href="pcn-css-view">Cancel</a></p>
    </div>
 
