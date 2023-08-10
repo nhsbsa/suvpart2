@@ -73,7 +73,7 @@ const router = express.Router();
 })
 
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
-router.post('v3-iona/pay-pcn-extend', function(request, response) {
+router.post('/v3-iona/pay-pcn-extend', function(request, response) {
 
   var country = request.session.data['example-inline']
   if (country == "yes"){
