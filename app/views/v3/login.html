@@ -1,0 +1,107 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Login
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<!-- <div class="nhsuk-secondary-navigation">
+  <div class="nhsuk-grid-row">
+     <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-secondary-navigation__container">
+           <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+              <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                 <ul class="nhsuk-secondary-navigation__list">
+                    <li class="nhsuk-secondary-navigation__item">
+                       <a class="nhsuk-secondary-navigation__link" aria-current="page" href="search-page">Back</a>
+                    </li>
+                 </ul>
+              </nav>
+           </div>
+        </div>
+     </div>
+  </div>
+</div> -->
+{% endblock %}
+
+{% block signout %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  
+</div>
+        
+<h1 class="nhsuk-u-margin-bottom-4">
+  Login
+</h1>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                Username  
+              </label>
+               <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                Password 
+              </label>
+               <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="password">
+            </div>
+            
+            
+            
+            
+            
+          
+          
+                  
+                
+                </fieldset>   
+            
+              
+           
+
+
+          
+
+         
+
+       
+
+             
+          <a href="search-page" class="nhsuk-button" role="button">Login</a>
+
+         <p><a href="javascript:history.back()">Cancel</a></p>
+
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+</div>
+{% endblock %}
