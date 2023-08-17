@@ -76,6 +76,7 @@ Content page example - NHS.UK prototype kit
        <p>Make sure these are correct at your GP surgery, dental practice and any benefits organisations.</p>
        <p>If any of your details are not up to date, you may receive another Penalty Charge Notice in the future.</p>
 
+       <form action="/v3-iona/pay-pcn-DD-complete-radios" method="post">
        <div class="nhsuk-form-group">
 
          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
@@ -92,7 +93,7 @@ Content page example - NHS.UK prototype kit
            <div class="nhsuk-radios nhsuk-radios--conditional">
        
              <div class="nhsuk-radios__item">
-               <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+               <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="yes" aria-controls="conditional-contact-1" aria-expanded="false">
                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
                  Yes
                </label>
@@ -110,7 +111,7 @@ Content page example - NHS.UK prototype kit
              </div>
        
              <div class="nhsuk-radios__item">
-               <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+               <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="no" aria-controls="conditional-contact-2" aria-expanded="false">
                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
                  No
                </label>
@@ -124,7 +125,9 @@ Content page example - NHS.UK prototype kit
        
        </div>
 
-       <a href="pcn-css-view" class="nhsuk-button" type="submit">Continue</a>
+       <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+         Continue
+       </button>
    
    </div>
 

@@ -94,4 +94,15 @@ router.post('/v3-iona/pay-pcn-DD-address', function(request, response) {
   }
 })
 
+// pay-pcn-DD-complete-radios.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-iona/pay-pcn-DD-complete-radios', function(request, response) {
+
+  var country = request.session.data['contact']
+  if (country == "no"){
+      response.redirect("pcn-css-view")
+  } else {
+      response.redirect("pay-pcn-DD-complete-enter-email")
+  }
+})
+
 module.exports = router;
