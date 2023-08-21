@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
- Add a note
+Ease penalty
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -42,128 +42,87 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <h1>
-         Add a note
+         Ease penalty
       </h1>
+      <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
+         <label class="nhsuk-label" for="select-1">
+            Amount to ease
+         </label>
+         <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="0" selected></option>
+            <option value="1">Surcharge </option>
+            <option value="2">Penalty charge and Surcharge</option>
+         </select>
+      </div>
 
-      <form action="#" method="POST" id="form">
-         <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="message">
-               Notes
-            </label>
-            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
-            <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
+      <dl class="nhsuk-summary-list">
+         <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+               Easement amount
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+               £50.00
+            </dd>
          </div>
 
-         <div class="nhsuk-form-group">
-            <fieldset class="nhsuk-fieldset">
-               <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
-                 <h1 class="nhsuk-fieldset__heading">
-                   Select the options which apply
-                 </h1>
-               </legend>
-               <div class="nhsuk-checkboxes">
-                  <div class="nhsuk-checkboxes__item">
-                     <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                        Apply to open cases only
-                     </label>
-                  </div>
-
-                  <div class="nhsuk-checkboxes__item">
-                     <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-                        Apply to all cases
-                     </label>
-                  </div>
-               </div>
-            </fieldset>
+         <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+               Customer has paid
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              £10.00
+            </dd>
          </div>
-         <button class="nhsuk-button" id="button" type="submit">Submit</button>
-      </form>
 
-      <p><a href="pcn-css-view">Cancel</a></p>
+         <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+               Balance after easement paid
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+               <p>£116.40</p>
+            </dd>
+         </div>
+      </dl>
+
+      <label class="nhsuk-label" for="select-2">Reason for easement</label>
+      <select class="nhsuk-select nhsuk-u-margin-bottom-6" id="select-2" name="select-2">
+         <option value="0" selected></option>
+         <option value="1">**CO cross over (Surcharge) </option>
+         <option value="2">**ES Extreme situation/team manager discretion</option>
+         <option value="3">**HC Financial hardship - HC2 confirmed
+         <option value="4">**FL First letter not received</option>
+         <option value="5">**MM Medex or Matex - subsequently holds a certificate</option>
+         <option value="6">**MP more than one PCN in same month</option>
+         <option value="7">**LD Vulnerable - language difficulties</option>
+         <option value="8">**TO Vulnerable - terminal illness over 6 months</option>
+         <option value="9">**TO Vulnerable - terminal illness under 6 months</option>
+         <option value="10">**TU Vulnerable - disability or long term condition</option>
+         <option value="11">**PR PR form not signed</option>
+      </select>
+
+      <div class="nhsuk-form-group">
+         <label class="nhsuk-label" for="message">
+            Note
+         </label>
+         <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
+         <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
+      </div>
+
+      <a href="css-view" class="nhsuk-button" role="button">Submit</a>
+      <p><a href="css-view">Cancel</a></p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
       <div class="bordered-content-box nhsuk-u-margin-bottom-6">
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-               <h2 class="nhsuk-heading-m pcn-title nhsuk-u-margin-bottom-0">PCN 06183129565 <span class="nhsuk-tag nhsuk-tag--green heading-tag">Open</span></h2> 
+               <h2 class="nhsuk-heading-m  nhsuk-u-margin-bottom-0">PCN 06183129565 <span class="nhsuk-tag nhsuk-tag--green heading-tag">Open</span></h2> 
             </div>
          </div>
       </div>
-
-      <div class="bordered-content-box nhsuk-u-margin-bottom-6">
-         <dl class="nhsuk-summary-list  nhsuk-u-margin-bottom-4">
-
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Name
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                Joe Bloggs
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Address
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-               9 Hotspur Street<br>Townford<br> NE10LD
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Email address
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-               <p>joe.blogss@example.com</p>
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Telephone number
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                <p>07700 900362</p>
-                
-              </dd>
-          
-            </div>
-
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-                 Date of birth
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-                 20 November 1988
-               </dd>
-           
-             </div>
-
-             <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-                 NHS number
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-                  23141986
-               </dd>
-           
-             </div>
-          
-          </dl>
-      </div>
-
       <div class="nhsuk-grid-row">
          <div class="nhsuk-grid-column-full">
             <div class="nhsuk-tabs" data-module="nhsuk-tabs">
@@ -191,64 +150,58 @@
                <div class="nhsuk-tabs__panel" id="costs">
                   <dl class="nhsuk-summary-list">
                      <div class="nhsuk-summary-list__row">
-                     <dt class="nhsuk-summary-list__key">
-                        Prescription cost
-                     </dt>
-                     <dd class="nhsuk-summary-list__value">
-                        £26.40
-                     </dd>
+                        <dt class="nhsuk-summary-list__key">
+                           Prescription cost
+                        </dt>
+                        <dd class="nhsuk-summary-list__value">
+                           £26.40
+                        </dd>
+                        </div>
+                     
+                        <div class="nhsuk-summary-list__row">
+                        <dt class="nhsuk-summary-list__key">
+                           Penalty charge
+                        </dt>
+                        <dd class="nhsuk-summary-list__value">
+                           £100.00
+                        </dd>
                      </div>
                   
                      <div class="nhsuk-summary-list__row">
-                     <dt class="nhsuk-summary-list__key">
-                        Penalty charge
-                     </dt>
-                     <dd class="nhsuk-summary-list__value">
-                        £100.00
-                     </dd>
-                  
+                        <dt class="nhsuk-summary-list__key">
+                           Surcharge
+                        </dt>
+                        <dd class="nhsuk-summary-list__value">
+                           £50.00
+                        </dd>
                      </div>
                   
                      <div class="nhsuk-summary-list__row">
-                     <dt class="nhsuk-summary-list__key">
-                        Surcharge
-                     </dt>
-                     <dd class="nhsuk-summary-list__value">
-                        £50.00
-                     </dd>
-                  
-                     </div>
-                  
-                     <div class="nhsuk-summary-list__row">
-                     <dt class="nhsuk-summary-list__key">
-                        Total charge
-                     </dt>
-                     <dd class="nhsuk-summary-list__value">
-                        <p>£176.40</p>
-                     </dd>
-                  
+                        <dt class="nhsuk-summary-list__key">
+                           Total charge
+                        </dt>
+                        <dd class="nhsuk-summary-list__value">
+                           £176.40
+                        </dd>
                      </div>
 
                      <div class="nhsuk-summary-list__row">
                         <dt class="nhsuk-summary-list__key">
-                        Paid
+                           Paid
                         </dt>
                         <dd class="nhsuk-summary-list__value">
-                        <p>£10.00</p>
+                          £10.00
                         </dd>
-                  
                      </div>
 
                      <div class="nhsuk-summary-list__row">
                         <dt class="nhsuk-summary-list__key">
-                        Balance remaining
+                           Balance remaining
                         </dt>
                         <dd class="nhsuk-summary-list__value">
-                        <p class="nhsuk-u-font-weight-bold">£166.40</p>
+                           <p class="nhsuk-u-font-weight-bold">£166.40</p>
                         </dd>
-                  
                      </div>
-                  
                   </dl>
                </div>
             
@@ -501,6 +454,4 @@
       $('#chars').text(length);
    });
 </script>
-
-</html>
 {% endblock %}

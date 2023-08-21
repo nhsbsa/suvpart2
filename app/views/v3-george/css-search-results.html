@@ -14,7 +14,6 @@ PCN Search
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-
 <div class="nhsuk-secondary-navigation">
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
@@ -23,7 +22,8 @@ PCN Search
           <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
             <ul class="nhsuk-secondary-navigation__list">
               <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="pcn-search">Reports</a>
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="css-search-results">Reports
+                </a>
               </li>
             </ul>
           </nav>
@@ -32,6 +32,7 @@ PCN Search
     </div>
   </div>
 </div>
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -44,10 +45,7 @@ PCN Search
 {% block content %}
 
 <div class="nhsuk-grid-row">
-
   <div class="nhsuk-grid-column-full">
-
-    <!-- Change the page heading -->
     <h1>
       PCN Search
     </h1>
@@ -89,12 +87,64 @@ PCN Search
       <div class="grid-row">
         <div class="nhsuk-grid-column-full">
           <div class="form-group nhsuk-u-margin-top-3">
-            <a class="nhsuk-button nhsuk-u-margin-right-2" href="pcn-search-results" role="button">Search</a>
-            <a class="nhsuk-button nhsuk-button--secondary" href="#" role="button">
-              Reset
-            </a>
+            <a class="nhsuk-button nhsuk-u-margin-right-2" id="search-button" href="#" role="button">Search</a>
+           
+            <a class="nhsuk-button nhsuk-button--secondary" id="reset-button" href="css-search" role="button">Reset</a>
           </div>
         </div>
       </div>
     </div>
-    {% endblock %}
+
+    <div class="table-scroll" id="table-scroll">
+      <div class="nhsuk-table-responsive nhsuk-u-margin-top-0 table-wrap">
+        <table class="nhsuk-table nhsuk-table-u-margin-0 nhsuk-table-clickable main-table" id="sortable">
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th role="columnheader" class="" scope="col">
+                Reference
+              <th role="columnheader" class="" scope="col">
+                Name
+              <th role="columnheader" class="" scope="col">
+                Address
+              <th role="columnheader" class="" scope="col">
+                Date of birth
+              <th role="columnheader" class="" scope="col">
+                Status
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a href="css-view">123456789</a></td>
+              <td class="nhsuk-table__cell">Joe Bloggs</td>
+              <td class="nhsuk-table__cell">9 TEST ROAD, TOWN, NE1 OLD</td>
+              <td class="nhsuk-table__cell">15/11/1992</td>
+              <td><span class="nhsuk-tag nhsuk-tag--green case-tag">Open</span></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a href="css-view">123456789</a></td>
+              <td class="nhsuk-table__cell">Joe Bloggs</td>
+              <td class="nhsuk-table__cell">9 TEST ROAD, TOWN, NE1 OLD</td>
+              <td class="nhsuk-table__cell">15/11/1992</td>
+              <td><span class="nhsuk-tag nhsuk-tag--green case-tag">Open</span></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a href="css-view">123456789</a></td>
+              <td class="nhsuk-table__cell">Joe Bloggs</td>
+              <td class="nhsuk-table__cell">9 TEST ROAD, TOWN, NE1 OLD</td>
+              <td class="nhsuk-table__cell">15/11/1992</td>
+              <td><span class="nhsuk-tag nhsuk-tag--red case-tag">Locked</span></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a href="css-view">123456789</a></td>
+              <td class="nhsuk-table__cell">Joe Bloggs</td>
+              <td class="nhsuk-table__cell">9 TEST ROAD, TOWN, NE1 OLD</td>
+              <td class="nhsuk-table__cell">15/11/1992</td>
+              <td><span class="nhsuk-tag nhsuk-tag--blue case-tag">Closed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

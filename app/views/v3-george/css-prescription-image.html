@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
- How would you like to pay?
+Prescription image
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -43,40 +43,26 @@
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-<form action="/v3-george/pcn-payment" method="POST">
-   <div class="nhsuk-form-group">
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
-          <h1 class="nhsuk-fieldset__heading">
-            How would you like to pay?
-          </h1>
-        </legend>
-    
-        <div class="nhsuk-radios">
-    
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="card" name="payment-method" type="radio" value="card">
-            <label class="nhsuk-label nhsuk-radios__label" for="card">
-              Debit or credit card
-            </label>
-          </div>
-    
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="dd" name="payment-method" type="radio" value="dd">
-            <label class="nhsuk-label nhsuk-radios__label" for="dd">
-              Direct Debit
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-       
-    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-      Submit
-    </button>
-</form>
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-back-link">
+         <a class="nhsuk-back-link__link" href="css-view">
+           <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+           </svg>
+           Go back</a>
+       </div>
+   </div>
+   <div class="nhsuk-grid-column-one-half">
+      <h1>Prescription image</h1>
 
- <p><a href="pcn-css-view">Cancel</a></p>
+      <figure class="nhsuk-image">
+         <img class="nhsuk-image__img" src="/images/example-prescription-front.jpg" alt="Prescription">
+         <!-- <figcaption class="nhsuk-image__caption">
+           Image of the prescription
+         </figcaption> -->
+       </figure>
+   </div>
+</div>
 
-</html>
 {% endblock %}

@@ -46,7 +46,7 @@
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
         <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="pcn-payment-dd-check-answers">
+            <a class="nhsuk-back-link__link" href="css-payment-dd-bank-details">
             <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
                 <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
             </svg>
@@ -54,7 +54,7 @@
         </div>
 
         <h1>
-            Confirm and submit your Direct Debit
+            Check your answers are correct
         </h1>
 
         <div class="nhsuk-warning-callout">
@@ -66,9 +66,43 @@
             <p>This information must all be read out to the customer.</p>
         </div>
 
-        <p>If we are unable to take a payment, you may have to pay extra charges. If we are unable to take payments on more than one occasion, you may not be able to pay by Direct Debit in the future.</p>
+        <h2 class="nhsuk-heading-m">Your Direct Debit details</h2>
 
-        <h2 class="nhsuk-heading-m">Direct Debit summary</h2>
+        <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Number of payments
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+                <a href="css-payment-dd-months">
+                  Change<span class="nhsuk-u-visually-hidden"> number of payments</span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Chosen payment date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                1
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+                <a href="css-payment-dd-date">
+                  Change<span class="nhsuk-u-visually-hidden"> chosen payment date</span>
+                </a>
+              </dd>
+            </div>          
+          </dl>
+
+          <p>Your payments will be taken on, or just after, your chosen payment date each month until your penalty charge has been cleared.</p>
+
+          <h2 class="nhsuk-heading-m">Your payment summary</h2>
 
           <dl class="nhsuk-summary-list">
 
@@ -114,8 +148,50 @@
           
           </dl>
 
+          <p>Your payment summary is based on the information you have given us.</p>
+
           <p>You're responsible for making sure that the payments can be taken on these dates.</p>
 
+          <h2 class="nhsuk-heading-m">We will send confirmation of your Direct Debit here</h2>
+
+          <dl class="nhsuk-summary-list">      
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                9 Hotspur Street<br>Townford<br>NE10LD
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="css-payment-dd-address">
+                  Change<span class="nhsuk-u-visually-hidden"> address</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                <p>joe.bloggs@example.com</p>
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="css-payment-dd-email">
+                  Change<span class="nhsuk-u-visually-hidden"> email address</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+          
+          </dl>
 
           <h2 class="nhsuk-heading-m">Your bank details</h2>
 
@@ -128,6 +204,14 @@
                 Joe Bloggs
               </dd>
           
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="css-payment-dd-bank-details">
+                  Change<span class="nhsuk-u-visually-hidden"> account holder name</span>
+                </a>
+          
+              </dd>
+          
             </div>
           
             <div class="nhsuk-summary-list__row">
@@ -136,6 +220,14 @@
               </dt>
               <dd class="nhsuk-summary-list__value">
                 12345678
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="css-payment-dd-email">
+                  Change<span class="nhsuk-u-visually-hidden"> account number</span>
+                </a>
+          
               </dd>
           
             </div>
@@ -148,45 +240,25 @@
                   12 34 56
                 </dd>
             
+                <dd class="nhsuk-summary-list__actions">
+            
+                  <a href="css-payment-bank-details">
+                    Change<span class="nhsuk-u-visually-hidden"> sort code</span>
+                  </a>
+            
+                </dd>
+            
               </div>
           
           </dl>
 
-          <div class="bordered-content-box nhsuk-u-margin-bottom-6">
-            <img class="nhsuk-image__img nhsuk-u-margin-bottom-4" src="/images/dd-logo.png" style="width: 150px;" alt="Direct Debit logo">
-            <p>We will send this Direct Debit instruction to <span class="nhsuk-u-font-weight-bold">HSBC BANK PLC, Guernsey, Channel Islands</span>.</p>
-            <p>Please pay the NHSBSA PECS Direct Debits from the account detailed in this instruction subject to the safeguads assured by the Direct Debit Guarantee. I understand that this instruction may remain with the NHSBSA PECS, and if so, details will be passed electronically to my Bank/Building Society.</p>
-            <p>Originator:<br>NHSBSA PECS, Bridge House,<br>152 Pilgrim Street, Newcastle Upon Tyne, NE1 6SN</p>
-            <p>Service User Number (SUN): 174819</p>
-            <p class="nhsuk-u-margin-bottom-0">Telephone: 0300 330 9219</p>
-        </div>
-
-        <form action="pcn-payment-dd-thank-you" method="POST">
-            <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
-                    <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
-                        <h1 class="nhsuk-fieldset__heading">
-                         Do you agree to the terms and conditions?
-                        </h1>
-                    </legend>
-                
-                    <div class="nhsuk-checkboxes">                
-                        <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agree">
-                            <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-font-weight-bold" for="agree">
-                                I agree to the terms and conditions
-                            </label>
-                        </div>                
-                    </div>
-                </fieldset>
-            </div>
-
+        <form action="css-payment-dd-confirm" method="POST">
             <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
                 Continue
             </button>
         </form>
 
-        <p><a href="pcn-css-view">Cancel</a></p>
+        <p><a href="css-view">Cancel</a></p>
     </div>
 </div>
 {% endblock %}

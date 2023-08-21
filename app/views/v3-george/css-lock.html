@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
- Add a payment by card
+Place penalty on lock
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -42,59 +42,112 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
 <div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-back-link">
-        <a class="nhsuk-back-link__link" href="pcn-payment">
-          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-          </svg>
-          Go back</a>
-      </div>
-   </div>
-
    <div class="nhsuk-grid-column-one-half">
       <h1>
-         Pay by card
+         Place penalty on lock
       </h1>
-
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="balance">
-          Balance remaining
-        </label>
-        <div class="nhsbsa-input-wrapper">
-            <span class="nhsbsa-input-prefix">£</span>
-            <input class="nhsuk-input nhsuk-input--width-10" id="balance" name="balance" type="text" value="166.40" disabled>
-        </div>
+         <label class="nhsuk-label" for="select-1">
+            Time on lock
+         </label>
+         <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="0" selected></option>
+            <option value="1">Lock for 14 days </option>
+            <option value="2">Lock for 28 days</option>
+            <option value="3">Lock for 30 days
+            <option value="4">Lock for 60 days + check med/mat</option>
+            <option value="5">Lock for 90 days</option>
+         </select>
+      </div>
+      <div class="nhsuk-form-group">
+         <label class="nhsuk-label" for="example">
+            Reason for locking
+         </label>
+         <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
+         <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
       </div>
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="amount">
-          Amount to pay
-        </label>
-        <div class="nhsbsa-input-wrapper">
-            <span class="nhsbsa-input-prefix">£</span>
-            <input class="nhsuk-input nhsuk-input--width-10" id="amount" name="amount" type="text" value="">
-        </div>
-      </div>
-
-      <a href="pcn-payment-card-gov" class="nhsuk-button" role="button">
-        Submit
-      </a>
-      
-
-      <p><a href="pcn-css-view">Cancel</a></p>
+      <a href="#" class="nhsuk-button" role="button">Submit</a>
+      <p><a href="css-view">Cancel</a></p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
       <div class="bordered-content-box nhsuk-u-margin-bottom-6">
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-               <h2 class="nhsuk-heading-m pcn-title nhsuk-u-margin-bottom-0">PCN 06183129565 <span class="nhsuk-tag nhsuk-tag--green heading-tag">Open</span></h2> 
+               <h2 class="nhsuk-heading-m  nhsuk-u-margin-bottom-0">PCN 06183129565 <span class="nhsuk-tag nhsuk-tag--green heading-tag">Open</span></h2> 
             </div>
          </div>
       </div>
+
+      <div class="bordered-content-box nhsuk-u-margin-bottom-6">
+         <dl class="nhsuk-summary-list  nhsuk-u-margin-bottom-4">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Joe Bloggs
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+               9 Hotspur Street<br>Townford<br> NE10LD
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+               <p>joe.blogss@example.com</p>
+              </dd>
+          
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Telephone number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                <p>07700 900362</p>
+                
+              </dd>
+          
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+               <dt class="nhsuk-summary-list__key">
+                 Date of birth
+               </dt>
+               <dd class="nhsuk-summary-list__value">
+                 20 November 1988
+               </dd>
+           
+             </div>
+
+             <div class="nhsuk-summary-list__row">
+               <dt class="nhsuk-summary-list__key">
+                 NHS number
+               </dt>
+               <dd class="nhsuk-summary-list__value">
+                  23141986
+               </dd>
+           
+             </div>
+          
+          </dl>
+      </div>
+
       <div class="nhsuk-grid-row">
          <div class="nhsuk-grid-column-full">
             <div class="nhsuk-tabs" data-module="nhsuk-tabs">
@@ -424,4 +477,14 @@
    </div>
 </div>
 
+<script>
+   var maxLength = 375;
+   $('textarea').keyup(function () {
+      var length = $(this).val().length;
+      var length = maxLength - length;
+      $('#chars').text(length);
+   });
+</script>
+
+</html>
 {% endblock %}
