@@ -43,8 +43,16 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+<div class="nhsuk-back-link">
 
-<div class="nhsuk-grid-row">
+   <a class="nhsuk-back-link__link" href="pay-pcn-extend">
+     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+     </svg>
+     Go back</a>
+ </div>
+
+ <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
          <h2 class="nhsuk-error-summary__title" id="error-summary-title">
@@ -54,65 +62,93 @@ Content page example - NHS.UK prototype kit
            
            <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
              <li>
-               <a href="#example-error-1">Select how you would like to pay your penalty charge</a>
+               <a href="#checkbox-error">Confirm that you understand what will happen if we are unable to take payments on more than one occasion.</a>
              </li>
            </ul>
          </div>
        </div>
 
-       
-            <h1 class="nhsuk-u-margin-bottom-4">
-               Add payment
-            </h1>
-            <div></div>
+      <h1 class="nhsuk-u-margin-bottom-4">
+         Set up a Direct Debit
+      </h1>
+      <div></div>
 
-      <div class="nhsuk-form-group nhsuk-form-group--error">
+      <p><b>All information on this page must be read out to the customer.</b></p>
 
-         <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
-           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-             <h1 class="nhsuk-fieldset__heading">
-               Select a payment method
-             </h1>
-           </legend>
-       
-      
-       
-           <span class="nhsuk-error-message" id="example-error-error">
-             <span class="nhsuk-u-visually-hidden">Error:</span> Select one of the options
-           </span>
-       
-           <div class="nhsuk-radios nhsuk-radios--inline">
-       
-             <div class="nhsuk-radios__item">
-               <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
-               <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
-                 Pay by card
-               </label>
-             </div>
-       
-             <div class="nhsuk-radios__item">
-               <input class="nhsuk-radios__input" id="example-error-2" name="example-error" type="radio" value="no">
-               <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
-                 Set up a Direct Debit
-               </label>
-             </div>
-       
-           </div>
-         </fieldset>
-       
+      <p>Direct Debit lets you pay your penalty charge over a number of months, on a date that suits you.</p>
+
+      <div class="nhsuk-inset-text">
+         <span class="nhsuk-u-visually-hidden">Information: </span>
+         <p>If we are unable to take a payment, you may have to pay extra charges.</p>
+         <p>If we are unable to take payments on more than one occasion, your Direct Debit plan may be cancelled and you may need to pay the amount you owe in full.</p>
        </div>
-      
-          
-          
+
+       <form>
+
+         <div class="nhsuk-form-group nhsuk-form-group--error">
+       
+           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint contact-error">
+             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+               <h1 class="nhsuk-fieldset__heading">
+                  You must confirm the following to set up a Direct Debit online
+               </h1>
+             </legend>
+       
+             <span class="nhsuk-error-message" id="checkbox-error">
+               <span class="nhsuk-u-visually-hidden">Error:</span> Confirm that you understand what will happen if we are unable to take payments on more than one occasion.
+             </span>
+       
+             <div class="nhsuk-checkboxes">
+       
+               <div class="nhsuk-checkboxes__item">
+                 <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                 <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                  I'm using my own bank account
+                 </label>
+               </div>
+       
+               <div class="nhsuk-checkboxes__item">
+                 <input class="nhsuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
+                 <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+                  I'm the only person required to authorise debits from this account
+                 </label>
+               </div>
+       
+               <div class="nhsuk-checkboxes__item">
+                 <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message">
+                 <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+                  I understand that if you are unable to take payments on more than one occasion, I might have to pay extra charges and may not be able to pay by Direct Debit again
+                 </label>
+               </div>
+       
+             </div>
+           </fieldset>
+       
+         </div>
+       
+       </form>
+
+
          
-         <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Continue
-          </button>
-      </form>
+       
+             
+       
+              
+       
+               
+       
+             
+       
+         
+
+       <p>Read the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/" title="External website">Direct Debit Guarantee</a>.</p>
 
 
       
 
+      
+
+      <a href="pay-pcn-DD-monthly-options" class="nhsuk-button" type="submit">Continue</a>
       <p><a href="pcn-css-view">Cancel</a></p>
    </div>
 
@@ -210,7 +246,7 @@ Content page example - NHS.UK prototype kit
             </div>
          </div>
 
-  
+   
    
                   
                
