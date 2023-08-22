@@ -54,59 +54,85 @@
       </div>
 
       <h1>
-         Pay by Direct Debit
+         ERROR
       </h1>
 
-      <div class="nhsuk-warning-callout">
-        <h3 class="nhsuk-warning-callout__label">
-          <span role="text">
-            Important:
-          </span>
-        </h3>
-        <p>This information must all be read out to the customer.</p>
-      </div>
+      data['confirm']
 
-      <p>Direct Debit lets you pay your penalty charge over a number of months, on a date that suits you.</p>
-      <p>If we are unable to take a payment, you may have to pay extra charges.</p>
-      <p>If we are unable to take payments on more than one occassion, your Direct Debit plan may be canceelled and you may need to pay the amount you owe in full.</p>
+      {% from "summary-list/macro.njk" import summaryList %}
 
-      <form action="/v3-george/css-payment-dd-months" method="POST">
-          {{ checkboxes({
-            "idPrefix": "dd-confirmation",
-            "name": "confirm",
-            "values": data["confirm"],
-            "fieldset": {
-              "legend": {
-                "text": "You must confirm the following to setup a Direct Debit online",
-                "classes": "nhsuk-fieldset__legend--m",
-                isPageHeading: false
-              }
-            },
-            "items": [
-              {
-                "value": "bank",
-                "text": "I'm using my own bank account"
-              },
-              {
-                "value": "person",
-                "text": "I'm the only person required to authorise debits from this account"
-              },
-              {
-                "value": "understand",
-                "text": "I understand that if you are unable to take payments on more than one occasion, I might have to pay extra charges and may not be able to pay by Direct Debit again"
-              }
-            ]
-          }) }}
-
-         <p>Read the <a href="#">Direct Debit guarantee</a></p>
-       
-         <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-           Continue
-         </button>
-       </form>
-
-
-      <p><a href="css-view">Cancel</a></p>
+{{ summaryList({
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: data['confirm']
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "15 March 1984"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Contact information"
+      },
+      value: {
+        html: "73 Roman Rd<br>Leeds<br> LS2 5ZN"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact information"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: '<p>07700 900362</p><p>karen.francis@example.com</p>'
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact details"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
    </div>
 </div>
 

@@ -61,16 +61,31 @@ const router = express.Router();
     }
   });
 
-  // pcn-payment.html in v3 George folder - decide which page to direct to depending on the answer chosen
+  // George v3 Routes
+
+  // css-payment.html - decide which page to direct to depending on the answer chosen
   router.post('/v3-george/css-payment', function(request, response) {
 
-    var country = request.session.data['payment-method']
-    if (country == "card"){
+    var method = request.session.data['payment-method']
+    if (method == "card"){
         response.redirect("css-payment-card")
     } else {
         response.redirect("css-payment-dd")
     }
 })
+
+  // css-payment-dd.html - show error page if bottom checkbox not checked, else redirect to next page
+
+  router.post('/v3-george/css-payment-dd-months', function(request, response) {
+      var confirm = request.session.data['confirm'];
+
+      if (confirm.includes('bank') && confirm.includes('person') && confirm.includes('understand')){
+        response.redirect("css-payment-dd-months")
+      } else {
+        response.redirect("css-payment-dd-error")
+      }
+  })
+
 
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
 router.post('/v3-iona/pay-pcn-extend', function(request, response) {
