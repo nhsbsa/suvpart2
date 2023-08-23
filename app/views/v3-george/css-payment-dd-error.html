@@ -43,6 +43,18 @@
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+<!-- Controls which checkboxes are checked upon loading of error page by remembering choice with session data -->
+
+{% set passedData = data['confirm'] %}
+
+{% if passedData === noneChecked %}
+  {% set checkboxChecked = false %}
+  {% set errorMessageText = "Confirm that you are using your own bank account, you are the only person... " %}
+{% else %}
+  {% set checkboxChecked = true %}
+  {% set errorMessageText = "Confirm that you understand what will happen if we are unable to take payments on more than one occasion" %}
+{% endif %}
+
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
     <div class="nhsuk-back-link">
@@ -61,7 +73,7 @@
           
           <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
             <li>
-              <a href="#dd-confirmation-3">Confirm that you understand what will happen if we are unable to take payments on more than one occasion</a>
+              <a href="#dd-confirmation-3">{{ errorMessageText }}</a>
             </li>
           </ul>
         </div>
@@ -97,18 +109,18 @@
               }
             },
             "errorMessage": {
-              "text": "Confirm that you understand what will happen if we are unable to take payments on more than one occasion"
+              "text": errorMessageText
           },
             "items": [
               {
                 "value": "bank",
                 "text": "I'm using my own bank account",
-                "checked": true
+                "checked": checkboxChecked
               },
               {
                 "value": "person",
                 "text": "I'm the only person required to authorise debits from this account",
-                "checked": true
+                "checked": checkboxChecked
               },
               {
                 "value": "understand",
@@ -123,7 +135,6 @@
            Continue
          </button>
        </form>
-
 
       <p><a href="css-view">Cancel</a></p>
    </div>

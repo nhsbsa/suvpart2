@@ -94,10 +94,10 @@ const router = express.Router();
         response.redirect("css-payment-dd-months")
       } else if (confirm === "noneChecked" ) {
         response.redirect("css-payment-dd-error");
-        console.log("confirm: " + confirm);
+        console.log("confirm contains: " + confirm);
       } else {
         response.redirect("css-payment-dd-error");
-        console.log("confirm: " + confirm);
+        console.log("confirm contains: " + confirm);
       }
   })
 
