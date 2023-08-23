@@ -49,16 +49,28 @@
   {% set cardChecked = false %}
 {% endif %}
 
+<!-- Controls which radio is auto selected if user uses 'go back' by remembering choice with session data -->
 {% if data['payment-method'] === "dd" %}
   {% set ddChecked = true %}
 {% else %}
   {% set ddChecked = false %}
 {% endif %}
 
-<form action="/v3-george/css-payment" method="POST">
+
+{{ errorSummary({
+  "titleText": "There is a problem",
+  "errorList": [
+    {
+      "text": "Select how you would like to pay your penalty charge",
+      "href": "#payment-method-error-1"
+    }
+  ]
+}) }}
+
+<form action="/v3-george/css-payment-error" method="POST">
   {{ radios({
-    "idPrefix": "payment-method",
-    "name": "payment-method",
+    "idPrefix": "payment-method-error",
+    "name": "payment-method-error",
     "fieldset": {
       "legend": {
         "text": "How would you like to pay?",
@@ -66,6 +78,9 @@
         "isPageHeading": true
       }
     },
+    "errorMessage": {
+      "text": "Select how you would like to pay your penalty charge"
+  },
     "items": [
       {
         "value": "card",

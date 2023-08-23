@@ -65,27 +65,41 @@ const router = express.Router();
 
   // css-payment.html - decide which page to direct to depending on the answer chosen
   router.post('/v3-george/css-payment', function(request, response) {
-
     var method = request.session.data['payment-method']
-    if (method == "card"){
-        response.redirect("css-payment-card")
-    } else {
+    if (method === "card"){
+      response.redirect("css-payment-card")
+    } else if (method === "dd") {
         response.redirect("css-payment-dd")
+    } else {
+      response.redirect("css-payment-error")
     }
-})
+  })
+  router.post('/v3-george/css-payment-error', function(request, response) {
+    var method = request.session.data['payment-method-error']
+    if (method === "card"){
+      response.redirect("css-payment-card")
+    } else if (method === "dd") {
+        response.redirect("css-payment-dd")
+    } else {
+      response.redirect("css-payment-error")
+    }
+  })
 
   // css-payment-dd.html - show error page if bottom checkbox not checked, else redirect to next page
 
   router.post('/v3-george/css-payment-dd-months', function(request, response) {
-      var confirm = request.session.data['confirm'];
+      let confirm = request.session.data['confirm'] || "noneChecked";
 
-      if (confirm.includes('bank') && confirm.includes('person') && confirm.includes('understand')){
+      if (confirm.includes('understand')){
         response.redirect("css-payment-dd-months")
+      } else if (confirm === "noneChecked" ) {
+        response.redirect("css-payment-dd-error");
+        console.log("confirm: " + confirm);
       } else {
-        response.redirect("css-payment-dd-error")
+        response.redirect("css-payment-dd-error");
+        console.log("confirm: " + confirm);
       }
   })
-
 
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
 router.post('/v3-iona/pay-pcn-extend', function(request, response) {
