@@ -81,12 +81,12 @@ Content page example - NHS.UK prototype kit
    <h1 class="nhsuk-heading-l">Which date would you like payments to be taken each month?</h1>
       <p>All payments will be taken on, or just after, your chosen date.</p>
       <p>Enter a payment date between 1 and 28.</p>
+      <span class="nhsuk-error-message" id="name-error">
+         <span class="nhsuk-u-visually-hidden">Error:</span> Enter the date you would like payments to be taken each month
+       </span>
   <label class="nhsuk-label" for="name">
     Date
   </label>
-  <span class="nhsuk-error-message" id="name-error">
-    <span class="nhsuk-u-visually-hidden">Error:</span> Enter the date you would like payments to be taken each month
-  </span>
   <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-2" id="name" name="name" type="text" pattern="[0-9]*" inputmode="numeric" aria-describedby="name-error">
 </div>
 
