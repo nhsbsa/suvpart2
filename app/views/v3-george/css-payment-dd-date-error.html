@@ -50,6 +50,16 @@
             "text": "Go back"
         }) }}
 
+        {{ errorSummary({
+        "titleText": "There is a problem",
+        "errorList": [
+            {
+            "text": "Enter a payment date between 1 and 28",
+            "href": "#example-error-1"
+            }
+        ]
+        }) }}
+
         <h1>
             Which date would you like payments to be taken each month?
         </h1>
@@ -60,12 +70,15 @@
         }) }}
 
         <p>All payments will be taken on, or just after, your chosen date.</p>
-        <p>Enter a payment date between 1 and 28.</p>
+        <p>Enter a payment date between 1 and 28</p>
 
         <form action="css-payment-dd-address" method="POST">
             {{ input({
                 "label": {
                     "text": "Date"
+                },
+                "errorMessage": {
+                    "text": "Enter a payment date between 1 and 28"
                 },
                 "id": "date",
                 "name": "date",

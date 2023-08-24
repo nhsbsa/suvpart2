@@ -43,29 +43,21 @@
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-{% if data['dd-months'] === "three" %}
-  {% set threeChecked = true %}
-{% else %}
-  {% set threeChecked = false %}
-{% endif %}
-
-{% if data['dd-months'] === "six" %}
-  {% set sixChecked = true %}
-{% else %}
-  {% set sixChecked = false %}
-{% endif %}
-
-{% if data['dd-months'] === "twelve" %}
-  {% set twelveChecked = true %}
-{% else %}
-  {% set twelveChecked = false %}
-{% endif %}
-
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-two-thirds">
         {{ backLink({
             "href": "css-payment-dd",
             "text": "Go back"
+        }) }}
+
+        {{ errorSummary({
+            "titleText": "There is a problem",
+            "errorList": [
+                {
+                "text": "Select how many months you want to pay over",
+                "href": "#dd-months-1"
+                }
+            ]
         }) }}
 
         <h1>
@@ -75,14 +67,13 @@
         {{ warningCallout({
             "heading": "Important:",
             "HTML": "<p>This information must all be read out to the customer.</p>"
-        }) }}
+          }) }}
 
         <p>Your total amount to pay is <span class="nhsuk-u-font-weight-bold">£166.40</span>. You will not be charged interest on this amount and it will not affect your credit score.</p>
         
         <form action="css-payment-dd-date" method="POST">
-
             {{ radios({
-              "idPrefix": "dd-months",
+              "idPrefix": "dd-months-error",
               "name": "dd-months",
               "fieldset": {
                 "legend": {
@@ -91,30 +82,30 @@
                   "isPageHeading": true
                 }
               },
+              "errorMessage": {
+                "text": "Select how many months you want to pay over"
+            },
               "items": [
                 {
                     "value": "three",
                     "text": "3 months",
                     "hint": {
                         "text": "1 Payment of £55.46 followed by 2 payments of £55.47"
-                    },
-                    "checked": threeChecked
+                    }
                 },
                 {
                     "value": "six",
                     "text": "6 months",
                     "hint": {
                         "text": "1 Payment of £27.75 followed by 5 payments of £27.73"
-                    },
-                    "checked": sixChecked
+                    }
                 },
                 {
                     "value": "twelve",
                     "text": "12 months",
                     "hint": {
                         "text": "1 Payment of £13.95 followed by 11 payments of £13.87"
-                    },
-                    "checked": twelveChecked
+                    }
                 }
               ]
             }) }}

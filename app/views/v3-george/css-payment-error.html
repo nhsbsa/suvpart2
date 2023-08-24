@@ -94,9 +94,11 @@
       }
     ]
   }) }}   
-  <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-    Submit
-  </button>
+  
+  {{ button({
+    "text": "Continue",
+    "type": "submit"
+  }) }}
 </form>
 
  <p><a href="css-view">Cancel</a></p>

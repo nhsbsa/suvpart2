@@ -72,6 +72,7 @@ const router = express.Router();
         response.redirect("css-payment-dd")
     } else {
       response.redirect("css-payment-error")
+      console.log(method)
     }
   })
   router.post('/v3-george/css-payment-error', function(request, response) {
@@ -82,11 +83,11 @@ const router = express.Router();
         response.redirect("css-payment-dd")
     } else {
       response.redirect("css-payment-error")
+
     }
   })
 
   // css-payment-dd.html - show error page if bottom checkbox not checked, else redirect to next page
-
   router.post('/v3-george/css-payment-dd-months', function(request, response) {
       let confirm = request.session.data['confirm'] || "noneChecked";
 
@@ -101,6 +102,35 @@ const router = express.Router();
       }
   })
 
+  // css-payment-dd-months.html - show errror page if none of the radios are selected
+  router.post('/v3-george/css-payment-dd-date', function(request, response) {
+    var months = request.session.data['dd-months']
+    if (months === "three"){
+      response.redirect("css-payment-dd-date")
+    } else if (months === "six") {
+      response.redirect("css-payment-dd-date")
+    } else if (months === "twelve") {
+      response.redirect("css-payment-dd-date")
+    } else {
+      response.redirect("css-payment-dd-months-error")
+    }
+  })
+
+  // css-payment-dd-date.html - show errror page if date entered is blank, zero, or greater than 28
+  router.post('/v3-george/css-payment-dd-address', function(request, response) {
+    var date = request.session.data['date']
+    if (date >= 1 && date <= 28){
+      response.redirect("css-payment-dd-address")
+    } else if (date === 0) {
+      response.redirect("css-payment-dd-date-error")
+    } else if (date === "undefined") {
+      response.redirect("css-payment-dd-date-error")
+    } else {
+      response.redirect("css-payment-dd-date-error")
+    }
+  })
+
+// Iona v3 Routes
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
 router.post('/v3-iona/pay-pcn-extend', function(request, response) {
 
