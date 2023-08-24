@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Confirm your email address
+ Confirm your email address
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -50,6 +50,16 @@ Confirm your email address
             "text": "Go back"
         }) }}
 
+        {{ errorSummary({
+            "titleText": "There is a problem",
+            "errorList": [
+              {
+                "text": "The email address you provided does not match",
+                "href": "#email-address-confirm"
+              }
+            ]
+        }) }}
+
         <h1>
             Confirm your email address
         </h1>
@@ -58,6 +68,9 @@ Confirm your email address
             {{ input({
                 "label": {
                   "text": "Email address"
+                },
+                "errorMessage": {
+                    "text": "The email address you provided does not match"
                 },
                 "classes": "nhsuk-u-width-one-half",
                 "id": "email-address-confirm",

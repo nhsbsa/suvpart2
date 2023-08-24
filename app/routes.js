@@ -158,6 +158,31 @@ const router = express.Router();
     }
   })
 
+    // css-payment-dd-email.html - show bank details if empty, else show email confirmation page
+    router.post('/v3-george/css-payment-dd-email-confirm', function(request, response) {
+      var email = request.session.data['email-address']
+  
+      // checking that the required fields aren't empty, if they are show error page
+      if (email === ""){
+        response.redirect("css-payment-dd-bank-details")
+      } else {
+        response.redirect("css-payment-dd-email-confirm")
+      }
+    })
+
+    // css-payment-dd-email-confirm.html - show bank details if emails match, else show error page
+    router.post('/v3-george/css-payment-dd-bank-details', function(request, response) {
+      var email = request.session.data['email-address']
+      var emailConfirm = request.session.data['email-address-confirm']
+  
+      // checking that the required fields aren't empty, if they are show error page
+      if (email === emailConfirm){
+        response.redirect("css-payment-dd-bank-details")
+      } else {
+        response.redirect("css-payment-dd-email-confirm-error")
+      }
+    })
+
 // Iona v3 Routes
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
 router.post('/v3-iona/pay-pcn-extend', function(request, response) {
