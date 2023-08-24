@@ -130,6 +130,34 @@ const router = express.Router();
     }
   })
 
+  // css-payment-dd-address.html - show errror page if none of the radios are selected, if yes show email address page, if no show address update page
+  router.post('/v3-george/css-payment-dd-email', function(request, response) {
+    var addressCorrect = request.session.data['address-correct']
+    if (addressCorrect === "yes"){
+      response.redirect("css-payment-dd-email")
+    } else if (addressCorrect === "no") {
+      response.redirect("css-payment-dd-address-update")
+    } else if (addressCorrect === "undefined") {
+      response.redirect("css-payment-dd-address-error")
+    } else {
+      response.redirect("css-payment-dd-address-error")
+    }
+  })
+
+  // css-payment-dd-address-update.html - show errror page required fields are empty, else show email addrress page
+  router.post('/v3-george/css-payment-dd-email-address-update', function(request, response) {
+    var addressOne = request.session.data['address-one']
+    var addressTown = request.session.data['address-town']
+    var addressPostcode = request.session.data['address-postcode']
+
+    // checking that the required fields aren't empty, if they are show error page
+    if (addressOne === "" || addressTown === "" || addressPostcode === ""){
+      response.redirect("css-payment-dd-address-update-error")
+    } else {
+      response.redirect("css-payment-dd-email")
+    }
+  })
+
 // Iona v3 Routes
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
 router.post('/v3-iona/pay-pcn-extend', function(request, response) {

@@ -1,0 +1,132 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  What is your address?
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        {{ backLink({
+            "href": "css-payment-dd-address",
+            "text": "Go back"
+        }) }}
+
+        {{ errorSummary({
+          "titleText": "There is a problem",
+          "errorList": [
+            {
+              "text": "Enter address line 1",
+              "href": "#address-one"
+            },
+            {
+              "text": "Enter your town or city",
+              "href": "#address-town"
+            },
+            {
+              "text": "Enter your postcode",
+              "href": "#address-postcode"
+            }
+          ]
+        }) }}
+
+        <h1>
+            What is your address?
+        </h1>
+
+        <p>This address will be updated on your record.</p>
+
+        <form action="css-payment-dd-email-address-update" method="POST">
+            {{ input({
+              "label": {
+                "text": "Address line 1"
+              },
+              "errorMessage": {
+                "text": "Enter address line 1"
+              },
+              "classes": "nhsuk-u-width-one-half",
+              "id": "address-one",
+              "name": "address-one"
+            }) }}
+
+            {{ input({
+              "label": {
+                "text": "Address line 2 (optional)"
+              },
+              "classes": "nhsuk-u-width-one-half",
+              "id": "address-two",
+              "name": "address-two"
+            }) }}
+
+            {{ input({
+              "label": {
+                "text": "Town or city"
+              },
+              "errorMessage": {
+                "text": "Enter your town or city"
+              },
+              "classes": "nhsuk-u-width-one-half",
+              "id": "address-town",
+              "name": "address-town"
+            }) }}
+
+            {{ input({
+              "label": {
+                "text": "Postcode"
+              },
+              "errorMessage": {
+                "text": "Enter your postcode"
+              },
+              "classes": "nhsuk-u-width-one-quarter",
+              "id": "address-postcode",
+              "name": "address-postcode"
+            }) }}
+
+            {{ button({
+                "text": "Continue",
+                "type": "submit"
+            }) }}
+        </form>
+
+        <p><a href="css-view">Cancel</a></p>
+    </div>
+</div>
+{% endblock %}

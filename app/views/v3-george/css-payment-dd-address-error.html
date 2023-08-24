@@ -44,72 +44,71 @@
 {% block content %}
 
 <div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-two-thirds">
         {{ backLink({
-            "href": "css-payment-dd",
+            "href": "css-payment-dd-date",
             "text": "Go back"
         }) }}
 
         {{ errorSummary({
-            "titleText": "There is a problem",
-            "errorList": [
-                {
-                "text": "Select how many months you want to pay over",
-                "href": "#dd-months-1"
-                }
-            ]
+          "titleText": "There is a problem",
+          "errorList": [
+              {
+              "text": "Select whether your address is correct or not",
+              "href": "#address-correct-1"
+              }
+          ]
         }) }}
 
         <h1>
-            Select how many months you want to pay over
+            Is your address correct?
         </h1>
 
         {{ warningCallout({
             "heading": "Important:",
             "HTML": "<p>This information must all be read out to the customer.</p>"
-          }) }}
+        }) }}
 
-        <p>Your total amount to pay is <span class="nhsuk-u-font-weight-bold">£166.40</span>. You will not be charged interest on this amount and it will not affect your credit score.</p>
-        
-        <form action="css-payment-dd-date" method="POST">
+        <p>We'll send confirmation of your Direct Debit to the address you provide.</p>
+
+        <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                9 Hotspur Street<br>Townford<br>NE10LD
+              </dd>
+            </div>
+          </dl>
+
+        <form action="css-payment-dd-email" method="POST">
             {{ radios({
-              "idPrefix": "dd-months-error",
-              "name": "dd-months",
-              "fieldset": {
-                "legend": {
-                  "text": "Select how many months you want to pay over",
-                  "classes": "nhsuk-fieldset__legend--m",
-                  "isPageHeading": true
-                }
-              },
-              "errorMessage": {
-                "text": "Select how many months you want to pay over"
+                "idPrefix": "address-correct",
+                "name": "address-correct",
+                "classes": "nhsuk-radios--inline",
+                "fieldset": {
+                  "legend": {
+                    "text": "Is your address correct?",
+                    "classes": "nhsuk-fieldset__legend--s nhsuk-u-font-weight-normal",
+                    "isPageHeading": false
+                  }
                 },
-              "items": [
-                {
-                    "value": "three",
-                    "text": "3 months",
-                    "hint": {
-                        "text": "1 Payment of £55.46 followed by 2 payments of £55.47"
-                    }
+                "errorMessage": {
+                  "text": "Select whether your address is correct or not"
                 },
-                {
-                    "value": "six",
-                    "text": "6 months",
-                    "hint": {
-                        "text": "1 Payment of £27.75 followed by 5 payments of £27.73"
-                    }
-                },
-                {
-                    "value": "twelve",
-                    "text": "12 months",
-                    "hint": {
-                        "text": "1 Payment of £13.95 followed by 11 payments of £13.87"
-                    }
-                }
-              ]
+                "items": [
+                  {
+                    "value": "yes",
+                    "text": "Yes"
+                  },
+                  {
+                    "value": "no",
+                    "text": "No"
+                  }
+                ]
             }) }}
-        
+
             {{ button({
                 "text": "Continue",
                 "type": "submit"
