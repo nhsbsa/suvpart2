@@ -217,4 +217,15 @@ router.post('/v3-iona/pay-pcn-DD-complete-radios', function(request, response) {
   }
 })
 
+// cannot-pay-by-DD.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-iona/cannot-pay-by-DD', function(request, response) {
+
+  var country = request.session.data['example-inline']
+  if (country == "yes"){
+      response.redirect("pcn-payment-card")
+  } else {
+      response.redirect("pcn-css-view")
+  }
+})
+
 module.exports = router;
