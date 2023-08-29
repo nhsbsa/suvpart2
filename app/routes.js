@@ -158,30 +158,46 @@ const router = express.Router();
     }
   })
 
-    // css-payment-dd-email.html - show bank details if empty, else show email confirmation page
-    router.post('/v3-george/css-payment-dd-email-confirm', function(request, response) {
-      var email = request.session.data['email-address']
-  
-      // checking that the required fields aren't empty, if they are show error page
-      if (email === ""){
-        response.redirect("css-payment-dd-bank-details")
-      } else {
-        response.redirect("css-payment-dd-email-confirm")
-      }
-    })
+  // css-payment-dd-email.html - show bank details if empty, else show email confirmation page
+  router.post('/v3-george/css-payment-dd-email-confirm', function(request, response) {
+    var email = request.session.data['email-address']
 
-    // css-payment-dd-email-confirm.html - show bank details if emails match, else show error page
-    router.post('/v3-george/css-payment-dd-bank-details', function(request, response) {
-      var email = request.session.data['email-address']
-      var emailConfirm = request.session.data['email-address-confirm']
-  
-      // checking that the required fields aren't empty, if they are show error page
-      if (email === emailConfirm){
-        response.redirect("css-payment-dd-bank-details")
-      } else {
-        response.redirect("css-payment-dd-email-confirm-error")
-      }
-    })
+    // checking that the required fields aren't empty, if they are show error page
+    if (email === ""){
+      response.redirect("css-payment-dd-bank-details")
+    } else {
+      response.redirect("css-payment-dd-email-confirm")
+    }
+  })
+
+  // css-payment-dd-email-confirm.html - show bank details if emails match, else show error page
+  router.post('/v3-george/css-payment-dd-bank-details', function(request, response) {
+    var email = request.session.data['email-address']
+    var emailConfirm = request.session.data['email-address-confirm']
+
+    // checking that the email address matches the confirm email address field exactly - if it does show bank details page
+    if (email === emailConfirm){
+      response.redirect("css-payment-dd-bank-details")
+    } else {
+      response.redirect("css-payment-dd-email-confirm-error")
+    }
+  })
+
+  // css-payment-dd-bank-details.html - show check your answer if fields are filled, else show error page
+  router.post('/v3-george/css-payment-dd-bank-details', function(request, response) {
+    var accountName = request.session.data['bank-name']
+    var accountNumber = request.session.data['bank-account']
+    var sortOne = request.session.data['bank-sort-one']
+    var sortTwo = request.session.data['bank-sort-one']
+    var sortThree = request.session.data['bank-sort-one']
+
+    // checking that the required fields aren't empty, if they are show error page
+    if (accountName === "" || accountNumber === "" || sortOne === "" || sortTwo === "" || sortThree === ""){
+      response.redirect("css-payment-dd-bank-details-error")
+    } else {
+      response.redirect("css-payment-dd-check-answers")
+    }
+  })
 
 // Iona v3 Routes
 // pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen

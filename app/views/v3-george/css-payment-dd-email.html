@@ -44,41 +44,41 @@
 {% block content %}
 
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-        {{ backLink({
-            "href": "css-payment-dd-address",
-            "text": "Go back"
-        }) }}
+   <div class="nhsuk-grid-column-two-thirds">
+      {{ backLink({
+         "href": "css-payment-dd-address",
+         "text": "Go back"
+      }) }}
 
-        <h1>
-            What is your email address?
-        </h1>
+      <h1>
+         What is your email address?
+      </h1>
 
-        {{ warningCallout({
-            "heading": "Important:",
-            "HTML": "<p>This information must all be read out to the customer.</p>"
-        }) }}
+      {{ warningCallout({
+         "heading": "Important:",
+         "HTML": "<p>This information must all be read out to the customer.</p>"
+      }) }}
 
-        <p>We'll send confirmation of your Direct Debit to the email address you provide.</p>
+      <p>We'll send confirmation of your Direct Debit to the email address you provide.</p>
 
-        <form action="css-payment-dd-email-confirm" method="POST">
-            {{ input({
-                "label": {
-                  "text": "Email address (optional)"
-                },
-                "classes": "nhsuk-u-width-one-half",
-                "id": "email-address",
-                "name": "email-address",
-                "value": data['email-address']
-              }) }}
+      <form action="css-payment-dd-email-confirm" method="POST">
+         {{ input({
+               "label": {
+               "text": "Email address (optional)"
+               },
+               "classes": "nhsuk-u-width-one-half",
+               "id": "email-address",
+               "name": "email-address",
+               "value": data['email-address']
+         }) }}
 
-              {{ button({
-                "text": "Continue",
-                "type": "submit"
-            }) }}
-        </form>
+         {{ button({
+            "text": "Continue",
+            "type": "submit"
+         }) }}
+      </form>
 
-        <p><a href="css-view">Cancel</a></p>
-    </div>
+      <p><a href="css-view">Cancel</a></p>
+   </div>
 </div>
 {% endblock %}
