@@ -44,221 +44,551 @@
 {% block content %}
 
 <div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="css-payment-dd-bank-details">
-            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-            </svg>
-            Go back</a>
-        </div>
+  <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="css-payment-dd-bank-details">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
 
-        <h1>
-            Check your answers are correct
-        </h1>
+      <h1>
+          Check your answers are correct
+      </h1>
 
-        <div class="nhsuk-warning-callout">
-            <h2 class="nhsuk-warning-callout__label">
-            <span role="text">
-                Important:
-            </span>
-            </h2>
-            <p>This information must all be read out to the customer.</p>
-        </div>
+      <div class="nhsuk-warning-callout">
+          <h2 class="nhsuk-warning-callout__label">
+          <span role="text">
+              Important:
+          </span>
+          </h2>
+          <p>This information must all be read out to the customer.</p>
+      </div>
 
-        <h2 class="nhsuk-heading-m">Your Direct Debit details</h2>
+      <h2 class="nhsuk-heading-m">Your Direct Debit details</h2>
+
+      <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Number of payments
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              12
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+              <a href="css-payment-dd-months">
+                Change<span class="nhsuk-u-visually-hidden"> number of payments</span>
+              </a>
+            </dd>
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Chosen payment date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              1
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+              <a href="css-payment-dd-date">
+                Change<span class="nhsuk-u-visually-hidden"> chosen payment date</span>
+              </a>
+            </dd>
+          </div>          
+        </dl>
+
+        <p>Your payments will be taken on, or just after, your chosen payment date each month until your penalty charge has been cleared.</p>
+
+        <h2 class="nhsuk-heading-m">Your payment summary</h2>
 
         <dl class="nhsuk-summary-list">
-            <div class="nhsuk-summary-list__row">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              First payment
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              £13.95
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              First payment taken on or just after
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              01 September 2023
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Following 11 payments
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              £13.87
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Total amount
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              £166.40
+            </dd>
+        
+          </div>
+        
+        </dl>
+
+        <p>Your payment summary is based on the information you have given us.</p>
+
+        <p>You're responsible for making sure that the payments can be taken on these dates.</p>
+
+        <h2 class="nhsuk-heading-m">We will send confirmation of your Direct Debit here</h2>
+
+        <dl class="nhsuk-summary-list">      
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              9 Hotspur Street<br>Townford<br>NE10LD
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="css-payment-dd-address">
+                Change<span class="nhsuk-u-visually-hidden"> address</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>joe.bloggs@example.com</p>
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="css-payment-dd-email">
+                Change<span class="nhsuk-u-visually-hidden"> email address</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+        </dl>
+
+        <h2 class="nhsuk-heading-m">Your bank details</h2>
+
+        <dl class="nhsuk-summary-list">      
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Account holder's name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Joe Bloggs
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="css-payment-dd-bank-details">
+                Change<span class="nhsuk-u-visually-hidden"> account holder name</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Account number
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              12345678
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="css-payment-dd-email">
+                Change<span class="nhsuk-u-visually-hidden"> account number</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Number of payments
+                Sort code
               </dt>
               <dd class="nhsuk-summary-list__value">
-                12
-              </dd>
-          
-              <dd class="nhsuk-summary-list__actions">
-                <a href="css-payment-dd-months">
-                  Change<span class="nhsuk-u-visually-hidden"> number of payments</span>
-                </a>
-              </dd>
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Chosen payment date
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                1
-              </dd>
-          
-              <dd class="nhsuk-summary-list__actions">
-                <a href="css-payment-dd-date">
-                  Change<span class="nhsuk-u-visually-hidden"> chosen payment date</span>
-                </a>
-              </dd>
-            </div>          
-          </dl>
-
-          <p>Your payments will be taken on, or just after, your chosen payment date each month until your penalty charge has been cleared.</p>
-
-          <h2 class="nhsuk-heading-m">Your payment summary</h2>
-
-          <dl class="nhsuk-summary-list">
-
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                First payment
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                £13.95
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                First payment taken on or just after
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                01 September 2023
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Following 11 payments
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                £13.87
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Total amount
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                £166.40
-              </dd>
-          
-            </div>
-          
-          </dl>
-
-          <p>Your payment summary is based on the information you have given us.</p>
-
-          <p>You're responsible for making sure that the payments can be taken on these dates.</p>
-
-          <h2 class="nhsuk-heading-m">We will send confirmation of your Direct Debit here</h2>
-
-          <dl class="nhsuk-summary-list">      
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Address
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                9 Hotspur Street<br>Townford<br>NE10LD
-              </dd>
-          
-              <dd class="nhsuk-summary-list__actions">
-          
-                <a href="css-payment-dd-address">
-                  Change<span class="nhsuk-u-visually-hidden"> address</span>
-                </a>
-          
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Email address
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                <p>joe.bloggs@example.com</p>
-              </dd>
-          
-              <dd class="nhsuk-summary-list__actions">
-          
-                <a href="css-payment-dd-email">
-                  Change<span class="nhsuk-u-visually-hidden"> email address</span>
-                </a>
-          
-              </dd>
-          
-            </div>
-          
-          </dl>
-
-          <h2 class="nhsuk-heading-m">Your bank details</h2>
-
-          <dl class="nhsuk-summary-list">      
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Account holder's name
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                Joe Bloggs
-              </dd>
-          
-              <dd class="nhsuk-summary-list__actions">
-          
-                <a href="css-payment-dd-bank-details">
-                  Change<span class="nhsuk-u-visually-hidden"> account holder name</span>
-                </a>
-          
-              </dd>
-          
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Account number
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                12345678
+                12 34 56
               </dd>
           
               <dd class="nhsuk-summary-list__actions">
           
-                <a href="css-payment-dd-email">
-                  Change<span class="nhsuk-u-visually-hidden"> account number</span>
+                <a href="css-payment-bank-details">
+                  Change<span class="nhsuk-u-visually-hidden"> sort code</span>
                 </a>
           
               </dd>
           
             </div>
+        
+        </dl>
 
-            <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Sort code
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  12 34 56
-                </dd>
-            
-                <dd class="nhsuk-summary-list__actions">
-            
-                  <a href="css-payment-bank-details">
-                    Change<span class="nhsuk-u-visually-hidden"> sort code</span>
-                  </a>
-            
-                </dd>
-            
-              </div>
-          
-          </dl>
+      <form action="css-payment-dd-confirm" method="POST">
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Continue
+          </button>
+      </form>
 
-        <form action="css-payment-dd-confirm" method="POST">
-            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                Continue
-            </button>
-        </form>
+      <p><a href="css-view">Cancel</a></p>
+  </div>
 
-        <p><a href="css-view">Cancel</a></p>
+  <div class="nhsuk-grid-column-one-half">
+    <div class="bordered-content-box nhsuk-u-margin-bottom-6">
+       <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+             <h2 class="nhsuk-heading-m pcn-title nhsuk-u-margin-bottom-0">PCN 06183129565 <span class="nhsuk-tag nhsuk-tag--green heading-tag">Open</span></h2> 
+          </div>
+       </div>
     </div>
+    <div class="nhsuk-grid-row">
+       <div class="nhsuk-grid-column-full">
+          <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+             <ul class="nhsuk-tabs__list">
+          
+             <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+                <a class="nhsuk-tabs__tab" href="#costs">
+                   Costs
+                </a>
+             </li>
+          
+             <li class="nhsuk-tabs__list-item">
+                <a class="nhsuk-tabs__tab" href="#dates">
+                   Dates
+                </a>
+             </li>
+          
+             <li class="nhsuk-tabs__list-item">
+                <a class="nhsuk-tabs__tab" href="#other">
+                   Other
+                </a>
+             </li>
+             </ul>
+          
+             <div class="nhsuk-tabs__panel" id="costs">
+                <dl class="nhsuk-summary-list">
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Prescription cost
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         £26.40
+                      </dd>
+                      </div>
+                   
+                      <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Penalty charge
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         £100.00
+                      </dd>
+                   </div>
+                
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Surcharge
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         £50.00
+                      </dd>
+                   </div>
+                
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Total charge
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         £176.40
+                      </dd>
+                   </div>
+
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Paid
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        £10.00
+                      </dd>
+                   </div>
+
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Balance remaining
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         <p class="nhsuk-u-font-weight-bold">£166.40</p>
+                      </dd>
+                   </div>
+                </dl>
+             </div>
+          
+             <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="dates">
+                <dl class="nhsuk-summary-list">
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      Prescribed on
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      29/05/18
+                   </dd>
+                   </div>
+
+                   <div class="nhsuk-summary-list__row">
+
+                
+
+                   <dt class="nhsuk-summary-list__key">
+                      Dispensed month end date
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      30/06/18
+                   </dd>
+                </div>
+
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      Enquiry sent
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      Not sent
+                   </dd>
+                   </div>
+                
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      PCN sent
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      10/09/18
+                   </dd>
+                   </div>
+                
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      Surcharge sent
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      <p>10/10/18</p>
+                   </dd>
+                   </div>
+
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                      Respond by
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                      07/11/18
+                   </div>
+                </dl>
+             </div>
+          
+             <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="other">
+                <dl class="nhsuk-summary-list">
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      Prescription items
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      3
+                   </dd>
+                   </div>
+
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      Exemption
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      (M) Has valid NHS Tax Credit Exemption Certificate
+                   </dd>
+                   </div>
+                
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      DWP checked
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      Yes
+                   </dd>
+                   </div>
+                
+                   <div class="nhsuk-summary-list__row">
+                   <dt class="nhsuk-summary-list__key">
+                      Source
+                   </dt>
+                   <dd class="nhsuk-summary-list__value">
+                      Electronic
+                   </dd>
+                   </div>
+
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                      Dispenser
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         <p>FMMMM</p>
+                      </dd>
+                   </div>
+
+
+                   <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                         Evidence not seen?
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                         No
+                      </dd>
+                   </div>
+                </dl>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <div class="nhsuk-grid-row">
+       <div class="nhsuk-grid-column-full">
+          <div class="nhsuk-tabs nhsuk-u-margin-bottom-0" data-module="nhsuk-tabs">                
+             <ul class="nhsuk-tabs__list">
+                <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+                   <a class="nhsuk-tabs__tab" href="#notes">
+                   Notes
+                   </a>
+                </li>
+             
+                <li class="nhsuk-tabs__list-item">
+                   <a class="nhsuk-tabs__tab" href="#transactions">
+                   Transactions
+                   </a>
+                </li>
+             </ul>
+             
+             <div class="nhsuk-tabs__panel" id="notes">
+                <table  role="table">
+                   <thead>
+                      <tr>
+                         <th class="nhsuk-u-font-weight-bold">Date</th>
+                         <th class="nhsuk-u-font-weight-bold">Agent</th>
+                         <th class="nhsuk-u-font-weight-bold">Comments</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                      <tr>
+                         <td>27/07/17 13.00</td>
+                         <td>TIM</td>
+                         <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>JOANNE</td>
+                         <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.00</td>
+                         <td>TIM</td>
+                         <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>JOANNE</td>
+                         <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>JOANNE</td>
+                         <td>IINFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>JOANNE</td>
+                         <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
+                      </tr>
+                   </tbody>
+                </table>
+             </div>
+             
+             <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="transactions">             
+                <table>
+                   <thead>
+                      <tr>
+                         <th>Date</th>
+                         <th>User</th>
+                         <th>Amount</th>
+                         <th>For</th>
+                         <th>Type</th>
+                       
+                      </tr>
+                   </thead>
+                   <tbody>
+                      <tr>
+                         <td>31/07/17 15.45</td>
+                         <td>System</td>
+                         <td>-£8.60</td>
+                         <td>Adjustment</td>
+                         <td>Direct Debit</td>
+                      </tr>
+                      <tr>
+                         <td>30/07/17 15.45</td>
+                         <td>System</td>
+                         <td>£8.60</td>
+                         <td>PCN</td>
+                         <td>Direct Debit</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>System</td>
+                         <td>£51.00</td>
+                         <td>PCN</td>
+                         <td>Cheque</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>System</td>
+                         <td>-£51.00</td>
+                         <td>Surcharge</td>
+                         <td>Surcharge added</td>
+                      </tr>
+                      <tr>
+                         <td>27/07/17 13.30</td>
+                         <td>System</td>
+                         <td>£58.60</td>
+                         <td>PCN</td>
+                         <td>Payment request</td>
+                      </tr>
+                   </tbody>
+                </table>
+             </div>
+             
+          </div>
+       </div>
+    </div>
+ </div>
 </div>
 {% endblock %}
