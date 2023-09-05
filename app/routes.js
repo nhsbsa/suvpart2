@@ -244,4 +244,27 @@ router.post('/v3-iona/cannot-pay-by-DD', function(request, response) {
   }
 })
 
+// V3-mvp Routes
+// pay-pcn-extend.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-mvp/pay-pcn-extend', function(request, response) {
+
+  var country = request.session.data['example-inline']
+  if (country == "yes"){
+      response.redirect("pcn-payment-card")
+  } else {
+      response.redirect("pay-pcn-DD-start")
+  }
+})
+
+// pay-pcn-DD-address.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-mvp/pay-pcn-DD-address', function(request, response) {
+
+  var country = request.session.data['address']
+  if (country == "yes"){
+      response.redirect("pay-pcn-DD-check-answers")
+  } else {
+      response.redirect("pay-pcn-DD-address-change")
+  }
+})
+
 module.exports = router;

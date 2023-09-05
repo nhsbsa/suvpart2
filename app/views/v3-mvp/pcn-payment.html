@@ -1,0 +1,82 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ How would you like to pay?
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<form action="/v3-george/pcn-payment" method="POST">
+   <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+          <h1 class="nhsuk-fieldset__heading">
+            How would you like to pay?
+          </h1>
+        </legend>
+    
+        <div class="nhsuk-radios">
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="card" name="payment-method" type="radio" value="card">
+            <label class="nhsuk-label nhsuk-radios__label" for="card">
+              Debit or credit card
+            </label>
+          </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="dd" name="payment-method" type="radio" value="dd">
+            <label class="nhsuk-label nhsuk-radios__label" for="dd">
+              Direct Debit
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+       
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Submit
+    </button>
+</form>
+
+ <p><a href="pcn-css-view">Cancel</a></p>
+
+</html>
+{% endblock %}

@@ -1,0 +1,304 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-back-link">
+
+   <a class="nhsuk-back-link__link" href="pay-pcn-DD-start">
+     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+     </svg>
+     Go back</a>
+ </div>
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-one-half">
+      <h1 class="nhsuk-u-margin-bottom-4">
+         Set up a Direct Debit
+      </h1>
+      <div></div>
+
+      <p><b>All information on this page must be read out to the customer.</b></p>
+
+      <h2>Select how many months you want to pay over</h2>
+
+      <p>Your total amount to pay is £456.81. You will not be charged interest on this amount and it will not affect your credit score.</p>
+      <p>Select how many months you want to pay over</p>
+
+      <div class="nhsuk-form-group">
+
+         <fieldset class="nhsuk-fieldset">
+           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+           </legend>
+       
+           <div class="nhsuk-radios">
+       
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="gateway" aria-describedby="example-hints-1-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                 3 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                  1 payment of £152.27 followed by 2 payments of £152.26
+               </div>
+             </div>
+       
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 6 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £76.13 followed by 5 payments of £76.12
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 9 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £50.76 followed by 8 payments of £50.75
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 12 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £38.07 followed by 11 payments of £38.05
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 15 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £30.45 followed by 14 payments of £30.44
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 18 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £25.38 followed by 17 payments of £25.35
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 24 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £19.03 followed by 23 payments of £19.00
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 36 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £12.69 followed by 35 payments of £12.68
+               </div>
+             </div>
+
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="verify" aria-describedby="example-hints-2-item-hint">
+               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                 48 months
+               </label>
+               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  1 payment of £9.52 followed by 47 payments of £9.50
+               </div>
+             </div>
+       
+           </div>
+         </fieldset>
+       
+       </div>
+
+      
+
+      
+
+       <p><a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/" title="External website">Contact us if you cannot afford any of these monthly plans (link opens in new window)</a>.</p>
+
+
+      
+
+      
+
+      <a href="pay-pcn-DD-dates" class="nhsuk-button" type="submit">Continue</a>
+      <p><a href="pcn-css-view">Cancel</a></p>
+   </div>
+
+   <div class="nhsuk-grid-column-one-half">
+      <div class="border-box">
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
+               <p class="nhsuk-heading-m"><a href="prescription-image"> View prescription</a></p>
+            </div>
+            <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dental charges</h2>
+               <p>£81.62</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+               <p>£456.81</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">EDI</h2>
+               <p>43210</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+               <p>£100.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+               <p>10/09/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+               <p>No</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+               <p>£50.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+               <p>10/10/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Treatment band</h2>
+               <p>3</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+               <p>£456.81</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+               <p>07/11/23</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Treatment start</h2>
+               <p>03/03/23</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+               <p>£0.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Area team</h2>
+               <p>Q55</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Treatment end</h2>
+               <p>03/03/23</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">HC3 amount</h2>
+               <p>No HC3</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Country</h2>
+               <p>E</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p>Universal Credit Certificate (Box "P")</p>
+            </div>
+         </div>
+
+  
+   
+                  
+               
+                  
+   
+   
+                  
+
+   
+            
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   var maxLength = 375;
+   $('textarea').keyup(function () {
+      var length = $(this).val().length;
+      var length = maxLength - length;
+      $('#chars').text(length);
+   });
+</script>
+{% endblock %}

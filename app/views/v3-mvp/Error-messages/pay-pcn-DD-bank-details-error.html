@@ -1,0 +1,254 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-back-link">
+
+   <a class="nhsuk-back-link__link" href="pay-pcn-DD-check-answers">
+     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+     </svg>
+     Go back</a>
+ </div>
+
+ <div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+         <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+           There is a problem
+         </h2>
+         <div class="nhsuk-error-summary__body">
+           
+           <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+             <li>
+               <a href="#name-error">Enter the account holder's name <br> Enter the account number <br>Enter the sort code</b></a>
+             </li>
+           </ul>
+         </div>
+       </div>
+   
+
+      <h1 class="nhsuk-u-margin-bottom-4">
+         Set up a Direct Debit
+      </h1>
+      <div></div>
+
+      <p><b>All information on this page must be read out to the customer.</b></p>
+
+      <div class="nhsuk-form-group nhsuk-form-group--error">
+         <h1 class="nhsuk-heading-l">Enter your bank details</h1>
+            
+            <p>Equifax will perform a check to verify the bank account details you give us. A record of this will be left on your credit record for 12 months but will not affect your credit rating.</p>
+        
+         
+         <label class="nhsuk-label" for="name">
+          Account holder's name
+        </label>
+        <span class="nhsuk-error-message" id="name-error">
+          <span class="nhsuk-u-visually-hidden">Error:</span> Enter the account holder's name
+        </span>
+        <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-20" id="name" name="name" type="text" aria-describedby="name-error">
+        <p></p>
+
+        <label class="nhsuk-label" for="name">
+         Account number
+       </label>
+       <span class="nhsuk-error-message" id="name-error">
+         <span class="nhsuk-u-visually-hidden">Error:</span> Enter the account number
+       </span>
+       <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-20" id="name" name="name" type="text" aria-describedby="name-error">
+
+       <p></p>
+       <label class="nhsuk-label" for="name">
+         Sort code
+       </label>
+       <span class="nhsuk-error-message" id="name-error">
+         <span class="nhsuk-u-visually-hidden">Error:</span> Enter the sort code
+       </span>
+       <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-2" id="name" name="name" type="text" aria-describedby="name-error">
+       <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-2" id="name" name="name" type="text" aria-describedby="name-error">
+       <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-2" id="name" name="name" type="text" aria-describedby="name-error">
+      </div>
+      
+      
+
+      
+
+         
+
+          
+
+          
+          
+             
+          
+         
+       
+       </dl>
+        
+
+
+      <a href="pay-pcn-DD-confirm-submit" class="nhsuk-button" type="submit">Continue</a>
+      <p><a href="pcn-css-view">Cancel</a></p>
+   </div>
+
+   <div class="nhsuk-grid-column-one-half">
+      <div class="border-box">
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
+               <p class="nhsuk-heading-m"><a href="prescription-image"> View prescription</a></p>
+            </div>
+            <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
+               <p>£26.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
+               <p>not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
+               <p>3</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+               <p>£100.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+               <p>10/09/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
+               <p>29/05/18</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+               <p>£50.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+               <p>10/10/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
+               <p>30/06/18</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+               <p>£176.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+               <p>07/11/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+               <p>£10.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
+               <p>Yes</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
+               <p>Electronic</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+               <p>£166.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
+               <p><a href="dispenser">FMMMM</a></p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+               <p>No</p>
+            </div>
+         </div>
+
+  
+   
+                  
+               
+                  
+   
+   
+                  
+
+   
+            
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   var maxLength = 375;
+   $('textarea').keyup(function () {
+      var length = $(this).val().length;
+      var length = maxLength - length;
+      $('#chars').text(length);
+   });
+</script>
+{% endblock %}
