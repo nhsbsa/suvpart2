@@ -134,7 +134,7 @@ const router = express.Router();
   router.post('/v3-george/css-payment-dd-email', function(request, response) {
     var addressCorrect = request.session.data['address-correct']
     if (addressCorrect === "yes"){
-      response.redirect("css-payment-dd-email")
+      response.redirect("css-payment-dd-bank-details")
     } else if (addressCorrect === "no") {
       response.redirect("css-payment-dd-address-update")
     } else if (addressCorrect === "undefined") {
@@ -154,7 +154,7 @@ const router = express.Router();
     if (addressOne === "" || addressTown === "" || addressPostcode === ""){
       response.redirect("css-payment-dd-address-update-error")
     } else {
-      response.redirect("css-payment-dd-email")
+      response.redirect("css-payment-dd-bank-details")
     }
   })
 
