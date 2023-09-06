@@ -1,0 +1,78 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-secondary-navigation__container">
+        <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+          <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+            <ul class="nhsuk-secondary-navigation__list">
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" aria-current="page" href="page-list">Reports</a>
+              </li>
+              <li class="nhsuk-secondary-navigation__item">
+                <a class="nhsuk-secondary-navigation__link" href="tracker">Tracker
+                </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <!-- Change the page heading -->
+    <h1>
+      Are you sure you want to remove this from the tracker?
+    </h1>
+    <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">
+        <span role="text">
+          <span class="nhsuk-u-visually-hidden">Important: </span>
+          Press continue to remove from tracker or cancel to go back to tracker
+        </span>
+      </h3>
+      <p>Reference &nbsp; &nbsp;</nav> 123456789</p>
+    </div>
+
+  </div>
+  <div class="grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="form-group nhsuk-u-margin-top-3">
+        <a class="nhsuk-button" id="test-screen" href="css-pcn-view-tracker" role="button">Continue</a>
+        <p><a href="css-pcn-view">Cancel</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- End of content -->
+</div>
+
+</div>
+{% endblock %}

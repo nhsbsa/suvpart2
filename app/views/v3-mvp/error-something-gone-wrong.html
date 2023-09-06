@@ -1,0 +1,36 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Something's gone wrong
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<h1>Something's gone wrong</h1>
+<p>We are currently experiencing a problem with this service and are working to fix it as soon as possible.</p>
+
+<p>Please try again later or contact us on:</p>
+<div class="nhsuk-inset-text">
+    <p>Service Team:</p>
+    <p>Call us on: 0300 330 3330</p>
+</div>
+
+{% endblock %}
