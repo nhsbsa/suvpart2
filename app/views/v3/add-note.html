@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Lock PCN
+Add note
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -42,35 +42,45 @@ Lock PCN
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
-      <h1 class="nhsuk-u-margin-bottom-4">
-         Place penalty on lock
-      </h1>
-      <div class="nhsuk-form-group">
-         <label class="nhsuk-label" for="select-1">
-            <p class="nhsuk-u-font-weight-bold">Time on lock
-            <p>
-         </label>
-         <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="0" selected></option>
-            <option value="1">Lock for 14 days </option>
-            <option value="2">Lock for 28 days</option>
-            <option value="3">Lock for 30 days
-            <option value="4">Lock for 60 days + check med/mat</option>
-            <option value="5">Lock for 90 days</option>
-         </select>
-      </div>
-      <div class="nhsuk-form-group">
-         <label class="nhsuk-label" for="example">
-            Reason for locking
-         </label>
-         <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
-         <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
-      </div>
 
-      <a href="view-pcn" class="nhsuk-button" role="button">Submit</a>
-      <p><a href="view-pcn">Cancel</a></p>
+      <h1 class="nhsuk-u-margin-bottom-4">
+         Create note
+      </h1>
+
+      <form action="view-pcn" method="POST" id="form">
+         <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+               Notes
+            </label>
+            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);">This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one chara</textarea>
+            <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
+         </div>
+
+         <div class="nhsuk-form-group">
+            <div class="nhsuk-checkboxes">
+
+               <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                     Apply to open cases only
+                  </label>
+               </div>
+
+               <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                     Apply to all cases
+                  </label>
+               </div>
+            </div>
+         </div>
+         <button class="nhsuk-button" id="button" type="submit">Submit</button>
+      </form>
+
+      <p><a href="css-pcn-view">Cancel</a></p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
@@ -90,10 +100,10 @@ Lock PCN
             <p>£10.00</p>
             <h2 class="nhsuk-heading-s">Balance due</h2>
             <p>£166.40</p>
-
             <!--  <h2 class="nhsuk-heading-s">Direct Debit status</h2>
                   <p>Active</p> -->
          </div>
+
          <div class="nhsuk-grid-column-one-third">
             <h2 class="nhsuk-heading-s">Enquiry sent </h2>
             <p>not sent</p>
@@ -106,13 +116,13 @@ Lock PCN
             <h2 class="nhsuk-heading-s">DWP checked</h2>
             <p>Yes</p>
             <h2 class="nhsuk-heading-s">Dispenser</h2>
-            <h2 class="nhsuk-heading-s">FMMMM</h2>
+            <p>FMMMM</a></p>
             <h2 class="nhsuk-heading-s">Evidence not seen?</h2>
             <p>No</p>
-
             <!-- <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
                   <p>0012345678</p> -->
          </div>
+
          <div class="nhsuk-grid-column-one-third">
             <h2 class="nhsuk-heading-s">Items</h2>
             <p>3</p>
@@ -127,10 +137,11 @@ Lock PCN
             <!--<p>Electronic</p>-->
             <!-- DD set-up -->
             <!-- <h2 class="nhsuk-heading-s">Direct Debit status</h2>
-                  <p>Active</p>
-                  <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
-                  <p>0012345678</p> -->
+            <p>Active</p>
+            <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
+            <p>0012345678</p> -->
          </div>
+
          <div class="nhsuk-grid-column-full">
             <div class="container">
                <ul class="tabs1">
@@ -138,6 +149,7 @@ Lock PCN
                   <li class="tab-link" data-tab1="tab-1">Transactions</li>
                   
                </ul>
+
                <!-- NOTES -->
                <div id="tab-1" class="tab1-content">
                   <table class="internal-table">

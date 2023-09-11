@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Lock PCN
+Pay by card
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -42,31 +42,26 @@ Lock PCN
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <h1 class="nhsuk-u-margin-bottom-4">
-         Place penalty on lock
+         Add payment
       </h1>
+
       <div class="nhsuk-form-group">
-         <label class="nhsuk-label" for="select-1">
-            <p class="nhsuk-u-font-weight-bold">Time on lock
-            <p>
+         <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
+            Balance due
          </label>
-         <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="0" selected></option>
-            <option value="1">Lock for 14 days </option>
-            <option value="2">Lock for 28 days</option>
-            <option value="3">Lock for 30 days
-            <option value="4">Lock for 60 days + check med/mat</option>
-            <option value="5">Lock for 90 days</option>
-         </select>
+         £ <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
       </div>
+
       <div class="nhsuk-form-group">
-         <label class="nhsuk-label" for="example">
-            Reason for locking
          </label>
-         <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;" onkeyup="countChars(this);"></textarea>
-         <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
+         <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
+            Amount to pay
+         </label>
+         £ <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
       </div>
 
       <a href="view-pcn" class="nhsuk-button" role="button">Submit</a>
@@ -90,7 +85,6 @@ Lock PCN
             <p>£10.00</p>
             <h2 class="nhsuk-heading-s">Balance due</h2>
             <p>£166.40</p>
-
             <!--  <h2 class="nhsuk-heading-s">Direct Debit status</h2>
                   <p>Active</p> -->
          </div>
@@ -106,10 +100,9 @@ Lock PCN
             <h2 class="nhsuk-heading-s">DWP checked</h2>
             <p>Yes</p>
             <h2 class="nhsuk-heading-s">Dispenser</h2>
-            <h2 class="nhsuk-heading-s">FMMMM</h2>
+            <p>FMMMM</a></p>
             <h2 class="nhsuk-heading-s">Evidence not seen?</h2>
             <p>No</p>
-
             <!-- <h2 class="nhsuk-heading-s">Direct Debit reference</h2>
                   <p>0012345678</p> -->
          </div>
@@ -136,8 +129,8 @@ Lock PCN
                <ul class="tabs1">
                   <li class="tab-link current1" data-tab1="tab-2">Notes</li>
                   <li class="tab-link" data-tab1="tab-1">Transactions</li>
-                  
                </ul>
+
                <!-- NOTES -->
                <div id="tab-1" class="tab1-content">
                   <table class="internal-table">
@@ -201,9 +194,11 @@ Lock PCN
                   <table>
                      <thead>
                         <tr>
-                           <th>Date</th>
-                           <th>Agent</th>
-                           <th>Comments</th>
+
+                              <th>Date</th>
+                              <th>Agent</th>
+                              <th>Comments</th>
+
                         </tr>
                      </thead>
 
@@ -247,15 +242,6 @@ Lock PCN
       </div>
    </div>
 </div>
-
-<script>
-   var maxLength = 375;
-   $('textarea').keyup(function () {
-      var length = $(this).val().length;
-      var length = maxLength - length;
-      $('#chars').text(length);
-   });
-</script>
 
 </html>
 {% endblock %}

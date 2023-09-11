@@ -267,4 +267,27 @@ router.post('/v3-mvp/pay-pcn-DD-address', function(request, response) {
   }
 })
 
+// V3 Routes
+// add-payment.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3/add-payment', function(request, response) {
+
+  var payment = request.session.data['payment']
+  if (payment == "card"){
+      response.redirect("card-payment")
+  } else {
+      response.redirect("/v3/direct-debit/start")
+  }
+})
+
+// direct-debit/address.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3/direct-debit/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v3/direct-debit/check-answers")
+  } else {
+      response.redirect("/v3/direct-debit/change-address")
+  }
+})
+
 module.exports = router;
