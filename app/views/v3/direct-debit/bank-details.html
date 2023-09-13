@@ -65,18 +65,19 @@ Enter your bank details
             credit rating.
         </p>
 
+        <form action="/v3/direct-debit/bank-details" method="post">
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="input-width-20">
                 Account holder's name
             </label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            <input class="nhsuk-input nhsuk-input--width-20" id="accountname" name="account-holder" type="text">
         </div>
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="input-width-20">
                 Account number
             </label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            <input class="nhsuk-input nhsuk-input--width-20" id="accountnumber" name="account-number" type="text">
         </div>
 
         <div class="nhsuk-form-group">
@@ -90,26 +91,31 @@ Enter your bank details
               <div class="nhsuk-date-input" id="example">
                 <div class="nhsuk-date-input__item">
                   <div class="nhsuk-form-group">           
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sortone" name="sort-one" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
                   </div>
                 </div>
                 <div class="nhsuk-date-input__item">
                   <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sorttwo" name="sort-two" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
                   </div>
                 </div>
                 <div class="nhsuk-date-input__item">
                   <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sortthree" name="sort-three" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
                   </div>
                 </div>
               </div>
+              
             </fieldset>
         </div>
 
-        <a href="confirm" class="nhsuk-button" type="submit">Continue</a>
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+        </button>
+    </form>
         <p><a href="/v3/view-pcn">Cancel</a></p>
     </div>
+
 
     <div class="nhsuk-grid-column-one-half">
         <div class="border-box">

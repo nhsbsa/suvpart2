@@ -290,4 +290,18 @@ router.post('/v3/direct-debit/address', function(request, response) {
   }
 })
 
+ // bank-details.html in v3 folder - if user inputs incorrect sort code, will be directed to cannot-verify-details
+ router.post('/v3/direct-debit/bank-details', function(request, response) {
+  var accountHolder = request.session.data['account-holder']
+    var accountNumber = request.session.data['account-number']
+    var sortOne = request.session.data['sort-one']
+    var sortTwo = request.session.data['sort-two']
+    var sortThree = request.session.data['sort-three']
+ if (account-holder === "" || account-number === "" || sort-one === "40" || sort-two === "00" || sort-three === "40"){
+  response.redirect("/v3/direct-debit/cannot-verify-details")
+} else {
+  response.redirect("/v3/direct-debit/confirm")
+}
+})
+
 module.exports = router;
