@@ -207,34 +207,34 @@ router.post('/v3-iona/pay-pcn-extend', function(request, response) {
   if (country == "yes"){
       response.redirect("pcn-payment-card")
   } else {
-      response.redirect("pay-pcn-DD-start")
+      response.redirect("pay-pcn-dd-start")
   }
 })
 
-// pay-pcn-DD-address.html in v3 folder - decide which page to direct to depending on the answer chosen
-router.post('/v3-iona/pay-pcn-DD-address', function(request, response) {
+// pay-pcn-dd-address.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-iona/pay-pcn-dd-address', function(request, response) {
 
   var country = request.session.data['address']
   if (country == "yes"){
-      response.redirect("pay-pcn-DD-check-answers")
+      response.redirect("pay-pcn-dd-check-answers")
   } else {
-      response.redirect("pay-pcn-DD-address-change")
+      response.redirect("pay-pcn-dd-address-change")
   }
 })
 
-// pay-pcn-DD-complete-radios.html in v3 folder - decide which page to direct to depending on the answer chosen
-router.post('/v3-iona/pay-pcn-DD-complete-radios', function(request, response) {
+// pay-pcn-dd-complete-radios.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-iona/pay-pcn-dd-complete-radios', function(request, response) {
 
   var country = request.session.data['contact']
   if (country == "no"){
       response.redirect("pcn-css-view")
   } else {
-      response.redirect("pay-pcn-DD-complete-enter-email")
+      response.redirect("pay-pcn-dd-complete-enter-email")
   }
 })
 
-// cannot-pay-by-DD.html in v3 folder - decide which page to direct to depending on the answer chosen
-router.post('/v3-iona/cannot-pay-by-DD', function(request, response) {
+// cannot-pay-by-dd.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-iona/cannot-pay-by-dd', function(request, response) {
 
   var country = request.session.data['example-inline']
   if (country == "yes"){
@@ -252,18 +252,18 @@ router.post('/v3-mvp/pay-pcn-extend', function(request, response) {
   if (country == "yes"){
       response.redirect("pcn-payment-card")
   } else {
-      response.redirect("pay-pcn-DD-start")
+      response.redirect("pay-pcn-dd-start")
   }
 })
 
-// pay-pcn-DD-address.html in v3 folder - decide which page to direct to depending on the answer chosen
-router.post('/v3-mvp/pay-pcn-DD-address', function(request, response) {
+// pay-pcn-dd-address.html in v3 folder - decide which page to direct to depending on the answer chosen
+router.post('/v3-mvp/pay-pcn-dd-address', function(request, response) {
 
   var country = request.session.data['address']
   if (country == "yes"){
-      response.redirect("pay-pcn-DD-check-answers")
+      response.redirect("pay-pcn-dd-check-answers")
   } else {
-      response.redirect("pay-pcn-DD-address-change")
+      response.redirect("pay-pcn-dd-address-change")
   }
 })
 
