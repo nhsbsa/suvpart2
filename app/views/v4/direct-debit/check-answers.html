@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Set up a Direct Debit
+Check your answers are correct
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -44,63 +44,135 @@ Set up a Direct Debit
 {% block content %}
 
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="/v3/add-payment">
+    <a class="nhsuk-back-link__link" href="address">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
         <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
         Go back
     </a>
 </div>
+
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-half">
         <h1 class="nhsuk-u-margin-bottom-4">
             Set up a Direct Debit
         </h1>
-        <div></div>
 
         <p><strong>All information on this page must be read out to the customer.</strong></p>
 
-        <p>Direct Debit lets you pay your penalty charge over a number of months, on a date that suits you.</p>
+        <h2>Check your answers are correct</h2>
+        <h3>Your Direct Debit details</h3>
 
-        <div class="nhsuk-inset-text">
-            <span class="nhsuk-u-visually-hidden">Information: </span>
-            <p>If we are unable to take a payment, you may have to pay extra charges.</p>
-            <p>If we are unable to take payments on more than one occasion, your Direct Debit plan may be cancelled and you may need to pay the amount you owe in full.</p>
-        </div>
+        <dl class="nhsuk-summary-list">
 
-        <form>
-            {{ checkboxes({
-                "idPrefix": "dd-confirmation",
-                "name": "confirm",
-                "values": data["confirm"],
-                "fieldset": {
-                  "legend": {
-                    "text": "You must confirm the following to setup a Direct Debit online",
-                    "classes": "nhsuk-fieldset__legend--l",
-                    isPageHeading: false
-                  }
-                },
-                "items": [
-                  {
-                    "value": "bank",
-                    "text": "I'm using my own bank account"
-                  },
-                  {
-                    "value": "person",
-                    "text": "I'm the only person required to authorise debits from this account"
-                  },
-                  {
-                    "value": "understand",
-                    "text": "I understand that if you are unable to take payments on more than one occasion, I might have to pay extra charges and may not be able to pay by Direct Debit again"
-                  }
-                ]
-              }) }}
-        </form>
+            <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Number of payments
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                12
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+                <a href="monthly-options">
+                Change<span class="nhsuk-u-visually-hidden"> number of payments</span>
+                </a>
+        
+            </dd>
+        
+            </div>
+        
+            <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Chosen payment date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                20
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+                <a href="select-date">
+                Change<span class="nhsuk-u-visually-hidden"> payment date</span>
+                </a>
+        
+            </dd>
+        
+            </div>
+        </dl>
 
-        <p>Read the <a href="https://www.directdebit.co.uk/direct-debit-explained/direct-debit-guarantee/" target="_blank" title="External website">Direct Debit Guarantee</a>.</p>
+        <p>Your payments will be taken on, or just after, your chosen date each month until your penalty charge has been cleared.</p>
 
-        <a href="monthly-options" class="nhsuk-button" role="button">Continue</a>
-        <p><a href="/v3/view-pcn">Cancel</a></p>
+        <h3>Your payment summary</h3>
+
+        <dl class="nhsuk-summary-list">
+
+         <div class="nhsuk-summary-list__row">
+           <dt class="nhsuk-summary-list__key">
+             First payment
+           </dt>
+           <dd class="nhsuk-summary-list__value">
+             £10.00
+           </dd>
+       
+         </div>
+       
+         <div class="nhsuk-summary-list__row">
+           <dt class="nhsuk-summary-list__key">
+             First payment taken on or just after
+           </dt>
+           <dd class="nhsuk-summary-list__value">
+             20 April 2023
+           </dd>
+       
+         </div>
+       
+         <div class="nhsuk-summary-list__row">
+           <dt class="nhsuk-summary-list__key">
+             Following 11 payments 
+           </dt>
+           <dd class="nhsuk-summary-list__value">
+             £15.66
+           </dd>
+       
+         </div>
+       
+         <div class="nhsuk-summary-list__row">
+           <dt class="nhsuk-summary-list__key">
+             Total amount
+           </dt>
+           <dd class="nhsuk-summary-list__value">
+            £166.00
+           </dd>
+       
+         </div>
+       
+        </dl>
+
+        <p>Your payment summary is based on the information you have given us.</p>
+        <p>You're responsible for making sure that payments can be taken on these dates.</p>
+        <h3>We will send confirmation of your Direct Debit to this address</h3>
+
+        <dl class="nhsuk-summary-list">
+        
+            <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                123 Test road<br>Newcastle<br> NE41 X21
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+        
+                <a href="change-address">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+                </a>
+        
+            </div>
+        </dl>
+        <a href="bank-details" class="nhsuk-button" type="submit">Continue</a>
+        <p><a href="/v4/view-pcn">Cancel</a></p>
     </div>
 
     <div class="nhsuk-grid-column-one-half">
@@ -110,7 +182,7 @@ Set up a Direct Debit
                     <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
                 </div>
             </div>
-
+    
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
@@ -125,7 +197,7 @@ Set up a Direct Debit
                     <p>3</p>
                 </div>
             </div>
-
+    
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
@@ -140,7 +212,7 @@ Set up a Direct Debit
                     <p>29/05/18</p>
                 </div>
             </div>
-
+    
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
@@ -155,7 +227,7 @@ Set up a Direct Debit
                     <p>30/06/18</p>
                 </div>
             </div>
-
+    
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
@@ -170,7 +242,7 @@ Set up a Direct Debit
                     <p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
                 </div>
             </div>
-
+    
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
@@ -185,7 +257,7 @@ Set up a Direct Debit
                     <p>Electronic</p>
                 </div>
             </div>
-
+    
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-third">
                     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>

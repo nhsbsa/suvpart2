@@ -302,4 +302,28 @@ router.post('/v3/direct-debit/address', function(request, response) {
 }
 })
 
+// V4 Routes
+// direct-debit/address.html in v4 folder - decide which page to direct to depending on the answer chosen
+router.post('/v4/direct-debit/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v4/direct-debit/check-answers")
+  } else {
+      response.redirect("/v4/direct-debit/change-address")
+  }
+})
+
+// bank-details.html in v4 folder - if user inputs incorrect sort code, will be directed to cannot-verify-details
+router.post('/v4/direct-debit/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v4/direct-debit/cannot-verify-details")
+} else {
+response.redirect("/v4/direct-debit/confirm")
+}
+})
+
 module.exports = router;
