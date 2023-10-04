@@ -207,7 +207,7 @@ router.post('/v3-iona/pay-pcn-extend', function(request, response) {
   if (country == "yes"){
       response.redirect("pcn-payment-card")
   } else {
-      response.redirect("pay-pcn-dd-start")
+      response.redirect("pay-pcn-DD-start")
   }
 })
 
