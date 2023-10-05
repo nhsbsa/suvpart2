@@ -45,10 +45,16 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-back-link">
 
+   <a class="nhsuk-back-link__link" href="address-lookup">
+     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+     </svg>
+     Go back</a>
+ </div>
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <h1 class="nhsuk-u-margin-bottom-4">
-         We cannot set up your Direct Debit
+         Set up a Direct Debit
       </h1>
       <div></div>
 
@@ -63,20 +69,46 @@ Content page example - NHS.UK prototype kit
          </div>
        </div>
 
-      <p>We've been unable to verify your details.</p>
-      <p>You'll need to pay in full and pay by either credit or debit card.</p>
+      <h2>What is your address?</h2>
 
+      <p>We'll send confirmation of your Direct Debit to the address you provide.</p>
+      <table class="nhsuk-table">
+         <caption class="nhsuk-table__caption">Postcode</caption>
+         <thead role="rowgroup" class="nhsuk-table__head">
+           <tr role="row">
+             <th role="columnheader" class="" scope="col">
+               NE1 OLD
+             </th>
+             <th role="columnheader" class="" scope="col">
+               <a href="address-lookup">Change</a>
+             </th>
+           </tr>
+         </thead>
+         <tbody class="nhsuk-table__body">
+           
+           
+         </tbody>
+      </table>
 
-       
-    
+      <div class="nhsuk-form-group">
+         <label class="nhsuk-label" for="select-1">
+           Your address
+         </label>
+         <select class="nhsuk-select" id="select-1" name="select-1">
+           <option value="1" selected>Select your address</option>
+           <option value="2">123 Test Road, Town, NE1 12Q</option>
+           <option value="3">123 Test Road, Test Town, NE54 6AJ</option>
+           <option value="3">1211 Test Road, Test Town, NE54 6AJ</option>
+         </select>
+       </div>
 
       
+       
+           <p><a href="change-address">My address is not listed</a></p>
 
-       <a href="../card-payment" class="nhsuk-button" type="submit">Pay</a>
-       
-       
-       <p><a href="../view-pcn">Cancel</a></p>
-   
+
+           <a href="check-answers" class="nhsuk-button" type="submit">Continue</a>
+      <p><a href="../view-pcn">Cancel</a></p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
