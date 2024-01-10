@@ -50,12 +50,20 @@ View PCN
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
  
-<div class="nhsuk-back-link">
-   <a class="nhsuk-back-link__link" href="data-entry">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+  <div class="nhsuk-back-link">
+     <a class="nhsuk-back-link__link" href="data-entry">
      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
      </svg>
      Previous record</a>
+  </div>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+     <h2 class="float-text-right nhsuk-body-m nhsuk-u-margin-bottom-2">Cases completed - 1</h2>
+  </div>
+
 </div>
 
 <!--TOP BANNER START-->
@@ -63,7 +71,7 @@ View PCN
   <div class="nhsuk-grid-row">
      <div class="nhsuk-grid-column-full">
         <h1 class="nhsuk-heading-m pcn-title nhsuk-u-margin-bottom-0">Prescription form ID - 123456789</h1> 
-        <h3 class="prescription-link nhsuk-u-margin-bottom-0">Processing period - December 2023</h3>
+        <h3 class="float-text-right nhsuk-u-margin-bottom-0">Processing period - December 2023</h3>
      </div>
   </div>
 </div>
@@ -90,7 +98,7 @@ View PCN
  
             <div class="nhsuk-tabs__panel" id="Back">
                 <h2>Exemption category claimed : D</h2>
-                <figure class="nhsuk-image">
+                <figure class="nhsuk-image nhsuk-u-margin-top-0">
                     <img class="nhsuk-image__img" src="/images/prescription-back.png" alt="Front side of the prescription image">
                 </figure>
             </div>
