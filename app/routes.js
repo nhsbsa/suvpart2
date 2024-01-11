@@ -326,4 +326,16 @@ response.redirect("/v4/direct-debit/confirm")
 }
 })
 
+// PECS WEB INTEGRATION Routes
+// pecs-web/random-sample.html - decide which page to direct to depending on the radio answer selected
+router.post('/pecs-web/random-sample', function(request, response) {
+
+  var detailsCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v4/direct-debit/check-answers")
+  } else {
+      response.redirect("/pecs-web/sample-edit")
+  }
+})
+
 module.exports = router;
