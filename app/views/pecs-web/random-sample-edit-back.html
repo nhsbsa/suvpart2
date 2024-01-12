@@ -1,0 +1,372 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+ 
+<!-- Set the page title -->
+{% block pageTitle %}
+View PCN
+{% endblock %}
+ 
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+ 
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="search">Home</a>
+                      </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" aria-current="page" href="random-sample-edit-back">Random sample</a>
+                      </li>
+                      <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="data-entry">Data entry</a>
+                     </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="data-entry-stats">Stats</a>
+                     </li>
+ 
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+ 
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+ 
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-one-half">
+   <div class="nhsuk-back-link">
+      
+   </div>
+   </div>
+   <div class="nhsuk-grid-column-one-half">
+      <h2 class="float-text-right nhsuk-body-m nhsuk-u-margin-bottom-2">Cases completed - 0/200</h2>
+   </div>
+
+</div>
+
+
+
+
+
+<!--TOP BANNER START-->
+<div class="bordered-content-box nhsuk-u-margin-bottom-4">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <h1 class="nhsuk-heading-m pcn-title nhsuk-u-margin-bottom-0">Prescription form ID - 123456789</h1> 
+         <h3 class="float-text-right nhsuk-u-margin-bottom-0">Processing period - December 2023</h3>
+      </div>
+   </div>
+</div>
+<!--TOP BANNER END-->
+ 
+<!-- ROW START -->
+<div class="nhsuk-grid-row">
+    
+    <!-- LEFT HAND SIDE -->
+    <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+            <ul class="nhsuk-tabs__list">
+                <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item">
+                <a class="nhsuk-tabs__tab" href="random-sample-edit">
+                    Front
+                </a>
+                </li>
+            
+                <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+                <a class="nhsuk-tabs__tab" href="random-sample-edit-back">
+                    Back
+                </a>
+                </li>
+            </ul>
+ 
+            <div class="nhsuk-tabs__panel" id="Front">
+                <h2>Exemption category claimed : D</h2>
+                <figure class="nhsuk-image nhsuk-u-margin-top-0">
+                    <img class="nhsuk-image__img" src="/images/prescription-back.png" alt="Front side of the prescription image">
+                </figure>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LEFT HAND SIDE END -->
+ 
+    <!-- RIGHT HAND SIDE -->
+    <div class="nhsuk-grid-column-one-half">
+        
+        
+ 
+        <!-- CONTENT BOX START -->
+        <div class="border-box">
+            <!-- CONTENT ROW -->
+            
+            <!-- SEARCH ADDRESS ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>Search address</strong>
+                        </label>
+                
+                        <input class="nhsuk-input" id="example" name="search" type="text">
+                    </div>
+                </div>
+                                  
+                <div class="nhsuk-grid-column-one-half">
+                  <a href="data-entry-search-address" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-3" type="submit">Search</a>
+                </div>
+            </div>
+ 
+            <!-- ADDRESS 1 ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>Address line 1</strong>
+                        </label>
+                    
+                        <input class="nhsuk-input" id="example" name="line1" type="text">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ADRESS 2 ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>Address line 2</strong>
+                        </label>
+                        
+                        <input class="nhsuk-input" id="example" name="line2" type="text">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TOWN OR CITY -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>Town or city</strong>
+                        </label>
+                
+                        <input class="nhsuk-input" id="example" name="town" type="text">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COUNTRY -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>Country</strong>
+                        </label>
+            
+                        <input class="nhsuk-input" id="example" name="country" type="text">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- POSTCODE -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="input-width-10">
+                            <strong>Postcode</strong>
+                        </label>
+                
+                        <input class="nhsuk-input nhsuk-input--width-10" id="example" name="postcode" type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- TITLE ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="select-1">
+                            <strong>Title</strong>
+                        </label>
+                        
+                        <select class="nhsuk-select" id="select-1" name="select-1">
+                            <option value="1"selected>Mr</option>
+                            <option value="2">Mrs</option>
+                            <option value="3">Miss</option>
+                            <option value="4">Ms</option>
+                            <option value="5">Madam</option>
+                            <option value="5">Master</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NAME ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>First name</strong>
+                        </label>
+    
+                        <input class="nhsuk-input" id="example" name="first name" type="text">
+                    </div>
+                </div>
+    
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="example">
+                        <strong>Last name</strong>
+                      </label>
+                      <input class="nhsuk-input" id="example" name="last name" type="text">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- NHS NUMBER ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                        <strong>NHS Number</strong>
+                        </label>
+                        <input class="nhsuk-input" id="example" name="first name" type="text">
+                    </div>
+                </div>
+            </div>
+                
+            <!-- GENDER ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="select-1">
+                            <strong>Gender</strong>
+                        </label>
+    
+                        <select class="nhsuk-select" id="select-1" name="select-1">
+                            <option value="1"selected>Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Non-binary</option>
+                            <option value="4">Other</option>
+                            <option value="5">Not Known</option>
+                            <option value="5">Not Stated</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- DOB AND AGE ROW -->
+               <div class="nhsuk-grid-row">
+                  <div class="nhsuk-grid-column-one-half">
+                     <div class="nhsuk-form-group">
+                        <legend class="nhsuk-fieldset__legend nhsuk-label--s">
+                           <h1 class="nhsuk-fieldset__heading">
+                              Date of birth
+                           </h1>
+                           </legend>
+                     </div>    
+                     
+                        <div class="nhsuk-date-input" id="example">
+                           <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                 Day
+                              </label>
+                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                              </div>
+                           </div> 
+                           <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                 Month
+                              </label>
+                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                              </div>
+                           </div>
+                           <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                 Year
+                              </label>
+                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                              </div>
+                           </div>
+                           </div>
+                     </div>      
+
+                        <div class="nhsuk-grid-column-one-half">
+                           <div class="nhsuk-form-group">
+                              <label class="nhsuk-label nhsuk-u-margin-bottom-7" for="input-width-2">
+                                 <strong>Age</strong>
+                              </label>
+                              <input class="nhsuk-input nhsuk-input--width-2" id="input-width-2" name="age" type="Day">
+                           </div>
+                        </div>
+               </div>
+            
+ 
+            <!-- PRESC DATE CHECKBOX ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="input-width-10">
+                            <strong>Prescription date</strong>
+                        </label>
+                        
+                        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="date" type="date">
+                    </div>
+                </div>
+            </div>   
+              
+            <div class="nhsuk-grid-row">
+               <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-checkboxes nhsuk-u-margin-top-3">
+                        <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="example-1" name="evidence" type="checkbox" value="email">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                              <strong>Evidence not seen</strong>
+                            </label>
+                        </div>
+                    </div>
+               </div>
+            </div>
+           
+            
+            <!-- BUTTONS -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  <a href="random-sample-2" class="nhsuk-button nhsuk-u-margin-top-5" type="submit">Submit</a>
+            
+                    <a href="random-sample-edit" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5 nhsuk-u-margin-left-5" type="submit">Reset</a>
+                </div>
+            </div>
+ 
+        </div>
+        <!-- CONTENT BOX END-->
+    </div>
+    <!-- RIGHT HAND SIDE END -->
+ 
+</div><!-- ROW END-->                                                    
+        
+{% endblock %}

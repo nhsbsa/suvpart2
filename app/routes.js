@@ -330,11 +330,44 @@ response.redirect("/v4/direct-debit/confirm")
 // pecs-web/random-sample.html - decide which page to direct to depending on the radio answer selected
 router.post('/pecs-web/random-sample', function(request, response) {
 
-  var detailsCorrect = request.session.data['address']
-  if (addressCorrect == "yes"){
-      response.redirect("/v4/direct-debit/check-answers")
+  var detailsCorrect = request.session.data['correct']
+  if (detailsCorrect == "yes"){
+      response.redirect("/pecs-web/random-sample-2")
   } else {
-      response.redirect("/pecs-web/sample-edit")
+      response.redirect("/pecs-web/random-sample-edit")
+  }
+})
+
+// pecs-web/random-sample-2.html - decide which page to direct to depending on the radio answer selected
+router.post('/pecs-web/random-sample-2', function(request, response) {
+
+  var detailsCorrect = request.session.data['correct']
+  if (detailsCorrect == "yes"){
+      response.redirect("/pecs-web/random-sample-2")
+  } else {
+      response.redirect("/pecs-web/random-sample-edit")
+  }
+})
+
+// pecs-web/random-sample-back.html - decide which page to direct to depending on the radio answer selected
+router.post('/pecs-web/random-sample-back', function(request, response) {
+
+  var detailsCorrect = request.session.data['correct']
+  if (detailsCorrect == "yes"){
+      response.redirect("/pecs-web/random-sample-2")
+  } else {
+      response.redirect("/pecs-web/random-sample-edit")
+  }
+})
+
+// pecs-web/random-sample-2-back.html - decide which page to direct to depending on the radio answer selected
+router.post('/pecs-web/random-sample-2-back', function(request, response) {
+
+  var detailsCorrect = request.session.data['correct']
+  if (detailsCorrect == "yes"){
+      response.redirect("/pecs-web/random-sample-2")
+  } else {
+      response.redirect("/pecs-web/random-sample-edit")
   }
 })
 

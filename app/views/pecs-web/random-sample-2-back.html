@@ -23,7 +23,7 @@ View PCN
                <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
                   <ul class="nhsuk-secondary-navigation__list">
                      <li class="nhsuk-secondary-navigation__item">
-                        <a class="nhsuk-secondary-navigation__link" href="search">Home</a>
+                        <a class="nhsuk-secondary-navigation__link" href="manager-login">Home</a>
                       </li>
                      <li class="nhsuk-secondary-navigation__item">
                         <a class="nhsuk-secondary-navigation__link" aria-current="page" href="random-sample">Random sample</a>
@@ -57,7 +57,7 @@ View PCN
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
    <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="data-entry">
+      <a class="nhsuk-back-link__link" href="random-sample">
       <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
       </svg>
@@ -65,7 +65,7 @@ View PCN
    </div>
    </div>
    <div class="nhsuk-grid-column-one-half">
-      <h2 class="float-text-right nhsuk-body-m nhsuk-u-margin-bottom-2">Cases completed - 2/200</h2>
+      <h2 class="float-text-right nhsuk-body-m nhsuk-u-margin-bottom-2">Cases completed - 1/200</h2>
    </div>
 
 </div>
@@ -225,7 +225,7 @@ View PCN
 
                   <!--RADIOS START-->
                   <div class="nhsuk-grid-column-full">
-                    <form action="/pecs-web/random-sample" method="post">
+                    <form action="/pecs-web/random-sample-2-back" method="post">
                     <div class="nhsuk-form-group">
                       <fieldset class="nhsuk-fieldset">
                         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -244,7 +244,7 @@ View PCN
                           </div>
                     
                           <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="details" name="incorrect" type="radio" value="no">
+                            <input class="nhsuk-radios__input" id="details" name="correct" type="radio" value="no">
                             <label class="nhsuk-label nhsuk-radios__label" for="example-incorrect">
                               No, amend the form
                             </label>
@@ -259,7 +259,9 @@ View PCN
             
             <!-- BUTTON -->
             
-            <a href="data-entry" class="nhsuk-button" type="submit">Continue</a>
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Continue
+            </button>
         
           </div>
         </form>
