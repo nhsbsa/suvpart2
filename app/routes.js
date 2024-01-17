@@ -326,6 +326,31 @@ response.redirect("/v4/direct-debit/confirm")
 }
 })
 
+
+// V5 Routes
+
+// Option 1
+router.post('/v5/option-one/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v5/option-one/check-answers")
+  } else {
+      response.redirect("/v5/option-one/change-address")
+  }
+})
+
+router.post('/v5/option-one/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v5/option-one/cannot-verify-details")
+} else {
+response.redirect("/v5/option-one/confirm")
+}
+})
+
 // PECS WEB INTEGRATION Routes
 // pecs-web/random-sample.html - decide which page to direct to depending on the radio answer selected
 router.post('/pecs-web/random-sample', function(request, response) {
