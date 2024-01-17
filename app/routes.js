@@ -345,9 +345,75 @@ router.post('/v5/option-one/bank-details', function(request, response) {
   var sortTwo = request.session.data['sort-two']
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
-response.redirect("/v5/option-one/cannot-verify-details")
+response.redirect("/v5/option-two/cannot-verify-details")
 } else {
-response.redirect("/v5/option-one/confirm")
+response.redirect("/v5/option-two/confirm")
+}
+})
+
+// Option 2
+router.post('/v5/option-two/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v5/option-two/check-answers")
+  } else {
+      response.redirect("/v5/option-two/change-address")
+  }
+})
+
+router.post('/v5/option-two/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v5/option-two/cannot-verify-details")
+} else {
+response.redirect("/v5/option-two/confirm")
+}
+})
+
+// Option 3
+router.post('/v5/option-three/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v5/option-three/check-answers")
+  } else {
+      response.redirect("/v5/option-three/change-address")
+  }
+})
+
+router.post('/v5/option-three/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v5/option-three/cannot-verify-details")
+} else {
+response.redirect("/v5/option-three/confirm")
+}
+})
+
+// Option 4
+router.post('/v5/option-four/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v5/option-four/check-answers")
+  } else {
+      response.redirect("/v5/option-four/change-address")
+  }
+})
+
+router.post('/v5/option-four/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v5/option-four/cannot-verify-details")
+} else {
+response.redirect("/v5/option-four/confirm")
 }
 })
 
