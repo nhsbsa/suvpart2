@@ -1,0 +1,174 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+ 
+<!-- Set the page title -->
+{% block pageTitle %}
+View PCN
+{% endblock %}
+ 
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+ 
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="search">Home</a>
+                      </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" aria-current="page" href="data-entry">Data entry</a>
+                      </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="data-entry-stats">Stats</a>
+                     </li>
+ 
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+ 
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+ 
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+ 
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-back-link">
+       <a class="nhsuk-back-link__link" href="data-entry">
+       <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+       </svg>
+       Previous record</a>
+    </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+       <h2 class="float-text-right nhsuk-body-m nhsuk-u-margin-bottom-2">Cases completed - 1</h2>
+    </div>
+ 
+ </div>
+
+<!--TOP BANNER START-->
+<div class="bordered-content-box nhsuk-u-margin-bottom-4">
+    <div class="nhsuk-grid-row">
+       <div class="nhsuk-grid-column-full">
+          <h1 class="nhsuk-heading-m pcn-title nhsuk-u-margin-bottom-0">Prescription form ID - 123456789</h1> 
+          <h3 class="float-text-right nhsuk-u-margin-bottom-0">Processing period - December 2023</h3>
+       </div>
+    </div>
+ </div>
+ <!--TOP BANNER END-->
+ 
+<div class="nhsuk-grid-row"><!-- ROW START -->
+    
+    <!-- LEFT HAND SIDE -->
+        <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+                <ul class="nhsuk-tabs__list">
+                    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+                    <a class="nhsuk-tabs__tab" href="data-entry-search-lookup">
+                        Front
+                    </a>
+                    </li>
+                
+                    <li class="nhsuk-tabs__list-item">
+                    <a class="nhsuk-tabs__tab" href="data-entry-search-lookup-back">
+                        Back
+                    </a>
+                    </li>
+                </ul>
+    
+                <div class="nhsuk-tabs__panel" id="Front">
+                    <h2>Exemption category claimed : D</h2>
+                    <figure class="nhsuk-image nhsuk-u-margin-top-0">
+                        <img class="nhsuk-image__img" src="/images/prescription-front.png" alt="Front side of the prescription image">
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+
+    
+
+    <!-- LEFT HAND SIDE END -->
+ 
+    <!-- RIGHT HAND SIDE -->
+    <div class="nhsuk-grid-column-one-half">
+        
+        <!-- CONTENT BOX START -->
+        <div class="border-box">
+            <!-- CONTENT ROW -->
+            
+        
+ 
+            <!-- SEARCH ADDRESS ROW -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="example">
+                            <strong>Search address</strong>
+                        </label>
+                
+                        <input class="nhsuk-input" id="example" name="search" type="text">
+                    </div>
+                </div>
+                                  
+                <div class="nhsuk-grid-column-one-half">
+                    <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-3" data-module="nhsuk-button" type="submit">
+                        Search
+                    </button>
+                </div>
+            </div>
+ 
+            <!-- SEARCH ADDRESS LIST - SELECT -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="select-1">
+                      Select an address
+                    </label>
+                    <select class="nhsuk-select" id="select-1" name="select-1">
+                      <option value="1">123 Test Road, Newcastle, NE1 4XL</option>
+                      <option value="2" selected>12 Test Road, Newcastle, NE42 NX1</option>
+                      <option value="3">1 Testing Road, Newcastle, NE48 ABC</option>
+                      <option value="4">1 Testing Road, Test Street, Newcastle, NE48 ABC</option>
+                    </select>
+                  </div>
+            
+            
+            <!-- BUTTON -->
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  <a href="data-entry" class="nhsuk-button nhsuk-u-margin-top-3" type="submit">Select</a>
+            
+                </div>
+            </div>
+
+            <a href="data-entry">Address not found? Enter the address manually</a>.
+ 
+        </div>
+        <!-- CONTENT BOX END-->
+    </div>
+    <!-- RIGHT HAND SIDE END -->
+ 
+</div><!-- ROW END-->                                                    
+        
+{% endblock %}
