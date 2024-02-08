@@ -330,112 +330,112 @@ response.redirect("/v4/direct-debit/confirm")
 // V5 Routes
 
 // Option 1
-router.post('/v5/option-one/address', function(request, response) {
+router.post('/v5/option-one/direct-debit/address', function(request, response) {
 
   var addressCorrect = request.session.data['address']
   if (addressCorrect == "yes"){
-      response.redirect("/v5/option-one/check-answers")
+      response.redirect("/v5/option-one/direct-debit/check-answers")
   } else {
-      response.redirect("/v5/option-one/change-address")
+      response.redirect("/v5/option-one/direct-debit/change-address")
   }
 })
 
-router.post('/v5/option-one/bank-details', function(request, response) {
+router.post('/v5/option-one/direct-debit/bank-details', function(request, response) {
   var sortOne = request.session.data['sort-one']
   var sortTwo = request.session.data['sort-two']
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
-response.redirect("/v5/option-two/cannot-verify-details")
+response.redirect("/v5/option-two/direct-debit/cannot-verify-details")
 } else {
-response.redirect("/v5/option-two/confirm")
+response.redirect("/v5/option-two/direct-debit/confirm")
 }
 })
 
 // Option 2
-router.post('/v5/option-two/address', function(request, response) {
+router.post('/v5/option-two/direct-debit/address', function(request, response) {
 
   var addressCorrect = request.session.data['address']
   if (addressCorrect == "yes"){
-      response.redirect("/v5/option-two/check-answers")
+      response.redirect("/v5/option-two/direct-debit/check-answers")
   } else {
-      response.redirect("/v5/option-two/change-address")
+      response.redirect("/v5/option-two/direct-debit/change-address")
   }
 })
 
-router.post('/v5/option-two/bank-details', function(request, response) {
+router.post('/v5/option-two/direct-debit/bank-details', function(request, response) {
   var sortOne = request.session.data['sort-one']
   var sortTwo = request.session.data['sort-two']
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
-response.redirect("/v5/option-two/cannot-verify-details")
+response.redirect("/v5/option-two/direct-debit/cannot-verify-details")
 } else {
-response.redirect("/v5/option-two/confirm")
+response.redirect("/v5/option-two/direct-debit/confirm")
 }
 })
 
 // Option 2.1
-router.post('/v5/option-two-one/address', function(request, response) {
+router.post('/v5/option-two-one/direct-debit/address', function(request, response) {
 
   var addressCorrect = request.session.data['address']
   if (addressCorrect == "yes"){
-      response.redirect("/v5/option-two-one/check-answers")
+      response.redirect("/v5/option-two-one/direct-debit/check-answers")
   } else {
-      response.redirect("/v5/option-two-one/change-address")
+      response.redirect("/v5/option-two-one/direct-debit/change-address")
   }
 })
 
-router.post('/v5/option-two-one/bank-details', function(request, response) {
+router.post('/v5/option-two-one/direct-debit/bank-details', function(request, response) {
   var sortOne = request.session.data['sort-one']
   var sortTwo = request.session.data['sort-two']
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
-response.redirect("/v5/option-two-one/cannot-verify-details")
+response.redirect("/v5/option-two-one/direct-debit/cannot-verify-details")
 } else {
-response.redirect("/v5/option-two-one/confirm")
+response.redirect("/v5/option-two-one/direct-debit/confirm")
 }
 })
 
 // Option 3
-router.post('/v5/option-three/address', function(request, response) {
+router.post('/v5/option-three/direct-debit/address', function(request, response) {
 
   var addressCorrect = request.session.data['address']
   if (addressCorrect == "yes"){
-      response.redirect("/v5/option-three/check-answers")
+      response.redirect("/v5/option-three/direct-debit/check-answers")
   } else {
-      response.redirect("/v5/option-three/change-address")
+      response.redirect("/v5/option-three/direct-debit/change-address")
   }
 })
 
-router.post('/v5/option-three/bank-details', function(request, response) {
+router.post('/v5/option-three/direct-debit/bank-details', function(request, response) {
   var sortOne = request.session.data['sort-one']
   var sortTwo = request.session.data['sort-two']
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
-response.redirect("/v5/option-three/cannot-verify-details")
+response.redirect("/v5/option-three/direct-debit/cannot-verify-details")
 } else {
-response.redirect("/v5/option-three/confirm")
+response.redirect("/v5/option-three/direct-debit/confirm")
 }
 })
 
 // Option 4
-router.post('/v5/option-four/address', function(request, response) {
+router.post('/v5/option-four/direct-debit/address', function(request, response) {
 
   var addressCorrect = request.session.data['address']
   if (addressCorrect == "yes"){
-      response.redirect("/v5/option-four/check-answers")
+      response.redirect("/v5/option-four/direct-debit/check-answers")
   } else {
-      response.redirect("/v5/option-four/change-address")
+      response.redirect("/v5/option-four/direct-debit/change-address")
   }
 })
 
-router.post('/v5/option-four/bank-details', function(request, response) {
+router.post('/v5/option-four/direct-debit/bank-details', function(request, response) {
   var sortOne = request.session.data['sort-one']
   var sortTwo = request.session.data['sort-two']
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
-response.redirect("/v5/option-four/cannot-verify-details")
+response.redirect("/v5/option-four/direct-debit/cannot-verify-details")
 } else {
-response.redirect("/v5/option-four/confirm")
+response.redirect("/v5/option-four/direct-debit/confirm")
 }
 })
 
