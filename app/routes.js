@@ -390,8 +390,10 @@ router.post('/v5/option-two-one/direct-debit/bank-details', function(request, re
   var sortThree = request.session.data['sort-three']
 if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
 response.redirect("/v5/option-two-one/direct-debit/cannot-verify-details")
+} else if (sortOne === "" && sortTwo === "" && sortThree === ""){
+  response.redirect("/v5/option-two-one/direct-debit/bank-details-error")
 } else {
-response.redirect("/v5/option-two-one/direct-debit/confirm")
+  response.redirect("/v5/option-two-one/direct-debit/confirm")
 }
 })
 

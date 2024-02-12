@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Content page example - NHS.UK prototype kit
+We cannot set up a Direct Debit
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -48,35 +48,31 @@ Content page example - NHS.UK prototype kit
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <h1 class="nhsuk-u-margin-bottom-4">
-         We cannot set up your Direct Debit
+         We cannot set up a Direct Debit
       </h1>
-      <div></div>
 
       <div class="nhsuk-card">
          <div class="nhsuk-card__content">
            <h3 class="nhsuk-card__heading">
              All information below must be read out to the customer.
-       
-           </h3>
-           
-       
+            </h3>
          </div>
-       </div>
+      </div>
 
-      <p>We've been unable to verify your details.</p>
-      <p>You'll need to pay in full if you want to pay online.</p>
+      <p>We've been unable to verify the patient's details.</p>
+      <p>They'll need to pay by card or send a cheque or postal order.</p>
 
+      <h2>Card payments</h2>
 
-       
-    
+      <p>They can pay online, or you can generate a token and transfer them to the automated payment line.</p>
 
-      
+      <h2>Paying in installments</h2>
 
-       <a href="../card-payment" class="nhsuk-button" type="submit">Pay by card</a>
-       
-       
-       <p><a href="../view-pcn">Cancel</a></p>
-   
+      <p>If they want to pay in installments, <a href="https://apps.powerapps.com/play/e/default-cf6d0482-86b1-4f88-8c0c-3b4de4cb402c/a/4ada9d09-9791-4316-8950-67b5d684039b?tenantId=cf6d0482-86b1-4f88-8c0c-3b4de4cb402c&source=portal" target="_blank">use the payment calculator to tell the patient what options they have (opens in a new tab)</a>.</p>
+      <br>
+      <p>
+         <a class="nhsuk-button" role="button" href="/v5/option-two-one/view-pcn">Go to patient details screen</a>
+      </p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
@@ -370,12 +366,5 @@ Content page example - NHS.UK prototype kit
   </div>
 </div>
 
-<script>
-   var maxLength = 375;
-   $('textarea').keyup(function () {
-      var length = $(this).val().length;
-      var length = maxLength - length;
-      $('#chars').text(length);
-   });
 </script>
 {% endblock %}
