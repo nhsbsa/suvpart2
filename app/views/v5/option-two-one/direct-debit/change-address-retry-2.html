@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Enter your bank details
+What is your address?
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -44,14 +44,13 @@ Enter your bank details
 {% block content %}
 
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="check-answers">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-        </svg>
-        Go back
-    </a>
-</div>
 
+   <a class="nhsuk-back-link__link" href="address">
+     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+     </svg>
+     Go back</a>
+ </div>
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-half">
         <h1 class="nhsuk-u-margin-bottom-4">
@@ -69,85 +68,50 @@ Enter your bank details
             </div>
           </div>
 
-        <h2>Enter your bank details</h2>
-        <p>Equifax will perform a check to verify the bank account details you give us. A record of this will be left on your credit record for 12 months but will not affect your 
-            credit rating.
-        </p>
+        <h2>What is your address?</h2>
 
-        
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="input-width-20">
-                Account holder's name
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="accountname" name="account-holder" type="text">
-        </div>
+        <p>We'll send confirmation of the Direct Debit to the address provided.</p>
 
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="input-width-20">
-                Account number
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="accountnumber" name="account-number" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-              <legend class="nhsuk-fieldset__legend nhsuk-label">
-                <h1 class="nhsuk-fieldset__heading" id="sort-code-label">
-                  Sort code
-                </h1>
-              </legend>
-          
-              <div class="nhsuk-date-input" id="example">
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">           
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sortone" name="sort-one" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
-                  </div>
-                </div>
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sorttwo" name="sort-two" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
-                  </div>
-                </div>
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sortthree" name="sort-three" type="text" pattern="[0-9]*" inputmode="numeric" aria-labelledby="sort-code-label">
-                  </div>
-                </div>
-              </div>
-              
-            </fieldset>
-        </div>
-
-        <details class="nhsuk-details">
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                View the Direct Debit Guarantee
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
-                <img
-            src="https://www.guhg.co.uk/wp-content/uploads/2018/11/direct-debit-website-992x561-e1542983967438-1140x720.png"
-            width="200px" alt="Picture of DD logo" style="display:block; margin-bottom: 10px; mix-blend-mode: multiply;">
-              <h3>The Direct Debit Guarantee</h3>
-              <ul>
-                <li>This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.</li>
-                <li>If there are any changes to the amount, date or frequency of your Direct Debit NHSBSA PECS will notify you 10 working days in advance of your account being debited or as otherwise agreed. If you request NHSBSA DECS to collect a payment, confirmation of the amount and date will be given to you at the time of the request.</li>
-                <li>If an error is made in the payment of your Direct Debit, by NHSBSA DECS or your bank or building society, you are entitled to a full and immediate refund of the amount paid from your bank or building society./li>
-                <li>If you receive a refund you are not entitled to, you must pay it back when NHSBSA DECS asks you to.</li>
-                <li>You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.</li>
-              </ul>
-             
-          
+        <fieldset class="nhsuk-fieldset">
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="address-line-1">
+                    Address line 1
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-line-1" name="address-line-1" type="text">
             </div>
-          </details>
 
-        <a class="nhsuk-button" role="button" href="cannot-verify-details">
-            Continue
-        </a>
-
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="address-line-1">
+                    Address line 2
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-line-1" name="address-line-1" type="text">
+            </div>
+       
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="address-town">
+                    Town or city
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+            </div>
+       
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="address-county">
+                    County
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>
+       
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="address-postcode">
+                    Postcode
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+            </div>
+        </fieldset>
+        
+        <a href="still-cannot-verify" class="nhsuk-button" type="submit">Continue</a>
         <p><a href="/v5/option-two-one/view-pcn">Cancel</a></p>
     </div>
-
 
     <div class="nhsuk-grid-column-one-half">
         <div class="border-box">
@@ -439,4 +403,6 @@ Enter your bank details
         </div>
     </div>
 </div>
+
+</script>
 {% endblock %}
