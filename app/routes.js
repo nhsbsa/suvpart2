@@ -441,6 +441,33 @@ response.redirect("/v5/option-four/direct-debit/confirm")
 }
 })
 
+// V6 Routes
+
+// V6 Direct Debit address route
+router.post('/v6/direct-debit/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v6/direct-debit/check-answers")
+  } else {
+      response.redirect("/v6/direct-debit/change-address")
+  }
+})
+
+// V6 Direct Debit bank details eroute
+router.post('/v6/direct-debit/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v6/direct-debit/cannot-verify-details")
+} else if (sortOne === "" && sortTwo === "" && sortThree === ""){
+  response.redirect("/v6/direct-debit/bank-details-error")
+} else {
+  response.redirect("/v6/direct-debit/confirm")
+}
+})
+
 // PECS WEB INTEGRATION Routes
 // pecs-web/random-sample.html - decide which page to direct to depending on the radio answer selected
 router.post('/pecs-web/random-sample', function(request, response) {
