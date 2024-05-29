@@ -201,6 +201,7 @@ View PCN
          </div>
       </div>
    </div>
+   
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box" id="rightHandSide">
          <div class="nhsuk-grid-row">
@@ -295,122 +296,124 @@ View PCN
             </div>
          </div>
 
-         <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
-               <div class="container">
-                  <ul class="tabs1">
-                     <li class="tab-link current1" data-tab1="tab-2">Notes</li>
-                     <li class="tab-link" data-tab1="tab-1">Transactions</li>
-                  </ul>
-                  <!-- NOTES -->
-                  <div id="tab-1" class="tab1-content">
-                     <p><a href="card-payment"> Add payment</a> &nbsp;&nbsp; <a href="add-easement"> Add easement</a> &nbsp;&nbsp; <a href="direct-debit/start"> Add Direct Debit</a></p>
-                     
-                        <table class="internal-table">
+         <div class="scrollable-panel">
+            <div class="nhsuk-grid-row">
+               <div class="nhsuk-grid-column-full">
+                  <div class="container">
+                     <ul class="tabs1">
+                        <li class="tab-link current1" data-tab1="tab-2">Notes</li>
+                        <li class="tab-link" data-tab1="tab-1">Transactions</li>
+                     </ul>
+                     <!-- NOTES -->
+                     <div id="tab-1" class="tab1-content">
+                        <p><a href="card-payment"> Add payment</a> &nbsp;&nbsp; <a href="add-easement"> Add easement</a> &nbsp;&nbsp; <a href="direct-debit/start"> Add Direct Debit</a></p>
+                        
+                           <table class="internal-table">
+                              <thead>
+                                 <tr>
+                                    <th>Date</th>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>For</th>
+                                    <th>Type</th>
+                                    <th>Action</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>31/07/17 15.45</td>
+                                    <td>System</td>
+                                    <td>-£8.60</td>
+                                    <td>Adjustment</td>
+                                    <td>Direct Debit</td>
+                                    <td><a href="#">Edit</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td>30/07/17 15.45</td>
+                                    <td>System</td>
+                                    <td>£8.60</td>
+                                    <td>PCN</td>
+                                    <td>Direct Debit</td>
+                                    <td><a href="#"></a></td>
+                                 </tr>
+                                 <tr>
+                                    <td>27/07/17 13.30</td>
+                                    <td>System</td>
+                                    <td>£51.00</td>
+                                    <td>PCN</td>
+                                    <td>Cheque</td>
+                                    <td><a href="#"></a></td>
+                                 </tr>
+                                 <tr>
+                                    <td>27/07/17 13.30</td>
+                                    <td>System</td>
+                                    <td>-£51.00</td>
+                                    <td>Surcharge</td>
+                                    <td>Surcharge added</td>
+                                    <td><a href="#">Remove</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td>27/07/17 13.30</td>
+                                    <td>System</td>
+                                    <td>£58.60</td>
+                                    <td>PCN</td>
+                                    <td>Payment request</td>
+                                    <td><a href="#"></a></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                     </div>
+                 
+                     <!-- TRANSACTIONS -->
+                     <div id="tab-2" class="tab1-content current1">
+                        <p><a href="add-note">Add note</a></p>
+                        <table class="notes-table">
                            <thead>
                               <tr>
-                                 <th>Date</th>
-                                 <th>User</th>
-                                 <th>Amount</th>
-                                 <th>For</th>
-                                 <th>Type</th>
-                                 <th>Action</th>
+                                 <th class="nhsuk-u-font-weight-bold">Date</th>
+                                 <th class="nhsuk-u-font-weight-bold">Agent</th>
+                                 <th class="nhsuk-u-font-weight-bold">Comments</th>
                               </tr>
                            </thead>
                            <tbody>
                               <tr>
-                                 <td>31/07/17 15.45</td>
-                                 <td>System</td>
-                                 <td>-£8.60</td>
-                                 <td>Adjustment</td>
-                                 <td>Direct Debit</td>
-                                 <td><a href="#">Edit</a></td>
+                                 <td>30/07/17 11.00</td>
+                                 <td>TIM</td>
+                                 <td>REFUND IN PROGRESS</td>
                               </tr>
                               <tr>
-                                 <td>30/07/17 15.45</td>
-                                 <td>System</td>
-                                 <td>£8.60</td>
-                                 <td>PCN</td>
-                                 <td>Direct Debit</td>
-                                 <td><a href="#"></a></td>
+                                 <td>27/07/17 13.00</td>
+                                 <td>TIM</td>
+                                 <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
                               </tr>
                               <tr>
                                  <td>27/07/17 13.30</td>
-                                 <td>System</td>
-                                 <td>£51.00</td>
-                                 <td>PCN</td>
-                                 <td>Cheque</td>
-                                 <td><a href="#"></a></td>
+                                 <td>JOANNE</td>
+                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/17 13.00</td>
+                                 <td>TIM</td>
+                                 <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
                               </tr>
                               <tr>
                                  <td>27/07/17 13.30</td>
-                                 <td>System</td>
-                                 <td>-£51.00</td>
-                                 <td>Surcharge</td>
-                                 <td>Surcharge added</td>
-                                 <td><a href="#">Remove</a></td>
+                                 <td>JOANNE</td>
+                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
                               </tr>
                               <tr>
                                  <td>27/07/17 13.30</td>
-                                 <td>System</td>
-                                 <td>£58.60</td>
-                                 <td>PCN</td>
-                                 <td>Payment request</td>
-                                 <td><a href="#"></a></td>
+                                 <td>JOANNE</td>
+                                 <td>IINFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
+                              </tr>
+                              <tr>
+                                 <td>27/07/17 13.30</td>
+                                 <td>JOANNE</td>
+                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
                               </tr>
                            </tbody>
                         </table>
-                  </div>
-              
-                  <!-- TRANSACTIONS -->
-                  <div id="tab-2" class="tab1-content current1">
-                     <p><a href="add-note">Add note</a></p>
-                     <table class="notes-table">
-                        <thead>
-                           <tr>
-                              <th class="nhsuk-u-font-weight-bold">Date</th>
-                              <th class="nhsuk-u-font-weight-bold">Agent</th>
-                              <th class="nhsuk-u-font-weight-bold">Comments</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>30/07/17 11.00</td>
-                              <td>TIM</td>
-                              <td>REFUND IN PROGRESS</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/17 13.00</td>
-                              <td>TIM</td>
-                              <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/17 13.30</td>
-                              <td>JOANNE</td>
-                              <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/17 13.00</td>
-                              <td>TIM</td>
-                              <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/17 13.30</td>
-                              <td>JOANNE</td>
-                              <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/17 13.30</td>
-                              <td>JOANNE</td>
-                              <td>IINFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                           </tr>
-                           <tr>
-                              <td>27/07/17 13.30</td>
-                              <td>JOANNE</td>
-                              <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                           </tr>
-                        </tbody>
-                     </table>
+                     </div>
                   </div>
                </div>
             </div>

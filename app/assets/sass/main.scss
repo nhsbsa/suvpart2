@@ -575,3 +575,12 @@ tr.decs-row.hide {
   float:right;
 }
 
+#rightHandSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable-panel {
+  flex-grow: 1;
+  overflow-y: auto;
+}
