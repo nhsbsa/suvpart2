@@ -53,34 +53,37 @@
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
 <script>
-  // Function to set the height of the div
-  function setDivHeight() {
-      var div = document.getElementById('rightHandSide'); 
-      var windowHeight = window.innerHeight;
-      div.style.height = (windowHeight + 100) + 'px';
-  }
+	// Function to set the height of the div
+	function setDivHeight() {
+		var leftDiv = document.getElementById('leftHandSide'); 
+		var rightDiv = document.getElementById('rightHandSide'); 
+		var windowHeight = window.innerHeight;
 
-  // Call the function when the window is resized
-  window.onresize = setDivHeight;
+    if (leftDiv) {
+      leftDiv.style.height = (windowHeight + 100) + 'px';
+    }
+		rightDiv.style.height = (windowHeight + 100) + 'px';
+	}
 
-  // Call the function initially to set the height when the page loads
-  setDivHeight();
+	// Call the function when the window is resized
+	window.onresize = setDivHeight;
+
+	// Call the function initially to set the height when the page loads
+	setDivHeight();
 </script>
 
 <footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
-    <div class="nhsuk-width-container-fluid">
-      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        
-        
-        
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://nhsbsauk.sharepoint.com/sites/Accessibility/SitePages/Accessibility-statement-for-Single-User-View.aspx">Accessibility</a></li>
-      </ul>
-      
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-    </div>
-  </div>
+	<div class="nhsuk-footer" id="nhsuk-footer">
+		<div class="nhsuk-width-container-fluid">
+			<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+			
+			<ul class="nhsuk-footer__list">      
+				<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://nhsbsauk.sharepoint.com/sites/Accessibility/SitePages/Accessibility-statement-for-Single-User-View.aspx">Accessibility</a></li>
+			</ul>
+			
+			<p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+		</div>
+	</div>
 </footer>
 {% endblock %}
 
