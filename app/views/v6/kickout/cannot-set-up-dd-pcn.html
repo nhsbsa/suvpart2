@@ -44,32 +44,32 @@ We cannot set up a Direct Debit
 {% block content %}
 
 <div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-one-half">
-      <h1>We cannot set up a Direct Debit</h1>
+    <div class="nhsuk-grid-column-one-half">
+        <h1>We cannot set up a Direct Debit</h1>
 
-      <div class="nhsuk-warning-callout">
-         <h3 class="nhsuk-warning-callout__label">
-           <span role="text">
-             Important:
-           </span>
-         </h3>
-         <p>All information must be read out to the customer.</p>
-      </div>
+        <!-- <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+            <span role="text">
+                Important:
+            </span>
+            </h3>
+            <p>All information must be read out to the customer.</p>
+        </div> -->
 
-      <p>We've been unable to verify the patient's details.</p>
-      <p>They'll need to pay by card or send a cheque or postal order.</p>
-      
-      <h2>Card payments</h2>
+        <p>We've been unable to verify the patient's details. They'll not be able to pay by Direct Debit.</p>
+        <p>They'll need to pay by card or send a cheque or postal order.</p>
+        
+        <h2>Card payments</h2>
 
-      <p>They can pay online, or you can generate a token and transfer them to the automated payment line.</p>
+        <p>They can pay online, or you can generate a token and transfer them to the automated payment line.</p>
 
-      <h2>Paying in installments</h2>
+        <h2>Paying in installments</h2>
 
-      <p>If they want to pay in installments, they can make regular card payments using a payment plan similar to Direct Debit.</p>
-      <p>They'll need to make the first payment within 28 days (by 17 July 2024).</p>
-      <h3>The payment plan summary:</h3>
+        <p>If they want to pay in installments, they can make regular card payments using a payment plan similar to Direct Debit.</p>
+        <p>They'll need to make the first payment within 28 days (by 17 July 2024).</p>
+        <h3>The payment plan summary:</h3>
 
-      <dl class="nhsuk-summary-list">
+        <dl class="nhsuk-summary-list">
         <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
                 First payment
@@ -105,15 +105,19 @@ We cannot set up a Direct Debit
                 £57.90
             </dd>
         </div>
-    </dl>
+        </dl>
 
+        <p>They'll need to make at least one payment every 30 days. If they do not keep up these payments, they may have to pay a surcharge of up to £50.</p>
 
-      <p>If they do not keep up these payments, they may have to pay a surcharge of up to £50.</p>
-
-      <p>
-         <a class="nhsuk-button" role="button" href="/v6/view-pcn">Go to patient details screen</a>
-      </p>
-   </div>
+        <p>If they want to make manual payments using this payment plan, add this to the notes.</p>
+       
+        <p class="nhsuk-u-margin-bottom-0">
+            <a class="nhsuk-button" role="button" href="/v6/view-pcn">Add payment plan summary to notes</a>
+        </p>
+        <p>
+            <a class="nhsuk-button nhsuk-button--secondary" role="button" href="/v6/view-pcn">Go to patient details screen</a>
+        </p>
+    </div>
 
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box" id="rightHandSide">
