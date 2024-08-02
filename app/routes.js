@@ -468,6 +468,59 @@ response.redirect("/v6/direct-debit/cannot-verify-details")
 }
 })
 
+// V6 3rd KYC failure manual notes PCN
+router.post('/v6/kickout/cannot-set-up-dd-pcn-2', function(request, response) {
+
+  var manualPayment = request.session.data['regular-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-pcn-2-error")
+  }
+})
+
+// V6 3rd KYC failure manual notes PCN - Error message
+router.post('/v6/kickout/cannot-set-up-dd-pcn-2-error', function(request, response) {
+
+  var manualPayment = request.session.data['regular-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-pcn-2-error")
+  }
+})
+
+// V6 3rd KYC failure manual notes surcharge
+router.post('/v6/kickout/cannot-set-up-dd-surcharge-2', function(request, response) {
+
+  var manualPayment = request.session.data['manual-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-2-error")
+  }
+})
+
+// V6 3rd KYC failure manual notes surcharge
+router.post('/v6/kickout/cannot-set-up-dd-surcharge-2-error', function(request, response) {
+
+  var manualPayment = request.session.data['manual-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-2-error")
+  }
+})
+
+
 // PECS WEB INTEGRATION Routes
 // pecs-web/random-sample.html - decide which page to direct to depending on the radio answer selected
 router.post('/pecs-web/random-sample', function(request, response) {
