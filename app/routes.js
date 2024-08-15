@@ -494,6 +494,32 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-2-error', function(request, respon
   }
 })
 
+// V6 3rd KYC failure manual notes PCN - Iteration 3
+router.post('/v6/kickout/cannot-set-up-dd-pcn-3', function(request, response) {
+
+  var manualPayment = request.session.data['regular-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-pcn-3-error")
+  }
+})
+
+// V6 3rd KYC failure manual notes PCN - Error message - Iteration 3
+router.post('/v6/kickout/cannot-set-up-dd-pcn-3-error', function(request, response) {
+
+  var manualPayment = request.session.data['regular-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-pcn-3-error")
+  }
+})
+
 // V6 3rd KYC failure manual notes surcharge
 router.post('/v6/kickout/cannot-set-up-dd-surcharge-2', function(request, response) {
 
@@ -517,6 +543,32 @@ router.post('/v6/kickout/cannot-set-up-dd-surcharge-2-error', function(request, 
       response.redirect("/v6/view-pcn")
   } else {
     response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-2-error")
+  }
+})
+
+// V6 3rd KYC failure manual notes surcharge - Iteration 3
+router.post('/v6/kickout/cannot-set-up-dd-surcharge-3', function(request, response) {
+
+  var manualPayment = request.session.data['manual-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-3-error")
+  }
+})
+
+// V6 3rd KYC failure manual notes surcharge - Iteration 3
+router.post('/v6/kickout/cannot-set-up-dd-surcharge-3-error', function(request, response) {
+
+  var manualPayment = request.session.data['manual-payments']
+  if (manualPayment == "yes"){
+      response.redirect("/v6/view-pcn-manual-note")
+  } else if (manualPayment == "no"){
+      response.redirect("/v6/view-pcn")
+  } else {
+    response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-3-error")
   }
 })
 
