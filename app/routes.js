@@ -473,7 +473,7 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-2', function(request, response) {
 
   var manualPayment = request.session.data['regular-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
       response.redirect("/v6/view-pcn")
   } else {
@@ -486,7 +486,7 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-2-error', function(request, respon
 
   var manualPayment = request.session.data['regular-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
       response.redirect("/v6/view-pcn")
   } else {
@@ -499,7 +499,7 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-3', function(request, response) {
 
   var manualPayment = request.session.data['regular-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
       response.redirect("/v6/view-pcn")
   } else {
@@ -512,7 +512,7 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-3-error', function(request, respon
 
   var manualPayment = request.session.data['regular-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
       response.redirect("/v6/view-pcn")
   } else {
@@ -525,7 +525,7 @@ router.post('/v6/kickout/cannot-set-up-dd-surcharge-2', function(request, respon
 
   var manualPayment = request.session.data['manual-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
       response.redirect("/v6/view-pcn")
   } else {
@@ -538,7 +538,7 @@ router.post('/v6/kickout/cannot-set-up-dd-surcharge-2-error', function(request, 
 
   var manualPayment = request.session.data['manual-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
       response.redirect("/v6/view-pcn")
   } else {
@@ -551,9 +551,9 @@ router.post('/v6/kickout/cannot-set-up-dd-surcharge-3', function(request, respon
 
   var manualPayment = request.session.data['manual-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
-      response.redirect("/v6/view-pcn")
+      response.redirect("/v6/view-pcn-payment-plan-note-no")
   } else {
     response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-3-error")
   }
@@ -564,9 +564,9 @@ router.post('/v6/kickout/cannot-set-up-dd-surcharge-3-error', function(request, 
 
   var manualPayment = request.session.data['manual-payments']
   if (manualPayment == "yes"){
-      response.redirect("/v6/view-pcn-manual-note")
+      response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
-      response.redirect("/v6/view-pcn")
+      response.redirect("/v6/view-pcn-payment-plan-note-no")
   } else {
     response.redirect("/v6/kickout/cannot-set-up-dd-surcharge-3-error")
   }
