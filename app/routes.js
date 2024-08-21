@@ -501,7 +501,7 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-3', function(request, response) {
   if (manualPayment == "yes"){
       response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
-      response.redirect("/v6/view-pcn")
+      response.redirect("/v6/view-pcn-payment-plan-note-no")
   } else {
     response.redirect("/v6/kickout/cannot-set-up-dd-pcn-3-error")
   }
@@ -514,7 +514,7 @@ router.post('/v6/kickout/cannot-set-up-dd-pcn-3-error', function(request, respon
   if (manualPayment == "yes"){
       response.redirect("/v6/view-pcn-payment-plan-note")
   } else if (manualPayment == "no"){
-      response.redirect("/v6/view-pcn")
+      response.redirect("/v6/view-pcn-payment-plan-note-no")
   } else {
     response.redirect("/v6/kickout/cannot-set-up-dd-pcn-3-error")
   }
