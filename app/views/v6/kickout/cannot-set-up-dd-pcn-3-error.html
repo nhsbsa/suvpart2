@@ -16,21 +16,21 @@ We cannot set up a Direct Debit
 {% block beforeContent %}
 
 <div class="nhsuk-secondary-navigation">
-   <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-         <div class="nhsuk-secondary-navigation__container">
-            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
-               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
-                  <ul class="nhsuk-secondary-navigation__list">
-                     <li class="nhsuk-secondary-navigation__item">
-                        <br><br>
-                     </li>
-                  </ul>
-               </nav>
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-secondary-navigation__container">
+                <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+                    <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                        <ul class="nhsuk-secondary-navigation__list">
+                            <li class="nhsuk-secondary-navigation__item">
+                                <br><br>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
@@ -46,82 +46,84 @@ We cannot set up a Direct Debit
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-half">
         <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
-			<h2 class="nhsuk-error-summary__title" id="error-summary-title">
-			  There is a problem
-			</h2>
-			<div class="nhsuk-error-summary__body">
-			
-			  <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
-				<li>
-				  <a href="#example-1">Select yes if they agree to make regular payments</a>
-				</li>
-			  </ul>
-			</div>
-		</div>
+            <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+                There is a problem
+            </h2>
+            <div class="nhsuk-error-summary__body">
+
+                <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+                    <li>
+                        <a href="#example-1">Select yes if they agree to make regular payments</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <h1>We cannot set up a Direct Debit</h1>
 
         <div class="nhsuk-warning-callout">
             <h3 class="nhsuk-warning-callout__label">
-            <span role="text">
-                Important:
-            </span>
+                <span role="text">
+                    Important:
+                </span>
             </h3>
-            <p>All information must be read out to the customer.</p>
+            <p>All information must be read out to the patient.</p>
         </div>
 
         <p>We've been unable to verify the patient's details. They'll not be able to pay by Direct Debit.</p>
         <p>They'll need to pay by card or send a cheque or postal order.</p>
-        
+
         <h2>Card payments</h2>
 
         <p>They can pay online, or you can generate a token and transfer them to the automated payment line.</p>
 
         <h2>Paying in installments</h2>
 
-        <p>If they want to pay in installments, they can make regular card payments using a payment plan similar to Direct Debit.</p>
+        <p>If they want to pay in installments, they can make regular card payments using a payment plan similar to
+            Direct Debit.</p>
         <p>They'll need to make the first payment within 28 days (by 17 July 2024).</p>
         <h3>The payment plan summary:</h3>
 
         <dl class="nhsuk-summary-list">
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-                First payment
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-                £4.82
-            </dd>
-        </div>
-   
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-                Following 11 payments 
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-                £4.82
-            </dd>
-        </div>
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    First payment
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    £4.82
+                </dd>
+            </div>
 
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-                Chosen payment date
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-                1
-            </dd>
-        </div>
-   
-        <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-                Total amount
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-                £57.90
-            </dd>
-        </div>
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    Following 11 payments
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    £4.82
+                </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    Chosen payment date
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    1
+                </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    Total amount
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    £57.90
+                </dd>
+            </div>
         </dl>
 
-        <p>They'll need to make regular monthly payments. If they do not, they may have to pay a surcharge of up to £50.</p>
+        <p>They'll need to make regular monthly payments. If they do not, they may have to pay a surcharge of up to £50.
+        </p>
 
         <form action="/v6/kickout/cannot-set-up-dd-pcn-3-error" method="post">
             <div class="nhsuk-form-group nhsuk-form-group--error">
@@ -133,19 +135,23 @@ We cannot set up a Direct Debit
                     </legend>
 
                     <span class="nhsuk-error-message" id="manual-payment-error">
-						<span class="nhsuk-u-visually-hidden">Error:</span> Select yes if they agree to make regular payments
+                        <span class="nhsuk-u-visually-hidden">Error:</span> Select yes if they agree to make regular
+                        payments
                     </span>
-                
+
                     <div class="nhsuk-radios">
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="example-1" name="regular-payments" type="radio" value="yes">
+                            <input class="nhsuk-radios__input" id="example-1" name="regular-payments" type="radio"
+                                value="yes">
                             <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                                Yes, they have agreed to make regular payments -  the payment summary will be added to the notes
+                                Yes, they have agreed to make regular payments - the payment summary will be added to
+                                the notes
                             </label>
                         </div>
-                    
+
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="example-2" name="regular-payments" type="radio" value="no">
+                            <input class="nhsuk-radios__input" id="example-2" name="regular-payments" type="radio"
+                                value="no">
                             <label class="nhsuk-label nhsuk-radios__label" for="example-2">
                                 No, they want to pay another way
                             </label>
@@ -160,297 +166,304 @@ We cannot set up a Direct Debit
         </form>
     </div>
 
-   <div class="nhsuk-grid-column-one-half">
-      <div class="border-box" id="rightHandSide">
-         <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
-               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
-            </div>
-         </div>
-
-         <dl class="nhsuk-summary-list  nhsuk-u-margin-bottom-6">
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-               Name
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-               Joe Bloggs
-               </dd>
-               <dd class="nhsuk-summary-list__actions">
-            </dd>
-            </div>
-         
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-               Address
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-               9 Hotspur Street<br>Townford<br> NE10LD
-               </dd>
-               <dd class="nhsuk-summary-list__actions">
-            </dd>
-            </div>
-         
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-               Email address
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-               <p>joe.blogss@example.com</p>
-               </dd>
-               <dd class="nhsuk-summary-list__actions">
-            </dd>
-            </div>
-         
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-               Telephone number
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-               <p>07700 900362</p>
-               </dd>
-               <dd class="nhsuk-summary-list__actions">
-            </dd>
+    <div class="nhsuk-grid-column-one-half">
+        <div class="border-box" id="rightHandSide">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
+                </div>
             </div>
 
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-                  Date of birth
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-                  20 November 1988
-               </dd>                   
-               <dd class="nhsuk-summary-list__actions">
-               </dd>
+            <dl class="nhsuk-summary-list  nhsuk-u-margin-bottom-6">
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        Name
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        Joe Bloggs
+                    </dd>
+                    <dd class="nhsuk-summary-list__actions">
+                    </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        Address
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        9 Hotspur Street<br>Townford<br> NE10LD
+                    </dd>
+                    <dd class="nhsuk-summary-list__actions">
+                    </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        Email address
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        <p>joe.blogss@example.com</p>
+                    </dd>
+                    <dd class="nhsuk-summary-list__actions">
+                    </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        Telephone number
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        <p>07700 900362</p>
+                    </dd>
+                    <dd class="nhsuk-summary-list__actions">
+                    </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        Date of birth
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        20 November 1988
+                    </dd>
+                    <dd class="nhsuk-summary-list__actions">
+                    </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        NHS number
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        23141986
+                    </dd>
+                    <dd class="nhsuk-summary-list__actions">
+                    </dd>
+                </div>
+            </dl>
+
+            <div class="scrollable-panel">
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-full">
+                        <div class="container">
+                            <ul class="tabs1">
+                                <li class="tab-link current1" data-tab1="tab-1">PCN details</li>
+                                <li class="tab-link" data-tab1="tab-2">Notes</li>
+                                <li class="tab-link" data-tab1="tab-3">Transactions</li>
+                            </ul>
+
+                            <!-- PCN DETAILS -->
+                            <div id="tab-1" class="tab1-content current1">
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
+                                        <p>£26.40</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
+                                        <p>not sent</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
+                                        <p>3</p>
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+                                        <p>£100.00</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+                                        <p>10/09/18</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
+                                        <p>29/05/18</p>
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+                                        <p>£50.00</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+                                        <p>10/10/18</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date
+                                        </h2>
+                                        <p>30/06/18</p>
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+                                        <p>£176.40</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+                                        <p>07/11/18</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+                                        <p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+                                        <p>£10.00</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
+                                        <p>Yes</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
+                                        <p>Electronic</p>
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+                                        <p>£166.40</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
+                                        <p>FMMMM</p>
+                                    </div>
+                                    <div class="nhsuk-grid-column-one-third">
+                                        <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+                                        <p>No</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- NOTES -->
+                            <div id="tab-2" class="tab1-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+
+                                            <th>Date</th>
+                                            <th>Agent</th>
+                                            <th>Comments</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>27/07/2017 13.00</td>
+                                            <td>Tim</td>
+                                            <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED
+                                                MANAGER. CALL ESCALATED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/2017 13.30</td>
+                                            <td>Joanne</td>
+                                            <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY
+                                                27/08/17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/2017 13.00</td>
+                                            <td>Tim</td>
+                                            <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED
+                                                MANAGER. CALL ESCALATED</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/2017 13.30</td>
+                                            <td>Joanne</td>
+                                            <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY
+                                                27/08/17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/2017 13.30</td>
+                                            <td>Joanne</td>
+                                            <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY
+                                                27/08/17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/2017 13.30</td>
+                                            <td>Joanne</td>
+                                            <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY
+                                                27/08/17</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- TRANSACTIONS -->
+                            <div id="tab-3" class="tab1-content">
+                                <table class="internal-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>User</th>
+                                            <th>Amount</th>
+                                            <th>For</th>
+                                            <th>Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>31/07/17 15.45</td>
+                                            <td>System</td>
+                                            <td>-£8.60</td>
+                                            <td>Adjustment</td>
+                                            <td>Direct Debit</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>30/07/17 15.45</td>
+                                            <td>System</td>
+                                            <td>£8.60</td>
+                                            <td>PCN</td>
+                                            <td>Direct Debit</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/17 13.30</td>
+                                            <td>System</td>
+                                            <td>£51.00</td>
+                                            <td>PCN</td>
+                                            <td>Cheque</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/17 13.30</td>
+                                            <td>System</td>
+                                            <td>-£51.00</td>
+                                            <td>Surcharge</td>
+                                            <td>Surcharge added</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>27/07/17 13.30</td>
+                                            <td>System</td>
+                                            <td>£58.60</td>
+                                            <td>PCN</td>
+                                            <td>Payment request</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="nhsuk-summary-list__row">
-               <dt class="nhsuk-summary-list__key">
-                  NHS number
-               </dt>
-               <dd class="nhsuk-summary-list__value">
-                  23141986
-               </dd>
-                  <dd class="nhsuk-summary-list__actions">
-               </dd>
-            </div>
-         </dl>
-
-         <div class="scrollable-panel">
-				<div class="nhsuk-grid-row">
-					<div class="nhsuk-grid-column-full">
-					<div class="container">
-						<ul class="tabs1">
-							<li class="tab-link current1" data-tab1="tab-1">PCN details</li>
-							<li class="tab-link" data-tab1="tab-2">Notes</li>
-							<li class="tab-link" data-tab1="tab-3">Transactions</li>
-						</ul>
-
-						<!-- PCN DETAILS -->
-						<div id="tab-1" class="tab1-content current1">
-						<div class="nhsuk-grid-row">
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
-								<p>£26.40</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
-								<p>not sent</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
-								<p>3</p>
-							</div>
-						</div>
-			
-						<div class="nhsuk-grid-row">
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
-								<p>£100.00</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
-								<p>10/09/18</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
-								<p>29/05/18</p>
-							</div>
-						</div>
-			
-						<div class="nhsuk-grid-row">
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
-								<p>£50.00</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
-								<p>10/10/18</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
-								<p>30/06/18</p>
-							</div>
-						</div>
-			
-						<div class="nhsuk-grid-row">
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
-								<p>£176.40</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
-								<p>07/11/18</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
-								<p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
-							</div>
-						</div>
-			
-						<div class="nhsuk-grid-row">
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
-								<p>£10.00</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
-								<p>Yes</p>
-							</div>
-							<div class="nhsuk-grid-column-one-third">
-								<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
-								<p>Electronic</p>
-							</div>
-						</div>
-			
-						<div class="nhsuk-grid-row">
-						<div class="nhsuk-grid-column-one-third">
-							<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
-							<p>£166.40</p>
-						</div>
-						<div class="nhsuk-grid-column-one-third">
-							<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
-							<p>FMMMM</p>
-						</div>
-						<div class="nhsuk-grid-column-one-third">
-							<h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
-							<p>No</p>
-						</div>
-						</div>
-						</div>
-
-						<!-- NOTES -->
-						<div id="tab-2" class="tab1-content">
-                            <table>
-                                <thead>
-                                    <tr>
-
-                                        <th>Date</th>
-                                        <th>Agent</th>
-                                        <th>Comments</th>
-
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>27/07/2017 13.00</td>
-                                        <td>Tim</td>
-                                        <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/2017 13.30</td>
-                                        <td>Joanne</td>
-                                        <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/2017 13.00</td>
-                                        <td>Tim</td>
-                                        <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/2017 13.30</td>
-                                        <td>Joanne</td>
-                                        <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/2017 13.30</td>
-                                        <td>Joanne</td>
-                                        <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/2017 13.30</td>
-                                        <td>Joanne</td>
-                                        <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-						</div>
-						
-						<!-- TRANSACTIONS -->
-						<div id="tab-3" class="tab1-content">
-                            <table class="internal-table">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>User</th>
-                                        <th>Amount</th>
-                                        <th>For</th>
-                                        <th>Type</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>31/07/17 15.45</td>
-                                        <td>System</td>
-                                        <td>-£8.60</td>
-                                        <td>Adjustment</td>
-                                        <td>Direct Debit</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>30/07/17 15.45</td>
-                                        <td>System</td>
-                                        <td>£8.60</td>
-                                        <td>PCN</td>
-                                        <td>Direct Debit</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/17 13.30</td>
-                                        <td>System</td>
-                                        <td>£51.00</td>
-                                        <td>PCN</td>
-                                        <td>Cheque</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/17 13.30</td>
-                                        <td>System</td>
-                                        <td>-£51.00</td>
-                                        <td>Surcharge</td>
-                                        <td>Surcharge added</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>27/07/17 13.30</td>
-                                        <td>System</td>
-                                        <td>£58.60</td>
-                                        <td>PCN</td>
-                                        <td>Payment request</td>
-                                        
-                                    </tr>
-                                </tbody>
-                            </table>
-						</div>
-					
-					</div>
-					</div>
-				</div>
-			</div>
-      </div>
-   </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
