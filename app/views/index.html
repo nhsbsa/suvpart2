@@ -47,103 +47,124 @@ NHS.UK TECS Single User View
 
                 <details class="nhsuk-details nhsuk-expander">
                     <summary class="nhsuk-details__summary">
-                        <span class="nhsuk-details__summary-text">Version 1</span>
+                        <span class="nhsuk-details__summary-text">Version 7</span>
                     </summary>
 
                     <div class="nhsuk-details__text">
-                        <p>
-                            As per the business process, a new re-design of SUV is required to allow for an improved accessibe version
-                            under the new NHS Toolkit.
+                        <p class="nhsuk-u-margin-bottom-0">
+                            This version of the prototype has been reformatted to include the PECS and DECS flows as
+                            well as the Direct Debit journey within each.
                         </p>
-
-                        <p>
-                            Presently, the SUV system has various funtions that all appear in a pop-up window which is not considered accessible.
-                        </p>
-                        <p>
-                            This prototype explores the function of a pop-up function removed and replaced by a seperate page function.
-                        </p>
-
-                        <h2>Page list</h2>
-
-                        <p>
-                            There is an <a href="/v1/individual-page-list">individual Page list</a>, which contains each individual SUV page.
-                        </p>
-
-                        <hr>
 
                         <h2>
                             Prototype journeys
                         </h2>
+                        <!-- PECS prototype links -->
+
+                        {{ table({
+                        panel: false,
+                        caption: "PECS prototype links",
+                        firstCellIsHeader: false,
+                        head: [
+                        {
+                        text: ""
+                        },
+                        {
+                        text: ""
+                        }
+                        ],
+                        rows: [
+                        [
+                        {
+                        text: "PECS CCS user"
+                        },
+                        {
+                        html: '<a href="/v7/PECS/search">Prototype Link</a>'
+                        }
+                        ],
+                        [
+                        {
+                        text: "PECS Back Office user"
+                        },
+                        {
+                        html: '<a href="/v7/PECS/back-user/search">Prototype Link</a>'
+                        }
+                        ]
+                        ]
+                        }) }}
+
+                        <!-- DECS prototype links -->
+
+                        {{ table({
+                        panel: false,
+                        caption: "DECS prototype links",
+                        firstCellIsHeader: false,
+                        head: [
+                        {
+                        text: ""
+                        },
+                        {
+                        text: ""
+                        }
+                        ],
+                        rows: [
+                        [
+                        {
+                        text: "DECS CCS user"
+                        },
+                        {
+                        html: '<a href="/v7/DECS/search">Prototype Link</a>'
+                        }
+                        ],
+                        [
+                        {
+                        text: "DECS Back Office user"
+                        },
+                        {
+                        html: '<a href="/v7/DECS/back-user/search">Prototype Link</a>'
+                        }
+                        ]
+                        ]
+                        }) }}
+
+                    </div>
+                </details> <!-- End version 7 -->
+
+                <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">PECS Web integration</span>
+                    </summary>
+
+                    <div class="nhsuk-details__text">
+                        <p class="nhsuk-u-margin-bottom-0">In this version of the prototype we are looking at
+                            integrating PECS Web into SUV. This is experimental work being carried out as part of the
+                            mini discovery phase. PECS web users would have different log ins to the CCS and Back office
+                            staff and limited access to cases i.e. can only view cases if a user searches.</p>
+
+                        <h2>
+                            Prototype Journey
+                        </h2>
 
                         <p>
-                            There is a <a href="/v1/journey-page">journey Page list</a>, which contains the Version 1 SUV journey.
+                            <a href="/pecs-web/search">Data entry users access</a>, starting from SUV search home screen
+                            which contains multiple design tweaks.
+                        </p>
+                        <p>
+                            <a href="pecs-web/manager-login">Manager access</a>, starting from manager login page to
+                            allow the user to the task of random sample checking.
                         </p>
                     </div>
-                </details> <!-- End version 1 -->
+                </details> <!-- End version Pecs web -->
 
                 <details class="nhsuk-details nhsuk-expander">
                     <summary class="nhsuk-details__summary">
-                        <span class="nhsuk-details__summary-text">Version 2</span>
+                        <span class="nhsuk-details__summary-text">Version 6</span>
                     </summary>
 
                     <div class="nhsuk-details__text">
-                        <p>
-                            As per the business process, a new re-design of SUV is required to allow for an improved accessibe version under the new NHS Toolkit.
-                        </p>
-                        <p>
-                            Presently, the SUV system has various funtions that all appear in a pop-up window which is not considered accessible.
-                        </p>
-
-                        <p>This prototype explores the function of a pop-up function removed and replaced by a seperate page function whilst allowing the user the ability to still see any PCN infomation.</p>
-
-                        <h2>
-                            Page list
-                        </h2>
-
-                        <p>
-                            There is an <a href="/v2/individual-page-list">individual Page list</a>, which contains each individual SUV page.
-                        </p>
-
-                        <hr>
-
-                        <h2>
-                            Prototype journeys
-                        </h2>
-
-                        <p>
-                            There is a <a href="/v2/search-page-no-tracker">CSS User New Page Function and PCN View PECS</a>, which contains the Version 1 SUV journey.
-                        </p>
-
-                        <p>
-                            There is a <a href="/v2/css-pcn-view-dental">CSS User New Page Function and PCN View DECS</a>, which contains the Version 1 SUV journey.
-                        </p>
-
-                        <p>
-                            There is a <a href="/v2/css-pcn-backend">Back End View with PCN PECS Info</a>, which contains all patient info and links to all CCS user functions.
-                        </p>
-
-                        <p>
-                            There is a <a href="/v2/css-pcn-view-extend-unlock">CSS View with Extend, unlock and close</a>, which contains all patient info and links to all CCS user functions.
-                        </p>
-                    </div>
-                </details> <!-- End version 2 -->
-
-                <details class="nhsuk-details nhsuk-expander">
-                    <summary class="nhsuk-details__summary">
-                        <span class="nhsuk-details__summary-text">Version 3</span>
-                    </summary>
-
-                    <div class="nhsuk-details__text">
-                        <p>
-                            In this version of the prototype we have added in a Direct Debit journey. We are to gather more info regarding creating a refund note and flagging a customer as vulnerable.
-                        </p>
-                        
-                        <p>
-                            After a demo run through with the business, a baseline prototype was drafted thus ready for testing. 
-                        </p>
-
-                        <p>
-                            An in-person testing session was organised with call centre staff on the 19/09/2023 to run through this version of the prototype to see if the design aligned with user mental models.
+                        <p class="nhsuk-u-margin-bottom-0">
+                            This version of the prototype has the Direct Debit journey integrated, and also explores
+                            options for a 3rd KYC failure.
                         </p>
 
                         <h2>
@@ -151,78 +172,14 @@ NHS.UK TECS Single User View
                         </h2>
 
                         <p>
-                            <a href="/v3/search">Direct Debit journey integrated into SUV (CCS user)</a>.
+                            <a href="/v6/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v3/back-user/search">Direct Debit journey integrated into SUV (Back user)</a>.        
-                        </p>
-
-                        <hr>
-
-                        <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
-                            <summary class="nhsuk-details__summary">
-                                <span class="nhsuk-details__summary-text">Version 3 - George</span>
-                            </summary>
-        
-                            <div class="nhsuk-details__text">
-                                <p class="nhsuk-u-margin-bottom-0">In this version of the prototype we are looking at existing features we can amend, new features to consider and a hypothetical Direct Debit journey.</p>
-                                
-                                <h2>
-                                    Prototype Journey
-                                </h2>
-        
-                                <p>
-                                    <a href="/v3-george/css-search">Direct Debit journey</a>, where a CSS user is starting from search. This journey also contains new design tweaks.
-                                </p>
-                            </div>
-                        </details> <!-- End version 3 George -->
-                       
-                        <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
-                            <summary class="nhsuk-details__summary">
-                                <span class="nhsuk-details__summary-text">Version 3 - Iona</span>
-                            </summary>
-        
-                            <div class="nhsuk-details__text">
-                                <p class="nhsuk-u-margin-bottom-0">In this version of the prototype we are looking at existing features we can amend, new features to consider and a hypothetical Direct Debit journey.</p>
-                                
-                                <h2>
-                                    Prototype Journey
-                                </h2>
-        
-                                <p>
-                                    <a href="/v3-iona/pcn-search">Direct Debit journey</a>, starting from search which contains multiple design tweaks.
-                                </p>
-                            </div>
-                        </details> <!-- End version 3 Iona -->
-                    </div>
-                </details> <!-- End version 3 -->
-
-                <details class="nhsuk-details nhsuk-expander">
-                    <summary class="nhsuk-details__summary">
-                        <span class="nhsuk-details__summary-text">Version 4</span>
-                    </summary>
-
-                    <div class="nhsuk-details__text">
-                        <p>
-                            This version of the prototype has the Direct Debit journey integrated and the access point to start DD has been changed. It is now a link option on the PCN view page "Add Direct Debit". This was a point highlighted from a previous user testing session and it will need to be tested.
-                        </p>
-                        
-                        <p>
-                           This version will have further amendments made from the back off the user research session carried out in September. 
-                        </p>
-
-                        <h2>
-                            Prototype journeys
-                        </h2>
-
-                        <p>
-                            <a href="/v4/search">Direct Debit journey integrated into SUV (CCS user)</a>.
-                        </p>
-                        <p>
-                            <a href="/v4/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.        
+                            <a href="/v6/back-user/search">Direct Debit journey integrated into SUV (Back office
+                                user)</a>.
                         </p>
                     </div>
-                </details> <!-- End version 4 -->
+                </details> <!-- End version 6 -->
 
                 <details class="nhsuk-details nhsuk-expander">
                     <summary class="nhsuk-details__summary">
@@ -231,7 +188,8 @@ NHS.UK TECS Single User View
 
                     <div class="nhsuk-details__text">
                         <p class="nhsuk-u-margin-bottom-0">
-                            This version of the prototype has the Direct Debit journey integrated, with 5 slightly different variations of the Direct Debit journey.    
+                            This version of the prototype has the Direct Debit journey integrated, with 5 slightly
+                            different variations of the Direct Debit journey.
                         </p>
 
                         <h2>Prototype journeys</h2>
@@ -243,10 +201,13 @@ NHS.UK TECS Single User View
                             <a href="/v5/option-one/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v5/option-one/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.   
-                        </p>  
+                            <a href="/v5/option-one/back-user/search">Direct Debit journey integrated into SUV (Back
+                                office user)</a>.
+                        </p>
                         <p>
-                            For this version, the right hand column of the Direct Debit journey is changed on the initial set up screen, and also on the enter your bank details screen to show the personal information rather than the PCN information. The rest of the journey remains unchanged.
+                            For this version, the right hand column of the Direct Debit journey is changed on the
+                            initial set up screen, and also on the enter your bank details screen to show the personal
+                            information rather than the PCN information. The rest of the journey remains unchanged.
                         </p>
 
                         <hr>
@@ -258,10 +219,13 @@ NHS.UK TECS Single User View
                             <a href="/v5/option-two/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v5/option-two/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.   
-                        </p>  
+                            <a href="/v5/option-two/back-user/search">Direct Debit journey integrated into SUV (Back
+                                office user)</a>.
+                        </p>
                         <p>
-                            For this version, the right hand column on the initial set up screen and the enter your bank details screen have changed to show personal details at the top, and a new tab at the bottom to show the PCN information that was replaced. The rest of the journey remains unchanged.
+                            For this version, the right hand column on the initial set up screen and the enter your bank
+                            details screen have changed to show personal details at the top, and a new tab at the bottom
+                            to show the PCN information that was replaced. The rest of the journey remains unchanged.
                         </p>
 
                         <h3>
@@ -272,11 +236,13 @@ NHS.UK TECS Single User View
                             <a href="/v5/option-two-one/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v5/option-two-one/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.   
-                        </p>  
+                            <a href="/v5/option-two-one/back-user/search">Direct Debit journey integrated into SUV (Back
+                                office user)</a>.
+                        </p>
 
                         <p>
-                            For this version, the right hand column will show personal details at the top throughout the entire journey, and a new tab at the bottom to show the PCN information.
+                            For this version, the right hand column will show personal details at the top throughout the
+                            entire journey, and a new tab at the bottom to show the PCN information.
                         </p>
 
                         <hr>
@@ -288,10 +254,13 @@ NHS.UK TECS Single User View
                             <a href="/v5/option-three/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v5/option-three/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.   
-                        </p>  
+                            <a href="/v5/option-three/back-user/search">Direct Debit journey integrated into SUV (Back
+                                office user)</a>.
+                        </p>
 
-                        <p>For this version, it is essentially 2.1 but 'flipped', the top of the right hand column remains as PCN information, with the introduction of a new tab at the bottom of the right hand column showing the personal information throughout the journey.</p>
+                        <p>For this version, it is essentially 2.1 but 'flipped', the top of the right hand column
+                            remains as PCN information, with the introduction of a new tab at the bottom of the right
+                            hand column showing the personal information throughout the journey.</p>
 
                         <hr>
 
@@ -303,20 +272,35 @@ NHS.UK TECS Single User View
                             <a href="/v5/option-four/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v5/option-four/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.   
-                        </p>  
-                        <p>This option is a 'curve ball' in the sense it is a slight re-design implementing the newer tabs component and the right hand column visually looking more inline with newer card component in the toolkit. This deisgn has PCN information and personal information as two tabs towards top of the right hand column, and the notes and transactions at the bottom of the right hand column. There is also another slight change, a new 'row' at the top of the column encapsulating the reference number so it is always visible and a 'tag' component to show the status. These changes are throughout the entire journey.</p>
+                            <a href="/v5/option-four/back-user/search">Direct Debit journey integrated into SUV (Back
+                                office user)</a>.
+                        </p>
+                        <p>This option is a 'curve ball' in the sense it is a slight re-design implementing the newer
+                            tabs component and the right hand column visually looking more inline with newer card
+                            component in the toolkit. This deisgn has PCN information and personal information as two
+                            tabs towards top of the right hand column, and the notes and transactions at the bottom of
+                            the right hand column. There is also another slight change, a new 'row' at the top of the
+                            column encapsulating the reference number so it is always visible and a 'tag' component to
+                            show the status. These changes are throughout the entire journey.</p>
                     </div>
                 </details> <!-- End version 5 -->
 
                 <details class="nhsuk-details nhsuk-expander">
                     <summary class="nhsuk-details__summary">
-                        <span class="nhsuk-details__summary-text">Version 6</span>
+                        <span class="nhsuk-details__summary-text">Version 4</span>
                     </summary>
 
                     <div class="nhsuk-details__text">
-                        <p class="nhsuk-u-margin-bottom-0">
-                            This version of the prototype has the Direct Debit journey integrated, and also explores options for a 3rd KYC failure.
+                        <p>
+                            This version of the prototype has the Direct Debit journey integrated and the access point
+                            to start DD has been changed. It is now a link option on the PCN view page "Add Direct
+                            Debit". This was a point highlighted from a previous user testing session and it will need
+                            to be tested.
+                        </p>
+
+                        <p>
+                            This version will have further amendments made from the back off the user research session
+                            carried out in September.
                         </p>
 
                         <h2>
@@ -324,33 +308,216 @@ NHS.UK TECS Single User View
                         </h2>
 
                         <p>
-                            <a href="/v6/search">Direct Debit journey integrated into SUV (CCS user)</a>.
+                            <a href="/v4/search">Direct Debit journey integrated into SUV (CCS user)</a>.
                         </p>
                         <p>
-                            <a href="/v6/back-user/search">Direct Debit journey integrated into SUV (Back office user)</a>.        
+                            <a href="/v4/back-user/search">Direct Debit journey integrated into SUV (Back office
+                                user)</a>.
                         </p>
                     </div>
-                </details> <!-- End version 6 -->
+                </details> <!-- End version 4 -->
+
+                <details class="nhsuk-details nhsuk-expander">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">Version 3</span>
+                    </summary>
+
+                    <div class="nhsuk-details__text">
+                        <p>
+                            In this version of the prototype we have added in a Direct Debit journey. We are to gather
+                            more info regarding creating a refund note and flagging a customer as vulnerable.
+                        </p>
+
+                        <p>
+                            After a demo run through with the business, a baseline prototype was drafted thus ready for
+                            testing.
+                        </p>
+
+                        <p>
+                            An in-person testing session was organised with call centre staff on the 19/09/2023 to run
+                            through this version of the prototype to see if the design aligned with user mental models.
+                        </p>
+
+                        <h2>
+                            Prototype journeys
+                        </h2>
+
+                        <p>
+                            <a href="/v3/search">Direct Debit journey integrated into SUV (CCS user)</a>.
+                        </p>
+                        <p>
+                            <a href="/v3/back-user/search">Direct Debit journey integrated into SUV (Back user)</a>.
+                        </p>
+
+                        <hr>
+
+                        <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">Version 3 - George</span>
+                            </summary>
+
+                            <div class="nhsuk-details__text">
+                                <p class="nhsuk-u-margin-bottom-0">In this version of the prototype we are looking at
+                                    existing features we can amend, new features to consider and a hypothetical Direct
+                                    Debit journey.</p>
+
+                                <h2>
+                                    Prototype Journey
+                                </h2>
+
+                                <p>
+                                    <a href="/v3-george/css-search">Direct Debit journey</a>, where a CSS user is
+                                    starting from search. This journey also contains new design tweaks.
+                                </p>
+                            </div>
+                        </details> <!-- End version 3 George -->
+
+                        <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">Version 3 - Iona</span>
+                            </summary>
+
+                            <div class="nhsuk-details__text">
+                                <p class="nhsuk-u-margin-bottom-0">In this version of the prototype we are looking at
+                                    existing features we can amend, new features to consider and a hypothetical Direct
+                                    Debit journey.</p>
+
+                                <h2>
+                                    Prototype Journey
+                                </h2>
+
+                                <p>
+                                    <a href="/v3-iona/pcn-search">Direct Debit journey</a>, starting from search which
+                                    contains multiple design tweaks.
+                                </p>
+                            </div>
+                        </details> <!-- End version 3 Iona -->
+                    </div>
+                </details> <!-- End version 3 -->
+
+                <details class="nhsuk-details nhsuk-expander">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">Version 2</span>
+                    </summary>
+
+                    <div class="nhsuk-details__text">
+                        <p>
+                            As per the business process, a new re-design of SUV is required to allow for an improved
+                            accessibe version under the new NHS Toolkit.
+                        </p>
+                        <p>
+                            Presently, the SUV system has various funtions that all appear in a pop-up window which is
+                            not considered accessible.
+                        </p>
+
+                        <p>This prototype explores the function of a pop-up function removed and replaced by a seperate
+                            page function whilst allowing the user the ability to still see any PCN infomation.</p>
+
+                        <h2>
+                            Page list
+                        </h2>
+
+                        <p>
+                            There is an <a href="/v2/individual-page-list">individual Page list</a>, which contains each
+                            individual SUV page.
+                        </p>
+
+                        <hr>
+
+                        <h2>
+                            Prototype journeys
+                        </h2>
+
+                        <p>
+                            There is a <a href="/v2/search-page-no-tracker">CSS User New Page Function and PCN View
+                                PECS</a>, which contains the Version 1 SUV journey.
+                        </p>
+
+                        <p>
+                            There is a <a href="/v2/css-pcn-view-dental">CSS User New Page Function and PCN View
+                                DECS</a>, which contains the Version 1 SUV journey.
+                        </p>
+
+                        <p>
+                            There is a <a href="/v2/css-pcn-backend">Back End View with PCN PECS Info</a>, which
+                            contains all patient info and links to all CCS user functions.
+                        </p>
+
+                        <p>
+                            There is a <a href="/v2/css-pcn-view-extend-unlock">CSS View with Extend, unlock and
+                                close</a>, which contains all patient info and links to all CCS user functions.
+                        </p>
+                    </div>
+                </details> <!-- End version 2 -->
+
+                <details class="nhsuk-details nhsuk-expander">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">Version 1</span>
+                    </summary>
+
+                    <div class="nhsuk-details__text">
+                        <p>
+                            As per the business process, a new re-design of SUV is required to allow for an improved
+                            accessibe version
+                            under the new NHS Toolkit.
+                        </p>
+
+                        <p>
+                            Presently, the SUV system has various funtions that all appear in a pop-up window which is
+                            not considered accessible.
+                        </p>
+                        <p>
+                            This prototype explores the function of a pop-up function removed and replaced by a seperate
+                            page function.
+                        </p>
+
+                        <h2>Page list</h2>
+
+                        <p>
+                            There is an <a href="/v1/individual-page-list">individual Page list</a>, which contains each
+                            individual SUV page.
+                        </p>
+
+                        <hr>
+
+                        <h2>
+                            Prototype journeys
+                        </h2>
+
+                        <p>
+                            There is a <a href="/v1/journey-page">journey Page list</a>, which contains the Version 1
+                            SUV journey.
+                        </p>
+                    </div>
+                </details> <!-- End version 1 -->
+
+
+
+
+
+
+
 
                 <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
                     <summary class="nhsuk-details__summary">
                         <span class="nhsuk-details__summary-text">Adhoc screens</span>
                     </summary>
-                
+
                     <div class="nhsuk-details__text">
-                        <p>In this section we will provide the adhoc screens for the SUV prototype which will include screens such as error pages, done pages, kickout pages etc.</p>
-                        
+                        <p>In this section we will provide the adhoc screens for the SUV prototype which will include
+                            screens such as error pages, done pages, kickout pages etc.</p>
+
                         <table class="nhsuk-table">
                             <caption class="nhsuk-table__caption">Error messages</caption>
                             <thead role="rowgroup" class="nhsuk-table__head">
-                            <tr role="row">
-                                <th role="columnheader" class="" scope="col">
-                                Page title
-                                </th>
-                                <th role="columnheader" class="" scope="col">
-                                URL
-                                </th>
-                            </tr>
+                                <tr role="row">
+                                    <th role="columnheader" class="" scope="col">
+                                        Page title
+                                    </th>
+                                    <th role="columnheader" class="" scope="col">
+                                        URL
+                                    </th>
+                                </tr>
                             </thead>
                             <tbody class="nhsuk-table__body">
                                 <!-- below commented out page no longer needed so 'archived' by commenting out -->
@@ -359,65 +526,88 @@ NHS.UK TECS Single User View
                                     <td class="nhsuk-table__cell">Add payment</td>
                                     <td class="nhsuk-table__cell "><a href="/v6/error-messages/add-payment-error">Payment method radio error</a></td>
                                 </tr> -->
-                              
+
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Set up Direct Debit checkbox</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-start-error">Direct Debit checkbox error</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-start-error">Direct
+                                            Debit checkbox error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Set up Direct Debit monthly options</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-monthly-options-error">Monthly options radios error</a></td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/error-messages/dd-monthly-options-error">Monthly options radios
+                                            error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Select a Date for Direct Debit</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-dates-error">Select date input field error</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-dates-error">Select
+                                            date input field error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Address correct</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-address-error">Address confirmation radio error</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-address-error">Address
+                                            confirmation radio error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Change address</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/change-address-error">Change address fieldset error</a></td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/error-messages/change-address-error">Change address fieldset
+                                            error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Bank details</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-bank-details-error">Bank details fieldset error</a></td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/error-messages/dd-bank-details-error">Bank details fieldset
+                                            error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Confirm and submit to Direct Debit terms</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-confirm-error">Confirm and submit checkbox error</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/dd-confirm-error">Confirm
+                                            and submit checkbox error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">Cannot pay by Direct Debit</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/cannot-pay-by-dd-error">Cannot pay by Direct Debit error</a></td>
-                                </tr>
-                            
-                                <tr role="row" class="nhsuk-table__row">
-                                    <td class="nhsuk-table__cell">We could not verify your details</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/cannot-verify-details-error">Cannot verify details error</a></td>
-                                </tr>
-                              
-                                <tr role="row" class="nhsuk-table__row">
-                                    <td class="nhsuk-table__cell">We have tried to find your updated details but <br>still could not verify them</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/error-messages/still-cannot-verify">Still cannot verify details error</a></td>
-                                </tr>
-                                
-                                <tr role="row" class="nhsuk-table__row">
-                                    <td class="nhsuk-table__cell">We cannot set up a Direct Debit - PCN (Option 3 error)</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-pcn-3-error">We cannot set up a Direct Debit - PCN (Option 3 error)</a></td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/error-messages/cannot-pay-by-dd-error">Cannot pay by Direct Debit
+                                            error</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
-                                    <td class="nhsuk-table__cell">We cannot set up a Direct Debit - Surcharge (Option 3 error)</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-surcharge-3-error">We cannot set up a Direct Debit - Surcharge (Option 3 error)</a></td>
+                                    <td class="nhsuk-table__cell">We could not verify your details</td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/error-messages/cannot-verify-details-error">Cannot verify details
+                                            error</a></td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">We have tried to find your updated details but
+                                        <br>still could not verify them
+                                    </td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/error-messages/still-cannot-verify">Still cannot verify details
+                                            error</a></td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">We cannot set up a Direct Debit - PCN (Option 3 error)
+                                    </td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-pcn-3-error">We
+                                            cannot set up a Direct Debit - PCN (Option 3 error)</a></td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">We cannot set up a Direct Debit - Surcharge (Option 3
+                                        error)</td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/kickout/cannot-set-up-dd-surcharge-3-error">We cannot set up a
+                                            Direct Debit - Surcharge (Option 3 error)</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -426,33 +616,39 @@ NHS.UK TECS Single User View
                             <caption class="nhsuk-table__caption">Kickout pages</caption>
                             <thead role="rowgroup" class="nhsuk-table__head">
                                 <tr role="row">
-                                <th role="columnheader" class="" scope="col">
-                                    Page title
-                                </th>
-                                <th role="columnheader" class="" scope="col">
-                                    URL
-                                </th>
+                                    <th role="columnheader" class="" scope="col">
+                                        Page title
+                                    </th>
+                                    <th role="columnheader" class="" scope="col">
+                                        URL
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="nhsuk-table__body">
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">We cannot verify your details</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/we-cannot-verify-details">We cannot verify your Direct Debit details</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/we-cannot-verify-details">We
+                                            cannot verify your Direct Debit details</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">We cannot set up your Direct Debit</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/we-cannot-setup">We cannot set up your Direct Debit</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/we-cannot-setup">We cannot set
+                                            up your Direct Debit</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">The patient cannot pay by Direct Debit</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/patient-cannot-pay-by-dd">The patient cannot pay by Direct Debit</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/patient-cannot-pay-by-dd">The
+                                            patient cannot pay by Direct Debit</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
-                                    <td class="nhsuk-table__cell">Unable to set up Direct Debit<br> <i>(not selected all checkboxes)</i></td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/direct-debit-consent-error">Unable to set up Direct Debit</a></td>
+                                    <td class="nhsuk-table__cell">Unable to set up Direct Debit<br> <i>(not selected all
+                                            checkboxes)</i></td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/kickout/direct-debit-consent-error">Unable to set up Direct
+                                            Debit</a></td>
                                 </tr>
 
                                 <!-- <tr role="row" class="nhsuk-table__row">
@@ -467,7 +663,8 @@ NHS.UK TECS Single User View
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">We cannot set up a Direct Debit - PCN (Option 3)</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-pcn-3">We cannot set up a Direct Debit - PCN (Option 3)</a></td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-pcn-3">We
+                                            cannot set up a Direct Debit - PCN (Option 3)</a></td>
                                 </tr>
 
                                 <!-- <tr role="row" class="nhsuk-table__row">
@@ -481,13 +678,17 @@ NHS.UK TECS Single User View
                                 </tr> -->
 
                                 <tr role="row" class="nhsuk-table__row">
-                                    <td class="nhsuk-table__cell">We cannot set up a Direct Debit - Surcharge (Option 3)</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-surcharge-3">We cannot set up a Direct Debit - Surcharge (Option 3)</a></td>
+                                    <td class="nhsuk-table__cell">We cannot set up a Direct Debit - Surcharge (Option 3)
+                                    </td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/cannot-set-up-dd-surcharge-3">We
+                                            cannot set up a Direct Debit - Surcharge (Option 3)</a></td>
                                 </tr>
 
                                 <tr role="row" class="nhsuk-table__row">
                                     <td class="nhsuk-table__cell">This page is no longer available</td>
-                                    <td class="nhsuk-table__cell "><a href="/v6/kickout/direct-debit-page-unavailable">This page is no longer available</a></td>
+                                    <td class="nhsuk-table__cell "><a
+                                            href="/v6/kickout/direct-debit-page-unavailable">This page is no longer
+                                            available</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -495,45 +696,27 @@ NHS.UK TECS Single User View
                         <table class="nhsuk-table">
                             <caption class="nhsuk-table__caption">Other</caption>
                             <thead role="rowgroup" class="nhsuk-table__head">
-                            <tr role="row">
-                                <th role="columnheader" class="" scope="col">
-                                Page title
-                                </th>
-                                <th role="columnheader" class="" scope="col">
-                                URL
-                                </th>
-                            </tr>
+                                <tr role="row">
+                                    <th role="columnheader" class="" scope="col">
+                                        Page title
+                                    </th>
+                                    <th role="columnheader" class="" scope="col">
+                                        URL
+                                    </th>
+                                </tr>
                             </thead>
-                            <tbody class="nhsuk-table__body">              
-                              <tr role="row" class="nhsuk-table__row">
-                                <td class="nhsuk-table__cell">View PCN - Refund in progress</td>
-                                <td class="nhsuk-table__cell "><a href="/v6/view-pcn-refund">View PCN - Refund in progress</a></td>
-                              </tr>
+                            <tbody class="nhsuk-table__body">
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">View PCN - Refund in progress</td>
+                                    <td class="nhsuk-table__cell "><a href="/v6/view-pcn-refund">View PCN - Refund in
+                                            progress</a></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </details> <!-- End adhoc -->
 
-                <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-4">
-                    <summary class="nhsuk-details__summary">
-                        <span class="nhsuk-details__summary-text">PECS Web integration</span>
-                    </summary>
 
-                    <div class="nhsuk-details__text">
-                        <p class="nhsuk-u-margin-bottom-0">In this version of the prototype we are looking at integrating PECS Web into SUV. This is experimental work being carried out as part of the mini discovery phase. PECS web users would have different log ins to the CCS and Back office staff and limited access to cases i.e. can only view cases if a user searches.</p>
-                        
-                        <h2>
-                            Prototype Journey
-                        </h2>
-
-                        <p>
-                            <a href="/pecs-web/search">Data entry users access</a>, starting from SUV search home screen which contains multiple design tweaks.
-                        </p>
-                        <p>
-                            <a href="pecs-web/manager-login">Manager access</a>, starting from manager login page to allow the user to the task of random sample checking.
-                        </p>
-                    </div>
-                </details> <!-- End version Pecs web -->
             </div>
         </div>
     </div>

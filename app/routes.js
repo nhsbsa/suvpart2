@@ -618,4 +618,31 @@ router.post('/pecs-web/random-sample-2-back', function(request, response) {
   }
 })
 
+
+// V7 Routes
+
+// V7 Direct Debit address route
+router.post('/v7/DECS/direct-debit/address', function(request, response) {
+
+  var addressCorrect = request.session.data['address']
+  if (addressCorrect == "yes"){
+      response.redirect("/v7/DECS/direct-debit/check-answers")
+  } else {
+      response.redirect("/v7/DECS/direct-debit/change-address")
+  } 
+})
+
+// V7 Direct Debit bank details eroute
+router.post('/v7/DECS/direct-debit/bank-details', function(request, response) {
+  var sortOne = request.session.data['sort-one']
+  var sortTwo = request.session.data['sort-two']
+  var sortThree = request.session.data['sort-three']
+if (sortOne === "40" && sortTwo === "00" && sortThree === "40"){
+response.redirect("/v7/DECS/direct-debit/cannot-verify-details")
+} else if (sortOne === "" && sortTwo === "" && sortThree === ""){
+  response.redirect("/v7/DECS/direct-debit/bank-details-error")
+} else {
+  response.redirect("/v7/DECS/direct-debit/confirm")
+}
+})
 module.exports = router;

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+This page is no longer available – Single user view
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+	<div class="nhsuk-grid-row">
+		<div class="nhsuk-grid-column-full">
+			<div class="nhsuk-secondary-navigation__container">
+				<div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+					<nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+						<ul class="nhsuk-secondary-navigation__list">
+							<li class="nhsuk-secondary-navigation__item">
+								<br><br>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+            <h1 class="nhsuk-heading-l">
+                This page is no longer available
+            </h1>
+
+            <p>Go to the patient details screen to start again.</p>
+
+            <p>
+                <a class="nhsuk-button" role="button" href="/v6/view-pcn">Go to patient details screen</a>
+            </p>            
+        </div>
+    </div>
+{% endblock %}
