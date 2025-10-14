@@ -51,12 +51,74 @@ Add note
       </h1>
 
       <form action="view-pcn" method="POST" id="form">
+         {{ select({
+         id: "contact-channel",
+         name: "contact-channel",
+         label: {
+         html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Contact Channel</label>'
+         },
+         items: [
+         {
+         value: call,
+         text: "Call"
+         },
+         {
+         value: "email",
+         text: "Email"
+         },
+         {
+         value: letter,
+         text: "Letter",
+         selected: true
+         },
+         {
+         value: webchat,
+         text: "Webchat"
+         },
+         {
+         value: admin,
+         text: "Admin"
+         }
+         ]
+         }) }}
+
+         <!-- Hidden field for email address -->
+         <div id="emailField" class="nhsuk-form-group" style="display: none;">
+            {{ input({
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Email reference</label>'
+            },
+            id: "email-ref",
+            name: "email-ref",
+            classes: "nhsuk-input--width-20"
+            }) }}
+         </div>
+
+         <script>
+            // Get references
+            const select = document.getElementById('contact-channel');
+            const emailField = document.getElementById('emailField');
+
+            // Listen for changes
+            select.addEventListener('change', function () {
+               if (this.value === 'email') {
+                  emailField.style.display = 'block';
+               } else {
+                  emailField.style.display = 'none';
+               }
+            });
+
+            // Run once on load (in case of preselected option)
+            if (select.value === 'email') {
+               emailField.style.display = 'block';
+            }
+         </script>
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
                Notes
             </label>
             <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;"
-               onkeyup="countChars(this);">This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one character too many. This is one chara</textarea>
+               onkeyup="countChars(this);"></textarea>
             <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
          </div>
 
