@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Add payment
+Pay by card
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -43,57 +43,81 @@ Add payment
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <h1 class="nhsuk-u-margin-bottom-4">
          Add payment
       </h1>
-      <div></div>
+
       <form action="/v3/add-payment" method="post">
          <div class="nhsuk-form-group">
-   
-            <fieldset class="nhsuk-fieldset">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                <h1 class="nhsuk-fieldset__heading">
-                  Select a payment method
-                </h1>
-              </legend>
-          
-              <div class="nhsuk-radios nhsuk-radios--inline">
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-inline-1" name="payment" type="radio" value="card">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                    Pay by card
-                  </label>
-                </div>
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-inline-2" name="payment" type="radio" value="dd">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                    Set up a Direct Debit
-                  </label>
-                </div>
-          
-              </div>
+            {{ select({
+            id: "select-1",
+            name: "select-1",
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Payment type</label>'
+            },
+            items: [
+            {
+            value: cheque,
+            text: "Cheque"
+            },
+            {
+            value: postal-order,
+            text: "Postal Order"
+            },
+            {
+            value: cash,
+            text: "Cash",
+            selected: true
+            },
+            {
+            value: bank-transfer,
+            text: "Bank Transfer"
+            }
+            ]
+            }) }}
+
+            {{ input({
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Payment amount</label>'
+            },
+            id: "example",
+            name: "example",
+            prefix: "£",
+            classes: "nhsuk-input--width-5"
+            }) }}
+
+            {{ characterCount({
+            name: "more-detail",
+            id: "more-detail",
+            maxlength: 2000,
+            label: {
+            text: "",
+            classes: "nhsuk-label--l",
+            isPageHeading: "true"
+            },
+            hint: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Notes</label>'
+            }
+            }) }}
             </fieldset>
          </div>
-         
+
          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Continue
-          </button>
+            Submit
+         </button>
       </form>
 
       <p><a href="view-pcn">Cancel</a></p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
-      <div class="border-box">
+      <div class="border-box" id="rightHandSide">
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
                <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
-               <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
+
             </div>
             <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
          </div>
@@ -174,15 +198,342 @@ Add payment
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
-               <p><a href="dispenser-details">FMMMM</a></p>
+               <p>FMMMM</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
                <p>No</p>
             </div>
          </div>
+
+         <div class="scrollable-panel">
+            <div class="nhsuk-grid-row">
+               <div class="nhsuk-grid-column-full">
+                  <div class="container">
+
+                     {% set notesContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "30/09/2025 14:23"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Refund in progress"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/2025 14:15"
+                     },
+                     {
+                     text: "SYSTEM"
+                     },
+                     {
+                     text: "REFUND REQUESTED"
+                     }
+                     ],
+                     [
+                     {
+                     text: "08/09/25 11:12"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "03/09/25 12:32"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ],
+                     [
+                     {
+                     text: "27/08/25 15:18"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "21/08/25 12:16"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ],
+                     [
+                     {
+                     text: "19/08/25 14:02"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "08/08/25 12:02"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%} {% set transactionsContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "User"
+                     },
+                     {
+                     text: "Amount"
+                     },
+                     {
+                     text: "For"
+                     },
+                     {
+                     text: "Type"
+                     },
+                     {
+                     text: "Action"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "31/07/25 15:44"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "-£8.60"
+                     },
+                     {
+                     text: "Adjustment"
+                     },
+                     {
+                     text: "Direct Debit"
+                     },
+                     {
+                     html: '<a href=#>Edit</a>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/07/25 12:24"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£8.60"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Direct Debit"
+                     },
+                     {
+                     text: ""
+                     }
+                     ],
+                     [
+                     {
+                     text: "27/07/25 11:51"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£51.00"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Cheque"
+                     },
+                     {
+                     text: ""
+                     }
+                     ],
+                     [
+                     {
+                     text: "20/07/25 10:23"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "-£51.00"
+                     },
+                     {
+                     text: "Surcharge"
+                     },
+                     {
+                     text: "Surcharge added"
+                     },
+                     {
+                     html: '<a href=#>Edit</a>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "19/07/25 14:20"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£58.60"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Payment request"
+                     },
+                     {
+                     text: ""
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%} {% set auditContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "14/10/25 15:01"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "Surname changed from: CARTWRIGHT, Postcode changed from: NE1 1EN"
+                     }
+                     ],
+                     [
+                     {
+                     text: "14/10/25 14:59"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: " Address line 1 changed from: 152 BRIDGE HOUSE"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/25 11:02"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: " Email updated from: JBLOGGS2@GMAIL.COM"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%}
+                     {{ tabs({
+                     items: [
+                     {
+                     label: "Notes",
+                     id: "notes",
+                     panel: {
+                     html: notesContent
+                     }
+                     },
+                     {
+                     label: "Transactions",
+                     id: "transactions",
+                     panel: {
+                     html: transactionsContent
+                     }
+                     },
+                     {
+                     label: "Audit history",
+                     id: "audit-history",
+                     panel: {
+                     html: auditContent
+                     }
+                     }
+                     ]
+                     }) }}
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 </div>
+
+</html>
 {% endblock %}

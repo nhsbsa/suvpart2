@@ -107,11 +107,12 @@ View PCN
                   <label class="nhsuk-label" for="tel">Telephone number</label>
                   <input class="nhsuk-input" id="tel" name="first-name-2" type="text">
                </div>
-               <a class="nhsuk-button nhsuk-button--secondary reset-button" id="search-button" href="" role="button">Reset</a>
+               <a class="nhsuk-button nhsuk-button--secondary reset-button" id="search-button" href=""
+                  role="button">Reset</a>
             </div>
          </div>
       </div>
-      
+
       <div class="nhsuk-grid-row scrollable-panel">
          <div class="nhsuk-grid-column-full nhsuk-u-margin-top-5">
             <div class="container">
@@ -207,7 +208,7 @@ View PCN
       <div class="border-box" id="rightHandSide">
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1> 
+               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
                <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
             </div>
             <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
@@ -301,120 +302,330 @@ View PCN
             <div class="nhsuk-grid-row">
                <div class="nhsuk-grid-column-full">
                   <div class="container">
-                     <ul class="tabs1">
-                        <li class="tab-link current1" data-tab1="tab-2">Notes</li>
-                        <li class="tab-link" data-tab1="tab-1">Transactions</li>
-                     </ul>
-                     <!-- NOTES -->
-                     <div id="tab-1" class="tab1-content">
-                        <p><a href="card-payment"> Add payment</a> &nbsp;&nbsp; <a href="add-easement"> Add easement</a> &nbsp;&nbsp; <a href="../direct-debit/start"> Add Direct Debit</a></p>
-                        
-                           <table class="internal-table">
-                              <thead>
-                                 <tr>
-                                    <th>Date</th>
-                                    <th>User</th>
-                                    <th>Amount</th>
-                                    <th>For</th>
-                                    <th>Type</th>
-                                    <th>Action</th>
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 <tr>
-                                    <td>31/07/17 15.45</td>
-                                    <td>System</td>
-                                    <td>-£8.60</td>
-                                    <td>Adjustment</td>
-                                    <td>Direct Debit</td>
-                                    <td><a href="#">Edit</a></td>
-                                 </tr>
-                                 <tr>
-                                    <td>30/07/17 15.45</td>
-                                    <td>System</td>
-                                    <td>£8.60</td>
-                                    <td>PCN</td>
-                                    <td>Direct Debit</td>
-                                    <td><a href="#"></a></td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/17 13.30</td>
-                                    <td>System</td>
-                                    <td>£51.00</td>
-                                    <td>PCN</td>
-                                    <td>Cheque</td>
-                                    <td><a href="#"></a></td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/17 13.30</td>
-                                    <td>System</td>
-                                    <td>-£51.00</td>
-                                    <td>Surcharge</td>
-                                    <td>Surcharge added</td>
-                                    <td><a href="#">Remove</a></td>
-                                 </tr>
-                                 <tr>
-                                    <td>27/07/17 13.30</td>
-                                    <td>System</td>
-                                    <td>£58.60</td>
-                                    <td>PCN</td>
-                                    <td>Payment request</td>
-                                    <td><a href="#"></a></td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                     </div>
-                 
-                     <!-- TRANSACTIONS -->
-                     <div id="tab-2" class="tab1-content current1">
-                        <p><a href="add-note">Add note</a></p>
-                        <table class="notes-table">
-                           <thead>
-                              <tr>
-                                 <th class="nhsuk-u-font-weight-bold">Date</th>
-                                 <th class="nhsuk-u-font-weight-bold">Agent</th>
-                                 <th class="nhsuk-u-font-weight-bold">Comments</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>30/07/17 11.00</td>
-                                 <td>TIM</td>
-                                 <td>REFUND IN PROGRESS</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/17 13.00</td>
-                                 <td>TIM</td>
-                                 <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/17 13.30</td>
-                                 <td>JOANNE</td>
-                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/17 13.00</td>
-                                 <td>TIM</td>
-                                 <td>CUST TOLD TO PAY HALF TO AVOID SURCHARGE. CUST NON COMPLIANT, DEMANDED MANAGER. CALL ESCALATED</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/17 13.30</td>
-                                 <td>JOANNE</td>
-                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/17 13.30</td>
-                                 <td>JOANNE</td>
-                                 <td>IINFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                              </tr>
-                              <tr>
-                                 <td>27/07/17 13.30</td>
-                                 <td>JOANNE</td>
-                                 <td>INFO REPEATED AS ABOVE. CUST PAID HALF, AGREED TO PAY NEXT HALF BY 27/08/17</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
+
+                     {% set notesContent %}
+                     <p class="nhsuk-u-font-size-16"><a href="add-note">Add note</a></p>
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "30/09/2025 14:23"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Refund in progress"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/2025 14:15"
+                     },
+                     {
+                     text: "SYSTEM"
+                     },
+                     {
+                     text: "REFUND REQUESTED"
+                     }
+                     ],
+                     [
+                     {
+                     text: "08/09/25 11:12"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "03/09/25 12:32"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ],
+                     [
+                     {
+                     text: "27/08/25 15:18"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "21/08/25 12:16"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ],
+                     [
+                     {
+                     text: "19/08/25 14:02"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "08/08/25 12:02"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%} {% set transactionsContent %}
+                     <p class="nhsuk-u-font-size-16"><a href="add-payment">Add payment</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                           href="add-easement">Add
+                           easement</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/v7/PECS/direct-debit/start">Add Direct
+                           Debit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="add-failed-payment">Add failed
+                           payment</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="add-refund">Add
+                           refund</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="add-transfer">Add transfer</a></p>
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "User"
+                     },
+                     {
+                     text: "Amount"
+                     },
+                     {
+                     text: "For"
+                     },
+                     {
+                     text: "Type"
+                     },
+                     {
+                     text: "Action"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "31/07/25 15:44"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "-£8.60"
+                     },
+                     {
+                     text: "Adjustment"
+                     },
+                     {
+                     text: "Direct Debit"
+                     },
+                     {
+                     html: '<a href=#>Edit</a>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/07/25 12:24"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£8.60"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Direct Debit"
+                     },
+                     {
+                     text: ""
+                     }
+                     ],
+                     [
+                     {
+                     text: "27/07/25 11:51"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£51.00"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Cheque"
+                     },
+                     {
+                     text: ""
+                     }
+                     ],
+                     [
+                     {
+                     text: "20/07/25 10:23"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "-£51.00"
+                     },
+                     {
+                     text: "Surcharge"
+                     },
+                     {
+                     text: "Surcharge added"
+                     },
+                     {
+                     html: '<a href=#>Edit</a>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "19/07/25 14:20"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£58.60"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Payment request"
+                     },
+                     {
+                     text: ""
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%} {% set auditContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "14/10/25 15:01"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "Surname changed from: CARTWRIGHT, Postcode changed from: NE1 1EN"
+                     }
+                     ],
+                     [
+                     {
+                     text: "14/10/25 14:59"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: " Address line 1 changed from: 152 BRIDGE HOUSE"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/25 11:02"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: " Email updated from: JBLOGGS2@GMAIL.COM"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%}
+                     {{ tabs({
+                     items: [
+                     {
+                     label: "Notes",
+                     id: "notes",
+                     panel: {
+                     html: notesContent
+                     }
+                     },
+                     {
+                     label: "Transactions",
+                     id: "transactions",
+                     panel: {
+                     html: transactionsContent
+                     }
+                     },
+                     {
+                     label: "Audit history",
+                     id: "audit-history",
+                     panel: {
+                     html: auditContent
+                     }
+                     }
+                     ]
+                     }) }}
                   </div>
                </div>
             </div>

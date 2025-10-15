@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Add easement
+Add payment
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -42,64 +42,80 @@ Add easement
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
+
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
       <h1 class="nhsuk-u-margin-bottom-4">
-         Ease penalty
+         Refund payment
       </h1>
-      <div class="nhsuk-form-group nhsuk-u-margin-bottom-6">
-         <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-1">
-            Amount to ease
-         </label>
-         <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="2" selected></option>
-            <option value="1">Surcharge </option>
-            <option value="2">Penalty charge and Surcharge</option>
-         </select>
-      </div>
+      <div></div>
+      <form action="/v3/add-payment" method="post">
+         <div class="nhsuk-form-group">
+            {{ input({
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Refund amount</label>'
+            },
+            id: "example",
+            name: "example",
+            prefix: "-£",
+            classes: "nhsuk-input--width-5"
+            }) }}
+            {{ select({
+            id: "select-1",
+            name: "select-1",
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Payment type</label>'
+            },
+            items: [
+            {
+            value: cheque,
+            text: "Cheque"
+            },
+            {
+            value: postal-order,
+            text: "Postal Order"
+            },
+            {
+            value: bank-transfer,
+            text: "Bank Transfer"
+            }
+            ]
+            }) }}
 
-      <p>Easement amount: £50.00</p>
-      <p>Customer has paid: £10.00</p>
-      <p class="nhsuk-u-margin-bottom-6">Balance after easement applied: £116.40</p>
+            {{ characterCount({
+            name: "more-detail",
+            id: "more-detail",
+            maxlength: 2000,
+            label: {
+            text: "",
+            classes: "nhsuk-label--l",
+            isPageHeading: "true"
+            },
+            hint: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Notes</label>'
+            }
+            }) }}
+            </fieldset>
+         </div>
 
-      <label class="nhsuk-label nhsuk-u-font-weight-bold" for="select-2">Reason for easement</label>
-      <select class="nhsuk-select nhsuk-u-margin-bottom-6" id="select-2" name="select-2">
-         <option value="0" selected></option>
-         <option value="1">**CO cross over (Surcharge) </option>
-         <option value="2">**ES Extreme situation/team manager discretion</option>
-         <option value="3">**HC Financial hardship - HC2 confirmed
-         <option value="4">**FL First letter not received</option>
-         <option value="5">**MM Medex or Matex - subsequently holds a certificate</option>
-         <option value="6">**MP more than one PCN in same month</option>
-         <option value="7">**LD Vulnerable - language difficulties</option>
-         <option value="8">**TO Vulnerable - terminal illness over 6 months</option>
-         <option value="9">**TO Vulnerable - terminal illness under 6 months</option>
-         <option value="10">**TU Vulnerable - disability or long term condition</option>
-         <option value="11">**PR PR form not signed</option>
-      </select>
+         <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Submit
+         </button>
+      </form>
 
-      <div class="nhsuk-form-group">
-         <label class="nhsuk-label" for="example">
-            Note
-         </label>
-         <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;"
-            onkeyup="countChars(this);"></textarea>
-         <p class="nhsuk-hint" id="charNum">You have 2000 characters remaining</p>
-      </div>
-
-      <a href="view-pcn" class="nhsuk-button" type="submit">Submit</a>
       <p><a href="view-pcn">Cancel</a></p>
    </div>
 
    <div class="nhsuk-grid-column-one-half">
-      <div class="border-box" id="rightHandSide">
+      <div class="border-box">
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
                <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
-
             </div>
             <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
          </div>
+
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
@@ -185,6 +201,39 @@ Add easement
             </div>
          </div>
 
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">HC3 amount</h2>
+               <p>£10.00</p>
+            </div>
+
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Area team</h2>
+               <p>£Q53</p>
+            </div>
+
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p>Has a valid prescription prepayment certificate (Box F)</p>
+            </div>
+         </div>
+
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Charge received</h2>
+               <p>£0.00</p>
+            </div>
+
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Country</h2>
+               <p>England</p>
+            </div>
+
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked?</h2>
+               <p>Yes</p>
+            </div>
+         </div>
          <div class="scrollable-panel">
             <div class="nhsuk-grid-row">
                <div class="nhsuk-grid-column-full">
@@ -513,15 +562,5 @@ Add easement
       </div>
    </div>
 </div>
-
-<script>
-   var maxLength = 375;
-   $('textarea').keyup(function () {
-      var length = $(this).val().length;
-      var length = maxLength - length;
-      $('#chars').text(length);
-   });
-</script>
-
-</html>
+</div>
 {% endblock %}
