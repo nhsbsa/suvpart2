@@ -1,5 +1,7 @@
 // Import GOV.UK frontend library
-@import "node_modules/govuk-frontend/dist/govuk/all";
+//@import "node_modules/govuk-frontend/dist/govuk";
+@import "govuk-frontend/dist/govuk";
+
 /*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */ /* stylelint-disable-line scss/comment-no-loud  */
 @font-face {
   font-family: "GDS Transport";
@@ -26,7 +28,7 @@
 }
 
 // Import NHS.UK frontend library
-@import "node_modules/nhsuk-frontend/packages/nhsuk";
+@import 'nhsuk-frontend/dist/nhsuk';
 
 // Components that are not in the NHS.UK frontend library
 @import "components/list-border";
@@ -35,6 +37,34 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
+
+/* FULL WIDTH */
+
+.nhsuk-width-container-fluid .nhsuk-secondary-navigation {
+  position: relative;
+  margin: 0 -16px;
+}
+
+.nhsuk-width-container-fluid .nhsuk-secondary-navigation .nhsuk-grid-row {
+  margin: 0;
+  padding: 0;
+}
+
+@include nhsuk-media-query($from: tablet) {
+  .nhsuk-width-container-fluid .nhsuk-secondary-navigation {
+  position: relative;
+  margin: 0 -32px;
+}
+
+.nhsuk-width-container-fluid .nhsuk-secondary-navigation .nhsuk-grid-row {
+  margin: 0;
+  padding: 0 32px;
+}
+}
+
+
+
 
 // SEARCH
 .nhsbsa-search-box {
@@ -523,6 +553,7 @@ tr.decs-row.hide {
   padding-top: 15px;
   position: absolute;
   right: 49px;
+  z-index: 1;
 }
 
 .nhsuk-input-grey {
