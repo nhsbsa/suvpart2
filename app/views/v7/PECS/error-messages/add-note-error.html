@@ -46,11 +46,21 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
+      {{ errorSummary({
+      titleText: "There is a problem",
+      errorList: [
+      {
+      text: "You must enter a note",
+      href: "#contact-channel"
+      }
+      ]
+      }) }}
       <h1 class="nhsuk-u-margin-bottom-4">
          Create note
       </h1>
 
       <form action="view-pcn" method="POST" id="form">
+
          {{ select({
          id: "contact-channel",
          name: "contact-channel",
@@ -117,14 +127,19 @@ Content page example - NHS.UK prototype kit
             }
          </script>
 
-         <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-               Notes
-            </label>
-            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;"
-               onkeyup="countChars(this);"></textarea>
-            <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
-         </div>
+         {{ characterCount({
+         idPrefix: "example-error",
+         name: "exampleError",
+         errorMessage: {
+         text: "Please enter a note"
+         },
+         name: "moreDetail",
+         id: "more-detail",
+         maxwords: 2048,
+         label: {
+         text: "Notes"
+         }
+         }) }}
 
          <div class="nhsuk-form-group">
             {{ radios({

@@ -46,11 +46,21 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
+      {{ errorSummary({
+      titleText: "There is a problem",
+      errorList: [
+      {
+      text: "You must enter an Email reference",
+      href: "#contact-channel"
+      }
+      ]
+      }) }}
       <h1 class="nhsuk-u-margin-bottom-4">
          Create note
       </h1>
 
       <form action="view-pcn" method="POST" id="form">
+
          {{ select({
          id: "contact-channel",
          name: "contact-channel",
@@ -59,8 +69,7 @@ Content page example - NHS.UK prototype kit
          },
          items: [
          {
-         value: letter,
-         selected: true
+         value: blank
          },
          {
          value: call,
@@ -68,7 +77,8 @@ Content page example - NHS.UK prototype kit
          },
          {
          value: "email",
-         text: "Email"
+         text: "Email",
+         selected: true
          },
          {
          value: letter,
@@ -88,6 +98,11 @@ Content page example - NHS.UK prototype kit
          <!-- Hidden field for email address -->
          <div id="emailField" class="nhsuk-form-group" style="display: none;">
             {{ input({
+            idPrefix: "example-error",
+            name: "exampleError",
+            errorMessage: {
+            text: "You must enter an Email reference"
+            },
             label: {
             html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Email reference</label>'
             },
