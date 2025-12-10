@@ -1,0 +1,124 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Enquiry letter
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-caption-m">Your details</span>
+      <h1>
+        Enquiry letter reference 01234567890
+      </h1>
+
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Do not delay
+          </span>
+        </h3>
+        <p>You now have 28 days to confirm you were entitled to free NHS prescriptions (by {{ 28 | alterTodaysDateByNumberOfDays }}). If you can confirm this, it will resolve the issue and stop you getting a penalty charge.</p>
+      </div>
+     
+    
+       <h2>Check your details carefully</h2>
+
+       <p>We check details on your prescription match the details on your exemption certificate, qualifying benefit, or prepayment certificate.</p>
+      <p>We have not been able to confirm you were entitled to free NHS prescriptions using these details.</p>
+     
+      <h3>Details on the prescription</h3>
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Michelle Doe
+          </dd>
+      
+        </div>
+        
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            12 Old Oak Road<br>Throckley<br> NE67 9AD
+          </dd>
+      
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Exemption reason ticked
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>Gets Income Support or income-related Employment and Support Allowance.</p>
+            
+          </dd>
+      
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date prescription was claimed
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ -1 | getClaimDateRange }}
+          </dd>
+      
+        </div>
+      </dl>
+
+
+
+      {% if data.showEmail === 'provided' %}
+        {% set emailValue = data.emailAddress or 'joe.bloggs@hotmail.com' %}
+      {% else %}
+        {% set emailValue = 'No email provided' %}
+      {% endif %}
+
+      <h3>Contact details</h3>
+      {{ summaryList({
+          rows: [
+            {
+              key: {
+                text: 'Email address'
+              },
+              value: {
+                text: emailValue
+              },
+              actions: {
+                items: [
+                  {
+                    href: 'email-change-EXPEDITE-v3',
+                    text: 'Change',
+                    visuallyHiddenText: 'email address'
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
+        
+
+
+
+
+      <p>If you were entitled to free NHS prescriptions, answering some questions to confirm this can help us resolve this issue. We can check if you had an exemption certificate or qualifying benefit, or if you had a valid prepayment certificate.</p>
+      
+      
+    </div>
+   
+  </div>
+  <a href="what-you-want-to-do-next" class="nhsuk-button">
+    Continue
+  </a>
+{% endblock %}

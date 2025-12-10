@@ -1,0 +1,124 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}You have accepted the penalty charge{% endblock %}
+
+
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+        {{ panel({
+            titleText: 'You have accepted the penalty charge',
+            html: '
+                <dl>
+                    <div>
+                        <dd class="nhsuk-body nhsuk-u-margin-0">Reference number</dd>
+                        <dt class="nhsuk-heading-l">01234567890</dt>
+                    </div>
+                </dl>',
+            classes: 'nhsuk-u-margin-bottom-6'
+        }) }}
+
+
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+ 
+
+            <h3 class="nhsuk-heading-m">Penalty Charge Notice amount</h3>
+
+                {% if data.settings[version].type === 'decs' %}
+
+                <!-- DECS -->
+                {% set summaryListRows = [
+                    {
+                      key: { text: 'Dental treatment charges' },
+                      value: { text: '£75.30' }
+                    },
+                    {
+                      key: { text: 'Penalty charge' },
+                      value: { text: '£50.00' }
+                    },
+                    {
+                      key: { text: 'Total amount to pay' },
+                      value: { html: '<strong>£125.30</strong>' }
+                }]%} 
+
+                {{ summaryList({
+                    rows: summaryListRows
+                }) }}
+
+                <p class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Amount to pay: £125.30</p>
+
+            {% else %}
+
+                <!-- PECS -->
+                {% set summaryListRows = [
+                    {
+                      key: { text: 'Prescription charges' },
+                      value: { text: '£9.90' }
+                    },
+                    {
+                      key: { text: 'Penalty charge' },
+                      value: { text: '£50.00' }
+                    },
+                    {
+                      key: { text: 'Total amount to pay' },
+                      value: { html: '<strong>£59.90</strong>' }
+                }]%} 
+
+                {{ summaryList({
+                    rows: summaryListRows
+                }) }}
+
+                <p class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Amount to pay: £59.90</p>
+
+            {% endif%}
+
+
+                {{ warningCallout({
+                    heading: 'What happens now',
+                    classes: 'nhsuk-u-margin-bottom-0',
+                    HTML: '<p class="nhsuk-body">We\'ll send you a letter with your penalty charge details. This is for your records, and does not represent any extra charges.</p>
+                            <p class="nhsuk-body">You do not need to wait for this letter to pay your penalty charge. You can make a payment now.</p>'      
+                }) }}
+
+
+                
+                {% set buttonURL = '../v6-pcn/payment-method' %}
+                {% if data.settings[version].type === 'decs' %}
+                    {% set buttonURL = '../v6-pcn-decs/payment-method' %}
+                {% endif %}
+
+                {{ button({
+                    classes: 'nhsuk-u-margin-top-6',
+                    text: 'Pay your penalty charge',
+                    href: buttonURL
+                }) }}
+
+
+                
+
+
+            </div>
+        </div>
+
+
+        <h2 class="nhsuk-heading-m">Other ways to pay your Penalty Charge Notice</h2>
+        <p>You can also make payments over the phone.</p>
+        <p><strong>Telephone:</strong> 0300 330 9291</p>
+
+        <p>You will need to keep a record of your Penalty Charge Notice reference number to make a payment.</p>
+
+        <p><a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="_blank" class="nhsuk-link--no-visited-state">Find out about call charges and other ways to contact us on our website (opens in a new tab)</a></p>
+
+
+        
+    
+
+
+    </div>
+</div>
+
+    {% endblock %}

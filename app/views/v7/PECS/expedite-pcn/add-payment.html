@@ -1,0 +1,309 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Pay by card
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-one-half">
+      <h1 class="nhsuk-u-margin-bottom-4">
+         Add payment
+      </h1>
+
+      <form action="/v7/PECS/view-pcn-enquiry-stage" method="post">
+         <div class="nhsuk-form-group">
+            {{ select({
+            id: "select-1",
+            name: "select-1",
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Payment type</label>'
+            },
+            items: [
+            {
+            value: cheque,
+            text: "Cheque"
+            },
+            {
+            value: postal-order,
+            text: "Postal Order"
+            },
+            {
+            value: cash,
+            text: "Cash",
+            selected: true
+            },
+            {
+            value: bank-transfer,
+            text: "Bank Transfer"
+            }
+            ]
+            }) }}
+
+            {{ input({
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Payment amount</label>'
+            },
+            id: "example",
+            name: "example",
+            prefix: "£",
+            classes: "nhsuk-input--width-5"
+            }) }}
+
+            {{ characterCount({
+            name: "more-detail",
+            id: "more-detail",
+            maxlength: 2000,
+            label: {
+            text: "",
+            classes: "nhsuk-label--l",
+            isPageHeading: "true"
+            },
+            hint: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Notes</label>'
+            }
+            }) }}
+            </fieldset>
+         </div>
+
+         <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Submit
+         </button>
+      </form>
+
+      <p><a href="view-pcn">Cancel</a></p>
+   </div>
+
+   <div class="nhsuk-grid-column-one-half">
+      <div class="border-box" id="rightHandSide">
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
+               <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
+            </div>
+            <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
+               <p>£9.90</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
+               <p>15/07/2025</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
+               <p>3</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+               <p>£46.75</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
+               <p>05/05/25</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
+               <p>05/05/25</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+               <p>£176.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+               <p>07/11/25</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+               <p>N/A</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
+               <p>Yes</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
+               <p>Electronic</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+               <p>N/A</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
+               <p><a href="dispenser-details">FMMMM</a></p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+               <p>No</p>
+            </div>
+         </div>
+
+         <div class="scrollable-panel">
+            <div class="nhsuk-grid-row">
+               <div class="nhsuk-grid-column-full">
+                  <div class="container">
+
+                     {% set notesContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ]
+                     }) }}
+                     {% endset -%} {% set transactionsContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "User"
+                     },
+                     {
+                     text: "Amount"
+                     },
+                     {
+                     text: "For"
+                     },
+                     {
+                     text: "Type"
+                     },
+                     {
+                     text: "Action"
+                     }
+                     ]
+                     }) }}
+                     {% endset -%} {% set auditContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ]
+                     }) }}
+                     {% endset -%}
+                     {{ tabs({
+                     items: [
+                     {
+                     label: "Notes",
+                     id: "notes",
+                     panel: {
+                     html: notesContent
+                     }
+                     },
+                     {
+                     label: "Transactions",
+                     id: "transactions",
+                     panel: {
+                     html: transactionsContent
+                     }
+                     },
+                     {
+                     label: "Audit history",
+                     id: "audit-history",
+                     panel: {
+                     html: auditContent
+                     }
+                     }
+                     ]
+                     }) }}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+</html>
+{% endblock %}

@@ -1,0 +1,362 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <br><br>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-one-half">
+
+      {{ panel({
+      titleText: 'You have accepted the penalty charge',
+      html: '
+      <dl>
+         <div>
+            <dd class="nhsuk-body nhsuk-u-margin-0">Reference number</dd>
+            <dt class="nhsuk-heading-l">01234567890</dt>
+         </div>
+      </dl>',
+      classes: 'nhsuk-u-margin-bottom-6'
+      }) }}
+
+
+      <div class="nhsuk-card">
+         <div class="nhsuk-card__content">
+
+
+            <h3 class="nhsuk-heading-m">Penalty Charge Notice amount</h3>
+
+            {% if data.settings[version].type === 'decs' %}
+
+            <!-- DECS -->
+            {% set summaryListRows = [
+            {
+            key: { text: 'Dental treatment charges' },
+            value: { text: '£75.30' }
+            },
+            {
+            key: { text: 'Penalty charge' },
+            value: { text: '£50.00' }
+            },
+            {
+            key: { text: 'Total amount to pay' },
+            value: { html: '<strong>£125.30</strong>' }
+            }]%}
+
+            {{ summaryList({
+            rows: summaryListRows
+            }) }}
+
+            <p class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Amount to pay: £125.30</p>
+
+            {% else %}
+
+            <!-- PECS -->
+            {% set summaryListRows = [
+            {
+            key: { text: 'Prescription charges' },
+            value: { text: '£9.90' }
+            },
+            {
+            key: { text: 'Penalty charge' },
+            value: { text: '£50.00' }
+            },
+            {
+            key: { text: 'Total amount to pay' },
+            value: { html: '<strong>£59.90</strong>' }
+            }]%}
+
+            {{ summaryList({
+            rows: summaryListRows
+            }) }}
+
+            <p class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Amount to pay: £59.90</p>
+
+            {% endif%}
+
+
+            {{ warningCallout({
+            heading: 'What happens now',
+            classes: 'nhsuk-u-margin-bottom-0',
+            html: '<p>We\'ll send you a letter with your penalty charge details. This is for your records, and does not
+               represent any extra charges.</p>
+            <p>You do not need to wait for this letter to pay your penalty charge. You can make a payment now.</p>
+            '
+            }) }}
+
+            {% set buttonURL = 'add-payment' %}
+            {% if data.settings[version].type === 'decs' %}
+            {% set buttonURL = '../v6-pcn-decs/payment-method' %}
+            {% endif %}
+
+            {{ button({
+            classes: 'nhsuk-u-margin-top-6',
+            text: 'Pay your penalty charge',
+            href: buttonURL
+            }) }}
+
+         </div>
+      </div>
+
+
+      <h2 class="nhsuk-heading-m">Other ways to pay your Penalty Charge Notice</h2>
+      <p>You can also make payments over the phone.</p>
+      <p><strong>Telephone:</strong> 0300 330 9291</p>
+
+      <p>You will need to keep a record of your Penalty Charge Notice reference number to make a payment.</p>
+
+      <p><a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="_blank"
+            class="nhsuk-link--no-visited-state">Find out about call charges and other ways to contact us on our website
+            (opens in a new tab)</a></p>
+
+
+
+
+
+
+   </div>
+
+
+   <div class="nhsuk-grid-column-one-half">
+      <div class="border-box" id="rightHandSide">
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+               <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
+               <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
+            </div>
+            <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
+               <p>£9.90</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
+               <p>15/07/2025</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
+               <p>3</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+               <p>£46.75</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
+               <p>05/05/25</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
+               <p>05/05/25</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+               <p>£176.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+               <p>07/11/25</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+               <p>N/A</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
+               <p>Yes</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
+               <p>Electronic</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+               <p>N/A</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
+               <p><a href="dispenser-details">FMMMM</a></p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+               <p>No</p>
+            </div>
+         </div>
+
+         <div class="scrollable-panel">
+            <div class="nhsuk-grid-row">
+               <div class="nhsuk-grid-column-full">
+                  <div class="container">
+
+                     {% set notesContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ]
+                     }) }}
+                     {% endset -%} {% set transactionsContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "User"
+                     },
+                     {
+                     text: "Amount"
+                     },
+                     {
+                     text: "For"
+                     },
+                     {
+                     text: "Type"
+                     },
+                     {
+                     text: "Action"
+                     }
+                     ]
+                     }) }}
+                     {% endset -%} {% set auditContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ]
+                     }) }}
+                     {% endset -%}
+                     {{ tabs({
+                     items: [
+                     {
+                     label: "Notes",
+                     id: "notes",
+                     panel: {
+                     html: notesContent
+                     }
+                     },
+                     {
+                     label: "Transactions",
+                     id: "transactions",
+                     panel: {
+                     html: transactionsContent
+                     }
+                     },
+                     {
+                     label: "Audit history",
+                     id: "audit-history",
+                     panel: {
+                     html: auditContent
+                     }
+                     }
+                     ]
+                     }) }}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   var maxLength = 375;
+   $('textarea').keyup(function () {
+      var length = $(this).val().length;
+      var length = maxLength - length;
+      $('#chars').text(length);
+   });
+</script>
+
+{% endblock %}
