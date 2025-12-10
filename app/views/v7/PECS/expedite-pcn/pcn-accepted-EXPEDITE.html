@@ -46,6 +46,15 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-warning-callout">
+         <h3 class="nhsuk-warning-callout__label">
+            <span role="text">
+               Important:
+            </span>
+         </h3>
+         <p>All information must be read out to the patient.</p>
+      </div>
+
 
       {{ panel({
       titleText: 'You have accepted the penalty charge',
@@ -114,26 +123,74 @@ Content page example - NHS.UK prototype kit
 
             {% endif%}
 
+            <h2 class="nhsuk-heading-m" style="margin-top:25px;">What happens now</h2>
+            <p>We'll send you a letter with your penalty charge details. This is for your records, and does not
+               represent any extra charges.</p>
+            <p>You do not need to wait for this letter to pay your penalty charge. You can make a payment now.</p>
 
-            {{ warningCallout({
+            <!-- {{ warningCallout({
             heading: 'What happens now',
             classes: 'nhsuk-u-margin-bottom-0',
             html: '<p>We\'ll send you a letter with your penalty charge details. This is for your records, and does not
                represent any extra charges.</p>
             <p>You do not need to wait for this letter to pay your penalty charge. You can make a payment now.</p>
             '
-            }) }}
+            }) }} -->
 
             {% set buttonURL = 'add-payment' %}
             {% if data.settings[version].type === 'decs' %}
             {% set buttonURL = '../v6-pcn-decs/payment-method' %}
             {% endif %}
 
-            {{ button({
+
+
+            <p>{{ radios({
+               idPrefix: "example",
+               name: "example",
+               fieldset: {
+               legend: {
+               text: "How would the customer like to pay?",
+               size: "l",
+               isPageHeading: false
+               }
+               },
+               items: [
+               {
+               value: "pay-now",
+               name:"choice",
+               text: "Make a payment now"
+               },
+               {
+               value: "direct-debit",
+               name:"choice",
+               text: "Set up a Direct Debit"
+               }
+               ]
+               }) }}</p>
+
+            <!-- {{ button({
             classes: 'nhsuk-u-margin-top-6',
-            text: 'Pay your penalty charge',
+            text: 'Continue',
             href: buttonURL
-            }) }}
+            }) }} -->
+            <a id="action-button" href="#" class="nhsuk-button">Continue</a>
+
+            <script>
+               const button = document.getElementById("action-button");
+
+               document.querySelectorAll('input[name="example"]').forEach(radio => {
+                  radio.addEventListener('change', () => {
+
+                     if (radio.value === "pay-now") {
+                        button.href = "add-payment";
+                     }
+                     else if (radio.value === "direct-debit") {
+                        button.href = "/v7/pecs/direct-debit/start";
+                     }
+
+                  });
+               });
+            </script>
 
          </div>
       </div>
@@ -183,7 +240,7 @@ Content page example - NHS.UK prototype kit
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
-               <p>£46.75</p>
+               <p>£50.00</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
