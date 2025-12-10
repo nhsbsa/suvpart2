@@ -32,6 +32,10 @@ Content page example - NHS.UK prototype kit
       </div>
    </div>
 </div>
+{{ backLink({
+text: 'Go back',
+href: 'javascript:history.back();'
+}) }}
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -43,10 +47,9 @@ Content page example - NHS.UK prototype kit
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
-      <h1 class="nhsuk-heading-l">Review your penalty charge</h1>
+      <h1 class="nhsuk-heading-l">Review the penalty charge</h1>
 
       <div class="nhsuk-warning-callout">
          <h3 class="nhsuk-warning-callout__label">
@@ -127,37 +130,35 @@ Content page example - NHS.UK prototype kit
             {% endif%}
          </div>
       </div>
-      <div class="nhsuk-card">
-         <div class="nhsuk-card__content">
 
-            <form action="pcn-accepted-EXPEDITE" method="post" novalidate>
+      <form action="pcn-accepted-EXPEDITE" method="post" novalidate>
 
 
-               <h2 class="nhsuk-heading-m">What you can do next</h2>
+         <h2 class="nhsuk-heading-m">What you can do next</h2>
 
-               <h3 class="nhsuk-heading-s">Do not accept the penalty charge</h3>
+         <h3 class="nhsuk-heading-s">Do not accept the penalty charge</h3>
 
-               <p>You still have 28 days to confirm you were entitled to free NHS prescriptions (by 6 January 2026). If
-                  you
-                  can confirm this, it will resolve the issue and stop you getting a penalty charge.</p>
-               <p>If you do not want to accept the penalty charge today you can still use this service to confirm you
-                  were
-                  entitled. You'll need to check the details on your enquiry letter first.</p>
+         <p>You still have 28 days to confirm you were entitled to free NHS prescriptions (by 6 January 2026). If
+            you
+            can confirm this, it will resolve the issue and stop you getting a penalty charge.</p>
+         <p>If you do not want to accept the penalty charge today you can still use this service to confirm you
+            were
+            entitled. You'll need to check the details on your enquiry letter first.</p>
 
-               <!-- {{ actionLink({
+         <!-- {{ actionLink({
                         href: 'enquiry-letter-details',
                         text: 'Go back to check the details on your enquiry letter'
                         }) }} -->
 
-               <p>If you do not confirm you were entitled to {{ freeStuff }} we will send a Penalty Charge Notice.</p>
+         <p>If you do not confirm you were entitled to {{ freeStuff }} we will send a Penalty Charge Notice.</p>
 
 
 
 
 
-               <h3 class="nhsuk-heading-s">Accept the penalty charge</h3>
+         <h3 class="nhsuk-heading-s">Accept the penalty charge</h3>
 
-               <!-- {{ warningCallout({
+         <!-- {{ warningCallout({
                            heading: 'Important information',
                            classes: 'smaller-heading',
                            html: '<p>If you accept your penalty charge today, you must make a payment or set up a Direct Debit within 31
@@ -165,149 +166,142 @@ Content page example - NHS.UK prototype kit
                               <p>If you do not, an extra surcharge of up to £50 may be added to these charges.</p>'
                               }) }} -->
 
-               <p>If you accept your penalty charge today, you must make a payment or set up a Direct Debit within 31
-                  days.</p>
-               <p>If you do not, an extra surcharge of up to £50 may be added to these charges.</p>
+         <p>If you accept your penalty charge today, you must make a payment or set up a Direct Debit within 31
+            days.</p>
+         <p>If you do not, an extra surcharge of up to £50 may be added to these charges.</p>
 
-               <p>If you accept the penalty charge today you confirm that you:</p>
-               <ul class="nhsuk-list nhsuk-list--bullet">
-                  <li>were not entitled to free NHS Prescriptions</li>
-                  <li>understand that you must make a payment or set up a Direct Debit within 31 days</li>
-               </ul>
+         <p>If you accept the penalty charge today you confirm that you:</p>
+         <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>were not entitled to free NHS Prescriptions</li>
+            <li>understand that you must make a payment or set up a Direct Debit within 31 days</li>
+         </ul>
 
-               {% set errorMessage = '' %}
-               {% if data.showErrors === 'true' %}
-               {% set errorMessage = { text: errorMessageText } %}
-               {% endif %}
+         {% set errorMessage = '' %}
+         {% if data.showErrors === 'true' %}
+         {% set errorMessage = { text: errorMessageText } %}
+         {% endif %}
 
-               {{ checkboxes({
-               idPrefix: 'acceptPCNDeclarationB',
-               name: 'acceptPCNDeclarationB',
-               id: 'acceptPCNDeclarationB',
-               errorMessage: errorMessage,
-               fieldset: {
-               legend: {
-               text: 'Tick the box if you accept the following statements',
-               isPageHeading: false,
-               classes: 'nhsuk-u-visually-hidden'
-               }
-               },
-               items: [
-               {
-               value: 'acceptCharge',
-               html: 'I confirm and accept my penalty charge'
-               }
-               ]
-               }) }}
-
-
-               {% if data.showEmailInput === 'true' %}
-
-               <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-section-break--m" />
-
-               {{ input({
-               label: {
-               text: 'What is your email address? (optional)',
-               classes: 'nhsuk-label--s'
-               },
-               hint: {
-               text: 'We will use this to send you notifications and reminders about your case.'
-               },
-               inputmode: 'email',
-               id: 'emailAddress',
-               name: 'emailAddress',
-               value: data.emailAddress,
-               attributes: {
-               autocomplete: 'none'
-               },
-               classes: 'nhsuk-input--width-20'
-               }) }}
-
-               {{ input({
-               label: {
-               text: 'Confirm email',
-               classes: 'nhsuk-label--s'
-               },
-               id: 'confirmEmailAddress',
-               inputmode: 'email',
-               attributes: {
-               autocomplete: 'none'
-               },
-               classes: 'nhsuk-input--width-20'
-               }) }}
+         {{ checkboxes({
+         idPrefix: 'acceptPCNDeclarationB',
+         name: 'acceptPCNDeclarationB',
+         id: 'acceptPCNDeclarationB',
+         errorMessage: errorMessage,
+         fieldset: {
+         legend: {
+         text: 'Tick the box if you accept the following statements',
+         isPageHeading: false,
+         classes: 'nhsuk-u-visually-hidden'
+         }
+         },
+         items: [
+         {
+         value: 'acceptCharge',
+         html: 'I confirm and accept my penalty charge'
+         }
+         ]
+         }) }}
 
 
-               <style>
-                  .nhsuk-hidden {
-                     display: none;
-                  }
-               </style>
+         {% if data.showEmailInput === 'true' %}
 
-               <script>
+         <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-section-break--m" />
 
-                  const ConfirmEmail = (function () {
+         {{ input({
+         label: {
+         text: 'What is your email address? (optional)',
+         classes: 'nhsuk-label--s'
+         },
+         hint: {
+         text: 'We will use this to send you notifications and reminders about your case.'
+         },
+         inputmode: 'email',
+         id: 'emailAddress',
+         name: 'emailAddress',
+         value: data.emailAddress,
+         attributes: {
+         autocomplete: 'none'
+         },
+         classes: 'nhsuk-input--width-20'
+         }) }}
 
-                     function _init() {
+         {{ input({
+         label: {
+         text: 'Confirm email',
+         classes: 'nhsuk-label--s'
+         },
+         id: 'confirmEmailAddress',
+         inputmode: 'email',
+         attributes: {
+         autocomplete: 'none'
+         },
+         classes: 'nhsuk-input--width-20'
+         }) }}
 
-                        const email = document.querySelector('#emailAddress');
-                        const emailConfirm = document.querySelector('#confirmEmailAddress');
 
+         <style>
+            .nhsuk-hidden {
+               display: none;
+            }
+         </style>
+
+         <script>
+
+            const ConfirmEmail = (function () {
+
+               function _init() {
+
+                  const email = document.querySelector('#emailAddress');
+                  const emailConfirm = document.querySelector('#confirmEmailAddress');
+
+                  emailConfirm.parentElement.classList.add('nhsuk-hidden');
+
+                  email.addEventListener('change', function () {
+
+                     if (email.value.trim() !== '') {
+
+                        // Value exists
+                        emailConfirm.value = '';
+                        emailConfirm.parentElement.classList.remove('nhsuk-hidden');
+                        emailConfirm.focus();
+
+                     } else {
+
+                        // No value
+                        emailConfirm.value = '';
                         emailConfirm.parentElement.classList.add('nhsuk-hidden');
 
-                        email.addEventListener('change', function () {
-
-                           if (email.value.trim() !== '') {
-
-                              // Value exists
-                              emailConfirm.value = '';
-                              emailConfirm.parentElement.classList.remove('nhsuk-hidden');
-                              emailConfirm.focus();
-
-                           } else {
-
-                              // No value
-                              emailConfirm.value = '';
-                              emailConfirm.parentElement.classList.add('nhsuk-hidden');
-
-                           }
-
-                        });
-
-
-                     };
-
-                     return {
-                        init: _init
                      }
-                  })();
 
-                  document.addEventListener('DOMContentLoaded', function () {
-                     ConfirmEmail.init();
                   });
 
-               </script>
+
+               };
+
+               return {
+                  init: _init
+               }
+            })();
+
+            document.addEventListener('DOMContentLoaded', function () {
+               ConfirmEmail.init();
+            });
+
+         </script>
 
 
-               <hr class="nhsuk-section-break nhsuk-section-break--m" />
+         <hr class="nhsuk-section-break nhsuk-section-break--m" />
 
-               {% endif %}
-
-
-
-               {{ button({
-               text: 'Accept penalty charge'
-               }) }}
-
-            </form>
+         {% endif %}
 
 
 
-            <p class="nhsuk-body nhsuk-u-margin-top-6"><a href="respond-to-your-letter" class="nhsuk-link">Cancel</a>
-            </p>
+         {{ button({
+         text: 'Accept penalty charge'
+         }) }}
+
+      </form>
 
 
-         </div>
-      </div>
 
    </div>
 

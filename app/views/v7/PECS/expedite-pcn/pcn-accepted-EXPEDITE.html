@@ -57,81 +57,16 @@ Content page example - NHS.UK prototype kit
 
 
       {{ panel({
-      titleText: 'You have accepted the penalty charge',
-      html: '
-      <dl>
-         <div>
-            <dd class="nhsuk-body nhsuk-u-margin-0">Reference number</dd>
-            <dt class="nhsuk-heading-l">01234567890</dt>
-         </div>
-      </dl>',
+      titleText: 'The penalty charge has been accepted',
       classes: 'nhsuk-u-margin-bottom-6'
       }) }}
 
+      <h2 class="nhsuk-heading-m">What happens now</h2>
+      <p>We'll send you a letter with your penalty charge details. This is for your records, and does not
+         represent any extra charges.</p>
+      <p>You do not need to wait for this letter to pay your penalty charge. You can make a payment now.</p>
 
-      <div class="nhsuk-card">
-         <div class="nhsuk-card__content">
-
-
-            <h3 class="nhsuk-heading-m">Penalty Charge Notice amount</h3>
-
-            {% if data.settings[version].type === 'decs' %}
-
-            <!-- DECS -->
-            {% set summaryListRows = [
-            {
-            key: { text: 'Dental treatment charges' },
-            value: { text: '£75.30' }
-            },
-            {
-            key: { text: 'Penalty charge' },
-            value: { text: '£50.00' }
-            },
-            {
-            key: { text: 'Total amount to pay' },
-            value: { html: '<strong>£125.30</strong>' }
-            }]%}
-
-            {{ summaryList({
-            rows: summaryListRows
-            }) }}
-
-            <p class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Amount to pay: £125.30</p>
-
-            {% else %}
-
-            <!-- PECS -->
-            {% set summaryListRows = [
-            {
-            key: { text: 'Prescription charges' },
-            value: { text: '£9.90' }
-            },
-            {
-            key: { text: 'Penalty charge' },
-            value: { text: '£50.00' }
-            },
-            {
-            key: { text: 'Total amount to pay' },
-            value: { html: '<strong>£59.90</strong>' }
-            }]%}
-
-            {{ summaryList({
-            rows: summaryListRows
-            }) }}
-
-            <p class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Amount to pay: £59.90</p>
-
-            {% endif%}
-         </div>
-      </div>
-      <div class="nhsuk-card">
-         <div class="nhsuk-card__content">
-            <h2 class="nhsuk-heading-m">What happens now</h2>
-            <p>We'll send you a letter with your penalty charge details. This is for your records, and does not
-               represent any extra charges.</p>
-            <p>You do not need to wait for this letter to pay your penalty charge. You can make a payment now.</p>
-
-            <!-- {{ warningCallout({
+      <!-- {{ warningCallout({
             heading: 'What happens now',
             classes: 'nhsuk-u-margin-bottom-0',
             html: '<p>We\'ll send you a letter with your penalty charge details. This is for your records, and does not
@@ -140,64 +75,63 @@ Content page example - NHS.UK prototype kit
             '
             }) }} -->
 
-            {% set buttonURL = 'add-payment' %}
-            {% if data.settings[version].type === 'decs' %}
-            {% set buttonURL = '../v6-pcn-decs/payment-method' %}
-            {% endif %}
+      {% set buttonURL = 'add-payment' %}
+      {% if data.settings[version].type === 'decs' %}
+      {% set buttonURL = '../v6-pcn-decs/payment-method' %}
+      {% endif %}
 
 
 
-            <p>{{ radios({
-               idPrefix: "example",
-               name: "example",
-               fieldset: {
-               legend: {
-               html: '
-            <h3 class="nhsuk-heading-s">How would the customer like to pay?</h3>',
-            size: "l",
-            isPageHeading: false
-            }
-            },
-            items: [
-            {
-            value: "pay-now",
-            name:"choice",
-            text: "Make a payment now"
-            },
-            {
-            value: "direct-debit",
-            name:"choice",
-            text: "Set up a Direct Debit"
-            }
-            ]
-            }) }}</p>
+      <p>{{ radios({
+         idPrefix: "example",
+         name: "example",
+         fieldset: {
+         legend: {
+         html: '
+      <h3 class="nhsuk-heading-s">How would the customer like to pay?</h3>',
+      size: "l",
+      isPageHeading: false
+      }
+      },
+      items: [
+      {
+      value: "pay-now",
+      name:"choice",
+      text: "Make a payment now"
+      },
+      {
+      value: "direct-debit",
+      name:"choice",
+      text: "Set up a Direct Debit"
+      }
+      ]
+      }) }}</p>
 
-            <!-- {{ button({
+      <!-- {{ button({
             classes: 'nhsuk-u-margin-top-6',
             text: 'Continue',
             href: buttonURL
             }) }} -->
-            <a id="action-button" href="#" class="nhsuk-button">Continue</a>
+      <a id="action-button" href="#" class="nhsuk-button">Continue</a>
 
-            <script>
-               const button = document.getElementById("action-button");
+      <script>
+         const button = document.getElementById("action-button");
 
-               document.querySelectorAll('input[name="example"]').forEach(radio => {
-                  radio.addEventListener('change', () => {
+         document.querySelectorAll('input[name="example"]').forEach(radio => {
+            radio.addEventListener('change', () => {
 
-                     if (radio.value === "pay-now") {
-                        button.href = "add-payment";
-                     }
-                     else if (radio.value === "direct-debit") {
-                        button.href = "/v7/PECS/direct-debit/start";
-                     }
+               if (radio.value === "pay-now") {
+                  button.href = "add-payment";
+               }
+               else if (radio.value === "direct-debit") {
+                  button.href = "/v7/PECS/direct-debit/start";
+               }
 
-                  });
-               });
-            </script>
+            });
+         });
+      </script>
 
-         </div>
-      </div>
+
 
    </div>
 
