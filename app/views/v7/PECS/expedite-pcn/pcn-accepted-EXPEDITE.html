@@ -152,24 +152,25 @@ Content page example - NHS.UK prototype kit
                name: "example",
                fieldset: {
                legend: {
-               text: "How would the customer like to pay?",
-               size: "l",
-               isPageHeading: false
-               }
-               },
-               items: [
-               {
-               value: "pay-now",
-               name:"choice",
-               text: "Make a payment now"
-               },
-               {
-               value: "direct-debit",
-               name:"choice",
-               text: "Set up a Direct Debit"
-               }
-               ]
-               }) }}</p>
+               html: '
+            <h3 class="nhsuk-heading-s">How would the customer like to pay?</h3>',
+            size: "l",
+            isPageHeading: false
+            }
+            },
+            items: [
+            {
+            value: "pay-now",
+            name:"choice",
+            text: "Make a payment now"
+            },
+            {
+            value: "direct-debit",
+            name:"choice",
+            text: "Set up a Direct Debit"
+            }
+            ]
+            }) }}</p>
 
             <!-- {{ button({
             classes: 'nhsuk-u-margin-top-6',
