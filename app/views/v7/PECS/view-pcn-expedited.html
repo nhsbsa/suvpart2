@@ -381,6 +381,36 @@ View PCN
                      }
                      ]
                      }) }}
+                     {% endset -%}{% set auditContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "30/11/2025 14:02"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "Status changed from enquiry to PCN"
+                     }
+                     ]
+                     ]
+                     }) }}
                      {% endset -%}
                      {{ tabs({
                      items: [
