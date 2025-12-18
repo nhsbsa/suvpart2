@@ -238,7 +238,7 @@ View PCN
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
-               <p>15/07/2025</p>
+               <p>{{ -2 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
@@ -252,11 +252,11 @@ View PCN
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
-               <p>30/11/2025</p>
+               <p>{{ 0 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
-               <p>05/05/25</p>
+               <p>{{ -64 | alterTodaysDateByNumberOfDays }}</p>
             </div>
          </div>
          <div class="nhsuk-grid-row">
@@ -270,7 +270,7 @@ View PCN
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
-               <p>05/05/25</p>
+               <p>{{ -64 | alterTodaysDateByNumberOfDays }}</p>
             </div>
          </div>
          <div class="nhsuk-grid-row">
@@ -280,7 +280,7 @@ View PCN
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
-               <p>07/11/25</p>
+               <p>{{ 31 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
@@ -308,7 +308,7 @@ View PCN
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
-               <p><a href="dispenser-details">FMMMM</a></p>
+               <p><a href="../dispenser-details">FMMMM</a></p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>

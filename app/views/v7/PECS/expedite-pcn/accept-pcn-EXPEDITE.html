@@ -23,7 +23,7 @@ Content page example - NHS.UK prototype kit
                <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
                   <ul class="nhsuk-secondary-navigation__list">
                      <li class="nhsuk-secondary-navigation__item">
-                        <br><br>
+                        <a class="nhsuk-secondary-navigation__link" href="javascript:history.back();">Back</a>
                      </li>
                   </ul>
                </nav>
@@ -32,10 +32,6 @@ Content page example - NHS.UK prototype kit
       </div>
    </div>
 </div>
-{{ backLink({
-text: 'Go back',
-href: 'javascript:history.back();'
-}) }}
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -138,7 +134,7 @@ href: 'javascript:history.back();'
 
          <h3 class="nhsuk-heading-s">Do not accept the penalty charge</h3>
 
-         <p>You still have 28 days to confirm you were entitled to free NHS prescriptions (by 6 January 2026). If
+         <p>You still have 26 days to confirm you were entitled to free NHS prescriptions (by {{ 26 | alterTodaysDateByNumberOfDays( 'long' ) }}). If
             you
             can confirm this, it will resolve the issue and stop you getting a penalty charge.</p>
          <p>If you do not want to accept the penalty charge today you can still use this service to confirm you
@@ -202,97 +198,6 @@ href: 'javascript:history.back();'
          }) }}
 
 
-         {% if data.showEmailInput === 'true' %}
-
-         <hr class="nhsuk-section-break nhsuk-section-break--visible nhsuk-section-break--m" />
-
-         {{ input({
-         label: {
-         text: 'What is your email address? (optional)',
-         classes: 'nhsuk-label--s'
-         },
-         hint: {
-         text: 'We will use this to send you notifications and reminders about your case.'
-         },
-         inputmode: 'email',
-         id: 'emailAddress',
-         name: 'emailAddress',
-         value: data.emailAddress,
-         attributes: {
-         autocomplete: 'none'
-         },
-         classes: 'nhsuk-input--width-20'
-         }) }}
-
-         {{ input({
-         label: {
-         text: 'Confirm email',
-         classes: 'nhsuk-label--s'
-         },
-         id: 'confirmEmailAddress',
-         inputmode: 'email',
-         attributes: {
-         autocomplete: 'none'
-         },
-         classes: 'nhsuk-input--width-20'
-         }) }}
-
-
-         <style>
-            .nhsuk-hidden {
-               display: none;
-            }
-         </style>
-
-         <script>
-
-            const ConfirmEmail = (function () {
-
-               function _init() {
-
-                  const email = document.querySelector('#emailAddress');
-                  const emailConfirm = document.querySelector('#confirmEmailAddress');
-
-                  emailConfirm.parentElement.classList.add('nhsuk-hidden');
-
-                  email.addEventListener('change', function () {
-
-                     if (email.value.trim() !== '') {
-
-                        // Value exists
-                        emailConfirm.value = '';
-                        emailConfirm.parentElement.classList.remove('nhsuk-hidden');
-                        emailConfirm.focus();
-
-                     } else {
-
-                        // No value
-                        emailConfirm.value = '';
-                        emailConfirm.parentElement.classList.add('nhsuk-hidden');
-
-                     }
-
-                  });
-
-
-               };
-
-               return {
-                  init: _init
-               }
-            })();
-
-            document.addEventListener('DOMContentLoaded', function () {
-               ConfirmEmail.init();
-            });
-
-         </script>
-
-
-         <hr class="nhsuk-section-break nhsuk-section-break--m" />
-
-         {% endif %}
-
 
 
          {{ button({
@@ -311,10 +216,11 @@ href: 'javascript:history.back();'
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
                <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
-               <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
+               <p class="nhsuk-heading-m"><a href="../view-prescription"> View prescription</a></p>
             </div>
             <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
          </div>
+
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
@@ -322,7 +228,7 @@ href: 'javascript:history.back();'
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
-               <p>15/07/2025</p>
+               <p>{{ -2 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
@@ -340,7 +246,7 @@ href: 'javascript:history.back();'
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
-               <p>05/05/25</p>
+               <p>{{ -64 | alterTodaysDateByNumberOfDays }}</p>
             </div>
          </div>
          <div class="nhsuk-grid-row">
@@ -354,7 +260,7 @@ href: 'javascript:history.back();'
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
-               <p>05/05/25</p>
+               <p>{{ -64 | alterTodaysDateByNumberOfDays }}</p>
             </div>
          </div>
          <div class="nhsuk-grid-row">
@@ -364,7 +270,7 @@ href: 'javascript:history.back();'
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
-               <p>07/11/25</p>
+               <p>{{ 26 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
@@ -392,7 +298,7 @@ href: 'javascript:history.back();'
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
-               <p><a href="dispenser-details">FMMMM</a></p>
+               <p><a href="../dispenser-details">FMMMM</a></p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>

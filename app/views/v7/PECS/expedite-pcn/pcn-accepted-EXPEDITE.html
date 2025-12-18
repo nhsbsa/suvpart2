@@ -23,7 +23,7 @@ Content page example - NHS.UK prototype kit
                <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
                   <ul class="nhsuk-secondary-navigation__list">
                      <li class="nhsuk-secondary-navigation__item">
-                        <br><br>
+                        <a class="nhsuk-secondary-navigation__link" href="javascript:history.back();">Back</a>
                      </li>
                   </ul>
                </nav>
@@ -136,12 +136,21 @@ Content page example - NHS.UK prototype kit
    </div>
 
 
+   <style>
+      .highlighted {
+         background-color: #007f3b;
+         color: #FFF;
+         display: inline;
+      }
+   </style>
+
+
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box" id="rightHandSide">
          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
                <h1 class="nhsuk-heading-m">PCN 06183129565: Open</h1>
-               <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
+               <p class="nhsuk-heading-m"><a href="../view-prescription"> View prescription</a></p>
             </div>
             <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
          </div>
@@ -152,7 +161,7 @@ Content page example - NHS.UK prototype kit
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
-               <p>15/07/2025</p>
+               <p>{{ -2 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
@@ -166,11 +175,11 @@ Content page example - NHS.UK prototype kit
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
-               <p>Not sent</p>
+               <p class="highlighted">{{ 0 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
-               <p>05/05/25</p>
+               <p>{{ -64 | alterTodaysDateByNumberOfDays }}</p>
             </div>
          </div>
          <div class="nhsuk-grid-row">
@@ -184,7 +193,7 @@ Content page example - NHS.UK prototype kit
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
-               <p>05/05/25</p>
+               <p>{{ -64 | alterTodaysDateByNumberOfDays }}</p>
             </div>
          </div>
          <div class="nhsuk-grid-row">
@@ -194,7 +203,7 @@ Content page example - NHS.UK prototype kit
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
-               <p>07/11/25</p>
+               <p class="highlighted">{{ 31 | alterTodaysDateByNumberOfDays }}</p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
@@ -222,7 +231,7 @@ Content page example - NHS.UK prototype kit
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
-               <p><a href="dispenser-details">FMMMM</a></p>
+               <p><a href="../dispenser-details">FMMMM</a></p>
             </div>
             <div class="nhsuk-grid-column-one-third">
                <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
@@ -250,9 +259,25 @@ Content page example - NHS.UK prototype kit
                      {
                      text: "Comments"
                      }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "30/11/2025 14:02"
+                     },
+                     {
+                     text: "SYSTEM"
+                     },
+                     {
+                     text: "Penalty Charge accepted and PCN letter issued"
+                     }
+                     ]
                      ]
                      }) }}
-                     {% endset -%} {% set transactionsContent %}
+                     {% endset -%}
+                     
+                     {% set transactionsContent %}
+                    
                      {{ table({
                      responsive: false,
                      panel: false,
@@ -278,7 +303,9 @@ Content page example - NHS.UK prototype kit
                      }
                      ]
                      }) }}
-                     {% endset -%} {% set auditContent %}
+                     {% endset -%}
+                     
+                     {% set auditContent %}
                      {{ table({
                      responsive: false,
                      panel: false,
@@ -293,6 +320,19 @@ Content page example - NHS.UK prototype kit
                      {
                      text: "Comments"
                      }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "30/11/2025 14:02"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "Status changed from enquiry to PCN"
+                     }
+                     ]
                      ]
                      }) }}
                      {% endset -%}

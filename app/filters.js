@@ -7,6 +7,46 @@ module.exports = function (env) { /* eslint-disable-line no-unused-vars */
    */
   const filters = {};
 
+
+  //
+  // ALTER DATE BY NUMBER OF MONTHS FUNCTION
+  //
+  filters.alterTodaysDateByNumberOfMonths = function( monthOffset, daysOffset ){
+
+    daysOffset = ( typeof daysOffset === 'number' && parseInt(daysOffset) ) ? parseInt(daysOffset) : 0;
+
+    let today = new Date();
+    today.setDate(today.getDate() + daysOffset);
+    var d = today.getDate();
+
+    today.setMonth(today.getMonth() + monthOffset);
+    if (today.getDate() !== d ) {
+      today.setDate(0);
+    }
+
+    return today.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+  };
+
+   //
+  // ALTER DATE BY NUMBER OF DAYS FUNCTION
+  //
+  filters.alterTodaysDateByNumberOfDays = function( daysOffset, format ){
+
+    let today = new Date();
+    today.setDate(today.getDate() + daysOffset);
+
+    let formatObj = ( format === 'long' ) ? { day: 'numeric', month: 'long', year: 'numeric' } : { month: '2-digit',day: '2-digit',year: 'numeric' };
+
+    // Manually format the date to avoid leading zeros (day, month, year)
+    return today.toLocaleDateString('en-GB', formatObj );
+
+  };
+
   /* ------------------------------------------------------------------
     add your methods to the filters obj below this comment block:
     @example:
