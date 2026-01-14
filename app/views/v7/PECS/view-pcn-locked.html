@@ -1,0 +1,662 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+View PCN
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<div class="nhsuk-secondary-navigation">
+   <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+         <div class="nhsuk-secondary-navigation__container">
+            <div class="nhsuk-secondary-navigation__nav" style="width: 100%">
+               <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+                  <ul class="nhsuk-secondary-navigation__list">
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="search-results">Back</a>
+                     </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="lock-pcn">Lock
+                        </a>
+                     </li>
+                     <li class="nhsuk-secondary-navigation__item">
+                        <a class="nhsuk-secondary-navigation__link" href="close-pcn">Close</a>
+                     </li>
+
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-one-half" id="leftHandSide">
+      <div class="border-box">
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half">
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="title">Title</label>
+                  <input class="nhsuk-input" id="title" name="first-name-2" type="text" value="Mr">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="f-name">First name</label>
+                  <input class="nhsuk-input" id="f-name" name="first-name-2" type="text" value="JOE">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="s-name">Last name</label>
+                  <input class="nhsuk-input" id="s-name" name="first-name-2" type="text" value="BLOGGS">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="dob">Date of birth</label>
+                  <input class="nhsuk-input" id="dob" name="first-name-2" type="text" value="20/11/88">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="nhs-no">NHS number</label>
+                  <input class="nhsuk-input" id="nhs-no" name="first-name-2" type="text" value="23141986">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">Email address</label>
+                  <input class="nhsuk-input" id="email" name="first-name-2" type="text">
+               </div>
+               <a class="nhsuk-button" id="search-button" href="view-pcn" role="button">Save</a>
+            </div>
+            <div class="nhsuk-grid-column-one-half">
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="add-1">Address line 1</label>
+                  <input class="nhsuk-input" id="add-1" name="first-name-2" type="text" value="9 HOTSPUR STREET">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="add-2">Address line 2</label>
+                  <input class="nhsuk-input" id="add-2" name="first-name-2" type="text" value="TOWNFORD">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="add-3">Address line 3</label>
+                  <input class="nhsuk-input" id="add-3" name="first-name-2" type="text" value="">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="add-4">Address line 4</label>
+                  <input class="nhsuk-input" id="add-4" name="first-name-2" type="text" value="">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="postcode">Postcode</label>
+                  <input class="nhsuk-input" id="postcode" name="first-name-2" type="text" value="NE10LD">
+               </div>
+               <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="tel">Telephone number</label>
+                  <input class="nhsuk-input" id="tel" name="first-name-2" type="text">
+               </div>
+               <a class="nhsuk-button nhsuk-button--secondary reset-button" id="search-button" href=""
+                  role="button">Reset</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="nhsuk-grid-row scrollable-panel">
+         <div class="nhsuk-grid-column-full nhsuk-u-margin-top-5">
+            <div class="container">
+               <ul class="tabs">
+                  <li class="tab-link current" data-tab="tab-3">Matches</li>
+                  <li class="tab-link" data-tab="tab-4">Possible matches</li>
+               </ul>
+               <div id="tab-3" class="tab-content current">
+                  <div class="makeScrollable2">
+                     <table class="internal2-table">
+                        <thead>
+                           <tr>
+                              <th>Reference</th>
+                              <th>Letter type</th>
+                              <th>Sent</th>
+                              <th>Respond</th>
+                              <th>Balance</th>
+                              <th>Status</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td><a href="">23141986</a></td>
+                              <td>PCN</td>
+                              <td>28/05/17</td>
+                              <td>28/06/17</td>
+                              <td>£108.60</td>
+                              <td> {{ tag({
+                                 text: "Open",
+                                 classes: "nhsuk-tag--green"
+                                 })}}</td>
+                           </tr>
+                           <tr>
+                              <td><a href="">323456789</a></td>
+                              <td>PCN</td>
+                              <td>28/04/17</td>
+                              <td>28/05/17</td>
+                              <td>£108.60</td>
+                              <td> {{ tag({
+                                 text: "Closed",
+                                 classes: "nhsuk-tag--blue"
+                                 })}}</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div id="tab-4" class="tab-content">
+                  <div class="makeScrollable2">
+                     <table class="internal-table">
+                        <thead>
+                           <tr>
+                              <th>Reference</th>
+                              <th>Name</th>
+                              <th>D.O.B</th>
+                              <th>Postcode</th>
+                              <th>Status</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="decsRow">
+                              <td><a href="#">823456789</a></td>
+                              <td>JOE BLOGGS</td>
+                              <td>20/03/90</td>
+                              <td>NE1 0LD</td>
+                              <td> {{ tag({
+                                 text: "Open",
+                                 classes: "nhsuk-tag--green"
+                                 })}}</td>
+                           </tr>
+                           <tr>
+                              <td><a href="#">423456789</a></td>
+                              <td>JOE J BLOGGS</td>
+                              <td>20/03/90</td>
+                              <td>NE1 0LD</td>
+                              <td> {{ tag({
+                                 text: "Open",
+                                 classes: "nhsuk-tag--green"
+                                 })}}</td>
+                           </tr>
+                           <tr class="decsRow">
+                              <td><a href="#">523456789</a></td>
+                              <td>JOE BLOGGS</td>
+                              <td>20/03/90</td>
+                              <td>NE1 5LD</td>
+                              <td> {{ tag({
+                                 text: "Open",
+                                 classes: "nhsuk-tag--green"
+                                 })}}</td>
+                           </tr>
+                           <tr class="decsRow">
+                              <td><a href="#">623456789</a></td>
+                              <td>LAURA HARTFORD</td>
+                              <td>20/03/90</td>
+                              <td>NE1 0LD</td>
+                              <td> {{ tag({
+                                 text: "Open",
+                                 classes: "nhsuk-tag--green"
+                                 })}}</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="nhsuk-grid-column-one-half">
+      <div class="border-box" id="rightHandSide">
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+               <h1 class="nhsuk-heading-m">PCN 12349876: Locked</h1>
+               <p class="nhsuk-heading-m"><a href="view-prescription"> View prescription</a></p>
+            </div>
+            <!--<h1 class="nhsuk-heading-m">Direct Debit</h1>-->
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescription</h2>
+               <p>£26.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Enquiry sent</h2>
+               <p>Not sent</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Items</h2>
+               <p>3</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Penalty</h2>
+               <p>£100.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">PCN sent</h2>
+               <p>10/09/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Prescribed date</h2>
+               <p>29/05/18</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge</h2>
+               <p>£50.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Surcharge sent</h2>
+               <p>10/10/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispensed month end date</h2>
+               <p>30/06/18</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Requested</h2>
+               <p>£176.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Respond by</h2>
+               <p>07/11/18</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Exemption</h2>
+               <p>(M) Has valid NHS Tax Credit Exemption Certificate</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Paid</h2>
+               <p>£10.00</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">DWP checked</h2>
+               <p>Yes</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Source</h2>
+               <p>Electronic</p>
+            </div>
+         </div>
+         <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Balance due</h2>
+               <p>£166.40</p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Dispenser</h2>
+               <p><a href="dispenser-details">FMMMM</a></p>
+            </div>
+            <div class="nhsuk-grid-column-one-third">
+               <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Evidence not seen?</h2>
+               <p>No</p>
+            </div>
+         </div>
+
+         <div class="scrollable-panel">
+            <div class="nhsuk-grid-row">
+               <div class="nhsuk-grid-column-full">
+                  <div class="container">
+
+                     {% set notesContent %}
+                     <p class="nhsuk-u-font-size-19"><a href="add-note">Add note</a></p>
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "30/11/2025 14:02"
+                     },
+                     {
+                     html: '<strong>SYSTEM</strong>'
+                     },
+                     {
+                     html: '<strong>Penalty Charge accepted and PCN letter issued</strong>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/2025 14:23"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Refund in progress"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/2025 14:15"
+                     },
+                     {
+                     html: '<strong>SYSTEM</strong>'
+                     },
+                     {
+                     html: '<strong>Refund requested</strong>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "08/09/25 11:12"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "03/09/25 12:32"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ],
+                     [
+                     {
+                     text: "27/08/25 15:18"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "21/08/25 12:16"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ],
+                     [
+                     {
+                     text: "19/08/25 14:02"
+                     },
+                     {
+                     text: "TIM"
+                     },
+                     {
+                     text: "Cust told to pay half to avoid surcharge. Cust non compliant, demanded manager. Call
+                     escalated."
+                     }
+                     ],
+                     [
+                     {
+                     text: "08/08/25 12:02"
+                     },
+                     {
+                     text: "JOANNE"
+                     },
+                     {
+                     text: "Info repeated as above. Cust paid half, agreed to pay next half by 27/09/25"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%} {% set transactionsContent %}
+                     <p class="nhsuk-u-font-size-19"><a href="card-payment">Add payment</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                           href="add-easement">Add
+                           easement</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="direct-debit/start">Add Direct Debit</a></p>
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "User"
+                     },
+                     {
+                     text: "Amount"
+                     },
+                     {
+                     text: "For"
+                     },
+                     {
+                     text: "Type"
+                     },
+                     {
+                     text: "Action"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "31/07/25 15:44"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "-£8.60"
+                     },
+                     {
+                     text: "Adjustment"
+                     },
+                     {
+                     text: "Direct Debit"
+                     },
+                     {
+                     html: '<a href=#>Edit</a>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/07/25 12:24"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£8.60"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Direct Debit"
+                     },
+                     {
+                     text: ""
+                     }
+                     ],
+                     [
+                     {
+                     text: "27/07/25 11:51"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£51.00"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Cheque"
+                     },
+                     {
+                     text: ""
+                     }
+                     ],
+                     [
+                     {
+                     text: "20/07/25 10:23"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "-£51.00"
+                     },
+                     {
+                     text: "Surcharge"
+                     },
+                     {
+                     text: "Surcharge added"
+                     },
+                     {
+                     html: '<a href=#>Edit</a>'
+                     }
+                     ],
+                     [
+                     {
+                     text: "19/07/25 14:20"
+                     },
+                     {
+                     text: "System"
+                     },
+                     {
+                     text: "£58.60"
+                     },
+                     {
+                     text: "PCN"
+                     },
+                     {
+                     text: "Payment request"
+                     },
+                     {
+                     text: ""
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%} {% set auditContent %}
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "14/10/25 15:01"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "Surname changed from: CARTWRIGHT, Postcode changed from: NE1 1EN"
+                     }
+                     ],
+                     [
+                     {
+                     text: "14/10/25 14:59"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: " Address line 1 changed from: 152 BRIDGE HOUSE"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/25 11:02"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: " Email updated from: JBLOGGS2@GMAIL.COM"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%}
+                     {{ tabs({
+                     items: [
+                     {
+                     label: "Notes",
+                     id: "notes",
+                     panel: {
+                     html: notesContent
+                     }
+                     },
+                     {
+                     label: "Transactions",
+                     id: "transactions",
+                     panel: {
+                     html: transactionsContent
+                     }
+                     },
+                     {
+                     label: "Audit history",
+                     id: "audit-history",
+                     panel: {
+                     html: auditContent
+                     }
+                     }
+                     ]
+                     }) }}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
