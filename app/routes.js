@@ -671,4 +671,25 @@ response.redirect("/v7/PECS/direct-debit/cannot-verify-details")
 }
 })
 
+router.post('/v7/PECS/lock-pcn', (req, res) => {
+
+  const message = (req.body.message || "").trim();
+  const charLength = message.length;
+
+  const lockOption = req.body['select-1'];  // dropdown value
+
+  const maxLength = 2000;
+  const minLength = 1;
+
+  const messageValid = charLength >= minLength && charLength <= maxLength;
+  const dropdownValid = lockOption && lockOption !== "0";
+
+  if (!messageValid || !dropdownValid) {
+    res.redirect('/v7/PECS/lock-pcn-error');
+  } else {
+    res.redirect('/v7/PECS/view-pcn-locked');
+  }
+
+});
+
 module.exports = router;
