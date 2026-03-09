@@ -2,41 +2,48 @@
 
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
-<!-- Extends the layout from /app/views/layout.html -->
+<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!--
-  In /app/views/layout.html you can:
-    - change the header and footer
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
     - add custom CSS and JavaScript
 -->
 
-<!--
-  Use this to set the page name which will appear at the
-  start of the <title> tag, followed by the service name.
-  This is often not needed on the homepage, where only the
-  service name is needed. You can also reuse this variable
-  within the <h1>, where they are the same.
--->
-{% set pageName = "" %}
+<!-- Set the page title -->
+{% block pageTitle %}
+NHS.UK TECS Single User View
+{% endblock %}
 
-<!-- For adding a breadcrumb or back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+{% block signout %}
 {% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-        <h1>Single User View</h1>
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1>Single User View 1.5</h1>
 
         <hr>
 
-        <h3>SUV (Single User View) Used in contact centre by agents.</h3>
+        <h2>SUV (Single User View) Used in contact centre by agents.</h2>
 
         <div class="nhsuk-card">
             <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading">
+                    SUV Re-design
+                </h3>
 
                 <details class="nhsuk-details nhsuk-expander">
                     <summary class="nhsuk-details__summary">
@@ -722,4 +729,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
