@@ -637,6 +637,60 @@ View PCN
                      ]
                      }) }}
                      {% endset -%}
+                     {% set thirdPartyContent %}
+                     <p class="nhsuk-u-font-size-19"><a href="add-3pa-note">Add note</a></p>
+                     {{ table({
+                     responsive: false,
+                     panel: false,
+                     firstCellIsHeader: false,
+                     head: [
+                     {
+                     text: "Date"
+                     },
+                     {
+                     text: "Agent"
+                     },
+                     {
+                     text: "Comments"
+                     }
+                     ],
+                     rows: [
+                     [
+                     {
+                     text: "14/10/25 15:01"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "COP - Surname changed from: CARTWRIGHT, Postcode changed from: NE1 1EN"
+                     }
+                     ],
+                     [
+                     {
+                     text: "14/10/25 14:59"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "LOA - Address line 1 changed from: 152 BRIDGE HOUSE"
+                     }
+                     ],
+                     [
+                     {
+                     text: "30/09/25 11:02"
+                     },
+                     {
+                     text: "JOECA"
+                     },
+                     {
+                     text: "POA - Email updated from: JBLOGGS2@GMAIL.COM"
+                     }
+                     ]
+                     ]
+                     }) }}
+                     {% endset -%}
                      {{ tabs({
                      items: [
                      {
@@ -658,6 +712,13 @@ View PCN
                      id: "audit-history",
                      panel: {
                      html: auditContent
+                     }
+                     },
+                     {
+                     label: "Third Party (3PA)",
+                     id: "third-party",
+                     panel: {
+                     html: thirdPartyContent
                      }
                      }
                      ]

@@ -52,70 +52,35 @@ Content page example - NHS.UK prototype kit
 
       <form action="view-pcn" method="POST" id="form">
          {{ select({
-         id: "contact-channel",
-         name: "contact-channel",
+         id: "type",
+         name: "type",
          label: {
-         html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Contact Channel</label>'
+         html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Type</label>'
          },
          items: [
          {
-         value: letter,
+         value: verbal,
          selected: true
          },
          {
-         value: call,
-         text: "Call"
+         value: verbal,
+         text: "Verbal"
          },
          {
-         value: "email",
-         text: "Email"
+         value: "loa",
+         text: "LOA"
          },
          {
-         value: letter,
-         text: "Letter"
+         value: "poa",
+         text: "POA"
          },
          {
-         value: webchat,
-         text: "Webchat"
-         },
-         {
-         value: admin,
-         text: "Admin"
+         value: "cop",
+         text: "COP"
          }
          ]
          }) }}
 
-         <!-- Hidden field for email address -->
-         <div id="emailField" class="nhsuk-form-group" style="display: none;">
-            {{ input({
-            label: {
-            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Email reference</label>'
-            },
-            id: "email-ref",
-            name: "email-ref",
-            classes: "nhsuk-input--width-20"
-            }) }}
-         </div>
-
-         <script>
-            // Get references
-            const select = document.getElementById('contact-channel');
-            const emailField = document.getElementById('emailField');
-
-            // Listen for changes
-            select.addEventListener('change', function () {
-               if (this.value === 'email') {
-                  emailField.style.display = 'block';
-               } else {
-                  emailField.style.display = 'none';
-               }
-            });
-
-            // Run once on load (in case of preselected option)
-            if (select.value === 'email') {
-               emailField.style.display = 'block';
-            }
-         </script>
 
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
@@ -124,29 +89,6 @@ Content page example - NHS.UK prototype kit
             <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;"
                onkeyup="countChars(this);"></textarea>
             <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
-         </div>
-
-         <div class="nhsuk-form-group">
-            {{ radios({
-            idPrefix: "example",
-            name: "example",
-            fieldset: {
-            legend: {
-            classes: "nhsuk-fieldset__legend--l",
-            isPageHeading: true
-            }
-            },
-            items: [
-            {
-            value: "open-cases",
-            text: "Apply to open cases only"
-            },
-            {
-            value: "all-cases",
-            text: "Apply to all cases"
-            }
-            ]
-            }) }}
          </div>
          <button class="nhsuk-button" id="button" type="submit">Submit</button>
       </form>
@@ -383,7 +325,7 @@ Content page example - NHS.UK prototype kit
          <div class="scrollable-panel">
             <div class="nhsuk-grid-row">
                <div class="nhsuk-grid-column-full">
-                 <div class="container">
+            <div class="container">
 
                      {% set notesContent %}
                      {{ table({
