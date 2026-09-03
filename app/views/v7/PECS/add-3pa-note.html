@@ -51,36 +51,20 @@ Content page example - NHS.UK prototype kit
       </h1>
 
       <form action="view-pcn" method="POST" id="form">
-         {{ select({
-         id: "type",
-         name: "type",
-         label: {
-         html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Type</label>'
-         },
-         items: [
-         {
-         value: verbal,
-         selected: true
-         },
-         {
-         value: verbal,
-         text: "Verbal"
-         },
-         {
-         value: "loa",
-         text: "LOA"
-         },
-         {
-         value: "poa",
-         text: "POA"
-         },
-         {
-         value: "cop",
-         text: "COP"
-         }
-         ]
-         }) }}
 
+         <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-heading-xs nhsuk-u-margin-bottom-0" for="type">
+               Type
+            </label>
+
+            <select class="nhsuk-select" id="type" name="type">
+               <option value="" selected hidden></option>
+               <option value="verbal">Verbal</option>
+               <option value="loa">LOA</option>
+               <option value="poa">POA</option>
+               <option value="cop">COP</option>
+            </select>
+         </div>
 
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
@@ -117,113 +101,6 @@ Content page example - NHS.UK prototype kit
 
 
       </dl>
-      <div class="nhsuk-card">
-         <div class="nhsuk-card__content">
-            <h3 class="nhsuk-card__heading">
-               Personal details
-            </h3>
-            <dl class="nhsuk-summary-list">
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Title
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     Mr
-                  </dd>
-
-               </div>
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     First name
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     Joe
-                  </dd>
-
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Last name
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     Bloggs
-                  </dd>
-
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Date of birth
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>20/11/88</p>
-                  </dd>
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     NHS number
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>23141986</p>
-                  </dd>
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Email address
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>joe.bloggs@gmail.com</p>
-                  </dd>
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Address line 1
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>1 Testing Street</p>
-                  </dd>
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Address line 2
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>Testing</p>
-                  </dd>
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Postcode
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>NE1 0LD</p>
-                  </dd>
-               </div>
-
-               <div class="nhsuk-summary-list__row">
-                  <dt class="nhsuk-summary-list__key">
-                     Telephone number
-                  </dt>
-                  <dd class="nhsuk-summary-list__value">
-                     <p>07654321987</p>
-                  </dd>
-               </div>
-
-
-         </div>
-      </div>
-
-
-
-
-
 
    </div>
 
@@ -325,7 +202,7 @@ Content page example - NHS.UK prototype kit
          <div class="scrollable-panel">
             <div class="nhsuk-grid-row">
                <div class="nhsuk-grid-column-full">
-            <div class="container">
+                  <div class="container">
 
                      {% set notesContent %}
                      {{ table({
@@ -648,7 +525,7 @@ Content page example - NHS.UK prototype kit
                      text: "JOECA"
                      },
                      {
-                     text: "COP - Surname changed from: CARTWRIGHT, Postcode changed from: NE1 1EN"
+                     html: "<strong>COP</strong><br>Surname changed from: CARTWRIGHT, Postcode changed from: NE1 1EN"
                      }
                      ],
                      [
@@ -659,7 +536,7 @@ Content page example - NHS.UK prototype kit
                      text: "JOECA"
                      },
                      {
-                     text: "LOA - Address line 1 changed from: 152 BRIDGE HOUSE"
+                        html: "<strong>LOA</strong><br>Address line 1 changed from: 152 BRIDGE HOUSE"
                      }
                      ],
                      [
@@ -670,7 +547,7 @@ Content page example - NHS.UK prototype kit
                      text: "JOECA"
                      },
                      {
-                     text: "POA - Email updated from: JBLOGGS2@GMAIL.COM"
+                        html: "<strong>POA</strong><br>Email updated from: JBLOGGS2@GMAIL.COM"
                      }
                      ]
                      ]
@@ -709,7 +586,7 @@ Content page example - NHS.UK prototype kit
                      ]
                      }) }}
 
-            </div>
+                  </div>
                </div>
             </div>
          </div>
