@@ -573,6 +573,7 @@ tr.decs-row.hide {
 #rightHandSide {
   display: flex;
   flex-direction: column;
+  min-height:1200px;
 }
 
 .scrollable-panel {
