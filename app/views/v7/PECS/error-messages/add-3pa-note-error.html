@@ -46,18 +46,29 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
+      {{ errorSummary({
+      titleText: "There is a problem",
+      errorList: [
+      {
+      text: "You must select a type",
+      href: "#contact-channel"
+      }
+      ]
+      }) }}
       <h1 class="nhsuk-u-margin-bottom-4">
          Create 3PA note
       </h1>
 
       <form action="view-pcn" method="POST" id="form">
 
-         <div class="nhsuk-form-group">
+         <div class="nhsuk-form-group nhsuk-form-group--error">
             <label class="nhsuk-label nhsuk-heading-xs nhsuk-u-margin-bottom-0" for="type">
                Type
             </label>
-
-            <select class="nhsuk-select" id="type" name="type">
+            <span class="nhsuk-error-message" id="name-error">
+               <span class="nhsuk-u-visually-hidden">Error: </span>Select a type
+            </span>
+            <select class="nhsuk-select nhsuk-select--error" id="type" name="type">
                <option value="" selected hidden></option>
                <option value="verbal">Verbal</option>
                <option value="loa">LOA</option>
@@ -65,6 +76,27 @@ Content page example - NHS.UK prototype kit
                <option value="cop">COP</option>
             </select>
          </div>
+
+
+         <script>
+            // Get references
+            const select = document.getElementById('contact-channel');
+            const emailField = document.getElementById('emailField');
+
+            // Listen for changes
+            select.addEventListener('change', function () {
+               if (this.value === 'email') {
+                  emailField.style.display = 'block';
+               } else {
+                  emailField.style.display = 'none';
+               }
+            });
+
+            // Run once on load (in case of preselected option)
+            if (select.value === 'email') {
+               emailField.style.display = 'block';
+            }
+         </script>
 
          <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
@@ -74,11 +106,14 @@ Content page example - NHS.UK prototype kit
                onkeyup="countChars(this);"></textarea>
             <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
          </div>
+
          <button class="nhsuk-button" id="button" type="submit">Submit</button>
       </form>
       <p><a href="view-pcn">Cancel</a></p>
+
       </dl>
    </div>
+
 
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box" id="rightHandSide">

@@ -46,13 +46,22 @@ Content page example - NHS.UK prototype kit
 
 <div class="nhsuk-grid-row">
    <div class="nhsuk-grid-column-one-half">
+      {{ errorSummary({
+      titleText: "There is a problem",
+      errorList: [
+      {
+      text: "You must enter a note",
+      href: "#contact-channel"
+      }
+      ]
+      }) }}
       <h1 class="nhsuk-u-margin-bottom-4">
          Create 3PA note
       </h1>
 
       <form action="view-pcn" method="POST" id="form">
 
-         <div class="nhsuk-form-group">
+        <div class="nhsuk-form-group">
             <label class="nhsuk-label nhsuk-heading-xs nhsuk-u-margin-bottom-0" for="type">
                Type
             </label>
@@ -66,19 +75,58 @@ Content page example - NHS.UK prototype kit
             </select>
          </div>
 
-         <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-               Notes
-            </label>
-            <textarea class="nhsuk-textarea" id="message" name="message" rows="8" style="font-size:19px;"
-               onkeyup="countChars(this);"></textarea>
-            <p class="nhsuk-hint" id="charNum">You have 2048 characters remaining</p>
+         <!-- Hidden field for email address -->
+         <div id="emailField" class="nhsuk-form-group" style="display: none;">
+            {{ input({
+            label: {
+            html: '<label class="nhsuk-heading-xs nhsuk-u-margin-bottom-0">Email reference</label>'
+            },
+            id: "email-ref",
+            name: "email-ref",
+            classes: "nhsuk-input--width-20"
+            }) }}
          </div>
+
+         <script>
+            // Get references
+            const select = document.getElementById('contact-channel');
+            const emailField = document.getElementById('emailField');
+
+            // Listen for changes
+            select.addEventListener('change', function () {
+               if (this.value === 'email') {
+                  emailField.style.display = 'block';
+               } else {
+                  emailField.style.display = 'none';
+               }
+            });
+
+            // Run once on load (in case of preselected option)
+            if (select.value === 'email') {
+               emailField.style.display = 'block';
+            }
+         </script>
+
+         {{ characterCount({
+         idPrefix: "example-error",
+         name: "exampleError",
+         errorMessage: {
+         text: "Please enter a note"
+         },
+         name: "moreDetail",
+         id: "more-detail",
+         maxwords: 2048,
+         label: {
+         text: "Notes"
+         }
+         }) }}
+
          <button class="nhsuk-button" id="button" type="submit">Submit</button>
       </form>
       <p><a href="view-pcn">Cancel</a></p>
       </dl>
    </div>
+
 
    <div class="nhsuk-grid-column-one-half">
       <div class="border-box" id="rightHandSide">
