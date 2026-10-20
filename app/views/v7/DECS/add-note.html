@@ -123,23 +123,28 @@ Content page example - NHS.UK prototype kit
          </div>
 
          <div class="nhsuk-form-group">
-            <div class="nhsuk-checkboxes">
-
-               <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                     Apply to open DECS cases
-                  </label>
-               </div>
-
-               <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-                     Apply to open, locked and closed DECS cases
-                  </label>
-               </div>
-            </div>
+            {{ radios({
+            idPrefix: "example",
+            name: "example",
+            fieldset: {
+            legend: {
+            classes: "nhsuk-fieldset__legend--l",
+            isPageHeading: true
+            }
+            },
+            items: [
+            {
+            value: "open-cases",
+            text: "Apply to open DECS cases"
+            },
+            {
+            value: "all-cases",
+            text: "Apply to open, locked and closed DECS cases"
+            }
+            ]
+            }) }}
          </div>
+
          <button class="nhsuk-button" id="button" type="submit">Submit</button>
       </form>
       <p><a href="view-pcn">Cancel</a></p>
